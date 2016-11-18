@@ -1,0 +1,71 @@
+@import "bourbon"
+
+//main_txt_color: #bcbdbe
+//$decoration_color: #04be5b
+//$main_active_color: #fff
+//font_RobotoRegular: "RobotoRegular", Arial, sans-serif
+//font_ROBOTO_BLACK: "ROBOTO-BLACK", Arial, sans-serif
+//font_ROBOTO_THIN: "ROBOTO-THIN", Arial, sans-serif
+//font_MyriadPro_Regular: "MyriadPro-Regular", Arial, sans-serif
+//font_MyriadPro_Bold: "MyriadPro-Bold", Arial, sans-serif
+
+$main_txt_color: #bcbdbe
+$decoration_color: #04be5b
+$main_active_color: #fff
+
+
+$font_RobotoRegular: "RobotoRegular", Arial, sans-serif
+$font_ROBOTO_BLACK: "ROBOTO-BLACK", Arial, sans-serif
+$font_ROBOTO_THIN: "ROBOTO-THIN", Arial, sans-serif
+$font_MyriadPro_Regular: "MyriadPro-Regular", Arial, sans-serif
+$font_MyriadPro_Bold: "MyriadPro-Bold", Arial, sans-serif
+
+
+@mixin font($color, $fz, $ff, $lh: 1.6)
+	color: $color
+	font: $fz $ff
+	line-height: $lh
+
+
+%main_btn
+	width: 272px
+	height: 49px
+	background-color: #FD5233
+	-moz-border-radius: 5px
+	border: none
+	text-transform: uppercase
+	-webkit-border-radius: 5px
+	border-radius: 5px
+	-moz-box-shadow: 0 1px 0 #FDB10D
+	-webkit-box-shadow: 0 1px 0 #FDB10D
+	box-shadow: 0 1px 0 #FDB10D
+	@include font(#fff, 17px, $font_MyriadPro_Bold) 
+%main_btn_hover
+	background-color: #FD2233
+%main_btn_active
+	background-color: #FD2233
+%main_btn_focus
+	background-color: #FD2233
+	outline: 0	
+
+// @mixin
+// 	font-size($font_px)
+// 		font-size: $font_px + px
+// 		font-size: px-to-rem($font_px)
+// 		$line_h: $font_px * 1,2
+// 		line-height: $line_h + px
+// 		line-height: px-to-rem($line_h)
+
+
+
+%flex 
+	display: flex
+	align-items: center
+	justify-content: center
+
+	
+			
+
+
+
+

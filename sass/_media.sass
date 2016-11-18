@@ -1,0 +1,173 @@
+@import "bourbon"
+
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px)
+	body, 
+	html
+		overflow: auto
+	.header_nav 
+		display: none
+	.button-mobile-menu
+		display: block
+		z-index: 100
+	.call_information_container
+		text-align: center
+		.call_information
+			margin: 0
+	.about-us-container-item
+		display: inline-block
+		margin-bottom: 60px
+	.main-about-us-container
+		padding: 100px 0
+	.main-result-container
+		margin-top: 65px
+	.owl-carousel-list-img-container
+		width: 500px	
+	.scroll-mouse-container
+		display: none
+	.header-form 
+		input[type=submit]
+			margin-top: 0
+	.header-add-project-container
+		margin-top: 40px
+	.main-result-container
+		margin-top: 0
+	.starting-work-item-title
+		opacity: 1
+	.starting-work-item 
+		input
+			padding: 7px 60px
+	.developed-sociality-foto-wrap
+		width: 450px
+		height: 450px
+@media only screen and (max-height: 950px)
+	body, 
+	html
+		overflow: auto
+	.top-menu-container
+		width: 100%
+	.main-quetions-section,
+	.starting-work-section,
+	.finished-result-section,
+	.clever-context-container 
+		padding: 100px 0
+	.main-quetions-container,
+	.starting-work-container,
+	.header-container,
+	.main-container-clever-context,
+	.main-about-us-container,
+	.finished-result-container,
+	.developed-sociality-container
+		min-height: 0
+	.developed-sociality-foto-wrap
+@media only screen and (max-width : 1200px)
+	/* Medium Devices, Desktops */
+@media only screen and (max-width : 992px)
+	/**/
+	.developed-sociality-foto-wrap
+		display: none
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px)
+	
+	/*Disable Animation on Mobile Devices*/
+	.animated
+		/*CSS transitions*/
+		-o-transition-property: none !important
+		-moz-transition-property: none !important
+		-ms-transition-property: none !important
+		-webkit-transition-property: none !important
+		transition-property: none !important
+		/*CSS transforms*/
+		-o-transform: none !important
+		-moz-transform: none !important
+		-ms-transform: none !important
+		-webkit-transform: none !important
+		transform: none !important
+		/*CSS animations*/
+		-webkit-animation: none !important
+		-moz-animation: none !important
+		-o-animation: none !important
+		-ms-animation: none !important
+		animation: none !important
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px)
+	/**/
+
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px)
+	/**/
+
+
+/*==========  Mobile First Method  ==========*/
+
+/* Custom, iPhone Retina */
+@media only screen and (min-width : 320px)
+	/**/
+
+
+/* Extra Small Devices, Phones */
+@media only screen and (min-width : 480px)
+	/**/
+
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 768px)
+	/**/
+
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px)
+	/**/
+
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) and (min-height : 950px)
+	// @media only screen and (min-height : 835px)
+	.container
+		width: 1200px
+	.header-container,
+	.main-container,
+	.finished-result-section,
+	.main-quetions-container,
+	.footer-position-contaiener,
+	.header-container,
+	.main-about-us-container,
+	.starting-work-container,
+	.developed-sociality-container
+		height: 100vh
+
+	.advertising-container,
+	.scroll-mouse-container,
+	.footer-row,
+	.footer-contaiener,
+	.about-lever-context-container,
+	// .audit-information-container,
+	.about-us-container-title,
+	.about-us-container,
+	.main-result-container,
+	.finished-result-container-title,
+	.owl-carousel-container,
+	.main-quetions,
+	.developed-sociality-foto-position,
+	.starting-work-container-position
+		position: absolute
+	.about-us-icon-container
+		padding-left: 27px
+
+@media only screen and (max-height : 950px)
+	.about-lever-context-container
+		h3
+			margin-bottom: 49px
+			margin-top: 42px
+	.finished-result-section
+		padding-bottom: 60px
+	.main-about-us-container
+		padding-top: 85px
+
+
