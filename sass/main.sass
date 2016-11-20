@@ -42,20 +42,11 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
-// .main
-// 	position: relative
-// 	transition: .5s
-// 	right: 0
-// 	&.active
-// 		right: 300px
-
-	// transition: left .5s
-	// left: 0
 //	Секция
 .top-menu-container
 	position: fixed
 	z-index: 100
-	width: calc(100% - 17px)
+	width: 100%
 	padding: 10px 0
 	background: transparent
 	transition: .5s
@@ -64,7 +55,7 @@ body textarea:required:valid
 		right: 300px
 	//transition: .5s
 .top-menu-container-active
-		background: rgba(0,0,0,0.4)
+	background: rgba(0,0,0,0.4)
 .main-container
 	position: relative
 .main-container-clever-context
@@ -643,6 +634,7 @@ body textarea:required:valid
 	background: rgba(0,0,0,0.675)
 	position: fixed
 	text-align: right
+	display: none
 	&.active
 		z-index: 0
 //	Секция

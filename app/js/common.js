@@ -9,57 +9,53 @@ $(function() {
 });
 
 // прокрутка по секциям
-function ToScroll() {
-    if ($(window).scrollTop() > 0) {
-        $(".top-menu-container").addClass("active");
-    } else {
-        $('.top-menu-container').removeClass("active");
-    }
-    console.log($(window).scrollTop());
-    }
-$(window).scroll(function() {
-    ToScroll();
-});
 
 
+function buttonMobileMenu() {
+    var button = $('.button-mobile-menu'),
+        header = $('.top-menu-container'),
+        content = $('.main'),
+        menu = $('.mobile-menu');
 
-// function buttonMobileMenu() {
-//     var button = $('.button-mobile-menu'),
-//         header = $('.top-menu-container'),
-//         content = $('.main'),
-//         menu = $('.mobile-menu');
-
-//         button.click(function () {
-//             header.toggleClass("active");
-//             content.toggleClass("active");
-//             menu.toggleClass("active");
-//             $('body').toggleClass('overflow');
-//         });
-//         content.click(function () {
-//             content.removeClass("active")
-//             header.removeClass("active");
-//             menu.toggleClass("active");
-//             $('body').removeClass('overflow');
-//         })
-//         menu.click(function () {
-//             content.removeClass("active")
-//             header.removeClass("active");
-//             menu.toggleClass("active");
-//             $('body').removeClass('overflow');
-//         })
-//     }   
+        button.click(function () {
+            header.toggleClass("active");
+            content.toggleClass("active");
+            menu.toggleClass("active");
+            $('body').toggleClass('overflow');
+        });
+        content.click(function () {
+            content.removeClass("active")
+            header.removeClass("active");
+            menu.toggleClass("active");
+            $('body').removeClass('overflow');
+        })
+        menu.click(function () {
+            content.removeClass("active")
+            header.removeClass("active");
+            menu.toggleClass("active");
+            $('body').removeClass('overflow');
+        })
+    }   
 
 
 function animation() {
-    var content = $('.about-lever-context-col');
-    content.animate(
-  {
-    opacity: "toggle"
-  },
-    5000);  
+
+    var parent = document.querySelector('.scroll-mouse'),
+        content = document.querySelector('ul').children;
+
+
+        for (var i = 0 ; content.length > i; i++) {
+                setInterval(function(){
+                   this.style.cssText= 'opacity: 1'
+                },
+                    500);  
+            }
+
 }
 $(document).ready(function() {
-// buttonMobileMenu()
+buttonMobileMenu();
+    animation();
+
 
 
     if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 950) {
@@ -73,7 +69,6 @@ $(document).ready(function() {
         // для инициализации tooltips
         });
     }
-    // ToScroll();
     // $( document ).tooltip({
     //   track: true
     // });  
@@ -82,7 +77,7 @@ $(document).ready(function() {
         e.preventDefault();
         var anchor = $(this);
         $('html, body').stop().animate({
-            scrollTop: $(anchor.attr('href')).offset().top-105
+            scrollTop: $(anchor.attr('href')).offset().top
         }, 500);
         return false;
     });
@@ -403,11 +398,11 @@ function accordion() {
 accordion();
 
 
+
 });
-
-
 $(".loader_inner").fadeOut();
-$(".loader").delay(400).fadeOut("slow");
+$(".loader").delay(100).fadeOut("slow");
+
 
 function navButton() {
     var headerNav = document.querySelector('#header_nav_id'),

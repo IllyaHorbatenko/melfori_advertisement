@@ -670,7 +670,7 @@ body{font-size:62.5%}
 input{font-size:1.8rem;font-weight:900}
 a:active,a:focus,a:hover,a:visited{color:#bcbdbe;text-decoration:none}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
-.top-menu-container{position:fixed;z-index:100;width:-webkit-calc(100% - 17px);width:calc(100% - 17px);padding:10px 0;background:0 0;-webkit-transition:.5s;transition:.5s;right:0}
+.top-menu-container{position:fixed;z-index:100;width:100%;padding:10px 0;background:0 0;-webkit-transition:.5s;transition:.5s;right:0}
 .top-menu-container.active{right:300px}
 .top-menu-container-active{background:rgba(0,0,0,.4)}
 .main-container{position:relative}
@@ -806,11 +806,12 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .developed-command-section{background:url(../img/background-main-1.jpg) no-repeat;background-size:cover;padding:85px 0}
 .developed-sociality-foto-container{padding-left:7px}
 .developed-sociality-foto-position{top:-webkit-calc(50% - 490px);top:calc(50% - 490px)}
-.mobile-menu{font-size:2.4rem;color:#6d6d6d;width:100%;height:100%;z-index:-1;background:rgba(0,0,0,.675);position:fixed;text-align:right}
+.mobile-menu{font-size:2.4rem;color:#6d6d6d;width:100%;height:100%;z-index:-1;background:rgba(0,0,0,.675);position:fixed;text-align:right;display:none}
 .mobile-menu.active{z-index:0}
 @media only screen and (max-width:1200px){body,html{overflow:auto}
 .header_nav{display:none}
 .button-mobile-menu{display:block;z-index:100}
+.mobile-menu{display:block}
 .call_information_container{text-align:center}
 .call_information_container .call_information{margin:0}
 .about-us-container-item{display:inline-block;margin-bottom:60px}
@@ -823,6 +824,8 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .starting-work-item-title{opacity:1}
 .starting-work-item input{padding:7px 60px}
 .developed-sociality-foto-wrap{width:450px;height:450px}
+.main{-webkit-transition:.5s;transition:.5s;right:0;position:relative}
+.main.active{right:300px}
 }
 @media only screen and (max-height:950px){body,html{overflow:auto}
 .top-menu-container{width:100%}
