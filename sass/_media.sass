@@ -12,6 +12,8 @@
 	.button-mobile-menu
 		display: block
 		z-index: 100
+	.mobile-menu
+		display: block
 	.call_information_container
 		text-align: center
 		.call_information
@@ -42,6 +44,12 @@
 	.developed-sociality-foto-wrap
 		width: 450px
 		height: 450px
+	.main
+		transition: .5s
+		right: 0
+		position: relative
+		&.active
+			right: 300px
 @media only screen and (max-height: 950px)
 	body, 
 	html
