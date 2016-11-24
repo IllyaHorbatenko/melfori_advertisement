@@ -4,9 +4,6 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
-	body, 
-	html
-		overflow: auto
 	.header_nav 
 		display: none
 	.button-mobile-menu
@@ -50,16 +47,25 @@
 		position: relative
 		&.active
 			right: 300px
+	.footer-title
+		padding: 0
+	.footer-nav-container
+		display: none
+	.footer-contaiener
+		margin-bottom: 60px
+	.call_information_container
+		text-align: center
+		margin: auto
+		width: 240px
+		padding: 0
 @media only screen and (max-height: 950px)
-	body, 
-	html
-		overflow: auto
 	.top-menu-container
 		width: 100%
 	.main-quetions-section,
 	.starting-work-section,
 	.finished-result-section,
-	.clever-context-container 
+	.clever-context-container,
+	.header
 		padding: 100px 0
 	.main-quetions-container,
 	.starting-work-container,
@@ -67,19 +73,62 @@
 	.main-container-clever-context,
 	.main-about-us-container,
 	.finished-result-container,
-	.developed-sociality-container
+	.developed-sociality-container,
+	.footer-position-contaiener
 		min-height: 0
 	.developed-sociality-foto-wrap
-@media only screen and (max-width : 1200px)
 	/* Medium Devices, Desktops */
+@media only screen and (max-width : 999px)
+	.audit-form,
+	.add-massage-form
+		width: auto
+		input[type=submit]
+			display: block
+			width: 262px
+			margin-top: 8px
+			margin: auto
+	.audit-form-input-container,
+	.input-container
+		display: block
+		width: 262px
+		margin: auto
+		margin-bottom: 9px
+	.submit-lable-audit
+		text-align: center
+		padding-left: 12px
+	.footer-form 
+		input
+			margin: 0
+
 @media only screen and (max-width : 992px)
 	/**/
 	.developed-sociality-foto-wrap
 		display: none
-
+	.starting-work-item-container
+		margin-bottom: 50px
+	.accordion_title
+		height: 73px
+		span
+			top: 4px
+			right: 10px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
-	
+	.advertising-title,
+	.footer-aside
+		text-align: center
+		padding: 0 
+	.about-us-container-title
+		p
+			padding: 0
+	.starting-work-container-position
+		padding: 0
+	.melfori-footer,
+	.footer-link-icon,
+	.privaci-politic
+		margin-bottom: 20px
+		padding: 0
+		text-align: center
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -105,12 +154,27 @@
 /* Extra Small Devices, Phones */
 @media only screen and (max-width : 480px)
 	/**/
+	.call_information_container
+		display: none
+	.main-result
+		padding: 0
+		input[type=submit]
+			width: 100%
+	.main-result-list
+		padding-right: 10px
+		padding-left: 42px
+	.starting-work-item-container
+		padding: 0
+	.starting-work-item
+		width: 100%
 
 
 /* Custom, iPhone Retina */
 @media only screen and (max-width : 320px)
 	/**/
-
+	body,
+	html
+		overflow-x: hidden
 
 /*==========  Mobile First Method  ==========*/
 
@@ -135,8 +199,15 @@
 
 
 /* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) and (max-height : 950px)
+	body, 
+	html
+		overflow: auto
 @media only screen and (min-width : 1200px) and (min-height : 950px)
 	// @media only screen and (min-height : 835px)
+	body, 
+	html
+		overflow: hidden
 	.container
 		width: 1200px
 	.header-container,
@@ -149,6 +220,7 @@
 	.starting-work-container,
 	.developed-sociality-container
 		height: 100vh
+		min-height: 950px
 
 	.advertising-container,
 	.scroll-mouse-container,

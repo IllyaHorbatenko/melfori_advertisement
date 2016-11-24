@@ -1,4 +1,5 @@
 $(function() {
+    // создание табов
 
     //SVG Fallback
     // if(!Modernizr.svg) {
@@ -38,34 +39,19 @@ function buttonMobileMenu() {
     }   
 
 
-function animation() {
-
-    var parent = document.querySelector('.scroll-mouse'),
-        content = document.querySelector('ul').children;
-
-
-        for (var i = 0 ; content.length > i; i++) {
-                setInterval(function(){
-                   this.style.cssText= 'opacity: 1'
-                },
-                    500);  
-            }
-
-}
 $(document).ready(function() {
 buttonMobileMenu();
-    animation();
 
 
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 950) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 650) {
         $(".main").onepage_scroll({
-       sectionContainer: "section", // контейнер, к которому будет применяться скролл
-       easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
-       animationTime: 500, // время анимации
-       pagination: true, // скрыть или отобразить пагинатор
-       animationTime: 500,
-       updateURL: false, // обновлять URL или нет
+            sectionContainer: "section", // контейнер, к которому будет применяться скролл
+            easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
+            animationTime: 500, // время анимации
+            pagination: true, // скрыть или отобразить пагинатор
+            animationTime: 500,
+            updateURL: false, // обновлять URL или нет
         // для инициализации tooltips
         });
     }
@@ -399,11 +385,30 @@ accordion();
 
 
 
+// табы
+$(".tabs-container .tabs-item").on('click', function(e) { //ссылки которые будут переключать табы
+    e.preventDefault();
+
+    $(".tabs-container .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
+
+    $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+
+    var data = $(this).data('tab');   //создаём переменную с датой
+    $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+    $('.tabs-wrap[data-tab=' + data + ']').addClass('active');   //если таб соответствует тому, какой data
+    //атрибут в ссылке то делаем его активным
+});
+
 });
 $(".loader_inner").fadeOut();
 $(".loader").delay(100).fadeOut("slow");
 
-
+$(function(){
+    var myArray = ["один", "два", "три", "четыре", "пять"];
+    $.each(myArray, function(index, value){
+        console.log("INDEX: " + index + " VALUE: " + value);
+    });
+});
 function navButton() {
     var headerNav = document.querySelector('#header_nav_id'),
         buttonSpan = document.querySelectorAll('.header_nav_button_span'),

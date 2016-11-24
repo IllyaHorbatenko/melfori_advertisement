@@ -447,13 +447,11 @@ body textarea:required:valid
 .footer-row-bottom
 	font-size: 1.4rem
 	font-weight: 900
-	display: flex
 	color: #fff
-	justify-content: space-between
 .footer-link-icon
-	ul
-		padding-bottom: 13px
-		padding-right: 29px
+	text-align: right
+	li:first-child
+		margin: 0
 	li
 		display: inline-block
 		margin-left: 16px
@@ -472,10 +470,9 @@ body textarea:required:valid
 	@include sprite($twitter)
 	display: inline-block
 .privaci-politic
-	padding-left: 110px
 	padding-top: 12px
 .melfori-footer
-	padding-left: 16px
+	text-align: left
 	padding-top: 12px
 .starting-work-section
 	background: url('../img/background-main-3.jpg') no-repeat
@@ -485,7 +482,7 @@ body textarea:required:valid
 	position: relative
 	min-height: 835px
 .starting-work-container-title
-	margin-bottom: 52px
+	margin-bottom: 47px
 	p
 		font-size: 3.8rem
 		color: #fff
@@ -497,36 +494,60 @@ body textarea:required:valid
 .starting-work-container-position
 	left: 0
 	right: 0
-	padding: 0 70px
+	padding: 0 21px
 	top: calc(50% - 346px)
 .starting-work-item-title
 	font-weight: 900
-	font-size: 2.4rem
-	color: #fff
+	font-size: 2rem
+	color: #343434
 	line-height: 1.2	
-	margin-bottom: 34px
-	opacity: 0.5
-	padding-bottom: 10px
+	background: #e2e2e2
+	padding: 23px 0 20px 60px
+	border-radius: 6px 6px 0 0
 	transition: .3s
 	border-bottom: 1px solid transparent
-.starting-work-item-container
-	&:hover
-		.starting-work-item-title
-			border-bottom: 1px solid #04be5b
-			opacity: 1
-.icon-container
-	width: 44px
-	height: 41px	
-	margin-bottom: 17px
+	text-align: left
+	.icon-container
+		width: 44px
+		height: 41px	
+		float: left
+		margin-top: 7px
+		margin-right: 24px
+.tabs-item
+	opacity: 0.5
+	display: block
+	&.active
+		opacity: 1
+.tabs-wrap
+	display: none
+	justify-content: space-between
+	&.active
+		display: flex
+.tabs-item-conatiner
+	.tabs-item:first-child
+		padding-left: 0
+	.tabs-item:last-child
+		padding-right: 0
+
+.tabs-container
+	padding: 0 0px 0 14px
+.tabs-wrap-container
+	background: #e2e2e2
+	padding: 36px 21px
+	border-radius: 0 0 6px 6px
+	
 .starting-work-item
 	background: #fff
 	padding-bottom: 33px
 	display: inline-block
+	border-radius: 6px 6px 0 0
+	box-shadow: 0 6px 9px -5px #000
 	span
 		font-size: 3.6rem
 		font-weight: 900
 		display: block
 		color: #fff
+		border-radius: 6px 6px 0 0
 		padding: 12px 0
 		box-shadow: 0 6px 9px -5px #000
 	aside
@@ -551,7 +572,7 @@ body textarea:required:valid
 .starting-work-item-span-1
 	background: #2e92cc
 .starting-work-item-span-2
-	background: #2ecc71
+	background: #cc662e
 .starting-work-item-span-3
 	background: #ccbf2e
 
