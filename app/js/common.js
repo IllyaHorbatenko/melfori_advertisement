@@ -39,7 +39,50 @@ function buttonMobileMenu() {
     }   
 
 
+// function setSection(){
+//     var bodyElem = document.querySelector('body'),
+//         bodyIndex =  bodyElem.getAttribute('class'),
+//         index = bodyIndex.split('-'),
+//         section = bodyElem.querySelectorAll('section');
+
+
+//        for(var i = 0; i < section.length; i++){
+//             for(var j = 0; j < index.length; j++){
+//                 if(parseInt(index[j]-1) == i){
+//                     var ifClass = section[i].getAttribute('class').split(' ');
+//                         for(var k = 0; k < ifClass.length; k++){
+//                             if(ifClass[k] !== 'animation'){
+//                                 section[i].classList.add('animation');
+//                             }
+//                         }
+//                 }
+//             }
+//        }
+    
+// }   
+
+
+function setSection(){
+    var section = document.querySelectorAll('section');
+    
+        for(var i = 0; i < section.length; i++){
+            var sectionClass = section[i].getAttribute('class').split(' ');
+            for(var j = 0; j < sectionClass.length; j++){
+                if(sectionClass[j] == 'active'){
+                    section[i].classList.add('animation');
+                    for(var k = 0; k<section.length; k++){
+                        if(k != i){
+                            section[k].classList.remove('animation');
+                        }
+                    }
+                }
+            }
+        }
+}   
 $(document).ready(function() {
+
+
+
 buttonMobileMenu();
 
 
@@ -55,6 +98,9 @@ buttonMobileMenu();
         // для инициализации tooltips
         });
     }
+    setInterval(function(){
+        setSection();
+    },100)
     // $( document ).tooltip({
     //   track: true
     // });  
@@ -403,12 +449,6 @@ $(".tabs-container .tabs-item").on('click', function(e) { //ссылки кот�
 $(".loader_inner").fadeOut();
 $(".loader").delay(100).fadeOut("slow");
 
-$(function(){
-    var myArray = ["один", "два", "три", "четыре", "пять"];
-    $.each(myArray, function(index, value){
-        console.log("INDEX: " + index + " VALUE: " + value);
-    });
-});
 function navButton() {
     var headerNav = document.querySelector('#header_nav_id'),
         buttonSpan = document.querySelectorAll('.header_nav_button_span'),
