@@ -80,9 +80,6 @@ function setSection(){
         }
 }   
 $(document).ready(function() {
-
-
-
 buttonMobileMenu();
 
 
@@ -444,6 +441,8 @@ $(".tabs-container .tabs-item").on('click', function(e) { //ссылки кот�
     $('.tabs-wrap[data-tab=' + data + ']').addClass('active');   //если таб соответствует тому, какой data
     //атрибут в ссылке то делаем его активным
 });
+
+// GREEN SOCKS
 
 });
 $(".loader_inner").fadeOut();
