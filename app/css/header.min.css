@@ -53,6 +53,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .dm-modal_inner{font-size:1.6rem;color:#343434}
 .privacy-politic-modal{width:100%}
 .close{position:absolute;right:25px;top:25px;width:35px;height:36px;background:url(../img/modal_close.png) no-repeat}
+.advertising-title-aside,.header-add-project-title,.header-container,.header-form,.header_nav,.scroll-mouse{position:relative}
 .header_logo,.header_nav,.header_nav li,.header_nav ul li{display:inline-block}
 .header{text-align:center;background:url(../img/header_background.jpg) center no-repeat;background-size:cover;padding-top:100px}
 .header_logo{float:left;background:url(../img/mel-logo.png) no-repeat;width:58px;height:53px;background-size:contain;margin:6px 0 0 -6px}
@@ -60,8 +61,8 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header_logo a:hover{text-decoration:none}
 .header_nav ul li{list-style:none}
 .main_content{text-align:center;-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}
-.header-container{position:relative;min-height:575px}
-.header_nav{position:relative;font-size:18px;text-align:left;padding-left:57px;margin-top:21px;font-weight:900;padding-right:0}
+.header-container{min-height:575px}
+.header_nav{font-size:18px;text-align:left;padding-left:57px;margin-top:21px;font-weight:900;padding-right:0}
 .header_nav li{letter-spacing:-1px;-webkit-transition:all .2s ease;transition:all .2s ease;border-bottom:1px solid transparent;padding-bottom:8px;padding-right:37px}
 .header_nav li:last-child{padding:0}
 .header_nav li:hover{border-bottom:1px solid #04be5b}
@@ -76,7 +77,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .advertising-title{text-align:left;margin-left:13px;padding-right:84px;font-weight:100;color:#fff}
 .advertising-title-aside b,.advertising-title-aside-main span{color:#04be5b}
 .advertising-container{display:inline-block;left:0;right:0;top:-webkit-calc(50% - 300px);top:calc(50% - 300px)}
-.advertising-title-aside-main{font-size:37px;font-weight:100;line-height:1.3;margin-bottom:51px}
+.advertising-title-aside-main{font-size:37px;font-weight:100;line-height:1.3;position:relative;margin-bottom:51px}
 .advertising-title-aside{font-size:18px}
 .header-add-project-container{line-height:1.3;padding:0}
 .header-add-project-title h2{font-size:30px;color:#fff;font-weight:900;margin-right:15px;margin-bottom:19px}
@@ -89,6 +90,6 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header-form input[type=submit]{margin-top:10px}
 .scroll-mouse-container{left:0;right:0;bottom:150px}
 .scroll-mouse-container h2{font-size:24px;color:#fff;margin-bottom:30px}
-.scroll-mouse{border:4px solid #fff;-webkit-border-radius:13px 14px 19px 19px;border-radius:13px 14px 19px 19px;width:32px;height:49px;margin:auto;position:relative}
+.scroll-mouse{border:4px solid #fff;-webkit-border-radius:13px 14px 19px 19px;border-radius:13px 14px 19px 19px;width:32px;height:49px;margin:auto}
 .scroll-mouse span{display:block;width:4px;height:8px;background:#fff;-webkit-border-radius:5px;border-radius:5px;margin:6px auto auto}
 .scroll-mouse li{display:block;width:8px;height:8px;border:0;-webkit-transform:rotate(42deg);-ms-transform:rotate(42deg);transform:rotate(42deg);margin:-1px auto 0;border-right:2px solid #fff;border-bottom:2px solid #fff}

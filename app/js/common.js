@@ -18,25 +18,25 @@ function buttonMobileMenu() {
         content = $('.main'),
         menu = $('.mobile-menu');
 
-        button.click(function () {
-            header.toggleClass("active");
-            content.toggleClass("active");
-            menu.toggleClass("active");
-            $('body').toggleClass('overflow');
-        });
-        content.click(function () {
-            content.removeClass("active")
-            header.removeClass("active");
-            menu.toggleClass("active");
-            $('body').removeClass('overflow');
-        })
-        menu.click(function () {
-            content.removeClass("active")
-            header.removeClass("active");
-            menu.toggleClass("active");
-            $('body').removeClass('overflow');
-        })
-    }   
+    button.click(function() {
+        header.toggleClass("active");
+        content.toggleClass("active");
+        menu.toggleClass("active");
+        $('body').toggleClass('overflow');
+    });
+    content.click(function() {
+        content.removeClass("active")
+        header.removeClass("active");
+        menu.toggleClass("active");
+        $('body').removeClass('overflow');
+    })
+    menu.click(function() {
+        content.removeClass("active")
+        header.removeClass("active");
+        menu.toggleClass("active");
+        $('body').removeClass('overflow');
+    })
+}
 
 
 // function setSection(){
@@ -58,46 +58,113 @@ function buttonMobileMenu() {
 //                 }
 //             }
 //        }
-    
+
 // }   
 
+var limit = 0;
 
-function setSection(){
+function setSection(t) {
     var section = document.querySelectorAll('section');
-    
-        for(var i = 0; i < section.length; i++){
-            var sectionClass = section[i].getAttribute('class').split(' ');
-            for(var j = 0; j < sectionClass.length; j++){
-                if(sectionClass[j] == 'active'){
-                    section[i].classList.add('animation');
-                    for(var k = 0; k<section.length; k++){
-                        if(k != i){
+
+    for (var i = 0; i < section.length; i++) {
+        var sectionClass = section[i].getAttribute('class').split(' '),
+            attribute = section[i].getAttribute('data-index');
+        for (var j = 0; j < sectionClass.length; j++) {
+            if (sectionClass[j] == 'active') {
+                if (limit == 0) {
+                    // вызов анимации
+                    t[i].play();
+                    t[i].resume(0);
+                    console.log(attribute);
+                    for (var k = 0; k < section.length; k++) {
+                        if (k != i) {
                             section[k].classList.remove('animation');
                         }
                     }
                 }
+                for (var q = 0; q < sectionClass.length; q++) {
+                    if (sectionClass[q] == 'animation') {
+                        limit++;
+                    }
+                    if (sectionClass[q] !== 'animation') {
+                        section[i].classList.add('animation');
+                        limit = 0;
+                    }
+                }
             }
         }
-}   
+    }
+
+
+}
+
+
+
+//     var limit = 0;
+// function setSection(){
+//     if (limit == 0 ){
+//         console.log(limit);
+//         limit++;
+//     }    
+// }   
 $(document).ready(function() {
-buttonMobileMenu();
+    buttonMobileMenu();
 
 
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 650) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 620) {
         $(".main").onepage_scroll({
             sectionContainer: "section", // контейнер, к которому будет применяться скролл
             easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
             animationTime: 500, // время анимации
             pagination: true, // скрыть или отобразить пагинатор
             animationTime: 500,
+            moveDown: function() {
+                console.log('index');
+            },
             updateURL: false, // обновлять URL или нет
-        // для инициализации tooltips
+            // для инициализации tooltips
         });
     }
-    setInterval(function(){
-        setSection();
-    },100)
+
+
+
+    // GREEN SOCKS
+    var t1 = new TimelineMax(),
+        t2 = new TimelineMax(),
+        t3 = new TimelineMax(),
+        t4 = new TimelineMax(),
+        t5 = new TimelineMax(),
+        t6 = new TimelineMax(),
+        t7 = new TimelineMax(),
+        t8 = new TimelineMax(),
+        t9 = new TimelineMax(),
+        t = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
+    t1.pause();
+    t2.pause();
+    t3.pause();
+    t4.pause();
+    t5.pause();
+    t6.pause();
+    t7.pause();
+    t8.pause();
+    t9.pause();
+
+    t1.from('.advertising-title-aside-main', 0.7, { y: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
+    t1.from('.advertising-title-aside', 0.7, { y: 100, opacity: 0, ease: Linear.easeNone }, 'header-title');
+    t1.from('.header-form', 0.7, { x: 100, opacity: 0, opacity: 0, ease: Linear.easeNone }, 'header-title');
+    t1.from('.header-add-project-title', 0.7, { x: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
+    t1.from('.scroll-mouse-container', 0.7, { y: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
+
+
+    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: -150,  opacity: 0,});
+
+
+    setInterval(function() {
+        setSection(t);
+    }, 100);
+
+
     // $( document ).tooltip({
     //   track: true
     // });  
@@ -127,48 +194,47 @@ buttonMobileMenu();
         autoPlay: true
     });
     var counter = function($this) {
-    var maxNum = Math.abs(parseInt($this.text()));
-    var i = 0;
-    var repeat = maxNum / 50;
+        var maxNum = Math.abs(parseInt($this.text()));
+        var i = 0;
+        var repeat = maxNum / 50;
 
-    setInterval(function() {
+        setInterval(function() {
 
-      $this.text(parseInt(i += repeat));
+            $this.text(parseInt(i += repeat));
 
-      if (i > maxNum) {
-        $this.text(parseInt(maxNum));
-        return;
-      }
-
-    }, 40);
-  };
-
-
-$(document).ready(function() {
-    var screenWidth = screen.width;
-    if (screenWidth>1200) {
-        console.log(screenWidth);
-        $(window).bind('scroll', function() {
-            if($(window).scrollTop() > 57){
-                $('.top-menu-fixed').addClass('fixed');
-                $('nav').css('padding-top', '1px');
-            }else{
-                $('.top-menu-fixed').removeClass('fixed');
-                $('nav').css('padding-top', '0px');
+            if (i > maxNum) {
+                $this.text(parseInt(maxNum));
+                return;
             }
-        })
-    }
-    else{
+
+        }, 40);
+    };
+
+
+    $(document).ready(function() {
+        var screenWidth = screen.width;
+        if (screenWidth > 1200) {
+            console.log(screenWidth);
+            $(window).bind('scroll', function() {
+                if ($(window).scrollTop() > 57) {
+                    $('.top-menu-fixed').addClass('fixed');
+                    $('nav').css('padding-top', '1px');
+                } else {
+                    $('.top-menu-fixed').removeClass('fixed');
+                    $('nav').css('padding-top', '0px');
+                }
+            })
+        } else {
             $('.top-menu-fixed').addClass('fixed');
         }
 
-});
+    });
 
 
 
-  $("#count .num").each(function(index, element) {
-    counter($(element));
-  });
+    $("#count .num").each(function(index, element) {
+        counter($(element));
+    });
     // Select в модальном окне
     $(document).click(function() {
         $('.slct').removeClass('active');
@@ -238,7 +304,7 @@ $(document).ready(function() {
         $("body").css({ "overflow": "hidden", "padding-right": "17px" });
 
     });
-     $(".modal").click(function(e) {
+    $(".modal").click(function(e) {
         e.preventDefault();
         var id = $(this).data('modal');
         var txt = $(this).data('info');
@@ -268,9 +334,9 @@ $(document).ready(function() {
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
 
-     
 
-    
+
+
     // закрываем модальное окно
     $("#win3 .close").click(function(e) {
         e.preventDefault();
@@ -403,46 +469,45 @@ $(document).ready(function() {
         return false; // вырубаем стандартную отправку формы
     });
 
-function accordion() {
-  $(".accordion .accordion_title").click(function() {
-    $content = $(this).next();
-    if ($content.is(":visible")) { //если нажали на title аккордеона,
-      $content.slideUp(500, function() { //и если контент аккордеона видимый, то
-      }); //убираем его
-      $(this).children().removeClass("active"); //убираем активный класс у стрелки к примеру
-    $(this).removeClass("active");
+    function accordion() {
+        $(".accordion .accordion_title").click(function() {
+            $content = $(this).next();
+            if ($content.is(":visible")) { //если нажали на title аккордеона,
+                $content.slideUp(500, function() { //и если контент аккордеона видимый, то
+                }); //убираем его
+                $(this).children().removeClass("active"); //убираем активный класс у стрелки к примеру
+                $(this).removeClass("active");
 
-    } else {
-      $(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые 
-      $(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
-        .removeClass("active");
-        $(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
-      $content.slideToggle("slow"); //открываем скрытый блок у того что нажали
-      $(this).children().addClass("active"); //добавляем активный класс у стрекли к примеру
-      $(this).addClass("active");
+            } else {
+                $(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые 
+                $(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
+                    .removeClass("active");
+                $(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
+                $content.slideToggle("slow"); //открываем скрытый блок у того что нажали
+                $(this).children().addClass("active"); //добавляем активный класс у стрекли к примеру
+                $(this).addClass("active");
+            }
+        });
     }
-  });
-}
 
-accordion();
+    accordion();
 
 
 
-// табы
-$(".tabs-container .tabs-item").on('click', function(e) { //ссылки которые будут переключать табы
-    e.preventDefault();
+    // табы
+    $(".tabs-container .tabs-item").on('click', function(e) { //ссылки которые будут переключать табы
+        e.preventDefault();
 
-    $(".tabs-container .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
+        $(".tabs-container .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
 
-    $(this).addClass('active'); //Добавляем активное состояние у той что нажали
+        $(this).addClass('active'); //Добавляем активное состояние у той что нажали
 
-    var data = $(this).data('tab');   //создаём переменную с датой
-    $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
-    $('.tabs-wrap[data-tab=' + data + ']').addClass('active');   //если таб соответствует тому, какой data
-    //атрибут в ссылке то делаем его активным
-});
+        var data = $(this).data('tab'); //создаём переменную с датой
+        $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
+        $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
+        //атрибут в ссылке то делаем его активным
+    });
 
-// GREEN SOCKS
 
 });
 $(".loader_inner").fadeOut();
@@ -452,9 +517,9 @@ function navButton() {
     var headerNav = document.querySelector('#header_nav_id'),
         buttonSpan = document.querySelectorAll('.header_nav_button_span'),
         headerNavButton = document.querySelector('.header_nav_button');
-        
 
-    for(var i = 0; i<buttonSpan.length; i++){
+
+    for (var i = 0; i < buttonSpan.length; i++) {
         buttonSpan[i].classList.toggle("active");
     }
     headerNav.classList.toggle("active");
