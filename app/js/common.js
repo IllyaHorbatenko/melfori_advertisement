@@ -39,27 +39,6 @@ function buttonMobileMenu() {
 }
 
 
-// function setSection(){
-//     var bodyElem = document.querySelector('body'),
-//         bodyIndex =  bodyElem.getAttribute('class'),
-//         index = bodyIndex.split('-'),
-//         section = bodyElem.querySelectorAll('section');
-
-
-//        for(var i = 0; i < section.length; i++){
-//             for(var j = 0; j < index.length; j++){
-//                 if(parseInt(index[j]-1) == i){
-//                     var ifClass = section[i].getAttribute('class').split(' ');
-//                         for(var k = 0; k < ifClass.length; k++){
-//                             if(ifClass[k] !== 'animation'){
-//                                 section[i].classList.add('animation');
-//                             }
-//                         }
-//                 }
-//             }
-//        }
-
-// }   
 
 var limit = 0;
 
@@ -71,17 +50,6 @@ function setSection(t) {
             attribute = section[i].getAttribute('data-index');
         for (var j = 0; j < sectionClass.length; j++) {
             if (sectionClass[j] == 'active') {
-                if (limit == 0) {
-                    // вызов анимации
-                    t[i].play();
-                    t[i].resume(0);
-                    console.log(attribute);
-                    for (var k = 0; k < section.length; k++) {
-                        if (k != i) {
-                            section[k].classList.remove('animation');
-                        }
-                    }
-                }
                 for (var q = 0; q < sectionClass.length; q++) {
                     if (sectionClass[q] == 'animation') {
                         limit++;
@@ -91,6 +59,16 @@ function setSection(t) {
                         limit = 0;
                     }
                 }
+                if (limit == 0) {
+                    // вызов анимации
+                    t[i].restart();
+                    console.log(attribute);
+                    for (var k = 0; k < section.length; k++) {
+                        if (k != i) {
+                            section[k].classList.remove('animation');
+                        }
+                    }
+                }
             }
         }
     }
@@ -98,15 +76,7 @@ function setSection(t) {
 
 }
 
-
-
-//     var limit = 0;
-// function setSection(){
-//     if (limit == 0 ){
-//         console.log(limit);
-//         limit++;
-//     }    
-// }   
+ 
 $(document).ready(function() {
     buttonMobileMenu();
 
@@ -150,14 +120,14 @@ $(document).ready(function() {
     t8.pause();
     t9.pause();
 
-    t1.from('.advertising-title-aside-main', 0.7, { y: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
-    t1.from('.advertising-title-aside', 0.7, { y: 100, opacity: 0, ease: Linear.easeNone }, 'header-title');
-    t1.from('.header-form', 0.7, { x: 100, opacity: 0, opacity: 0, ease: Linear.easeNone }, 'header-title');
-    t1.from('.header-add-project-title', 0.7, { x: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
-    t1.from('.scroll-mouse-container', 0.7, { y: -100, opacity: 0, ease: Linear.easeNone }, 'header-title');
+    t1.from('.advertising-title', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'header-1');
+    t1.from('.header-add-project-container', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'header-1');
+    t1.from('.scroll-mouse-container', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.6', 'header-3');
 
 
-    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: -150,  opacity: 0,});
+    t2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'advertising-1');
+    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.3', 'advertising-2');
+    t2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.6','advertising-3');
 
 
     setInterval(function() {
