@@ -4,6 +4,8 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	section
+		margin-bottom: -3px
 	.header_nav 
 		display: none
 	.button-mobile-menu
@@ -31,6 +33,7 @@
 			margin-top: 0
 	.header-add-project-container
 		margin-top: 40px
+		margin-bottom: 50px
 	.main-result-container
 		margin-top: 0
 	.starting-work-item-title
@@ -51,8 +54,8 @@
 		padding: 0
 	.footer-nav-container
 		display: none
-	.footer-contaiener
-		margin-bottom: 60px
+	.footer-container
+		margin: 60px 0
 	.call_information_container
 		text-align: center
 		margin: auto
@@ -61,19 +64,32 @@
 	.about-contextual-advertising-wrap-1,
 	.about-contextual-advertising-wrap-2
 		img
-			float: none
+			width: 450px
 	.starting-work-item-title
 		padding: 17px 0 26px 14px
 		font-size: 1.5rem
+	body,
+	html
+		overflow: auto
+	.starting-work-container-title
+		margin-top: 45px
+	.tabs-item-conatiner
+		margin-bottom: -1px
+	.tabs-container
+		margin-bottom: 50px
+	.main-quetions-container-title
+		margin-top: 50px
+	.ask-quetion-submit
+		margin-bottom: 50px
+	.developed-sociality-wrap
+		img
+			width: 100px
+	.developed-sociality-container
+		margin: 50px 0
+
 @media only screen and (max-height: 950px)
 	.top-menu-container
 		width: 100%
-	.main-quetions-section,
-	.starting-work-section,
-	.finished-result-section,
-	.clever-context-container,
-	.header
-		padding: 100px 0
 	.main-quetions-container,
 	.starting-work-container,
 	.header-container,
@@ -114,19 +130,30 @@
 	.starting-work-item-container
 		margin-bottom: 50px
 	.accordion_title
-		height: 73px
+		height: auto
 		span
 			top: 4px
 			right: 10px
 	.about-contextual-advertising-wrap-1,
 	.about-contextual-advertising-wrap-2
 		img
-			width: 500px
-			margin: 0
+			width: 400px
 	.starting-work-container-position
 		padding: 0
-	
-
+	.advertising-title
+		margin: 0
+	.about-us-container-title
+		p
+			padding: 0
+	.about-lever-context-col
+		margin-bottom: 50px
+		width: 400px
+		margin: auto
+	.starting-work-item
+		margin: 0 5px
+		aside
+			padding: 0
+			padding-top: 10px
 /* Small Devices, Tablets */
 @media only screen and (max-width : 768px)
 	.advertising-title,
@@ -144,7 +171,82 @@
 		margin-bottom: 20px
 		padding: 0
 		text-align: center
+	.header-form
+		margin: 0
+		margin-bottom: 50px
+	.about-contextual-advertising-wrap-1,
+	.about-contextual-advertising-wrap-2
+		img
+			width: 350px
+		h2
+			font-size: 2.5rem
+	.about-contextual-advertising-title
+		font-size: 3rem
+	.about-us-icon-container
+		margin-bottom: 50px
+		width: 400px
+	.starting-work-item-title
+		padding: 17px 22px 26px 14px
+		font-size: 1.5rem
+	.starting-work-item-title
+		text-align: center
+		.icon-container
+			float: none
+			margin: 0
+			margin-bottom: 10px
+	.starting-work-item
+		span
+			font-size: 2.6rem
+			padding: 5px 0
+		aside
+			b
+				font-size: 2.3rem
+		input
+			padding: 7px 45px
+	.starting-work-item-title
+		padding: 17px 0 26px 0
+		border-radius: 8px
+		margin-bottom: 10px
+		width: 150px
+	.tabs-item
+		padding: 0
+	.tabs-container
+		padding: 0
+	.tabs-wrap
+		&.active
+			display: block
+	.starting-work-item 
+		display: block
+	.tabs-item-conatiner
+		float: left
+	.tabs-wrap-container
+		float: right
+		width: calc(100% - 180px)
+		padding: 0
+		background: transparent
+	.starting-work-item
+		border-radius: 7px
+		margin: 0
+		margin-bottom: 15px
+	.starting-work-container
+		margin-bottom: 30px
+	.owl-carousel-list
+		padding: 0
+	.owl-carousel-list-img-container
+		width: 280px
+	.finished-result-container-title
+		font-size: 3rem
+		margin-top: 40px
+		margin-bottom: 20px
+	.owl-carousel-list-title
+		font-size: 2.3rem	
+		padding-bottom: 10px
+		a
+			margin: 0
 
+	.owl-carousel-list-article 
+		h4
+			font-size: 2rem
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -168,6 +270,19 @@
 
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 680px)
+	.about-contextual-advertising-wrap-1, 
+	.about-contextual-advertising-wrap-2
+		img
+			width: 300px
+@media only screen and (max-width : 573px)
+	.about-contextual-advertising-wrap-1, 
+	.about-contextual-advertising-wrap-2
+		img
+			float: none
+			width: 100%
+			margin: auto
+
 @media only screen and (max-width : 480px)
 	/**/
 	.call_information_container
@@ -183,14 +298,49 @@
 		padding: 0
 	.starting-work-item
 		width: 100%
-
-
+		padding: 0
+		border-radius: 8px
+		aside
+			padding: 10px	
+			font-size: 1.3rem	
+		input
+			padding: 10px 5px
+			font-size: 2rem
+			border-radius: 0  0 8px 8px
+			width: 100%
+	.starting-work-item-title
+		width: 100px
+		padding: 13px 5px
+		font-size: 1.3rem
+		.icon-container
+			width: 35px
+			height: auto
+	.tabs-wrap-container
+		width: calc(100% - 113px)
+	.about-lever-context-container
+		h3
+			font-size: 3rem
+	.about-lever-context-col
+		width: auto
+	.about-us-icon-container
+		width: auto
+	.about-lever-context-container
+		margin-bottom: 30px
 /* Custom, iPhone Retina */
+@media only screen and (max-width : 380px)	
+	.about-contextual-advertising-wrap-1, 
+	.about-contextual-advertising-wrap-2
+		img
+			display: none
+	.popup5
+		.dm-modal
+			width: 100%
+			padding: 50px 10px
 @media only screen and (max-width : 320px)
 	/**/
-	body,
-	html
-		overflow-x: hidden
+	// body,
+	// html
+	// 	overflow-x: hidden
 	.about-contextual-advertising-wrap-1,
 	.about-contextual-advertising-wrap-2
 		img
@@ -220,10 +370,7 @@
 
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) and (max-height : 950px)
-	body, 
-	html
-		overflow: auto
+
 @media only screen and (min-width : 1200px) and (min-height : 920px)
 	// @media only screen and (min-height : 835px)
 	body, 
@@ -247,7 +394,7 @@
 	.advertising-container,
 	.scroll-mouse-container,
 	.footer-row,
-	.footer-contaiener,
+	.footer-container,
 	.about-lever-context-container,
 	// .audit-information-container,
 	.about-us-container-title,

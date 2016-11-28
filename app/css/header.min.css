@@ -1,4 +1,3 @@
-body,body.overflow{overflow-x:hidden}
 .popup4 .dm-cell,section{text-align:center}
 .modal_error_triangle input[type=submit]{width:272px;height:49px;background-color:#FD5233;-moz-border-radius:5px;border:none;text-transform:uppercase;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 1px 0 #FDB10D;box-shadow:0 1px 0 #FDB10D;color:#fff;font:17px MyriadPro-Bold,Arial,sans-serif;line-height:1.6}
 body,h1{color:#bcbdbe}
@@ -9,7 +8,8 @@ body,h1{color:#bcbdbe}
 @font-face{font-family:ROBOTO-THIN;font-style:normal;font-weight:400;src:url(../fonts/ROBOTO-THIN/ROBOTO-THIN.eot?#iefix) format("embedded-opentype"),url(../fonts/ROBOTO-THIN/ROBOTO-THIN.woff) format("woff"),url(../fonts/ROBOTO-THIN/ROBOTO-THIN.ttf) format("truetype")}
 @font-face{font-family:MyriadPro-Regular;font-style:normal;font-weight:400;src:url(../fonts/MyriadPro-Regular/MyriadPro-Regular.eot?#iefix) format("embedded-opentype"),url(../fonts/MyriadPro-Regular/MyriadPro-Regular.woff) format("woff"),url(../fonts/MyriadPro-Regular/MyriadPro-Regular.ttf) format("truetype")}
 @font-face{font-family:MyriadPro-Bold;font-style:normal;font-weight:400;src:url(../fonts/MyriadPro-Bold/MyriadPro-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/MyriadPro-Bold/MyriadPro-Bold.woff) format("woff"),url(../fonts/MyriadPro-Bold/MyriadPro-Bold.ttf) format("truetype")}
-body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:ROBOTO-THIN,Arial,sans-serif}
+body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:ROBOTO-THIN,Arial,sans-serif;overflow-x:hidden}
+body.overflow{overflow-y:hidden!important}
 h1{font:60px ROBOTO-THIN,Arial,sans-serif;letter-spacing:.6px}
 p{padding:0;margin:0}
 html .loader{background:#fff;bottom:0;height:100%;left:0;position:fixed;right:0;top:0;width:100%;z-index:9999}
@@ -64,7 +64,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header-container{min-height:575px}
 .header_nav{font-size:18px;text-align:left;padding-left:57px;margin-top:21px;font-weight:900;padding-right:0}
 .header_nav li{letter-spacing:-1px;-webkit-transition:all .2s ease;transition:all .2s ease;border-bottom:1px solid transparent;padding-bottom:8px;padding-right:37px}
-.header_nav li:last-child{padding:0}
+.header_nav li:last-child{padding:0 0 8px}
 .header_nav li:hover{border-bottom:1px solid #04be5b}
 .header_nav li:hover a{color:#fff}
 .header_nav li a{margin-right:2px;-webkit-transition:all .2s ease;transition:all .2s ease;color:#bcbdbe}

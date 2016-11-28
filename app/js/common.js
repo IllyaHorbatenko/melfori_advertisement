@@ -61,11 +61,12 @@ function setSection(t) {
                 }
                 if (limit == 0) {
                     // вызов анимации
-                    t[i].restart();
+                     t[i].play(0);
                     console.log(attribute);
                     for (var k = 0; k < section.length; k++) {
                         if (k != i) {
                             section[k].classList.remove('animation');
+                            t[k].pause(0);
                         }
                     }
                 }
@@ -76,13 +77,13 @@ function setSection(t) {
 
 }
 
- 
+
 $(document).ready(function() {
     buttonMobileMenu();
 
 
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 620) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 920) {
         $(".main").onepage_scroll({
             sectionContainer: "section", // контейнер, к которому будет применяться скролл
             easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -95,11 +96,15 @@ $(document).ready(function() {
             updateURL: false, // обновлять URL или нет
             // для инициализации tooltips
         });
+            setInterval(function() {
+        setSection(t);
+    }, 100);
+
+
     }
 
+if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 920) {
 
-
-    // GREEN SOCKS
     var t1 = new TimelineMax(),
         t2 = new TimelineMax(),
         t3 = new TimelineMax(),
@@ -119,20 +124,61 @@ $(document).ready(function() {
     t7.pause();
     t8.pause();
     t9.pause();
-
-    t1.from('.advertising-title', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'header-1');
-    t1.from('.header-add-project-container', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'header-1');
-    t1.from('.scroll-mouse-container', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.6', 'header-3');
-
-
-    t2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut }, 'advertising-1');
-    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.3', 'advertising-2');
-    t2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease:  Power4.easeOut },'-=0.6','advertising-3');
+    t1.from('.advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
+    t1.from('.header-add-project-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
+    t1.from('.scroll-mouse-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'header-3');
 
 
-    setInterval(function() {
-        setSection(t);
-    }, 100);
+    t2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'advertising-1');
+    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
+    t2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'advertising-3');
+
+    t3.from('.about-lever-context-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+    t3.staggerFrom('.about-lever-context-col', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.4');
+    t3.from('.audit-information-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+    t3.from('.audit-form-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+    t3.from('.audit-form', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+
+    t4.from('.about-us-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+    t4.staggerFrom('.about-us-icon-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.5');
+    t4.from('.main-result', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+    t5.from('.finished-result-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+    t5.from('.owl-carousel-list-img-container', 0.7, { y: 200, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+    t5.from('.owl-carousel-list-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+    t5.from('.owl-carousel-list-article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+    t5.from('.owl-dots', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+    t6.from('.starting-work-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut },'-=0.5');
+    t6.from('.tabs-wrap-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
+    t6.staggerFrom('.tabs-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.4','tabs-item');
+    t6.staggerFrom('.starting-work-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8','tabs-item');
+
+
+
+    t7.from('.main-quetions-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
+    t7.staggerFrom('.accordion', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1,'-=0.6');
+    t7.from('.ask-quetion-submit', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+
+    t8.staggerFrom('.developed-sociality-wrap li', 0.7, { x: -100, autoAlpha: 0, ease: Power4.easeOut }, 0.2);
+    t8.from('.developed-sociality-foto-aside', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
+    t8.from('.developed-sociality-foto-wrap', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
+
+    t9.from('.footer-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.2');
+    t9.from('.footer-row', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
+}
+
+
+
+
+    // GREEN SOCKS FOR DOWN
+
+
+
+
+    //  GREEN SOCKS FOR UP
 
 
     // $( document ).tooltip({
@@ -465,8 +511,8 @@ $(document).ready(function() {
 
 
     // табы
-    $(".tabs-container .tabs-item").on('click', function(e) { //ссылки которые будут переключать табы
-        e.preventDefault();
+    $(".tabs-container .tabs-item").on('click', function(event) { //ссылки которые будут переключать табы
+        event.preventDefault();
 
         $(".tabs-container .tabs-item").removeClass('active'); //убираем активные состояния у ссылок
 
@@ -476,6 +522,7 @@ $(document).ready(function() {
         $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
         $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
         //атрибут в ссылке то делаем его активным
+        TweenMax.staggerFrom($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 100, autoAlpha: 0},0.1);
     });
 
 
