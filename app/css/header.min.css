@@ -26,7 +26,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup5 .dm-table{display:table;width:100%;height:100%}
 .popup5 .overlay{background:rgba(0,0,0,.65);z-index:1001}
 .popup5 .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle;text-align:center}
-.popup5 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;width:470px;border:3px solid #bcbdbe;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left;font-weight:900}
+.popup5 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;overflow:auto;width:579px;height:100vh;border:3px solid #bcbdbe;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left;font-weight:900}
 .popup,.popup .overlay,.popup2,.popup3{width:100%;height:100%;position:fixed;top:0;left:0}
 .dm-modal_inner{text-align:left}
 .dm-modal_inner_h1{font-size:24px;padding:23px 0;text-align:center;font-weight:900;color:#000}
@@ -37,7 +37,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle;text-align:center}
 .popup .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;width:470px;border:3px solid #bcbdbe;text-align:center;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002}
 .modal_form_input_wrap{position:relative;display:block}
-.modal_input_error{width:141px;height:35px;display:none;position:absolute;right:-25px;top:40px;padding-left:10px;font:15px/35px MyriadPro-Regular,Arial,sans-serif;background-color:#F4F4F4;border:1px solid #C8C8C8;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,.3);box-shadow:0 0 10px rgba(0,0,0,.3);z-index:100}
+.modal_input_error{width:141px;height:35px;text-align:center;display:none;position:absolute;right:-25px;top:40px;padding-left:10px;font:15px/35px MyriadPro-Regular,Arial,sans-serif;background-color:#F4F4F4;border:1px solid #C8C8C8;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,.3);box-shadow:0 0 10px rgba(0,0,0,.3);z-index:100}
 .modal_input_error.input_error_email{width:215px}
 .modal_input_error.input_error_phone{width:235px}
 .modal_input_error.form_error{display:block}

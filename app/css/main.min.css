@@ -727,7 +727,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .finished-result-section{background:url(../img/background-main-1.jpg) no-repeat;background-size:cover}
 .finished-result-container{min-height:737px}
 .finished-result-container-title{color:#343434;font-size:3.8rem;font-weight:900;left:0;right:0;top:-webkit-calc(10% - 8px);top:calc(10% - 8px)}
-.owl-carousel-container{text-align:left;left:0;right:0;top:-webkit-calc(50% - 240px);top:calc(50% - 240px);color:#343434;font-weight:900}
+.owl-carousel-container{text-align:left;left:0;right:0;top:-webkit-calc(50% - 240px);top:calc(50% - 240px);color:#343434;font-weight:900;padding-bottom:80px}
 .owl-carousel-list-img-container{width:641px;float:left;margin-top:16px;margin-right:37px}
 .owl-dot,.owl-dot span{width:0;height:0;-webkit-transition:all .2s ease}
 .owl-carousel-list{padding-left:21px}
@@ -738,7 +738,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .owl-carousel-list-article h4{font-size:2.4rem;padding-bottom:7px}
 .owl-carousel-list-article aside{font-size:1.6rem;font-weight:900;line-height:1.3}
 .owl-nav{padding-top:22px}
-.owl-dots{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center}
+.owl-dots{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:absolute;right:0;left:0}
 .owl-dot{padding:8px;margin:2px 7px 0;-webkit-border-radius:50%;border-radius:50%;border:2px solid #04be5b;transition:all .2s ease;position:relative;top:10px}
 .owl-dot span{display:inline-block;position:absolute;top:12px;left:12px;transition:all .2s ease;-webkit-border-radius:50%;border-radius:50%;background:#04be5b}
 .owl-dot.active{padding:12px;margin:0 2px}
@@ -822,7 +822,7 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .developed-sociality-foto-aside p{display:inline-block;line-height:1.3;margin-bottom:30px}
 .developed-command-section{background:url(../img/background-main-1.jpg) no-repeat;background-size:cover}
 .developed-sociality-foto-container{padding-left:7px}
-.developed-sociality-foto-position{top:-webkit-calc(50% - 490px);top:calc(50% - 490px)}
+.developed-sociality-foto-position{top:-webkit-calc(50% - 401px);top:calc(50% - 401px)}
 .mobile-menu{font-size:2.4rem;color:#6d6d6d;width:100%;height:100%;z-index:-1;background:rgba(0,0,0,.675);position:fixed;text-align:right;display:none}
 .mobile-menu.active{z-index:0}
 @media only screen and (max-width:1200px){section{margin-bottom:-3px}
@@ -853,6 +853,8 @@ body,html{overflow:auto}
 .main-quetions-container-title{margin-top:50px}
 .developed-sociality-wrap img{width:100px}
 .developed-sociality-container{margin:50px 0}
+.about-lever-context-container{margin-bottom:50px}
+.about-lever-context-container-title,.finished-result-container-title{margin-top:50px}
 }
 @media only screen and (max-height:950px){.top-menu-container{width:100%}
 .developed-sociality-container,.finished-result-container,.footer-position-contaiener,.header-container,.main-about-us-container,.main-container-clever-context,.main-quetions-container,.starting-work-container{min-height:0}
@@ -918,14 +920,13 @@ body,html{overflow:auto}
 .tabs-wrap-container{width:-webkit-calc(100% - 113px);width:calc(100% - 113px)}
 .about-lever-context-container h3{font-size:3rem}
 .about-lever-context-col,.about-us-icon-container{width:auto}
-.about-lever-context-container{margin-bottom:30px}
 }
 @media only screen and (max-width:380px){.about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{display:none}
 .popup5 .dm-modal{width:100%;padding:50px 10px}
 }
 @media only screen and (max-width:320px){.about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{display:none}
 }
-@media only screen and (min-width:1200px) and (min-height:920px){body,html{overflow:hidden}
+@media only screen and (min-width:1200px) and (min-height:820px){body,html{overflow:hidden}
 .container{width:1200px}
 .about-contextual-advertising-container,.developed-sociality-container,.finished-result-section,.footer-position-contaiener,.header-container,.main-about-us-container,.main-container,.main-quetions-container,.starting-work-container{height:100vh;min-height:950px}
 .about-contextual-advertising-position,.about-lever-context-container,.about-us-container,.about-us-container-title,.advertising-container,.developed-sociality-foto-position,.finished-result-container-title,.footer-container,.footer-row,.main-quetions,.main-result-container,.owl-carousel-container,.scroll-mouse-container,.starting-work-container-position{position:absolute}

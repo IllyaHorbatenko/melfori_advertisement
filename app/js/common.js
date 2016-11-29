@@ -40,42 +40,66 @@ function buttonMobileMenu() {
 
 
 
-var limit = 0;
+var limit = 0,
+    thisSection = 0,
+    naxtSection = 0;
+ 
 
-function setSection(t) {
+ // определение активной секции и добавление соотвецтвующей анимации
+function setAnimation(down, up) {
     var section = document.querySelectorAll('section');
 
-    for (var i = 0; i < section.length; i++) {
+    // проебежим по всем секциям
+
+    for (var i = 0; i < section.length; i++) { 
         var sectionClass = section[i].getAttribute('class').split(' '),
             attribute = section[i].getAttribute('data-index');
+
+            // пробежим по всем классам активной секции 
         for (var j = 0; j < sectionClass.length; j++) {
+
+            // если секция активна то...
             if (sectionClass[j] == 'active') {
                 for (var q = 0; q < sectionClass.length; q++) {
+                    // проверяем на наличия класса animation
                     if (sectionClass[q] == 'animation') {
                         limit++;
+                        thisSection = parseInt(attribute);
                     }
                     if (sectionClass[q] !== 'animation') {
                         section[i].classList.add('animation');
                         limit = 0;
+                        nextSection = parseInt(attribute);
                     }
                 }
                 if (limit == 0) {
-                    // вызов анимации
-                     t[i].play(0);
-                    console.log(attribute);
-                    for (var k = 0; k < section.length; k++) {
-                        if (k != i) {
-                            section[k].classList.remove('animation');
-                            t[k].pause(0);
+                    if (thisSection < nextSection) {
+                        // вызов анимации по скроллу вниз
+                        down[i].play(0);
+                        for (var k = 0; k < section.length; k++) {
+                            // удаление всех классов animation, кроме активной секции 
+                            if (k != i) {
+                                section[k].classList.remove('animation');
+                                down[k].pause(0);
+                            }
+                        }
+                    }
+                    if (thisSection > nextSection) {
+                        // вызов анимации по скроллу вверх
+                        up[i].play(0);
+                        for (var k = 0; k < section.length; k++) {
+                            if (k != i) {
+                                section[k].classList.remove('animation');
+                                up[k].pause(0);
+                            }
                         }
                     }
                 }
             }
         }
     }
-
-
 }
+
 
 
 $(document).ready(function() {
@@ -83,7 +107,7 @@ $(document).ready(function() {
 
 
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 920) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 720) {
         $(".main").onepage_scroll({
             sectionContainer: "section", // контейнер, к которому будет применяться скролл
             easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -96,89 +120,218 @@ $(document).ready(function() {
             updateURL: false, // обновлять URL или нет
             // для инициализации tooltips
         });
-            setInterval(function() {
-        setSection(t);
-    }, 100);
+        setInterval(function() {
+            setAnimation(td, tu);
+        }, 100);
+        var scrollMouseArrow = new TimelineMax(),
+            scrollMouse = new TimelineMax();
+        scrollMouse.staggerFrom($('.scroll-mouse'), 2, { y: 20, ease: Elastic.easeOut.config(2, 0.7) });
+        scrollMouseArrow.staggerFrom($('.scroll-mouse li'), 0.6, { autoAlpha: 0.2 }, 0.2);
 
+        scrollMouseArrow.repeat(Infinity);
+        scrollMouse.repeat(Infinity);
 
     }
 
-if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 920) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 720) {
 
-    var t1 = new TimelineMax(),
-        t2 = new TimelineMax(),
-        t3 = new TimelineMax(),
-        t4 = new TimelineMax(),
-        t5 = new TimelineMax(),
-        t6 = new TimelineMax(),
-        t7 = new TimelineMax(),
-        t8 = new TimelineMax(),
-        t9 = new TimelineMax(),
-        t = [t1, t2, t3, t4, t5, t6, t7, t8, t9];
-    t1.pause();
-    t2.pause();
-    t3.pause();
-    t4.pause();
-    t5.pause();
-    t6.pause();
-    t7.pause();
-    t8.pause();
-    t9.pause();
-    t1.from('.advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
-    t1.from('.header-add-project-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
-    t1.from('.scroll-mouse-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'header-3');
+        var td1 = new TimelineMax(),
+            td2 = new TimelineMax(),
+            td3 = new TimelineMax(),
+            td4 = new TimelineMax(),
+            td5 = new TimelineMax(),
+            td6 = new TimelineMax(),
+            td7 = new TimelineMax(),
+            td8 = new TimelineMax(),
+            td9 = new TimelineMax(),
 
+            tu1 = new TimelineMax(),
+            tu2 = new TimelineMax(),
+            tu3 = new TimelineMax(),
+            tu4 = new TimelineMax(),
+            tu5 = new TimelineMax(),
+            tu6 = new TimelineMax(),
+            tu7 = new TimelineMax(),
+            tu8 = new TimelineMax(),
+            tu9 = new TimelineMax(),
+            td = [td1, td2, td3, td4, td5, td6, td7, td8, td9];
+        tu = [tu1, tu2, tu3, tu4, tu5, tu6, tu7, tu8, tu9];
 
-    t2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'advertising-1');
-    t2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
-    t2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'advertising-3');
+        td1.pause();
+        td2.pause();
+        td3.pause();
+        td4.pause();
+        td5.pause();
+        td6.pause();
+        td7.pause();
+        td8.pause();
+        td9.pause();
 
-    t3.from('.about-lever-context-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
-    t3.staggerFrom('.about-lever-context-col', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.4');
-    t3.from('.audit-information-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-    t3.from('.audit-form-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-    t3.from('.audit-form', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        tu1.pause();
+        tu2.pause();
+        tu3.pause();
+        tu4.pause();
+        tu5.pause();
+        tu6.pause();
+        tu7.pause();
+        tu8.pause();
+        tu9.pause();
 
-
-    t4.from('.about-us-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
-    t4.staggerFrom('.about-us-icon-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.5');
-    t4.from('.main-result', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-
-    t5.from('.finished-result-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
-    t5.from('.owl-carousel-list-img-container', 0.7, { y: 200, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-    t5.from('.owl-carousel-list-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-    t5.from('.owl-carousel-list-article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-    t5.from('.owl-dots', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-
-    t6.from('.starting-work-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut },'-=0.5');
-    t6.from('.tabs-wrap-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
-    t6.staggerFrom('.tabs-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.4','tabs-item');
-    t6.staggerFrom('.starting-work-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8','tabs-item');
+        // GREEN SOCKS FOR DOWN
 
 
+        // секция 1
 
-    t7.from('.main-quetions-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
-    t7.staggerFrom('.accordion', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1,'-=0.6');
-    t7.from('.ask-quetion-submit', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td1.from('.advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
+        td1.from('.header-add-project-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'header-1');
+        td1.from('.scroll-mouse-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'header-3');
+
+        // секция 2
+
+        td2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'advertising-1');
+        td2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
+        td2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'advertising-3');
+
+        // секция 3
+
+        td3.from('.about-lever-context-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+        td3.staggerFrom('.about-lever-context-col', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.4');
+        td3.from('.audit-information-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td3.from('.audit-form-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td3.from('.audit-form', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+        // секция 4
+
+        td4.from('.about-us-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+        td4.staggerFrom('.about-us-icon-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.5');
+        td4.from('.main-result', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+        // секция 5
+
+        td5.from('.finished-result-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
+        td5.from('.owl-carousel-list-img-container', 0.7, { y: 200, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td5.from('.owl-carousel-list-title', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td5.from('.owl-carousel-list-article', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td5.from('.owl-dots', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+        // секция 6
+
+        td6.from('.starting-work-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
+        td6.from('.tabs-wrap-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
+        td6.staggerFrom('.tabs-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.4', 'tabs-item');
+        td6.staggerFrom('.starting-work-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8', 'tabs-item');
+
+        // секция 7
+
+        td7.from('.main-quetions-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
+        td7.staggerFrom('.accordion', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.6');
+        td7.from('.ask-quetion-submit', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+
+        // секция 8
+
+        td8.staggerFrom('.developed-sociality-wrap li', 0.7, { x: -100, autoAlpha: 0, ease: Power4.easeOut }, 0.2);
+        td8.from('.developed-sociality-foto-aside', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
+        td8.from('.developed-sociality-foto-wrap', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
+
+        // секция 9
+
+        td9.from('.footer-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.2');
+        td9.from('.footer-row', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
 
 
-    t8.staggerFrom('.developed-sociality-wrap li', 0.7, { x: -100, autoAlpha: 0, ease: Power4.easeOut }, 0.2);
-    t8.from('.developed-sociality-foto-aside', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
-    t8.from('.developed-sociality-foto-wrap', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
 
-    t9.from('.footer-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.2');
-    t9.from('.footer-row', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
-}
+        //  GREEN SOCKS FOR UP
+
+        // секция 1
+
+        tu1.set('.advertising-title', { y: -100, opacity: 0 }, '-=0.3', 'lable-1')
+            .to('.advertising-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.3', 'lable-1');
+        tu1.set('.header-add-project-container', { y: -100, opacity: 0 }, '-=0.6', 'lable-1')
+            .to('.header-add-project-container', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.6', 'lable-1');
+        tu1.set('.scroll-mouse-container', { y: -100, opacity: 0 }, '-=0.7', 'lable-1')
+            .to('.scroll-mouse-container', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-1');
+
+            // секция 2
+
+        tu2.set('.about-contextual-advertising-title', { y: -100, opacity: 0 }, '-=0.3', 'lable-2')
+            .to('.about-contextual-advertising-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.3', 'lable-2');
+        tu2.set('.about-contextual-advertising-wrap-1', { y: -100, opacity: 0 }, '-=0.5', 'lable-2')
+            .to('.about-contextual-advertising-wrap-1', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.5', 'lable-2');
+        tu2.set('.about-contextual-advertising-wrap-2', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
+            .to('.about-contextual-advertising-wrap-2', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
+
+            // секция 3
+
+        tu3.set('.about-lever-context-container-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-3')
+            .to('.about-lever-context-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-3');
+        tu3.set('.about-lever-context-col', { y: -100, opacity: 0 }, '-=0.8', 'lable-3')
+            .staggerTo('.about-lever-context-col', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, 0.2, '-=0.8', 'lable-3');
+        tu3.set('.audit-information-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-3')
+            .to('.audit-information-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-3');
+        tu3.set('.audit-form-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-3')
+            .to('.audit-form-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-3');
+        tu3.set('.audit-form', { y: -100, opacity: 0 }, '-=0.8', 'lable-3')
+            .to('.audit-form', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-3');
+
+            // секция 4
+
+        tu4.set('.about-us-container-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-4')
+            .to('.about-us-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-4');
+        tu4.set('.about-us-icon-container', { y: -100, opacity: 0 }, '-=0.8', 'lable-4')
+            .staggerTo('.about-us-icon-container', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, 0.2, '-=0.8', 'lable-4');
+        tu4.set('.main-result', { y: -100, opacity: 0 }, '-=0.8', 'lable-4')
+            .to('.main-result', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-4');
+
+            // секция 5
+
+        tu5.set('.finished-result-container-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-5')
+            .to('.finished-result-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+        tu5.set('.owl-carousel-list-img-container', { y: -200, opacity: 0 }, '-=0.8', 'lable-5')
+            .to('.owl-carousel-list-img-container', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+        tu5.set('.owl-carousel-list-title', { x: 100, opacity: 0 }, '-=0.8', 'lable-5')
+            .to('.owl-carousel-list-title', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+        tu5.set('.owl-carousel-list-article', { x: 100, opacity: 0 }, '-=0.8', 'lable-5')
+            .to('.owl-carousel-list-article', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+        tu5.set('.owl-dots', { y: -100, opacity: 0 }, '-=0.8', 'lable-5')
+            .to('.owl-dots', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+
+            // секция 6
+
+        tu6.set('.starting-work-container-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-6')
+            .to('.starting-work-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-6');
+        tu6.set('.tabs-wrap-container', { y: -100, opacity: 0 }, '-=0.8', 'lable-6')
+            .to('.tabs-wrap-container', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-6');
+        tu6.set('.tabs-item', { y: -100, autoAlpha: 0 }, '-=0.8', 'lable-6')
+            .staggerTo('.tabs-item', 1, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.2, '-=0.8', 'lable-6');
+        tu6.set('.starting-work-item', { y: -100, autoAlpha: 0 }, '-=1.3', 'lable-6')
+            .staggerTo('.starting-work-item', 1, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.2, '-=1.3', 'lable-6');
+
+            // секция 7
+
+        tu7.set('.main-quetions-container-title', { y: -100, opacity: 0 }, '-=0.7', 'lable-7')
+            .to('.main-quetions-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-7');
+        tu7.set('.accordion', { y: -100, autoAlpha: 0 }, '-=0.8', 'lable-7')
+            .staggerTo('.accordion', 1, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8', 'lable-7');
+        tu7.set('.ask-quetion-submit', { y: -100, opacity: 0 }, '-=0.9', 'lable-7')
+            .to('.ask-quetion-submit', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-7');
+
+            // секция 8 
+
+        tu8.set('.developed-sociality-wrap li', { x: -100, autoAlpha: 0 }, '-=0.3', 'lable-8')
+            .staggerTo('.developed-sociality-wrap li', 1, { x: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.3, '-=0.3', 'lable-8');
+        tu8.set('.developed-sociality-foto-aside', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
+            .to('.developed-sociality-foto-aside', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-8');
+        tu8.set('.developed-sociality-foto-wrap', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
+            .to('.developed-sociality-foto-wrap', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-8');
+    }
 
 
 
 
-    // GREEN SOCKS FOR DOWN
 
 
 
 
-    //  GREEN SOCKS FOR UP
 
 
     // $( document ).tooltip({
@@ -522,7 +675,7 @@ if (document.documentElement.clientWidth > 1200 && document.documentElement.clie
         $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
         $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
         //атрибут в ссылке то делаем его активным
-        TweenMax.staggerFrom($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 100, autoAlpha: 0},0.1);
+        TweenMax.staggerFrom($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 30, autoAlpha: 0 }, 0.1);
     });
 
 
