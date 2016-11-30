@@ -189,22 +189,24 @@ $(document).ready(function() {
         // секция 2
 
         td2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 'advertising-1');
-        td2.from('.about-contextual-advertising-wrap-1', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
-        td2.from('.about-contextual-advertising-wrap-2', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6', 'advertising-3');
+        td2.from('.about-contextual-advertising-wrap-1 article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
+        td2.from('.about-contextual-advertising-wrap-2 article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5', 'advertising-3');
+        td2.from('.about-contextual-advertising-wrap-1 img', 0.7, { opacity: 0, scale: 0.5, ease: Power4.easeOut },'-=0.6', 'advertising-img');
+        td2.from('.about-contextual-advertising-wrap-2 img', 0.7, {opacity: 0,scale: 0.5, ease: Power4.easeOut }, '-=0.6','advertising-img');
 
         // секция 3
 
         td3.from('.about-lever-context-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
-        td3.staggerFrom('.about-lever-context-col', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.4');
+        td3.staggerFrom('.about-lever-context-col', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.5');
         td3.from('.audit-information-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-        td3.from('.audit-form-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
-        td3.from('.audit-form', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td3.from('.audit-form-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.8');
+        td3.from('.audit-form', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
 
         // секция 4
 
         td4.from('.about-us-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut });
-        td4.staggerFrom('.about-us-icon-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.5');
-        td4.from('.main-result', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td4.staggerFrom('.about-us-icon-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, 0.2, '-=0.6');
+        td4.from('.main-result', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.9');
 
         // секция 5
 
@@ -255,10 +257,15 @@ $(document).ready(function() {
 
         tu2.set('.about-contextual-advertising-title', { y: -100, opacity: 0 }, '-=0.3', 'lable-2')
             .to('.about-contextual-advertising-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.3', 'lable-2');
-        tu2.set('.about-contextual-advertising-wrap-1', { y: -100, opacity: 0 }, '-=0.5', 'lable-2')
-            .to('.about-contextual-advertising-wrap-1', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.5', 'lable-2');
-        tu2.set('.about-contextual-advertising-wrap-2', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
-            .to('.about-contextual-advertising-wrap-2', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
+        tu2.set('.about-contextual-advertising-wrap-1 article', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
+            .to('.about-contextual-advertising-wrap-1 article', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
+        tu2.set('.about-contextual-advertising-wrap-2 article', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
+            .to('.about-contextual-advertising-wrap-2 article', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
+        tu2.set('.about-contextual-advertising-wrap-1 img',{ opacity: 0, scale: 0.5}, '-=0.9', 'lable-2-img')
+            .to('.about-contextual-advertising-wrap-1 img', 1, { opacity: 1, scale: 1, ease: Power4.easeOut }, '-=0.9', 'lable-2-img');
+        tu2.set('.about-contextual-advertising-wrap-2 img',{opacity: 0,scale: 0.5}, '-=0.9', 'lable-2-img')
+            .to('.about-contextual-advertising-wrap-2 img', 1, {opacity: 1,scale: 1, ease: Power4.easeOut }, '-=0.9', 'lable-2-img');
+
 
             // секция 3
 
@@ -498,6 +505,11 @@ $(document).ready(function() {
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
     $("#win .close").click(function(e) {
+        e.preventDefault();
+        $(".popup5").hide("clip", 500);
+        $("body").css({ "overflow": "inherit", "padding-right": "0" });
+    });
+    $("#win5 .close").click(function(e) {
         e.preventDefault();
         $(".popup5").hide("clip", 500);
         $("body").css({ "overflow": "inherit", "padding-right": "0" });

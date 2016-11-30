@@ -80,11 +80,13 @@ html .loader
 	.dm-modal
 		display: inline-block
 		padding: 50px 46px 50px 46px
-		max-width: 100%
-		width: 470px		
+		max-width: 100%	
 		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
+		overflow: auto
+		width: 579px
+		height: 100vh
 		animation: fade .8s
 		background-color: #fff
 		border-radius: 20px
@@ -357,13 +359,11 @@ html .loader
 		letter-spacing: -1px
 		transition: all 0.2s ease
 		border-bottom: 1px solid transparent
-		padding-bottom: 8px
 		padding-right: 37px
 		&:last-child
 			padding: 0
 			padding-bottom: 8px
 		&:hover
-			border-bottom: 1px solid $decoration_color
 			a
 				color: $main_active_color
 		a

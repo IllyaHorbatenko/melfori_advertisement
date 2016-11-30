@@ -52,7 +52,7 @@ body textarea:required:valid
 	transition: .5s
 	right: 0
 	&.active
-		right: 300px
+		right: 200px
 	//transition: .5s
 .top-menu-container-active
 	background: rgba(0,0,0,0.4)
@@ -351,24 +351,23 @@ body textarea:required:valid
 	top: 10px
 	span
 		display: inline-block
-		position: absolute
-		top: 12px
-		left: 12px
+		top: calc(50% - 8px)
+		left: 0
+		right: 0
+		margin: auto
 		width: 0
 		height: 0
-		transition: all 0.2s ease
+		position: absolute
 		background-size: contain
 		border-radius: 50%
 		background: $decoration_color
-.owl-dot.active	
-	padding: 12px
-	margin-top: 0
-	margin: 0 2px
+.owl-dot.active
+	padding: 13px
+	top: 6px
+	margin: 2px 4px 0
 	span
-		width: 15px
-		height: 15px
-		top: 5px
-		left: 5px
+		width: 16px
+		height: 16px
 .main-quetions-container
 	position: relative
 	min-height: 735px

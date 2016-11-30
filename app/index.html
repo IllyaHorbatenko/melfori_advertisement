@@ -1592,7 +1592,7 @@
         </div>
     </div>
     <!-- Модальное окно 3 -->
-    <div class="popup" id="win2" data-modal="modal-2">
+    <div class="popup" id="win3" data-modal="modal-2">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
@@ -1640,8 +1640,26 @@
         <div class="overlay">
         </div>
     </div>
+    <!-- модальное окно 4 -->
+    <div class="popup4" id="win4" data-modal="modal-4">
+        <div class="dm-table">
+            <div class="dm-cell">
+                <div class="dm-modal">
+                    <a href="#" class="close">
+                    </a>
+                    <div class="dm-modal_inner">
+                        <p class="dm-modal_inner_h1">Содержание аудита</p>
+                        <p class="dm-modal_inner_h2">заголовок</p>
+                        <p>текст</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+        </div>
+    </div>
     <!-- Модальное окно 5 -->
-    <div class="popup5" id="win" data-modal="modal-5">
+    <div class="popup5" id="win5" data-modal="modal-5">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
@@ -1682,13 +1700,13 @@
                 <div class="header_logo "></div>
             </div>
             <nav class="header_nav col-lg-7">
-                <ul>
-                    <li><a href="#clever-context">Что делаем</a></li>
-                    <li><a href="#about-us-section">Кейсы</a></li>
-                    <li><a href="#starting-work-section">Стоимость</a></li>
-                    <li><a href="#main-quetions-section">FAQ</a></li>
-                    <li><a href="#developed-command-section">Команда</a></li>
-                    <li><a href="#footer">Контакты</a></li>
+                <ul class="onepage-pagination">
+                    <li><a data-index="1" href="#1">Что делаем</a></li>
+                    <li><a data-index="2" href="#2">Кейсы</a></li>
+                    <li><a data-index="3" href="#3">Стоимость</a></li>
+                    <li><a data-index="4" href="#4">FAQ</a></li>
+                    <li><a data-index="5" href="#5">Команда</a></li>
+                    <li><a data-index="6" href="#6">Контакты</a></li>
                 </ul>
             </nav>
             <div class="button-mobile-menu">
@@ -1696,7 +1714,7 @@
                 <span></span>
                 <span></span>
             </div>
-            <div class="col-lg-3 col-md-10 col-sm-10 call_information_container">
+            <div class="col-lg-3 call_information_container">
                 <div class="call_information">
                     <span>Бесплатная консультация:</span>
                     <a href="tel:+380667077777"><b>+38 066 707 77 77</b></a>
@@ -1843,7 +1861,7 @@
                             </div>
                             <input type="submit" value="Хочу аудит">
                             <div class="submit-lable-audit">
-                                <a href="#">Посмотреть, что включено в аудит</a>
+                                <a href="#" class="modal" data-modal="modal-4">Посмотреть, что включено в аудит</a>
                             </div>
                         </form>
                     </div>
@@ -2266,7 +2284,7 @@
                         Мы не навязываем свои услуги, но предлагаем наиболее выгодные условия на рынке. Решение о сотрудничестве всегда остаётся за вами. Попробуйте!
                     </aside>
                 </div>
-                <div class="footer-row">
+                <div class="footer-row clearfix">
                     <div class="clearfix footer-nav-container">
                         <div class="col-lg-2">
                             <div class="header_logo footer_logo "></div>

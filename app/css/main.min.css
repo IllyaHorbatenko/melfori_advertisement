@@ -672,7 +672,7 @@ a:active,a:focus,a:hover,a:visited{color:#bcbdbe;text-decoration:none}
 body input:focus:required:invalid,body input:required:valid,body textarea:focus:required:invalid,body textarea:required:valid{color:#666}
 .top-menu-container{position:fixed;z-index:100;width:100%;padding:10px 0;background:0 0;-webkit-transition:.5s;transition:.5s;right:0}
 .about-contextual-advertising-container,.main-about-us-container,.main-container,.main-result-list li{position:relative}
-.top-menu-container.active{right:300px}
+.top-menu-container.active{right:200px}
 .top-menu-container-active{background:rgba(0,0,0,.4)}
 .main-container-clever-context{min-height:727px}
 .clever-context-container{background:url(../img/background-main-1.jpg) no-repeat;padding:20px 0;background-size:cover}
@@ -729,7 +729,6 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .finished-result-container-title{color:#343434;font-size:3.8rem;font-weight:900;left:0;right:0;top:-webkit-calc(10% - 8px);top:calc(10% - 8px)}
 .owl-carousel-container{text-align:left;left:0;right:0;top:-webkit-calc(50% - 240px);top:calc(50% - 240px);color:#343434;font-weight:900;padding-bottom:80px}
 .owl-carousel-list-img-container{width:641px;float:left;margin-top:16px;margin-right:37px}
-.owl-dot,.owl-dot span{width:0;height:0;-webkit-transition:all .2s ease}
 .owl-carousel-list{padding-left:21px}
 .owl-carousel-list-title{font-size:2.8rem;padding-bottom:37px}
 .owl-carousel-list-title a{color:#04be5b;margin-left:31px;font-size:1.5rem;border-bottom:1px solid}
@@ -739,10 +738,10 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .owl-carousel-list-article aside{font-size:1.6rem;font-weight:900;line-height:1.3}
 .owl-nav{padding-top:22px}
 .owl-dots{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;position:absolute;right:0;left:0}
-.owl-dot{padding:8px;margin:2px 7px 0;-webkit-border-radius:50%;border-radius:50%;border:2px solid #04be5b;transition:all .2s ease;position:relative;top:10px}
-.owl-dot span{display:inline-block;position:absolute;top:12px;left:12px;transition:all .2s ease;-webkit-border-radius:50%;border-radius:50%;background:#04be5b}
-.owl-dot.active{padding:12px;margin:0 2px}
-.owl-dot.active span{width:15px;height:15px;top:5px;left:5px}
+.owl-dot{padding:8px;margin:2px 7px 0;-webkit-border-radius:50%;border-radius:50%;border:2px solid #04be5b;-webkit-transition:all .2s ease;transition:all .2s ease;height:0;width:0;position:relative;top:10px}
+.owl-dot span{display:inline-block;top:-webkit-calc(50% - 8px);top:calc(50% - 8px);left:0;right:0;margin:auto;width:0;height:0;position:absolute;-webkit-border-radius:50%;border-radius:50%;background:#04be5b}
+.owl-dot.active{padding:13px;top:6px;margin:2px 4px 0}
+.owl-dot.active span{width:16px;height:16px}
 .main-quetions-container{position:relative;min-height:735px}
 .main-quetions-section{background:url(../img/background-main-1.jpg) no-repeat;background-size:cover}
 .main-quetions-container-title{font-weight:900;font-size:3.8rem;margin-bottom:53px;color:#343434}
@@ -840,21 +839,22 @@ body input:focus:required:invalid,body input:required:valid,body textarea:focus:
 .starting-work-item input{padding:7px 60px}
 .developed-sociality-foto-wrap{width:450px;height:450px}
 .main{-webkit-transition:.5s;transition:.5s;right:0;position:relative}
-.main.active{right:300px}
+.main.active{right:200px}
 .footer-title{padding:0}
 .footer-container{margin:60px 0}
-.call_information_container{text-align:center;margin:auto;width:240px;padding:0}
+.call_information_container{text-align:center;margin:auto;padding:0}
 .about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{width:450px}
 .starting-work-item-title{opacity:1;padding:17px 0 26px 14px;font-size:1.5rem}
 body,html{overflow:auto}
 .starting-work-container-title{margin-top:45px}
 .tabs-item-conatiner{margin-bottom:-1px}
 .ask-quetion-submit,.tabs-container{margin-bottom:50px}
-.main-quetions-container-title{margin-top:50px}
+.main-quetions-container-title{margin-top:65px}
 .developed-sociality-wrap img{width:100px}
 .developed-sociality-container{margin:50px 0}
 .about-lever-context-container{margin-bottom:50px}
 .about-lever-context-container-title,.finished-result-container-title{margin-top:50px}
+.call_information_container{width:240px}
 }
 @media only screen and (max-height:950px){.top-menu-container{width:100%}
 .developed-sociality-container,.finished-result-container,.footer-position-contaiener,.header-container,.main-about-us-container,.main-container-clever-context,.main-quetions-container,.starting-work-container{min-height:0}
@@ -872,9 +872,11 @@ body,html{overflow:auto}
 .accordion_title span{top:4px;right:10px}
 .about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{width:400px}
 .advertising-title{margin:0}
-.about-lever-context-col{width:400px;margin:auto}
+.about-lever-context-col{width:400px;margin:auto auto 50px}
 .starting-work-item{margin:0 5px}
 .starting-work-item aside{padding:10px 0 0}
+.footer-row{margin-bottom:25px}
+.audit-form input{margin-right:0}
 }
 @media only screen and (max-width:768px){.advertising-title,.footer-aside{text-align:center;padding:0}
 .about-us-container-title p,.starting-work-container-position{padding:0}
@@ -901,6 +903,9 @@ body,html{overflow:auto}
 .owl-carousel-list-title{font-size:2.3rem;padding-bottom:10px}
 .owl-carousel-list-title a{margin:0}
 .owl-carousel-list-article h4{font-size:2rem}
+.header_logo{margin:8px 0 0;width:47px;height:40px}
+.button-mobile-menu{padding:0 6px;margin-top:6px}
+.button-mobile-menu span{margin:6px 0;width:32px}
 .animated{-webkit-transition-property:none!important;transition-property:none!important;-ms-transform:none!important;-webkit-transform:none!important;transform:none!important;-webkit-animation:none!important;animation:none!important}
 }
 @media only screen and (max-width:680px){.about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{width:300px}
@@ -920,6 +925,8 @@ body,html{overflow:auto}
 .tabs-wrap-container{width:-webkit-calc(100% - 113px);width:calc(100% - 113px)}
 .about-lever-context-container h3{font-size:3rem}
 .about-lever-context-col,.about-us-icon-container{width:auto}
+.advertising-title-aside-main{font-size:30px}
+.header-add-project-title h2{font-size:25px}
 }
 @media only screen and (max-width:380px){.about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{display:none}
 .popup5 .dm-modal{width:100%;padding:50px 10px}

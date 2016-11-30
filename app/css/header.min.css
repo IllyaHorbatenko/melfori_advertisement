@@ -20,10 +20,11 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup4 .dm-table{display:table;width:100%;height:100%}
 .popup4 .overlay{background:rgba(0,0,0,.65);z-index:1001}
 .popup4 .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle}
-.popup4 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;width:470px;border:3px solid #bcbdbe;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left;font-weight:900}
-.popup5,.popup5 .overlay{width:100%;height:100%;position:fixed;top:0;left:0}
+.popup4 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;border:3px solid #bcbdbe;position:relative;overflow:auto;width:579px;height:100vh;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left;font-weight:900}
+.popup5,.popup5 .overlay{position:fixed;top:0;left:0}
+.popup5,.popup5 .dm-table,.popup5 .overlay{width:100%;height:100%}
 .popup5{display:none;overflow:auto;z-index:1000}
-.popup5 .dm-table{display:table;width:100%;height:100%}
+.popup5 .dm-table{display:table}
 .popup5 .overlay{background:rgba(0,0,0,.65);z-index:1001}
 .popup5 .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle;text-align:center}
 .popup5 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;overflow:auto;width:579px;height:100vh;border:3px solid #bcbdbe;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left;font-weight:900}
@@ -63,9 +64,8 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .main_content{text-align:center;-webkit-box-flex:1;-webkit-flex:1 0 auto;-ms-flex:1 0 auto;flex:1 0 auto}
 .header-container{min-height:575px}
 .header_nav{font-size:18px;text-align:left;padding-left:57px;margin-top:21px;font-weight:900;padding-right:0}
-.header_nav li{letter-spacing:-1px;-webkit-transition:all .2s ease;transition:all .2s ease;border-bottom:1px solid transparent;padding-bottom:8px;padding-right:37px}
+.header_nav li{letter-spacing:-1px;-webkit-transition:all .2s ease;transition:all .2s ease;border-bottom:1px solid transparent;padding-right:37px}
 .header_nav li:last-child{padding:0 0 8px}
-.header_nav li:hover{border-bottom:1px solid #04be5b}
 .header_nav li:hover a{color:#fff}
 .header_nav li a{margin-right:2px;-webkit-transition:all .2s ease;transition:all .2s ease;color:#bcbdbe}
 .button-mobile-menu{display:none;border:2px solid #fff;padding:0 10px;-webkit-border-radius:6px;border-radius:6px;margin-right:20px;float:right;margin-top:8px;-webkit-transition:left .5s;transition:left .5s}
