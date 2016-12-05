@@ -302,8 +302,8 @@ window.matchMedia || (window.matchMedia = function() {
             $(".onepage-pagination li a" + "[data-index='" + index + "']").removeClass("active");
             $(".onepage-pagination li a" + "[data-index='" + (index + 1) + "']").addClass("active");
               
-            $(".onepage-pagination-container" + "[data-index='" + index + "']").removeClass("active");
-            $(".onepage-pagination-container" + "[data-index='" + (index + 1) + "']").addClass("active");
+            // $(".onepage-pagination-container" + "[data-index='" + index + "']").removeClass("active");
+            // $(".onepage-pagination-container" + "[data-index='" + (index + 1) + "']").addClass("active");
           }
           $("body")[0].className = $("body")[0].className.replace(/\bviewing-page-\d.*?\b/g, '');
           $("body").addClass("viewing-page-"+next.data("index"))
@@ -384,7 +384,7 @@ window.matchMedia || (window.matchMedia = function() {
     
     // Create Pagination and Display Them
     if(settings.pagination == true) {
-      $("<ul class='onepage-pagination'>" + paginationList + "</ul>").prependTo("body");
+      $("<ul class='onepage-pagination-libs onepage-pagination'>" + paginationList + "</ul>").prependTo("body");
       posTop = (el.find(".onepage-pagination").height() / 2) * -1;
       el.find(".onepage-pagination").css("margin-top", posTop);
     }

@@ -11,31 +11,30 @@ $(function() {
 
 // прокрутка по секциям
 
-
 function buttonMobileMenu() {
     var button = $('.button-mobile-menu'),
         header = $('.top-menu-container'),
         content = $('.main'),
-        menu = $('.mobile-menu');
+        menu = $('.mobile_navigation a');
 
     button.click(function() {
+        $(".mobile-menu").toggleClass("active");
         header.toggleClass("active");
         content.toggleClass("active");
-        menu.toggleClass("active");
         $('body').toggleClass('overflow');
     });
     content.click(function() {
+        $(".mobile-menu").toggleClass("active");
         content.removeClass("active")
         header.removeClass("active");
-        menu.toggleClass("active");
         $('body').removeClass('overflow');
-    })
+    });
     menu.click(function() {
+        $(".mobile-menu").toggleClass("active");
         content.removeClass("active")
         header.removeClass("active");
-        menu.toggleClass("active");
         $('body').removeClass('overflow');
-    })
+    });
 }
 
 
@@ -125,7 +124,8 @@ $(document).ready(function() {
         }, 100);
         var scrollMouseArrow = new TimelineMax(),
             scrollMouse = new TimelineMax();
-        scrollMouse.staggerFrom($('.scroll-mouse'), 2, { y: 20, ease: Elastic.easeOut.config(2, 0.7) });
+        scrollMouse.from($('.scroll-mouse'), 2, { ease: Elastic.easeOut.config(2, 0.7),  y: -10})
+                   .to($('.scroll-mouse'), 0.5, {  y: -10});
         scrollMouseArrow.staggerFrom($('.scroll-mouse li'), 0.6, { autoAlpha: 0.2 }, 0.2);
 
         scrollMouseArrow.repeat(Infinity);
@@ -222,6 +222,7 @@ $(document).ready(function() {
         td6.from('.tabs-wrap-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
         td6.staggerFrom('.tabs-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.4', 'tabs-item');
         td6.staggerFrom('.starting-work-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8', 'tabs-item');
+        td6.from('.another-promotion', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=1.4');
 
         // секция 7
 
@@ -304,6 +305,8 @@ $(document).ready(function() {
 
             // секция 6
 
+        tu6.set('.another-promotion',{ y: -100, opacity: 0}, '-=0.2')
+            .to('.another-promotion', 0.7, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.2');
         tu6.set('.starting-work-container-title', { y: -100, opacity: 0 }, '-=0.8', 'lable-6')
             .to('.starting-work-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.8', 'lable-6');
         tu6.set('.tabs-wrap-container', { y: -100, opacity: 0 }, '-=0.8', 'lable-6')
@@ -345,12 +348,12 @@ $(document).ready(function() {
     //   track: true
     // });  
     //скролл по ссылке с атрибутом href 
-    $(".header_nav a[href*='#']").on("click", function(e) {
+    $(".mobile_navigation a[href*='#']").on("click", function(e) {
         e.preventDefault();
         var anchor = $(this);
         $('html, body').stop().animate({
             scrollTop: $(anchor.attr('href')).offset().top
-        }, 500);
+        },500);
         return false;
     });
     // Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
@@ -466,62 +469,28 @@ $(document).ready(function() {
         e.preventDefault();
         var id = $(this).data('modal');
         var txt = $(this).data('info');
-        $(".popup[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
+        var title =  $(this).data('title'); // для изменения title в модалке
+        $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
         $(".popup[data-modal=" + id + "] input[name=form_name").val(txt);
-        $("body").css({ "overflow": "hidden", "padding-right": "17px" });
+        $(".popup[data-modal="+id+"] h2").html(title); // прописать в ссылку data-title="нужный title"
 
+        if (window.matchMedia("(min-width: 992px)").matches) {
+            $("body").css({ "overflow": "hidden", "padding-right": "17px" });
+        }          
+        if (window.matchMedia("(max-width: 992px)").matches){
+            
+           $("body").css({ "overflow": "hidden", "padding-right": "0px" }); 
+        }
     });
-    $(".modal").click(function(e) {
-        e.preventDefault();
-        var id = $(this).data('modal');
-        var txt = $(this).data('info');
-        $(".popup5[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
-        $(".popup5[data-modal=" + id + "] input[name=form_name").val(txt);
-        $("body").css({ "overflow": "hidden", "padding-right": "17px" });
-
-    });
-    $(".modal").click(function(e) {
-        e.preventDefault();
-        var id = $(this).data('modal');
-        var txt = $(this).data('info');
-        $(".popup4[data-modal=" + id + "]").toggle("fade", 500).find("form").css('display', 'block');
-        $(".popup4[data-modal=" + id + "] input[name=form_name").val(txt);
-        $("body").css({ "overflow": "hidden", "padding-right": "17px" });
-
-    });
+    // overlay для закрытия
     $(".overlay").click(function() {
-        $(this).parent().toggle("fade", 500);
+        $(this).parent().toggle("drop", { direction: "up" }, 200);
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
-    // закрываем модальное окно
-    $("#win .close").click(function(e) {
+    // закрываем модальное окно на крестик
+    $(".popup .close").click(function(e) {
         e.preventDefault();
-        $(".popup").hide("clip", 500);
-        $("body").css({ "overflow": "inherit", "padding-right": "0" });
-    });
-    $("#win4 .close").click(function(e) {
-        e.preventDefault();
-        $(".popup4").hide("clip", 500);
-        $("body").css({ "overflow": "inherit", "padding-right": "0" });
-    });
-    $("#win .close").click(function(e) {
-        e.preventDefault();
-        $(".popup5").hide("clip", 500);
-        $("body").css({ "overflow": "inherit", "padding-right": "0" });
-    });
-    $("#win5 .close").click(function(e) {
-        e.preventDefault();
-        $(".popup5").hide("clip", 500);
-        $("body").css({ "overflow": "inherit", "padding-right": "0" });
-    });
-
-
-
-
-    // закрываем модальное окно
-    $("#win3 .close").click(function(e) {
-        e.preventDefault();
-        $(".popup3").hide("clip", 500);
+        $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
     //  Отправка форм

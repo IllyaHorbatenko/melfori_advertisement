@@ -8,10 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
     <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon/favicon.ico" type="image/x-icon">
-    <link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="img/favicon/apple-touch-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="img/favicon/apple-touch-icon-114x114.png">
+    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset .css">
     <link rel="stylesheet" href="css/onepage-scroll.css">
     <!-- Bootstrap v3.3.4 Grid Styles -->
@@ -1580,7 +1577,7 @@
         </div>
     </div>
     <!-- Модальное окно 2-->
-    <div class="popup2" id="win2">
+    <div class="popup2" id="win">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
@@ -1592,13 +1589,12 @@
         </div>
     </div>
     <!-- Модальное окно 3 -->
-    <div class="popup" id="win3" data-modal="modal-2">
+    <div class="popup" id="win" data-modal="modal-3">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
                     </a>
-                    <p class='sucess_mail'>Заявка отправлена</p>
                     <form id="form">
                         <div>
                             <label>Введите своё имя</label>
@@ -1641,7 +1637,7 @@
         </div>
     </div>
     <!-- модальное окно 4 -->
-    <div class="popup4" id="win4" data-modal="modal-4">
+    <div class="popup4 popup" id="win" data-modal="modal-4">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
@@ -1659,7 +1655,7 @@
         </div>
     </div>
     <!-- Модальное окно 5 -->
-    <div class="popup5" id="win5" data-modal="modal-5">
+    <div class="popup5 popup" id="win" data-modal="modal-5">
         <div class="dm-table">
             <div class="dm-cell">
                 <div class="dm-modal">
@@ -1682,17 +1678,134 @@
         <div class="overlay">
         </div>
     </div>
+    <!-- модальное окно 6 -->
+    <div class="popup6 popup" id="win" data-modal="modal-6">
+        <div class="dm-table">
+            <div class="dm-cell">
+                <div class="dm-modal">
+                    <a href="#" class="close">
+                    </a>
+                    <form id="form">
+                        <div>
+                            <label>Введите своё имя:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="name" class="modal_form_input" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Введите свой телефон:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="phone" class="modal_form_phone" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Введите свой e-mail:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="email" class="modal_form_email" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Вопрос:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <textarea name="questions" class="modal_form_input"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="form_name" value="Заказ veloVdelo">
+                        <input type="hidden" name="equipment_parts" value="">
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+        </div>
+    </div>
+    <!-- модалдьное окно 7 -->
+    <div class="popup7 popup" id="win" data-modal="modal-7">
+        <div class="dm-table">
+            <div class="dm-cell">
+                <div class="dm-modal">
+                    <a href="#" class="close">
+                    </a>
+                    <h2></h2>
+                    <form id="form">
+                        <div>
+                            <label>Введите своё имя:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="name" class="modal_form_input" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Введите свой телефон:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="phone" class="modal_form_phone" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Введите свой e-mail:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="email" class="modal_form_email" type="text">
+                            </div>
+                        </div>
+                        <div>
+                            <label>Вопрос:</label>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <textarea name="questions" class="modal_form_input"></textarea>
+                            </div>
+                        </div>
+                        <input type="hidden" name="form_name" value="Заказ veloVdelo">
+                        <input type="hidden" name="equipment_parts" value="">
+                        <input type="submit" value="Отправить">
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+        </div>
+    </div>
     <!-- окно меню для мобильного -->
-    <nav class="mobile-menu">
-        <ul>
-            <li><a href="#clever-context">Что делаем</a></li>
-            <li><a href="#about-us-section">Кейсы</a></li>
-            <li><a href="#starting-work-section">Стоимость</a></li>
-            <li><a href="#main-quetions-section">FAQ</a></li>
-            <li><a href="#developed-command-section">Команда</a></li>
-            <li><a href="#footer">Контакты</a></li>
-        </ul>
-    </nav>
+        <nav class="mobile-menu">
+            <ul class="mobile_navigation">
+                <li><a href="#clever-context">Что делаем</a></li>
+                <li><a href="#about-us-section">Кейсы</a></li>
+                <li><a href="#starting-work-section">Стоимость</a></li>
+                <li><a href="#main-quetions-section">FAQ</a></li>
+                <li><a href="#developed-command-section">Команда</a></li>
+                <li><a href="#footer">Контакты</a></li>
+            </ul>
+        </nav>
     <!-- Здесь пишем код -->
     <header class="top-menu-container onepage-pagination-container top-menu-container-active">
         <div class="container">
@@ -1701,12 +1814,12 @@
             </div>
             <nav class="header_nav col-lg-7">
                 <ul class="onepage-pagination">
-                    <li><a data-index="1" href="#1">Что делаем</a></li>
-                    <li><a data-index="2" href="#2">Кейсы</a></li>
-                    <li><a data-index="3" href="#3">Стоимость</a></li>
-                    <li><a data-index="4" href="#4">FAQ</a></li>
-                    <li><a data-index="5" href="#5">Команда</a></li>
-                    <li><a data-index="6" href="#6">Контакты</a></li>
+                    <li><a data-index="4" href="#4">Что делаем</a></li>
+                    <li><a data-index="5" href="#5">Кейсы</a></li>
+                    <li><a data-index="6" href="#6">Стоимость</a></li>
+                    <li><a data-index="7" href="#7">FAQ</a></li>
+                    <li><a data-index="8" href="#8">Команда</a></li>
+                    <li><a data-index="9" href="#9">Контакты</a></li>
                 </ul>
             </nav>
             <div class="button-mobile-menu">
@@ -1727,7 +1840,7 @@
         <section class="header" id="clever-context">
             <div class="container header-container">
                 <div class="advertising-container">
-                    <div class="col-lg-9">
+                    <div class="col-lg-8">
                         <div class="advertising-title">
                             <aside class="advertising-title-aside-main">
                                 Обеспечим заявками от клиентов
@@ -1737,7 +1850,7 @@
                             <aside class="advertising-title-aside">Без раздутого рекламного бюджета | <b>Уже через 2-4 дня</b></aside>
                         </div>
                     </div>
-                    <div class="col-lg-3 header-add-project-container">
+                    <div class="col-lg-4 header-add-project-container">
                         <div class="header-add-project-title">
                             <h2>Уже пользуетесь контекстом?</h2>
                             <p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
@@ -1882,7 +1995,7 @@
                         <div class="about-us-container">
                             <div class="row">
                                 <div class="about-us-container-item">
-                                    <div class="col-lg-3 col-md-6 col-sm-6 about-us-icon-container">
+                                    <div class="col-lg-3 col-md-6 about-us-icon-container">
                                         <img src="img/Diamond.png" class="about-us-icon-diamond">
                                         <aside class="about-us-aside">
                                             <h3>
@@ -1892,7 +2005,7 @@
                                             <p>Оптимизируем РК, и снижаем стоимость перехода до эффективного минимума</p>
                                         </aside>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-6 about-us-icon-container ">
+                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
                                         <img src="img/Credit-Card.png" class="about-us-icon-credit">
                                         <aside class="about-us-aside">
                                             <h3>
@@ -1904,7 +2017,7 @@
                                     </div>
                                 </div>
                                 <div class="about-us-container-item">
-                                    <div class="col-lg-3 col-md-6 col-sm-6 about-us-icon-container ">
+                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
                                         <img src="img/Pencil-And-Ruler.png" class="about-us-icon-pencil">
                                         <aside class="about-us-aside">
                                             <h3>
@@ -1914,7 +2027,7 @@
                                             <p>Никакой автоматической генерации нечитабельных объявлений – всё вручную</p>
                                         </aside>
                                     </div>
-                                    <div class="col-lg-3 col-md-6 col-sm-6 about-us-icon-container ">
+                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
                                         <img src="img/Banner.png" class="about-us-icon-banner">
                                         <aside class="about-us-aside">
                                             <h3>
@@ -1934,7 +2047,7 @@
                                     <li>Получаете более качественный трафик</li>
                                     <li>Повышаете показатели бизнеса минимума</li>
                                 </ul>
-                                <input type="submit" value="Готов попробовать">
+                                <input class="modal" type="submit" value="Готов попробовать" data-modal="modal-3">
                             </div>
                         </div>
                     </div>
@@ -1951,7 +2064,7 @@
                                 <img src="img/example-work.png">
                             </div>
                             <div>
-                                <h3 class="owl-carousel-list-title">Название Компании №1 <a href="#">Ссылка на сайт</a></h3>
+                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на сайт</a></h3>
                                 <article class="owl-carousel-list-article">
                                     <h4>Что сделали:</h4>
                                     <aside>
@@ -1971,7 +2084,7 @@
                                 <img src="img/example-work.png">
                             </div>
                             <div>
-                                <h3 class="owl-carousel-list-title">Название Компании №1 <a href="#">Ссылка на сайт</a></h3>
+                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p> <a href="#">Ссылка на сайт</a></h3>
                                 <article class="owl-carousel-list-article">
                                     <h4>Что сделали:</h4>
                                     <aside>
@@ -1991,7 +2104,7 @@
                                 <img src="img/example-work.png">
                             </div>
                             <div>
-                                <h3 class="owl-carousel-list-title">Название Компании №1 <a href="#">Ссылка на сайт</a></h3>
+                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на сайт</a></h3>
                                 <article class="owl-carousel-list-article">
                                     <h4>Что сделали:</h4>
                                     <aside>
@@ -2021,38 +2134,38 @@
                             </h2>
                             <div class="tabs-container clearfix">
                                 <div class="clearfix tabs-item-conatiner">
-                                    <a href="/" data-tab="1" class="col-lg-4 col-md-4 col-sm-4 tabs-item active">
+                                    <a href="/" data-tab="1" class="col-lg-4 col-md-4 tabs-item active">
                                         <h3 class="starting-work-item-title">
                                                 <img src="img/yandex-icon.png" class="icon-container">
                                                 <p>Настройка</p> 
                                                 <p>Яндекс. Директ</p>
                                             </h3>
                                     </a>
-                                    <a href="/" data-tab="2" class="col-lg-4 col-md-4 col-sm-4 tabs-item">
+                                    <a href="/" data-tab="2" class="col-lg-4 col-md-4 tabs-item">
                                         <h3 class="starting-work-item-title">
                                                 <img src="img/google-icon.png" class="icon-container">
                                                 <p>Настройка</p> 
-                                                <p>Яндекс. Директ</p>
+                                                <p>Google. Adwords</p>
                                             </h3>
                                     </a>
-                                    <a href="/" data-tab="3" class="col-lg-4 col-md-4 col-sm-4 tabs-item">
+                                    <a href="/" data-tab="3" class="col-lg-4 col-md-4 tabs-item">
                                         <h3 class="starting-work-item-title">
                                                 <img src="img/yandex-google-icon.png" class="icon-container">
-                                                <p>Настройка</p> 
-                                                <p>Яндекс. Директ</p>
+                                                <p>Комплексный</p> 
+                                                <p>Пакет ЯД + GA</p>
                                             </h3></a>
                                 </div>
                                 <div class="tabs-wrap-container">
                                     <div class="tabs-wrap active" data-tab="1">
                                         <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт1</span>
+                                            <span class="starting-work-item-span-1">Стандарт</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Яндекс. Директ (Стандарт)" data-modal="modal-7" value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-2">
                                             <span class="starting-work-item-span-2">Премиум</span>
@@ -2062,29 +2175,29 @@
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Яндекс. Директ (Премиум)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Стандарт</span>
+                                            <span class="starting-work-item-span-3">Gold</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Яндекс. Директ (Gold)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                     </div>
                                     <div class="tabs-wrap" data-tab="2">
                                         <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт2</span>
+                                            <span class="starting-work-item-span-1">Стандарт</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Google. Adwords (Стандарт)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-2">
                                             <span class="starting-work-item-span-2">Премиум</span>
@@ -2094,29 +2207,29 @@
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Google. Adwords (Премиум)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Стандарт</span>
+                                            <span class="starting-work-item-span-3">Gold</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Настройка Google. Adwords (Gold)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                     </div>
                                     <div class="tabs-wrap" data-tab="3">
                                         <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт3</span>
+                                            <span class="starting-work-item-span-1">Стандарт</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Комплексный Пакет ЯД + GA (Стандарт)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-2">
                                             <span class="starting-work-item-span-2">Премиум</span>
@@ -2126,19 +2239,31 @@
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Комплексный Пакет ЯД + GA (Премиум)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                         <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Стандарт</span>
+                                            <span class="starting-work-item-span-3">Gold</span>
                                             <aside>
                                                 <p>Анализ вашего бизнеса</p>
                                                 <p>Разработка стратегии продвижения</p>
                                                 <p>Создание и настройка Яндекс.Директ</p>
                                                 <p>Первичное ведение 1 месяц</p>
                                                 <b>От 59$</b></aside>
-                                            <input type="submit" value="Выбрать">
+                                            <input type="submit" class="modal" data-title="Комплексный Пакет ЯД + GA (Gold)" data-modal="modal-7"  value="Выбрать">
                                         </div>
                                     </div>
+                                </div>
+                                <div class="another-promotion">
+                                    <h3 class="another-promotion-title"><p>Как ещё можно увеличить 
+                                                ваши продажи?</p></h3>
+                                    <div class="another-promotion-item">
+                                         <h4>Melfori – веб-студия полного цикла</h4>
+                                         <p>По вашему желанию мы можем полностью проработать весь ваш маркетинг:</p>
+                                         <ul>
+                                             <li>– от создания лендинга:<a href="http://landing.melfori.com/" class="link"> landing.melfori.com</a></li>
+                                             <li>– до продвижения в инстаграме:<a href="http://instagram.melfori.com/"  class="link"> instagram.melfori.com</a></li>
+                                         </ul>`
+                                     </div> 
                                 </div>
                             </div>
                         </div>
@@ -2199,7 +2324,7 @@
                             </p>
                         </div>
                     </div>
-                    <input class="ask-quetion-submit" type="submit" name="ask-quetion" value="Задать вопрос">
+                    <input class="ask-quetion-submit modal" data-modal="modal-6" type="submit" name="ask-quetion" value="Задать вопрос">
                 </div>
         </section>
         <section class="developed-command-section" id="developed-command-section">

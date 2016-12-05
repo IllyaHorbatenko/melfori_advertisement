@@ -125,7 +125,6 @@ body textarea:required:valid
 	margin: auto
 	input
 		padding: 0 12px
-		border: 1px solid #d6d6d6
 		margin-right: 36px
 	input[type=submit]
 		margin: 0
@@ -311,6 +310,8 @@ body textarea:required:valid
 .owl-carousel-list-title
 	font-size: 2.8rem
 	padding-bottom: 37px
+	p
+		display: inline-block
 	a
 		color: #04be5b
 		margin-left: 31px
@@ -402,7 +403,7 @@ body textarea:required:valid
 	height: 50px
 	line-height: 30px
 	font-size: 2.4rem
-	padding: 7px 19px
+	padding: 7px 45px 7px 20px
 	border-radius: 4px
 	cursor: pointer
 	background-color: #454545
@@ -498,15 +499,23 @@ body textarea:required:valid
 .instagramm-icon
 	@include sprite($instagram)
 	display: inline-block
+	&:hover
+		@include sprite($instagram-hover)
 .vk-icon
 	@include sprite($vk)
 	display: inline-block
+	&:hover
+		@include sprite($vk-hover)
 .facebook-icon
 	@include sprite($facebook)
 	display: inline-block
+	&:hover
+		@include sprite($facebook-hover)
 .twitter-icon
 	@include sprite($twitter)
 	display: inline-block
+	&:hover
+		@include sprite($twitter-hover)
 .privaci-politic
 	padding-top: 12px
 .melfori-footer
@@ -533,7 +542,7 @@ body textarea:required:valid
 	left: 0
 	right: 0
 	padding: 0 21px
-	top: calc(50% - 346px)
+	top: calc(50% - 395px)
 .starting-work-item-title
 	font-weight: 900
 	font-size: 2rem
@@ -684,17 +693,53 @@ body textarea:required:valid
 .developed-sociality-foto-position
 	top: calc(50% - 401px)
 .mobile-menu
-	font-size: 2.4rem
-	color: #6d6d6d
+	font-size: 2.6rem
 	width: 100%
 	height: 100%
-	z-index: -1
 	background: rgba(0,0,0,0.675)
 	position: fixed
 	text-align: right
 	display: none
+	z-index: -1
 	&.active
 		z-index: 0
+	ul
+		float: right
+		width: 200px
+		margin-top: 50px
+	a
+		display: block
+		color: #fff
+		text-align: center
+		display: block
+		padding-bottom: 10px
+.another-promotion
+	font-weight: 900
+	color: #fff
+	padding-top: 32px
+	padding-left: 5px
+	.another-promotion-title
+		font-size: 3.6rem
+		height: 100%
+		float: left
+		width: 433px
+		margin-right: 35px
+	.another-promotion-item
+		display: inline-block
+		text-align: left
+		h4
+			font-size: 2.4rem
+		p,
+		ul
+			font-size: 1.6rem
+			margin-bottom: 10px
+		.link
+			color: #2ecc71
+			border-bottom: 2px solid
+
+
+
+
 //	Секция
 //	Секция
 //	Секция 
