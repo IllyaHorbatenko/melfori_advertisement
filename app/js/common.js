@@ -8,10 +8,6 @@ $(function() {
     //  });
     // };
 });
-        function getCookie() {document.cookie = "info=123";
-            alert(document.cookie);
-        };
-         getCookie() 
 // прокрутка по секциям
 
 function buttonMobileMenu() {
@@ -106,8 +102,10 @@ $(document).ready(function() {
     buttonMobileMenu();
 
 
+console.log(document.documentElement.clientWidth);
+console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 720) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 720) {
         $(".main").onepage_scroll({
             sectionContainer: "section", // контейнер, к которому будет применяться скролл
             easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -134,7 +132,7 @@ $(document).ready(function() {
 
     }
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight > 720) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 720) {
 
         var td1 = new TimelineMax(),
             td2 = new TimelineMax(),
@@ -396,7 +394,7 @@ $(document).ready(function() {
     $(document).ready(function() {
         var screenWidth = screen.width;
         if (screenWidth > 1200) {
-            console.log(screenWidth);
+
             $(window).bind('scroll', function() {
                 if ($(window).scrollTop() > 57) {
                     $('.top-menu-fixed').addClass('fixed');
