@@ -143,6 +143,7 @@ console.log(document.documentElement.clientHeight);
             td7 = new TimelineMax(),
             td8 = new TimelineMax(),
             td9 = new TimelineMax(),
+            td10 = new TimelineMax(),
 
             tu1 = new TimelineMax(),
             tu2 = new TimelineMax(),
@@ -153,9 +154,10 @@ console.log(document.documentElement.clientHeight);
             tu7 = new TimelineMax(),
             tu8 = new TimelineMax(),
             tu9 = new TimelineMax(),
+            tu10 = new TimelineMax(),
 
-            td = [td1, td2, td3, td4, td5, td6, td7, td8, td9];
-        tu = [tu1, tu2, tu3, tu4, tu5, tu6, tu7, tu8, tu9];
+            td = [td1, td2, td3, td4, td5, td6, td7, td8, td9, td10];
+        tu = [tu1, tu2, tu3, tu4, tu5, tu6, td7, tu8, tu9, tu10];
 
         td1.pause();
         td2.pause();
@@ -166,6 +168,7 @@ console.log(document.documentElement.clientHeight);
         td7.pause();
         td8.pause();
         td9.pause();
+        td10.pause();
 
         tu1.pause();
         tu2.pause();
@@ -176,6 +179,7 @@ console.log(document.documentElement.clientHeight);
         tu7.pause();
         tu8.pause();
         tu9.pause();
+        tu10.pause();
 
         // GREEN SOCKS FOR DOWN
 
@@ -225,20 +229,20 @@ console.log(document.documentElement.clientHeight);
 
         // секция 7
 
-        td7.from('.main-quetions-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
-        td7.staggerFrom('.accordion', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.6');
-        td7.from('.ask-quetion-submit', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
+        td8.from('.main-quetions-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
+        td8.staggerFrom('.accordion', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.6');
+        td8.from('.ask-quetion-submit', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.6');
 
         // секция 8
-        td8.from('.developed-sociality-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
-        td8.staggerFrom('.developed-sociality-wrap li', 0.7, { x: -100, autoAlpha: 0, ease: Power4.easeOut }, 0.2);
-        td8.from('.developed-sociality-foto-aside', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
-        td8.from('.developed-sociality-foto-wrap', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
+        td9.from('.developed-sociality-container-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
+        td9.staggerFrom('.developed-sociality-wrap li', 0.7, { x: -100, autoAlpha: 0, ease: Power4.easeOut }, 0.2);
+        td9.from('.developed-sociality-foto-aside', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.7');
+        td9.from('.developed-sociality-foto-wrap', 0.7, { x: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
 
         // секция 9
 
-        td9.from('.footer-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.2');
-        td9.from('.footer-row', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
+        td10.from('.footer-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.2');
+        td10.from('.footer-row', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.4');
 
 
 
@@ -315,21 +319,21 @@ console.log(document.documentElement.clientHeight);
 
         // секция 7
 
-        tu7.set('.main-quetions-container-title', { y: -100, opacity: 0 }, '+=0.3', 'lable-7')
+        tu8.set('.main-quetions-container-title', { y: -100, opacity: 0 }, '+=0.3', 'lable-7')
             .to('.main-quetions-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '+=0.3', 'lable-7');
-        tu7.set('.accordion', { y: -100, autoAlpha: 0 }, '-=0.8', 'lable-7')
+        tu8.set('.accordion', { y: -100, autoAlpha: 0 }, '-=0.8', 'lable-7')
             .staggerTo('.accordion', 1, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8', 'lable-7');
-        tu7.set('.ask-quetion-submit', { y: -100, opacity: 0 }, '-=0.9', 'lable-7')
+        tu8.set('.ask-quetion-submit', { y: -100, opacity: 0 }, '-=0.9', 'lable-7')
             .to('.ask-quetion-submit', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-7');
 
         // секция 8 
-        tu8.set('.developed-sociality-container-title', { y: -100, opacity: 0 }, '+=0.3')
+        tu9.set('.developed-sociality-container-title', { y: -100, opacity: 0 }, '+=0.3')
             .to('.developed-sociality-container-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '+=0.3');
-        tu8.set('.developed-sociality-wrap li', { x: -100, autoAlpha: 0 }, '-=0.3', 'lable-8')
+        tu9.set('.developed-sociality-wrap li', { x: -100, autoAlpha: 0 }, '-=0.3', 'lable-8')
             .staggerTo('.developed-sociality-wrap li', 1, { x: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.3, '-=0.3', 'lable-8');
-        tu8.set('.developed-sociality-foto-aside', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
+        tu9.set('.developed-sociality-foto-aside', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
             .to('.developed-sociality-foto-aside', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-8');
-        tu8.set('.developed-sociality-foto-wrap', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
+        tu9.set('.developed-sociality-foto-wrap', { x: -100, opacity: 0 }, '-=0.9', 'lable-8')
             .to('.developed-sociality-foto-wrap', 1, { x: 0, opacity: 1, ease: Power4.easeOut }, '-=0.9', 'lable-8');
     }
 

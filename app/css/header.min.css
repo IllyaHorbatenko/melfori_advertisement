@@ -139,7 +139,6 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .add-massage-form input[type=submit]{border:none;background:#04be5b;color:#fff;padding:0}
 .add-massage-form .submit{-webkit-box-shadow:0 3px 2px -1px #3a454b;box-shadow:0 3px 2px -1px #3a454b}
 .add-massage-form .submit:hover{-webkit-box-shadow:0 2px 5px 1px #3a454b;box-shadow:0 2px 5px 1px #3a454b}
-.header-form{margin-left:-16px}
 .header-form input{margin-bottom:10px;color:#000}
 .header-form input[type=submit]{margin-top:10px}
 .scroll-mouse-container{left:0;right:0;bottom:150px}

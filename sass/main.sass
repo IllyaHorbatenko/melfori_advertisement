@@ -42,7 +42,7 @@ body textarea:required:valid
 	position: fixed
 	z-index: 100
 	width: 100%
-	padding: 10px 0
+	padding: 0
 	background: transparent
 	transition: .5s
 	right: 0
@@ -635,6 +635,7 @@ body textarea:required:valid
 		float: left
 		margin-top: 8px
 		margin-right: 31px	
+		box-shadow: 2px 2px 4px 0px #a4a5a8
 	a
 		color: #04be5b
 		font-size: 1.8rem
@@ -654,8 +655,6 @@ body textarea:required:valid
 
 .developed-sociality-foto-wrap
 	width: 555px
-	height: 494px
-	background: #9f9f9f
 .developed-sociality-foto-aside
 	font-size: 2.4rem
 	color: #343434	
@@ -739,7 +738,70 @@ body textarea:required:valid
 			border-bottom: 2px solid
 
 
-
+.solution-section
+	background: #ebebeb
+	color: #343434
+	.title
+		font-size: 3.8rem
+		font-weight: 900
+		text-align: center
+	.solution-container
+		position: relative
+	.solution-position
+		left: 0
+		right: 0
+		margin: auto
+		top: calc(50% - 400px)
+	.number
+		font-size: 9rem
+		color: #2ecc71
+		position: relative
+		display: inline-block
+		width: 100%
+		line-height: 90px
+		&:before
+			content: ''
+			display: inline-block
+			width: 97px
+			height: 1px
+			background: #2ecc71
+			position: absolute
+			left: 30px
+			top: calc(50% - 1px)
+		&:after
+			content: ''
+			display: inline-block
+			width: 97px
+			height: 1px
+			background: #2ecc71
+			position: absolute
+			right: 30px
+			top: calc(50% - 1px)
+	.about-problems
+		font-size: 2.1rem
+		padding: 0 20px
+		line-height: 30px
+	.text-container
+		font-size: 2rem
+		font-weight: 900
+		margin: 25px 0
+		line-height: 27px
+	.developers
+		.title
+			margin-bottom: 20px
+		.name
+			font-size: 28px
+		.skills
+			font-size: 18px
+		.add-prop
+			background: #2ecc71
+			color: #fff
+			box-shadow: 1px 1px 1px 1px #9a9a9a
+			font-size: 18px
+			display: inline-block
+			border-radius: 5px
+			padding: 7px 40px
+			margin-top: 30px
 
 //	Секция
 //	Секция
