@@ -1003,6 +1003,35 @@ body,html{overflow:visible}
 .about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{height:280px}
 .about-contextual-advertising-wrap-1 h2,.about-contextual-advertising-wrap-2 h2{font-size:2.4rem}
 .about-contextual-advertising-wrap-1 p,.about-contextual-advertising-wrap-2 p{font-size:1.4rem}
+.about-contextual-advertising-title,.finished-result-container-title{font-size:3rem}
 .about-contextual-advertising-position{top:-webkit-calc(50% - 370px);top:calc(50% - 370px)}
-.about-contextual-advertising-title{font-size:3rem}
+.owl-carousel-list-img-container{width:550px}
+.owl-carousel-list-title{font-size:2.5rem;padding-bottom:15px}
+.owl-carousel-list-article{padding-bottom:10px}
+.owl-carousel-container{top:-webkit-calc(50% - 160px);top:calc(50% - 160px)}
+.finished-result-container-title{top:-webkit-calc(50% - 280px);top:calc(50% - 280px)}
+.starting-work-item-title .icon-container{width:31px;height:30px}
+.starting-work-item-title{font-size:1.4rem;padding:12px 0 11px 36px}
+.tabs-wrap-container{padding:21px}
+.starting-work-item{padding-bottom:23px}
+.starting-work-item span{font-size:2.8rem;padding:7px 0}
+.starting-work-item aside{padding:20px 22px 6px 14px}
+.starting-work-item aside b{font-size:2.7rem;margin-top:10px}
+.another-promotion{padding-top:12px}
+.another-promotion .another-promotion-title{font-size:2.7rem}
+.another-promotion .another-promotion-title h4{font-size:2.2rem}
+.another-promotion .another-promotion-item p{margin-bottom:2px}
+.starting-work-container-position{top:-webkit-calc(50% - 300px);top:calc(50% - 300px)}
+.starting-work-container-title{margin-bottom:20px}
+.starting-work-container-title p{font-size:3rem;padding-bottom:0}
+.developed-sociality-container-title{margin-bottom:15px}
+.developed-sociality-container-title b{font-size:3rem}
+.developed-sociality-foto-aside,.developed-sociality-wrap h3{font-size:2.2rem}
+.developed-sociality-foto-aside p{margin-bottom:20px}
+.developed-sociality-wrap li{margin-bottom:10px}
+.developed-sociality-wrap img{width:140px}
+.developed-sociality-foto-position{top:-webkit-calc(50% - 300px);top:calc(50% - 300px)}
+.footer_logo{width:158px}
+.call_information.footer-call,.footer-link-icon{text-align:center}
+.footer-row{left:0;right:0}
 }
