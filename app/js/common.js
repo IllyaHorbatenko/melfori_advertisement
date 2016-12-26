@@ -105,7 +105,7 @@ $(document).ready(function() {
 console.log(document.documentElement.clientWidth);
 console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 720) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 650) {
         $(".main").onepage_scroll({
             sectionContainer: "section", // контейнер, к которому будет применяться скролл
             easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -132,7 +132,7 @@ console.log(document.documentElement.clientHeight);
 
     }
 
-    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 720) {
+    if (document.documentElement.clientWidth > 1200 && document.documentElement.clientHeight >= 650) {
 
         var td1 = new TimelineMax(),
             td2 = new TimelineMax(),
