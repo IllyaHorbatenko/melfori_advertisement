@@ -12,6 +12,9 @@
 			margin-bottom: 25px
 		.another-promotion-item
 			display: block
+	.advertising-container,
+	.tabs-container
+		padding: 0
 	section
 		margin-bottom: -3px
 	.header_nav 
@@ -33,7 +36,7 @@
 	.main-result-container
 		margin-top: 65px
 	.owl-carousel-list-img-container
-		width: 500px	
+		width: 100%
 	.scroll-mouse-container
 		display: none
 	.header-form 
@@ -51,8 +54,8 @@
 		input
 			padding: 7px 60px
 	.developed-sociality-foto-wrap
-		width: 450px
-		height: 450px
+		img
+			width: 450px
 	.main
 		transition: .5s
 		right: 0
@@ -123,7 +126,18 @@
 	.finished-result-container-title
 		p
 			display: inline-block
-
+	.solution-section
+		.title
+			margin-top: 50px
+		.number
+			&:before
+				left: 0
+				width: calc(50% - 30px)
+			&:after
+				right: 0
+				width: calc(50% - 30px)
+		.developers
+			padding-bottom: 50px
 @media only screen and (max-height: 950px)
 	.top-menu-container
 		width: 100%
@@ -163,12 +177,27 @@
 		margin-bottom: 25px
 @media only screen and (max-width : 992px)
 	/**/
+	.solution-section
+		.title
+			margin-top: 50px
+		.developers
+			padding-bottom: 50px
+			.name
+				font-size: 2rem
+			.developers-item
+				margin-bottom: 20px
+		.about-problems
+			font-size: 1.7rem
+			padding: 0
+		.text-container
+			p
+				display: inline
+
+
 	.header-add-project-container
 		padding: 10px
 	.about-us-container-item
 		margin-bottom: 0
-	// .developed-sociality-foto-wrap
-	// 	display: none
 	.starting-work-item-container
 		margin-bottom: 50px
 	.accordion_title
@@ -283,8 +312,6 @@
 		margin-bottom: 30px
 	.owl-carousel-list
 		padding: 0
-	.owl-carousel-list-img-container
-		width: 280px
 	.finished-result-container-title
 		font-size: 3rem
 		margin-top: 40px
@@ -307,6 +334,23 @@
 		font-size: 30px
 	.developed-sociality-foto-wrap
 		width: 100%
+
+
+	.solution-section
+		.developers
+			padding-bottom: 50px
+			.name
+				font-size: 2rem
+			.developers-item
+				margin-bottom: 20px
+		.about-problems
+			font-size: 1.4rem
+			line-height: 18px
+			margin: auto
+			margin-bottom: 30px
+		.text-container
+			p
+				display: inline
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -330,6 +374,12 @@
 
 
 /* Extra Small Devices, Phones */
+@media only screen and (max-width : 767px)
+	.solution-section
+		.number
+			width: 300px
+		.about-problems
+			width: 300px
 @media only screen and (max-width : 680px)
 	.about-contextual-advertising-wrap-1, 
 	.about-contextual-advertising-wrap-2
@@ -351,6 +401,7 @@
 		.dm-modal
 			width: 100%
 			padding: 50px 20px 10px
+
 
 @media only screen and (max-width : 480px)
 	/**/
@@ -407,6 +458,11 @@
 		.dm-modal
 			width: 100%
 			padding: 50px 10px
+	.solution-section
+		.number
+			width: 100%
+		.about-problems
+			width: 100%
 @media only screen and (max-width : 320px)
 	/**/
 	// body,
@@ -442,7 +498,7 @@
 
 /* Large Devices, Wide Screens */
 
-@media only screen and (min-width : 1200px) and (min-height : 650px)
+@media only screen and (min-width : 1200px)
 	// @media only screen and (min-height : 835px)
 	body, 
 	html
@@ -461,7 +517,7 @@
 	.about-contextual-advertising-container,
 	.solution-container
 		height: 100vh
-		min-height: 650px
+		min-height: 600px
 
 	.advertising-container,
 	.scroll-mouse-container,
@@ -483,15 +539,17 @@
 	.about-us-icon-container
 		padding-left: 27px
 
-@media only screen and (max-width : 1700px) and (max-height : 950px) and (min-width : 1200px)
+@media only screen and (max-width : 1700px) and (min-width : 1200px)
 	.about-lever-context-container
 		h3
-			margin-bottom: 30px
+			margin-bottom: 45px
 			margin-top: 42px
+	.advertising-container
+		padding: 0 129px
+	.tabs-container
+		padding: 0 82px
 	.finished-result-section
 		padding-bottom: 60px
-	.main-about-us-container
-		padding-top: 85px
 	.header_logo
 		width: 40px
 		height: 37px
@@ -538,7 +596,7 @@
 			font-size: 	20px
 	
 	.about-lever-context-container 
-		top: calc(50% - 315px)
+		top: calc(50% - 335px)
 		h3
 			font-size: 3rem
 	.clever-context-image-blackboard, 
@@ -554,14 +612,15 @@
 	.audit-form-title
 		margin-bottom: 16px 
 	.about-us-container
-		top: calc(50% - 146px)
+		top: calc(50% - 138px)
 		margin: 0
 	.about-us-container-title
 		font-size: 3rem
-		top: 60px
+		top: 52px
 		p
 			margin-top: 6px
-
+	.submit-lable-audit
+		padding-right: 67px
 	.about-us-icon-diamond
 		width: 60px
 		margin-bottom: 18px
@@ -579,10 +638,14 @@
 		h3
 			font-size: 1.8rem
 			margin-bottom: 10px
+	.clever-context-image-money,
+	.clever-context-image-coffee,
+	.clever-context-image-blackboard
+		margin-bottom: 13px
 	.main-result-container
-		bottom: 15px
+		bottom: 25px
 	.main-result
-		padding: 28px 0 36px
+		padding: 16px 0
 		h2
 			font-size: 2.5rem
 			margin-bottom: 10px
@@ -591,6 +654,8 @@
 		padding-right: 25px
 		margin-bottom: 25px
 		font-size: 1.5rem
+		li
+			margin-bottom: 3px
 	.about-contextual-advertising-wrap-1,
 	.about-contextual-advertising-wrap-2
 		img
@@ -602,11 +667,9 @@
 		p
 			font-size: 1.4rem
 	.about-contextual-advertising-position
-		top: calc(50% - 335px)
+		top: calc(50% - 350px)
 	.about-contextual-advertising-title
 		font-size: 3rem
-	.owl-carousel-list-img-container
-		width: 470px
 	.finished-result-container-title
 		font-size: 3rem
 	.owl-carousel-list-title
@@ -614,12 +677,14 @@
 		padding-bottom: 15px
 	.owl-carousel-list-article
 		padding-bottom: 10px
+	.owl-carousel-list-img-container
+		width: 540px
 	.owl-carousel-container
-		top: calc(50% - 145px)
+		top: calc(50% - 180px)
 	.owl-nav
 		padding-top: 10px
 	.finished-result-container-title
-		top: calc(50% - 260px)
+		top: calc(50% - 280px)
 	.starting-work-item-title 
 		.icon-container
 			width: 31px
@@ -627,24 +692,25 @@
 
 	.starting-work-item-title
 		font-size: 1.4rem
-		padding: 12px 26px 14px 36px
+		padding: 12px 26px 21px 36px
 	.tabs-wrap-container
-		padding: 35px
+		padding: 20px 25px
 	.starting-work-item 
 		padding-bottom: 23px
 		span
 			font-size: 2.2rem
 			padding: 5px 0
 		aside
-			padding: 28px 10px 6px 10px
+			padding: 15px 10px 6px
 			b
 				font-size: 2.3rem
 				margin-top: 3px
 			p
 				margin-bottom: 3px
 	.another-promotion 
-		padding-top: 10px
+		padding-top: 0
 		.another-promotion-title
+			line-height: 35px
 			font-size: 2.2rem
 		.another-promotion-item 
 			p
@@ -654,9 +720,10 @@
 			ul
 				font-size: 1.3rem
 	.starting-work-container-position
-		top: calc(50% - 290px)
+		top: calc(50% - 272px)
 	.starting-work-container-title
-		margin-bottom: 10px
+		margin-bottom: 25px
+		line-height: 32px
 		p
 			font-size: 3rem
 			padding-bottom: 0px
@@ -680,8 +747,8 @@
 			margin-bottom: 5px
 			font-size: 1.2rem
 	.developed-sociality-foto-wrap
-		width: 500px
-		height: 400px
+		img
+			width: 450px
 	.developed-sociality-foto-position
 		top: calc(50% - 260px)
 	.footer_logo
@@ -714,3 +781,36 @@
 		margin-top: 15px
 	.main-quetions
 		top: calc(50% - 270px)
+
+
+	.solution-section
+		.title
+			font-size: 2.7rem
+		.solution-position
+			top: calc(50% - 284px)
+		.about-problems
+			padding: 0
+			line-height: 23px
+			font-size: 1.7rem
+		.text-container
+			font-size: 1.7rem
+			font-weight: 100
+			margin: 15px 0
+			line-height: 22px
+		.number
+			font-size: 5rem
+			line-height: 57px
+
+		.developers
+			.developers-item
+				padding: 0 33px
+			.title
+				margin-bottom: 6px
+			.name
+				font-size: 2.4rem
+			.skills
+				font-size: 1.5rem
+			.add-prop
+				font-size: 1.5rem
+				padding: 5px 30px
+				margin-top: 10px	

@@ -1564,6 +1564,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <p class='sucess_mail'>Заявка отправлена</p>
                     <form>
@@ -1582,6 +1584,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <p class='sucess_mail'>Заявка отправлена</p>
                 </div>
@@ -1594,6 +1598,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <form id="form">
                         <div>
@@ -1642,6 +1648,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <div class="dm-modal_inner">
                         <p class="dm-modal_inner_h1">Содержание аудита</p>
@@ -1660,6 +1668,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <div class="dm-modal_inner">
                         <p class="dm-modal_inner_h1">Политика конфиденциальности</p>
@@ -1684,6 +1694,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <form id="form">
                         <div>
@@ -1742,6 +1754,8 @@
             <div class="dm-cell">
                 <div class="dm-modal">
                     <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
                     </a>
                     <h2></h2>
                     <form id="form">
@@ -1795,11 +1809,60 @@
         <div class="overlay">
         </div>
     </div>
+    <!-- модальное окно -8 -->
+    <div class="popup-8 popup" id="win" data-modal="modal-8">
+        <div class="dm-table">
+            <div class="dm-cell">
+                <div class="dm-modal">
+                    <a href="#" class="close">
+                        <span class="left"></span>
+                        <span class="right"></span>
+                    </a>
+                    <form id="form">
+                        <aside class="form-aside">
+                            <h4>Оставьте заявку</h4>
+                            <p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
+                        </aside>
+                        <div>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
+                            </div>
+                        </div>
+                        <div>
+                            <div class="modal_form_input_wrap">
+                                <div class="modal_input_error">Заполните поле
+                                    <div class="modal_error_triangle"></div>
+                                    <div class="modal_error_chest_img"></div>
+                                </div>
+                                <input name="phone" class="modal_form_phone" type="text" placeholder="Введите номер телефона">
+                            </div>
+                        </div>
+                        <input type="hidden" name="form_name" value="Заказ veloVdelo">
+                        <input type="hidden" name="equipment_parts" value="">
+                        <input type="submit" value="Заказать">
+                    </form>
+                    <div class="modal-photo">
+                        <img src="img/developer-foto8.jpg" alt="">
+                        <aside>
+                            <h4>Юлия и Андрей</h4>
+                            <p>Менеджеры</p>
+                        </aside>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="overlay">
+        </div>
+    </div>
     <!-- окно меню для мобильного -->
     <nav class="mobile-menu">
         <ul class="mobile_navigation">
-            <li><a href="#clever-context">Что делаем</a></li>
-            <li><a href="#about-us-section">Кейсы</a></li>
+            <li><a href="#about-us-section">Что делаем</a></li>
+            <li><a href="#finished-result-section">Кейсы</a></li>
             <li><a href="#starting-work-section">Стоимость</a></li>
             <li><a href="#main-quetions-section">FAQ</a></li>
             <li><a href="#developed-command-section">Команда</a></li>
@@ -1810,17 +1873,18 @@
     <!-- Здесь пишем код -->
     <header class="top-menu-container onepage-pagination-container top-menu-container-active">
         <div class="container">
-            <div class="col-lg-2">
-                <div class="header_logo "></div>
+            <div class="col-lg-1">
+                <a href="/" class="header_logo"><img src="img/mel-logo.png" alt=""></a>
             </div>
-            <nav class="header_nav col-lg-7">
+            <nav class="header_nav col-lg-9">
                 <ul class="onepage-pagination">
                     <li><a data-index="4" href="#4">Что делаем</a></li>
                     <li><a data-index="5" href="#5">Кейсы</a></li>
                     <li><a data-index="6" href="#6">Стоимость</a></li>
-                    <li><a data-index="8" href="#7">FAQ</a></li>
-                    <li><a data-index="9" href="#8">Команда</a></li>
-                    <li><a data-index="10" href="#9">Контакты</a></li>
+                    <li><a data-index="7" href="#7">Решение проблемы</a></li>
+                    <li><a data-index="9" href="#9">FAQ</a></li>
+                    <li><a data-index="8" href="#8">Команда</a></li>
+                    <li><a data-index="10" href="#10">Контакты</a></li>
                 </ul>
             </nav>
             <div class="button-mobile-menu">
@@ -1828,7 +1892,7 @@
                 <span class="center"></span>
                 <span class="right"></span>
             </div>
-            <div class="col-lg-3 call_information_container">
+            <div class="col-lg-2 call_information_container">
                 <div class="call_information">
                     <span>Бесплатная консультация:</span>
                     <a href="tel:+380667077777"><b>+38 066 707 77 77</b></a>
@@ -1892,6 +1956,36 @@
                 </div>
             </div>
         </section>
+        <section class="about-contextual-advertising-section">
+            <div class="container">
+                <div class="row">
+                    <div class="about-contextual-advertising-container">
+                        <div class="about-contextual-advertising-position">
+                            <h1 class="about-contextual-advertising-title">Как работает контекстная реклама</h1>
+                            <div class="about-contextual-advertising-wrap-1 clearfix">
+                                <img src="img/image-advertising-2.png">
+                                <article>
+                                    <h2>Вы размещаете рекламу</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun inLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                    </p>
+                                </article>
+                            </div>
+                            <div class="about-contextual-advertising-wrap-2 clearfix">
+                                <img src="img/image-advertising-1.png">
+                                <article>
+                                    <h2>Вы размещаете рекламу</h2>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun
+                                    </p>
+                                    <p>inLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in </p>
+                                </article>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <section class="clever-context-container" id="clever-context">
             <div class="container main-container main-container-clever-context">
                 <div class="about-lever-context-container">
@@ -1906,15 +2000,15 @@
                     <div class="col-lg-4 col-md-4 about-lever-context-col">
                         <div class="clever-context-image-coffee"></div>
                         <aside class="aside-about-context">
-                            <h4>Вы не тратите рекламный бюджет</h4>
-                            <p>за несколько дней, получив 2-3 заявки от «залётных» посетителей</p>
+                            <h4>Вы получаете горячих клиентов</h4>
+                            <p>по нужным поисковым запросам, не переплачивая за стоимость клиента</p>
                         </aside class="aside-about-context">
                     </div>
                     <div class="col-lg-4 col-md-4 about-lever-context-col">
                         <div class="clever-context-image-blackboard"></div>
                         <aside class="aside-about-context">
-                            <h4>Вы не тратите рекламный бюджет</h4>
-                            <p>за несколько дней, получив 2-3 заявки от «залётных» посетителей</p>
+                            <h4>Вы увидете результат работы</h4>
+                            <p>уже через несколько дней после начала сотрудничества с нами</p>
                         </aside>
                     </div>
                     <div class="audit-information-container">
@@ -2019,36 +2113,6 @@
                                     <li>Повышаете показатели бизнеса минимума</li>
                                 </ul>
                                 <input class="modal" type="submit" value="Готов попробовать" data-modal="modal-3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="about-contextual-advertising-section" id="about-us-section">
-            <div class="container">
-                <div class="row">
-                    <div class="about-contextual-advertising-container">
-                        <div class="about-contextual-advertising-position">
-                            <h1 class="about-contextual-advertising-title">Как работает контекстная реклама</h1>
-                            <div class="about-contextual-advertising-wrap-1 clearfix">
-                                <img src="img/image-advertising-2.png">
-                                <article>
-                                    <h2>Вы размещаете рекламу</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun inLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-                                    </p>
-                                </article>
-                            </div>
-                            <div class="about-contextual-advertising-wrap-2 clearfix">
-                                <img src="img/image-advertising-1.png">
-                                <article>
-                                    <h2>Вы размещаете рекламу</h2>
-                                    <p>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sun
-                                    </p>
-                                    <p>inLorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in </p>
-                                </article>
                             </div>
                         </div>
                     </div>
@@ -2262,8 +2326,8 @@
                                     <h4>Melfori – веб-студия полного цикла</h4>
                                     <p>По вашему желанию мы можем полностью проработать весь ваш маркетинг:</p>
                                     <ul>
-                                        <li>– от создания лендинга:<a href="http://landing.melfori.com/" class="link"> landing.melfori.com</a></li>
-                                        <li>– до продвижения в инстаграме:<a href="http://instagram.melfori.com/" class="link"> instagram.melfori.com</a></li>
+                                        <li>– от создания лендинга:<a href="http://landing.melfori.com/" target="_blank" class="link"> landing.melfori.com</a></li>
+                                        <li>– до продвижения в инстаграме:<a href="http://instagram.melfori.com/" target="_blank" class="link"> instagram.melfori.com</a></li>
                                     </ul>
                                 </div>
                             </div>
@@ -2279,19 +2343,19 @@
                         <div class="solution-position">
                             <h3 class="title">Решение проблем</h3>
                             <div class="clearfix">
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
                                     <span class="number">1</span>
                                     <aside class="about-problems">
                                         <b>Есть сайт, а реклама не настроена?</b>
                                     </aside>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
                                     <span class="number">2</span>
                                     <aside class="about-problems">
                                         <b>Настроили рекламу, но клиентов нет и деньги уходят впустую?</b>
                                     </aside>
                                 </div>
-                                <div class="col-lg-4">
+                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
                                     <div>
                                         <span class="number">3</span>
                                         <aside class="about-problems">
@@ -2309,35 +2373,87 @@
                             </div>
                             <div class="developers">
                                 <h3 class="title"><p>Наши спецалисты</p></h3>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
                                     <img src="img/developer-foto4.jpg" alt="">
                                     <h4 class="name">Спичак Дмитрий</h4>
                                     <aside>
                                         <p class="skills">Веб-дизайнер</p>
                                     </aside>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
                                     <img src="img/developer-foto5.jpg" alt="">
                                     <h4 class="name">Елена Калиниченко</h4>
                                     <aside>
                                         <p class="skills">Веб-дизайнер</p>
                                     </aside>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
                                     <img src="img/developer-foto6.jpg" alt="">
                                     <h4 class="name">Александр Стадник</h4>
                                     <aside>
                                         <p class="skills">Front-End Developer</p>
                                     </aside>
                                 </div>
-                                <div class="col-lg-3">
+                                <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
                                     <img src="img/developer-foto7.jpg" alt="">
                                     <h4 class="name">Алексей Третьяков</h4>
                                     <aside>
                                         <p class="skills">Back-End </p>
                                     </aside>
                                 </div>
-                                <div class="add-prop">Получить предложение</div>
+                                <div class="add-prop modal" data-modal="modal-8">Получить предложение</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="developed-command-section" id="developed-command-section">
+            <div class="container">
+                <div class="row">
+                    <div class="developed-sociality-container clearfix">
+                        <div class="developed-sociality-foto-position">
+                            <h2 class="developed-sociality-container-title">
+                                <b>Созданием и ведением</b>
+                                <p>вашей рекламной кампании займётся сплочённая команда</p>
+                            </h2>
+                            <div class="col-lg-6 col-md-6">
+                                <ul class="developed-sociality-wrap">
+                                    <li class="clearfix">
+                                        <img src="img/developer-foto1.jpg">
+                                        <h3>Иван Иванов</h3>
+                                        <aside>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                                        </aside>
+                                        <a href="#">vk.com/1231343434</a>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="img/developer-foto2.jpg">
+                                        <h3>Иван Иванов</h3>
+                                        <aside>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                                        </aside>
+                                        <a href="#">vk.com/1231343434</a>
+                                    </li>
+                                    <li class="clearfix">
+                                        <img src="img/developer-foto3.jpg">
+                                        <h3>Иван Иванов</h3>
+                                        <aside>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
+                                        </aside>
+                                        <a href="#">vk.com/1231343434</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="col-lg-6 col-md-6">
+                                <div class="developed-sociality-foto-container">
+                                    <aside class="developed-sociality-foto-aside">
+                                        <p><span>Вся команда Melfori </span> (25 специалистов и каждый профессионал в своем деле)</p>
+                                    </aside>
+                                    <div class="developed-sociality-foto-wrap">
+                                        <img src="img/company-photo.jpg" alt="">
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -2400,58 +2516,6 @@
                     <input class="ask-quetion-submit modal" data-modal="modal-6" type="submit" name="ask-quetion" value="Задать вопрос">
                 </div>
         </section>
-        <section class="developed-command-section" id="developed-command-section">
-            <div class="container">
-                <div class="row">
-                    <div class="developed-sociality-container clearfix">
-                        <div class="developed-sociality-foto-position">
-                            <h2 class="developed-sociality-container-title">
-                                <b>Созданием и ведением</b>
-                                <p>вашей рекламной кампании займётся сплочённая команда</p>
-                            </h2>
-                            <div class="col-lg-6 col-md-6">
-                                <ul class="developed-sociality-wrap">
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto1.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto2.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto3.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="developed-sociality-foto-container">
-                                    <aside class="developed-sociality-foto-aside">
-                                        <p><span>Вся команда Melfori </span> (25 специалистов и каждый профессионал в своем деле)</p>
-                                    </aside>
-                                    <div class="developed-sociality-foto-wrap">
-                                        <img src="img/company-photo.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <section class="footer" id="footer">
             <div class="container footer-position-contaiener">
                 <div class="footer-container">
@@ -2484,29 +2548,8 @@
                         Мы не навязываем свои услуги, но предлагаем наиболее выгодные условия на рынке. Решение о сотрудничестве всегда остаётся за вами. Попробуйте!
                     </aside>
                 </div>
-                <div class="footer-row clearfix">
-                    <div class="clearfix footer-nav-container">
-                        <div class="col-lg-2">
-                            <div class="header_logo footer_logo "></div>
-                        </div>
-                        <nav class="header_nav footer-nav col-lg-7">
-                            <ul>
-                                <li><a href="#">Что делаем</a></li>
-                                <li><a href="#">Кейсы</a></li>
-                                <li><a href="#">Стоимость</a></li>
-                                <li><a href="#">FAQ</a></li>
-                                <li><a href="#">Команда</a></li>
-                                <li><a href="#">Контакты</a></li>
-                            </ul>
-                        </nav>
-                        <div class="col-lg-3 call_information_container">
-                            <div class="call_information footer-call">
-                                <span>Бесплатная консультация:</span>
-                                <a href="tel:+380667077777"><b>+38 066 707 77 77</b></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer-row-bottom">
+                <div class="footer-row container">
+                    <div class="footer-row-bottom clearfix">
                         <div class="melfori-footer col-lg-3 col-md-4 col-sm-4 col-xs-12">©2016 Melfori</div>
                         <div class="privaci-politic modal col-lg-6 col-md-4 col-sm-4 col-xs-12" data-modal="modal-5">Политика конфиденциальности</div>
                         <ul class="footer-link-icon col-lg-3 col-md-4 col-sm-4 col-xs-12">
@@ -2523,6 +2566,11 @@
                                 <a href="#" class="twitter-icon"></a>
                             </li>
                         </ul>
+                    </div>
+                    <div class="copirate">
+                        <a href="http://landing.melfori.com/" target="_blank">
+                            <p>Создание сайта:</p>
+                        </a>
                     </div>
                 </div>
             </div>

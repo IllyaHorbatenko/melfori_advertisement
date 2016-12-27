@@ -28,9 +28,9 @@ input[type=submit]
 	transition: .2s
 	border: none
 	outline: none
-	box-shadow: 0 3px 2px -1px #9f9f9f
+	box-shadow: 0 2px 5px 1px #374547
 	&:hover
-		box-shadow: 0 2px 5px 1px #9f9f9f
+		box-shadow: 0 2px 5px 1px #374547
 html .loader
 	background: none repeat scroll 0 0 #fff
 	bottom: 0
@@ -66,6 +66,21 @@ html .loader
 	width: 100%
 	height: 100%	
 	z-index: 1000
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -76,7 +91,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -87,7 +102,6 @@ html .loader
 		display: inline-block
 		padding: 50px 46px 50px 46px
 		max-width: 100%	
-		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
 		overflow: auto
@@ -107,6 +121,21 @@ html .loader
 	width: 100%
 	height: 100%	
 	z-index: 1000
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -117,7 +146,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -130,13 +159,12 @@ html .loader
 		max-width: 100%
 		overflow: auto
 		width: 579px
-		height: 100vh		
-		border: 3px solid $main_txt_color	
+		height: 100vh			
 		text-align: center
 		position: relative	
 		animation: fade .8s
 		background-color: #fff
-		border-radius: 20px
+		border-radius: 10px
 		z-index: 1002
 		text-align: left
 .popup6
@@ -150,6 +178,21 @@ html .loader
 	z-index: 1000
 	font-size: 2rem
 	color: #343434
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 
 	.dm-table
 		display: table
@@ -161,7 +204,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -174,12 +217,11 @@ html .loader
 		padding: 50px 46px 50px 46px
 		max-width: 100%
 		width: 470px		
-		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
 		animation: fade .8s
 		background-color: #fff
-		border-radius: 20px
+		border-radius: 10px
 		z-index: 1002
 	form
 		text-align: left
@@ -197,16 +239,16 @@ html .loader
 		min-height: 100px
 .dm-modal_inner
 	text-align: left
-	color: #343434
+	color: #fff
 .dm-modal_inner_h1
 	font-size: 24px
 	padding: 23px 0 
 	text-align: center
-	color: #000
+	color: #fff
 .dm-modal_inner_h2
 	font-size: 18px
 	padding: 20px 0
-	color: #000
+	color: #fff
 .popup3
 	position: fixed
 	top: 0
@@ -216,6 +258,21 @@ html .loader
 	width: 100%
 	height: 100%	
 	z-index: 1000
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -226,7 +283,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -238,13 +295,12 @@ html .loader
 		display: inline-block
 		padding: 50px 46px 50px 46px
 		max-width: 100%
-		width: 470px		
-		border: 3px solid $main_txt_color	
+		width: 470px			
 		text-align: center
 		position: relative	
 		animation: fade .8s
 		background-color: #fff
-		border-radius: 20px
+		border-radius: 10px
 		z-index: 1002
 .popup2
 	position: fixed
@@ -255,6 +311,21 @@ html .loader
 	width: 100%
 	height: 100%	
 	z-index: 1000
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -265,7 +336,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -278,12 +349,11 @@ html .loader
 		padding: 50px 46px 50px 46px
 		max-width: 100%
 		width: 470px		
-		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
 		animation: fade .8s
 		background-color: #fff
-		border-radius: 20px
+		border-radius: 10px
 		z-index: 1002
 .popup
 	position: fixed
@@ -295,7 +365,22 @@ html .loader
 	height: 100%	
 	z-index: 1000
 	font-size: 2rem
-	color: #343434
+	color: #fff
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -306,7 +391,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -319,12 +404,11 @@ html .loader
 		padding: 50px 46px 50px 46px
 		max-width: 100%
 		width: 470px		
-		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
 		animation: fade .8s
-		background-color: #fff
-		border-radius: 20px
+		background-color: rgba(81,95,101,0.99)
+		border-radius: 10px
 		z-index: 1002
 	form
 		text-align: left
@@ -350,7 +434,22 @@ html .loader
 	height: 100%	
 	z-index: 1000
 	font-size: 2rem
-	color: #343434
+	color: #fff
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
 	.dm-table
 		display: table
 		width: 100%
@@ -361,7 +460,7 @@ html .loader
 		position: fixed
 		top: 0
 		left: 0
-		background: rgba(0, 0, 0, 0.65)
+		background: rgba(54,64,74,0.98)
 		z-index: 1001
 	.dm-cell
 		display: table-cell
@@ -374,12 +473,11 @@ html .loader
 		padding: 50px 46px 50px 46px
 		max-width: 100%
 		width: 470px		
-		border: 3px solid $main_txt_color	
 		text-align: center
 		position: relative	
 		animation: fade .8s
-		background-color: #fff
-		border-radius: 20px
+		background-color: rgba(81,95,101,0.99)
+		border-radius: 10px
 		z-index: 1002
 	form
 		text-align: left
@@ -399,6 +497,64 @@ html .loader
 		font-size: 2.5rem
 		margin: 15px 0
 		text-transform: uppercase
+
+.popup-8
+	.dm-modal
+		background: rgba(81,95,101,0.99)
+		width: 700px
+		border: 0
+		border-radius: 10px
+	.close
+		background: none
+		right: 10px
+		top: 10px
+		span
+			width: 100%
+			background: #fff
+			height: 2px
+			display: block
+			position: absolute
+			bottom: 16px
+		.left
+			transform: rotate(45deg)
+		.right
+			transform: rotate(-45deg)
+	.overlay
+		background: rgba(54,64,74,0.98)
+	#form
+		width: 320px
+		input
+			padding-left: 10px
+			border-radius: 5px
+			border: none
+			margin-bottom: 10px
+		input[type=submit]
+			box-shadow: 0 2px 5px 1px #374547
+			margin-top: 10px
+			&:hover
+				box-shadow: 0 2px 5px 1px #374547
+		float: left
+		.form-aside
+			color: #fff
+			text-align: center
+			margin-bottom: 20px
+			h4
+				font-size: 3rem
+				margin-bottom: 15px
+			p
+				font-size: 1.4rem
+				margin-bottom: 25px
+				b
+					color: #04be5b
+	.modal-photo
+		float: right
+		margin-top: 16px
+		color: #fff
+		img
+			margin-bottom: 10px
+		h4
+			font-size: 2.8rem
+
 
 .modal_form_input_wrap
 	position: relative
@@ -420,6 +576,7 @@ html .loader
 	-webkit-box-shadow: 0 0 10px rgba(0,0,0,.3)
 	box-shadow: 0 0 10px rgba(0,0,0,.3)
 	z-index: 100
+	color: #000
 	&.input_error_email
 		width: 215px
 	&.input_error_phone
@@ -488,7 +645,7 @@ html .loader
 			outline: 0
 .dm-modal_inner
 	font-size: 1.6rem;
-	color: #343434
+	color: #fff
 .privacy-politic-modal
 	width: 100%	
 .close
@@ -518,7 +675,7 @@ html .loader
 	display: inline-block
 	position: relative	
 	ul
-		
+		text-align: center
 		li		
 			list-style: none
 			display: inline-block
@@ -532,11 +689,11 @@ html .loader
 	background-position: center
 	padding-top: 100px
 .header_logo
-	background: url('../img/mel-logo.png') no-repeat
+	//background: url('../img/mel-logo.png') no-repeat
 	width: 58px
 	height: 53px
 	background-size: contain
-	margin: 6px 0 0 -6px
+	margin: 6px 0 0
 .header-container
 	position: relative
 	min-height: 575px
@@ -583,7 +740,7 @@ html .loader
 		position: absolute
 		right: 0px
 		transition: .5s
-		margin: 21px 19px 0px 0
+		margin: 12px 19px 0px 0
 		&.left
 			top: 0
 		&.center
@@ -605,17 +762,17 @@ html .loader
 
 .call_information_container
 	padding-right: 0
-	text-align: left
+	text-align: right
 .call_information	
 	span
 		color: $main_txt_color
 		display: inline-block
 		width: 100%
-		font-size: 16px
+		font-size: 14px
 		margin-bottom: 2px
 	b
 		color: #fff
-		font-size: 23px	
+		font-size: 21px	
 .advertising-title
 	text-align: left
 	margin-left: 13px
@@ -670,9 +827,9 @@ html .loader
 		color: $main_active_color
 		padding: 0
 	.submit
-		box-shadow: 0 3px 2px -1px #3a454b
+		box-shadow: 0 2px 5px 1px #374547
 		&:hover
-			box-shadow: 0 2px 5px 1px #3a454b
+			box-shadow: 0 2px 5px 1px #374547
 .header-form
 	position: relative
 	input
