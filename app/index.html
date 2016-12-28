@@ -10,7 +10,8 @@
     <meta property="og:image" content="path/to/image.jpg">
     <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
     <link rel="stylesheet" href="css/reset .css">
-    <link rel="stylesheet" href="css/onepage-scroll.css">
+    <link rel="stylesheet" href="libs/scroll/jquery.fullPage.css">
+    <!-- <link rel="stylesheet" href="css/onepage-scroll.css"> -->
     <!-- Bootstrap v3.3.4 Grid Styles -->
     <style>
     html {
@@ -1877,14 +1878,14 @@
                 <a href="/" class="header_logo"><img src="img/mel-logo.png" alt=""></a>
             </div>
             <nav class="header_nav col-lg-9">
-                <ul class="onepage-pagination">
-                    <li><a data-index="4" href="#4">Что делаем</a></li>
-                    <li><a data-index="5" href="#5">Кейсы</a></li>
-                    <li><a data-index="6" href="#6">Стоимость</a></li>
-                    <li><a data-index="7" href="#7">Решение проблемы</a></li>
-                    <li><a data-index="9" href="#9">FAQ</a></li>
-                    <li><a data-index="8" href="#8">Команда</a></li>
-                    <li><a data-index="10" href="#10">Контакты</a></li>
+                <ul class="onepage-pagination" id="desktop-menu">
+                    <li data-menuanchor="2"><a href="#2">Что делаем</a></li>
+                    <li data-menuanchor="5"><a href="#5">Кейсы</a</li>
+                    <li data-menuanchor="6"><a href="#6">Стоимость</a></li>
+                    <li data-menuanchor="7"><a href="#7">Решение проблемы</a></li>
+                    <li data-menuanchor="9"><a href="#9">FAQ</a></li>
+                    <li data-menuanchor="8"><a href="#8">Команда</a></li>
+                    <li data-menuanchor="10"><a href="#10">Контакты</a></li>
                 </ul>
             </nav>
             <div class="button-mobile-menu">
@@ -1901,8 +1902,8 @@
         </div>
     </header>
     <!-- jfndjivn -->
-    <div class="main">
-        <section class="header" id="clever-context">
+    <div class="main" id="fullpage">
+        <section class="header section"  id="clever-context">
             <div class="container header-container">
                 <div class="advertising-container">
                     <div class="col-lg-8">
@@ -1956,7 +1957,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-contextual-advertising-section">
+        <section class="about-contextual-advertising-section section">
             <div class="container">
                 <div class="row">
                     <div class="about-contextual-advertising-container">
@@ -1986,7 +1987,7 @@
                 </div>
             </div>
         </section>
-        <section class="clever-context-container" id="clever-context">
+        <section class="clever-context-container section" id="clever-context">
             <div class="container main-container main-container-clever-context">
                 <div class="about-lever-context-container">
                     <h3 class="about-lever-context-container-title">«Умный» контекст — это когда</h3>
@@ -2046,7 +2047,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us-section" id="about-us-section">
+        <section class="about-us-section section" id="about-us-section">
             <div class="container">
                 <div class="row">
                     <div class="main-about-us-container">
@@ -2119,7 +2120,7 @@
                 </div>
             </div>
         </section>
-        <section class="finished-result-section" id="finished-result-section">
+        <section class="finished-result-section section" id="finished-result-section">
             <div class="container finished-result-container main-container">
                 <h2 class="finished-result-container-title">Посмотрите, каких результатов мы уже добились <p>для наших клиентов</p></h2>
                 <div class="owl-carousel-container">
@@ -2188,7 +2189,7 @@
                 </div>
             </div>
         </section>
-        <section class="starting-work-section" id="starting-work-section">
+        <section class="starting-work-section section" id="starting-work-section">
             <div class="container">
                 <div class="row">
                     <div class="starting-work-container clearfix">
@@ -2336,7 +2337,7 @@
                 </div>
             </div>
         </section>
-        <section class="solution-section">
+        <section class="solution-section section">
             <div class="container">
                 <div class="row">
                     <div class="solution-container">
@@ -2398,7 +2399,7 @@
                                     <img src="img/developer-foto7.jpg" alt="">
                                     <h4 class="name">Алексей Третьяков</h4>
                                     <aside>
-                                        <p class="skills">Back-End </p>
+                                        <p class="skills">Back-End Developer</p>
                                     </aside>
                                 </div>
                                 <div class="add-prop modal" data-modal="modal-8">Получить предложение</div>
@@ -2408,7 +2409,7 @@
                 </div>
             </div>
         </section>
-        <section class="developed-command-section" id="developed-command-section">
+        <section class="developed-command-section section" id="developed-command-section">
             <div class="container">
                 <div class="row">
                     <div class="developed-sociality-container clearfix">
@@ -2460,7 +2461,7 @@
                 </div>
             </div>
         </section>
-        <section class="main-quetions-section" id="main-quetions-section">
+        <section class="main-quetions-section section" id="main-quetions-section">
             <div class="container main-quetions-container">
                 <div class="main-quetions" id="main-quetions-id">
                     <h2 class="main-quetions-container-title">Есть вопросы или сомнения?<p>Отвечаем честно</p></h2>
@@ -2516,7 +2517,7 @@
                     <input class="ask-quetion-submit modal" data-modal="modal-6" type="submit" name="ask-quetion" value="Задать вопрос">
                 </div>
         </section>
-        <section class="footer" id="footer">
+        <section class="footer section" id="footer">
             <div class="container footer-position-contaiener">
                 <div class="footer-container">
                     <h2 class="footer-title">Начать просто. Не нужно ничего платить!

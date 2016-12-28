@@ -63,8 +63,7 @@ gulp.task('scripts', function() {
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js',
-		'app/libs/scroll/jquery.onepage-scroll.js',
-		'app/libs/scroll/jquery.onepage-scroll.min.js',
+		'app/libs/scroll/jquery.fullPage.min.js',
 		'app/libs/greensocks/*.js'
 		])
 		.pipe(concat('libs.js'))

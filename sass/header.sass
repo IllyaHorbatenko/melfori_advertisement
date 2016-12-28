@@ -679,6 +679,7 @@ html .loader
 		li		
 			list-style: none
 			display: inline-block
+
 			
 .main_content
 	text-align: center
@@ -723,6 +724,31 @@ html .loader
 			margin-right: 2px
 			transition: all 0.2s ease
 			color: $main_txt_color
+			&.active
+				color: #fff
+
+.onepage-pagination-container
+	.onepage-pagination
+		li
+			&.active
+				a
+					color: #fff
+					&:before
+						content: ''
+						position: absolute
+						width: calc(100% + 13px)
+						bottom: -12px
+						left: -6px
+						height: 1px
+						background: #04be5b
+			a
+				position: relative
+				transition: .3s
+				&:before
+					content: ''
+					transition: .3s
+
+
 
 .button-mobile-menu
 	display: none

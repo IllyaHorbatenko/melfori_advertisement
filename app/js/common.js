@@ -10,6 +10,17 @@ $(function() {
 });
 // прокрутка по секциям
 
+function activeMenuElem(elem) {
+    elem.click(function() {
+        elem.each(function() {
+            if ($(this) != elem) {
+                elem.removeClass("active");
+            }
+        });
+        $(this).toggleClass("active");
+    });
+}
+
 function buttonMobileMenu() {
     var button = $('.button-mobile-menu'),
         content = $('.main'),
@@ -22,15 +33,8 @@ function buttonMobileMenu() {
         button.toggleClass("active");
     });
 
-    selectElem.click(function() {
-        selectElem.each(function() {
-            if ($(this) != selectElem) {
-                selectElem.removeClass("active");
-            }
-        });
-        $(this).toggleClass("active");
+    activeMenuElem(selectElem);
 
-    });
 }
 
 
@@ -39,16 +43,38 @@ var limit = 0,
     thisSection = 0,
     naxtSection = 0;
 
+function activeDesctopMenu() {
+    var section = $('section'),
+        menuElem = $('#dasktop-menu li');
 
+    menuElem.click(function() {
+
+        var attrMenu = $(this).data('anchor'),
+            attrMenuSelf = $(this);
+        console.log(attrMenu);
+
+        section.each(function() {
+            var attrSection = $(this).data('anchor');
+            if (attrMenu == attrSection) {
+                attrMenuSelf.addClass('active');
+            }
+        });
+
+    });
+}
 // определение активной секции и добавление соотвецтвующей анимации
 function setAnimation(down, up) {
     var section = document.querySelectorAll('section');
 
+
     // проебежим по всем секциям
+
 
     for (var i = 0; i < section.length; i++) {
         var sectionClass = section[i].getAttribute('class').split(' '),
-            attribute = section[i].getAttribute('data-index');
+            attribute = section[i].getAttribute('data-anchor');
+
+
 
         // пробежим по всем классам активной секции 
         for (var j = 0; j < sectionClass.length; j++) {
@@ -97,7 +123,6 @@ function setAnimation(down, up) {
 }
 
 
-
 $(document).ready(function() {
     buttonMobileMenu();
 
@@ -106,21 +131,29 @@ $(document).ready(function() {
     console.log(document.documentElement.clientHeight);
 
     if (document.documentElement.clientWidth > 1200) {
-        $(".main").onepage_scroll({
-            sectionContainer: "section", // контейнер, к которому будет применяться скролл
-            easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
-            animationTime: 500, // время анимации
-            pagination: true, // скрыть или отобразить пагинатор
-            animationTime: 800,
-            moveDown: function() {
-                console.log('index');
-            },
-            updateURL: false, // обновлять URL или нет
-            // для инициализации tooltips
+        // $(".main").onepage_scroll({
+        //     sectionContainer: "section", // контейнер, к которому будет применяться скролл
+        //     easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
+        //     animationTime: 500, // время анимации
+        //     pagination: true, // скрыть или отобразить пагинатор
+        //     animationTime: 800,
+        //     moveDown: function() {
+        //         console.log('index');
+        //     },
+        //     updateURL: false, // обновлять URL или нет
+        //     // для инициализации tooltips
+        // });
+        $('#fullpage').fullpage({
+            anchors: ['1','2','3','4', '5', '6', '7', '8', '9', '10'],
+            menu: '#desktop-menu',
+            css3: true
         });
+       // activeDesctopMenu();
         setInterval(function() {
             setAnimation(td, tu);
         }, 100);
+
+
         var scrollMouseArrow = new TimelineMax(),
             scrollMouse = new TimelineMax();
         scrollMouse.from($('.scroll-mouse'), 2, { ease: Elastic.easeOut.config(2, 0.7), y: -10 })
@@ -228,7 +261,7 @@ $(document).ready(function() {
         td6.from('.another-promotion', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=1.4');
 
         //секция 7
-        
+
         td7.from('.solution-section .title ', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
         td7.staggerFrom('.solution-section .nomber-container', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8');
         td7.from('.solution-section .text-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
@@ -326,11 +359,11 @@ $(document).ready(function() {
 
         // секция 7
 
-        tu7.set('.solution-section .title ',{ y: -100, opacity: 0, ease: Power4.easeOut }, '+=0.5')
-            .to('.solution-section .title ', 0.7, { y:0, opacity: 1, ease: Power4.easeOut }, '+=0.5');
-        tu7.set('.solution-section .nomber-container', { y:-100, autoAlpha: 0, ease: Power4.easeOut }, '-=0.8')
+        tu7.set('.solution-section .title ', { y: -100, opacity: 0, ease: Power4.easeOut }, '+=0.5')
+            .to('.solution-section .title ', 0.7, { y: 0, opacity: 1, ease: Power4.easeOut }, '+=0.5');
+        tu7.set('.solution-section .nomber-container', { y: -100, autoAlpha: 0, ease: Power4.easeOut }, '-=0.8')
             .staggerTo('.solution-section .nomber-container', 0.7, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8');
-        tu7.set('.solution-section .text-container',{ y: -100, opacity: 0, ease: Power4.easeOut }, '-=0.5')
+        tu7.set('.solution-section .text-container', { y: -100, opacity: 0, ease: Power4.easeOut }, '-=0.5')
             .to('.solution-section .text-container', 0.7, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.5');
         tu7.set('.solution-section .developers-item', { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8')
             .staggerTo('.solution-section .developers-item', 0.7, { y: 100, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8');
