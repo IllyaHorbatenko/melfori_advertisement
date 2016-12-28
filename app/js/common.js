@@ -126,6 +126,12 @@ function setAnimation(down, up) {
 $(document).ready(function() {
     buttonMobileMenu();
 
+    var md = new MobileDetect(window.navigator.userAgent);
+    console.log(md.userAgent());
+    if (md.userAgent() == "Safari") {
+        $("#tel").css("font-size", "19px");  
+        console.log('dsvsd');
+    }
 
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
@@ -146,7 +152,8 @@ $(document).ready(function() {
         $('#fullpage').fullpage({
             anchors: ['1','2','3','4', '5', '6', '7', '8', '9', '10'],
             menu: '#desktop-menu',
-            css3: true
+            css3: true,
+            navigation:true
         });
        // activeDesctopMenu();
         setInterval(function() {
@@ -529,8 +536,10 @@ $(document).ready(function() {
         var txt = $(this).data('info');
         var title = $(this).data('title'); // для изменения title в модалке
         $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
-        $(".popup[data-modal=" + id + "] input[name=form_name").val(txt);
+        $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
         $(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
+
+        $(".popup5[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
 
         if (window.matchMedia("(min-width: 992px)").matches) {
             $("body").css({ "overflow": "hidden", "padding-right": "17px" });
@@ -549,6 +558,11 @@ $(document).ready(function() {
     $(".popup .close").click(function(e) {
         e.preventDefault();
         $(this).parents(".popup").hide("drop", { direction: "up" }, 200);
+        $("body").css({ "overflow": "inherit", "padding-right": "0" });
+    });
+    $(".popup5 .close").click(function(e) {
+        e.preventDefault();
+        $(this).parents(".popup5").hide("drop", { direction: "up" }, 200);
         $("body").css({ "overflow": "inherit", "padding-right": "0" });
     });
     //  Отправка форм

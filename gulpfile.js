@@ -64,6 +64,7 @@ gulp.task('scripts', function() {
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js',
 		'app/libs/scroll/jquery.fullPage.min.js',
+		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/greensocks/*.js'
 		])
 		.pipe(concat('libs.js'))

@@ -4,6 +4,9 @@
 
 /* Large Devices, Wide Screens */
 @media only screen and (max-width : 1200px)
+	.header-add-project-container
+		.modal_form_input_wrap
+			display: inline-block
 	.another-promotion
 		.another-promotion-title
 			text-align: center
@@ -13,7 +16,8 @@
 		.another-promotion-item
 			display: block
 	.advertising-container,
-	.tabs-container
+	.tabs-container,
+	.starting-work-container-position
 		padding: 0
 	section
 		margin-bottom: -3px
@@ -41,7 +45,7 @@
 		display: none
 	.header-form 
 		input[type=submit]
-			margin-top: 0
+			margin-top: 10px
 	.header-add-project-container
 		margin-top: 40px
 		margin-bottom: 50px
@@ -225,6 +229,9 @@
 		aside
 			padding: 0
 			padding-top: 10px
+		a
+			padding: 7px 58px
+
 	.audit-form
 		input
 			margin-right: 0
@@ -237,6 +244,29 @@
 		
 
 @media only screen and (max-width : 768px)
+	#form 
+		input
+		*::-webkit-input-placeholder
+			font-size: 16px
+		
+		*:-moz-placeholder
+			font-size: 16px
+		
+		*::-moz-placeholder
+			font-size: 16px
+		
+		*:-ms-input-placeholder
+			font-size: 16px
+	.popup-8 
+		.dm-modal
+			width: 420px
+		#form
+			width: 100%
+			.form-aside 
+				h4
+					font-size: 2.5rem
+		.modal-photo
+			display: none
 	.advertising-title,
 	.footer-aside
 		text-align: center
@@ -249,8 +279,8 @@
 	.melfori-footer,
 	.footer-link-icon,
 	.privaci-politic
-		margin-bottom: 20px
 		padding: 0
+		padding-bottom: 20px
 		text-align: center
 	.header-form
 		margin: 0
@@ -282,8 +312,8 @@
 		aside
 			b
 				font-size: 2.3rem
-		input
-			padding: 7px 45px
+		a
+			padding: 7px 38px
 	.starting-work-item-title
 		padding: 17px 0 26px 0
 		border-radius: 8px
@@ -405,6 +435,9 @@
 
 @media only screen and (max-width : 480px)
 	/**/
+	.popup-8 
+		.dm-modal
+			width: 90%
 	.call_information_container
 		display: none
 	.main-result
@@ -423,7 +456,7 @@
 		aside
 			padding: 10px	
 			font-size: 1.3rem	
-		input
+		a
 			padding: 10px 5px
 			font-size: 2rem
 			border-radius: 0  0 8px 8px
@@ -548,8 +581,10 @@
 		padding: 0 129px
 	.tabs-container
 		padding: 0 
-	.finished-result-section
-		padding-bottom: 60px
+	.another-promotion
+		.another-promotion-title
+			width: 309px
+			margin: 0
 	.header_logo
 		width: 40px
 		height: 37px
@@ -596,7 +631,7 @@
 			font-size: 	20px
 	
 	.about-lever-context-container 
-		top: calc(50% - 335px)
+		top: calc(50% - 323px)
 		h3
 			font-size: 3rem
 	.clever-context-image-blackboard, 
@@ -667,7 +702,7 @@
 		p
 			font-size: 1.4rem
 	.about-contextual-advertising-position
-		top: calc(50% - 350px)
+		top: calc(50% - 290px)
 	.about-contextual-advertising-title
 		font-size: 3rem
 	.finished-result-container-title
@@ -692,7 +727,7 @@
 
 	.starting-work-item-title
 		font-size: 1.4rem
-		padding: 12px 26px 19px 36px
+		padding: 12px 26px 21px 36px
 	.tabs-wrap-container
 		padding: 20px 25px
 	.starting-work-item 
@@ -720,6 +755,7 @@
 			ul
 				font-size: 1.3rem
 	.starting-work-container-position
+		padding: 0 81px
 		top: calc(50% - 272px)
 	.starting-work-container-title
 		margin-bottom: 25px
