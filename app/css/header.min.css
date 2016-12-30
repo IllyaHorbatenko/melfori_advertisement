@@ -14,7 +14,7 @@ body,h1{color:#bcbdbe}
 @font-face{font-family:MyriadPro-Bold;font-style:normal;font-weight:400;src:url(../fonts/MyriadPro-Bold/MyriadPro-Bold.eot?#iefix) format("embedded-opentype"),url(../fonts/MyriadPro-Bold/MyriadPro-Bold.woff) format("woff"),url(../fonts/MyriadPro-Bold/MyriadPro-Bold.ttf) format("truetype")}
 body{font-size:16px;min-width:320px;position:relative;line-height:1.6;font-family:ROBOTO-LIGHT,Arial,sans-serif;overflow-x:hidden}
 body.overflow{overflow-y:hidden!important}
-.popup4,.popup5,.popup5 .dm-modal,.popup6{overflow:auto}
+.popup,.popup2,.popup3,.popup4,.popup5,.popup5 .dm-modal,.popup6,.popup7{overflow:auto}
 h1{font:60px ROBOTO-LIGHT,Arial,sans-serif;letter-spacing:.6px}
 p{padding:0;margin:0}
 input[type=submit]{-webkit-transition:.2s;transition:.2s;border:none;outline:0;-webkit-box-shadow:0 2px 5px 1px #374547;box-shadow:0 2px 5px 1px #374547}
@@ -50,13 +50,12 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup6 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
 .popup6 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;width:470px;text-align:center;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002}
 .dm-modal_inner,.popup6 form{text-align:left}
-.popup6 input,.popup6 textarea{width:100%;height:40px;margin-bottom:20px}
+.popup6 input,.popup6 textarea{width:100%;height:40px;margin-bottom:20px;color:#000}
 .popup6 input[type=submit]{background:#04be5b;color:#fff;border:none;-webkit-border-radius:5px;border-radius:5px}
 .popup2 .dm-modal,.popup3 .dm-modal{max-width:100%;-webkit-border-radius:10px}
 .dm-modal_inner_h1{font-size:24px;padding:23px 0;text-align:center;text-transform:uppercase;color:#fff}
 .dm-modal_inner_h2{font-size:18px;padding:20px 0;color:#fff}
-.popup,.popup7{overflow:auto;font-size:2rem;color:#fff;left:0}
-.popup3{position:fixed;top:0;left:0;display:none;overflow:auto;width:100%;height:100%;z-index:1000}
+.popup3{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000}
 .popup3 .close{background:0 0;right:10px;top:10px}
 .popup3 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
 .popup3 .close .left{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
@@ -66,7 +65,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup3 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
 .popup3 .dm-modal{display:inline-block;padding:50px 46px;width:470px;text-align:center;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:#fff;border-radius:10px;z-index:1002}
 .popup .dm-modal,.popup2 .dm-modal{text-align:center;-webkit-animation:fade .8s}
-.popup2{position:fixed;top:0;left:0;display:none;overflow:auto;width:100%;height:100%;z-index:1000}
+.popup2{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000}
 .popup2 .close{background:0 0;right:10px;top:10px}
 .popup2 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
 .popup2 .close .left{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
@@ -75,7 +74,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup2 .overlay{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(54,64,74,.98);z-index:1001}
 .popup2 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
 .popup2 .dm-modal{display:inline-block;padding:50px 46px;width:470px;position:relative;animation:fade .8s;background-color:#fff;border-radius:10px;z-index:1002}
-.popup{position:fixed;top:0;display:none;width:100%;height:100%;z-index:1000}
+.popup{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#fff}
 .popup .close{background:0 0;right:10px;top:10px}
 .popup .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
 .popup .close .left{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
@@ -85,10 +84,12 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup .dm-cell{display:table-cell;padding:0 1em;text-align:center}
 .popup .dm-modal,.popup7 .dm-modal{display:inline-block;max-width:100%;width:470px}
 .popup .dm-modal{padding:50px 46px;position:relative;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002}
+.popup .dm-modal .success_mail{display:none;color:#fff;font:24px MyriadPro-Bold,Arial,sans-serif}
+.popup .dm-modal .success_mail.active{display:block}
 .popup form{text-align:left}
-.popup form input,.popup form textarea{width:100%;height:40px;margin-bottom:20px;-webkit-border-radius:5px;border-radius:5px}
+.popup form input,.popup form textarea{width:100%;height:40px;margin-bottom:20px;-webkit-border-radius:5px;border-radius:5px;color:#000}
 .popup form input[type=submit]{background:#04be5b;color:#fff;border:none}
-.popup7{position:fixed;top:0;display:none;width:100%;height:100%;z-index:1000}
+.popup7{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#fff}
 .popup7 .close{background:0 0;right:10px;top:10px}
 .popup7 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
 .popup7 .close .left{-webkit-transform:rotate(45deg);-ms-transform:rotate(45deg);transform:rotate(45deg)}
@@ -98,7 +99,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup7 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
 .popup7 .dm-modal{padding:50px 46px;text-align:center;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002}
 .popup7 form{text-align:left}
-.popup7 form input,.popup7 form textarea{width:100%;height:40px;margin-bottom:20px}
+.popup7 form input,.popup7 form textarea{width:100%;height:40px;margin-bottom:20px;color:#000}
 .popup7 form input[type=submit]{background:#04be5b;color:#fff;border:none;-webkit-border-radius:5px;border-radius:5px}
 .popup7 h2{font-size:2.5rem;margin:15px 0;text-transform:uppercase}
 .popup-8 .dm-modal{background:rgba(81,95,101,.99);width:700px;border:0;-webkit-border-radius:10px;border-radius:10px}
@@ -123,7 +124,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .modal_input_error.input_error_email{width:215px}
 .modal_input_error.input_error_phone{width:235px}
 .modal_input_error.form_error{display:block}
-.modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-33px;left:0;height:9px}
+.modal_error_chest_img{width:9px;position:relative;background-image:url(../img/modal_error_chest_img.png);top:-30px;left:0;height:9px}
 .modal_error_triangle{width:9px;position:relative;background-image:url(../img/modal_error_triangle.png);top:-43px;left:10px;height:8px}
 .modal_error_triangle label{margin-bottom:7px;margin-left:5px;text-align:left;display:block;font:14px MyriadPro-Bold,Arial,sans-serif;color:#bcbdbe}
 .header,.header_nav ul,.main_content{text-align:center}
@@ -175,7 +176,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header-add-project-title h2{font-size:30px;color:#fff;margin-right:15px;margin-bottom:19px}
 .header-add-project-title p{font-size:14px;margin-right:6px;margin-bottom:36px;margin-left:-4px}
 .header-add-project-title p b{color:#04be5b}
-.add-massage-form input{-webkit-border-radius:5px;border-radius:5px;width:263px;height:40px;padding-left:15px;border:1px solid rgba(0,0,0,.2)}
+.add-massage-form input{-webkit-border-radius:5px;border-radius:5px;width:263px;height:40px;padding-left:15px;border:1px solid rgba(0,0,0,.2);color:#000}
 .add-massage-form input[type=submit]{border:none;background:#04be5b;color:#fff;padding:0}
 .add-massage-form .submit,.add-massage-form .submit:hover{-webkit-box-shadow:0 2px 5px 1px #374547;box-shadow:0 2px 5px 1px #374547}
 .header-form input{margin-bottom:10px;color:#000}

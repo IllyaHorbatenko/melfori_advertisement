@@ -43,25 +43,6 @@ var limit = 0,
     thisSection = 0,
     naxtSection = 0;
 
-function activeDesctopMenu() {
-    var section = $('section'),
-        menuElem = $('#dasktop-menu li');
-
-    menuElem.click(function() {
-
-        var attrMenu = $(this).data('anchor'),
-            attrMenuSelf = $(this);
-        console.log(attrMenu);
-
-        section.each(function() {
-            var attrSection = $(this).data('anchor');
-            if (attrMenu == attrSection) {
-                attrMenuSelf.addClass('active');
-            }
-        });
-
-    });
-}
 // определение активной секции и добавление соотвецтвующей анимации
 function setAnimation(down, up) {
     var section = document.querySelectorAll('section');
@@ -127,16 +108,21 @@ $(document).ready(function() {
     buttonMobileMenu();
 
     var md = new MobileDetect(window.navigator.userAgent);
+
+    var mdSafari = new MobileDetect(
+    'Mozilla/5.0 (Linux; U; Android 4.0.3; en-in; SonyEricssonMT11i' +
+    ' Build/4.1.A.0.562) AppleWebKit/534.30 (KHTML, like Gecko)' +
+    ' Version/4.0 Mobile Safari/534.30');
+
     console.log(md.userAgent());
     if (md.userAgent() == "Safari") {
         $("#tel").css("font-size", "19px");  
-        console.log('dsvsd');
     }
-
+    
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth > 1200) {
+    if (document.documentElement.clientWidth > 1200 && md.mobile() != "iPad") {
         // $(".main").onepage_scroll({
         //     sectionContainer: "section", // контейнер, к которому будет применяться скролл
         //     easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -149,12 +135,13 @@ $(document).ready(function() {
         //     updateURL: false, // обновлять URL или нет
         //     // для инициализации tooltips
         // });
-        $('#fullpage').fullpage({
-            anchors: ['1','2','3','4', '5', '6', '7', '8', '9', '10'],
-            menu: '#desktop-menu',
-            css3: true,
-            navigation:true
-        });
+            $('#fullpage').fullpage({
+                anchors: ['1','2','3','4', '5', '6', '7', '8', '9', '10'],
+                menu: '#desktop-menu',
+                css3: true,
+                navigation:true
+            });
+    
        // activeDesctopMenu();
         setInterval(function() {
             setAnimation(td, tu);
@@ -172,7 +159,11 @@ $(document).ready(function() {
 
     }
 
-    if (document.documentElement.clientWidth > 1200) {
+    if(md.mobile() == "iPad"){
+        $('body, html').css('overflow','auto')
+    }
+
+    if (document.documentElement.clientWidth > 1200 && md.mobile() != "iPad") {
 
         var td1 = new TimelineMax(),
             td2 = new TimelineMax(),
@@ -538,6 +529,11 @@ $(document).ready(function() {
         $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
         $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
         $(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
+        $(".popup[data-modal=" + id + "] h2").css('display', 'block'); // прописать в ссылку data-title="нужный title"
+        if(document.documentElement.clientWidth > 768){
+            $(".popup[data-modal=" + id + "] .modal-photo").css('display', 'block'); 
+        }
+        $(".popup[data-modal=" + id + "] .close").css('display', 'block'); 
 
         $(".popup5[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
 
@@ -637,6 +633,7 @@ $(document).ready(function() {
         }
         console.log(erorr_finish);
         var size = error.length - 1;
+
         if (erorr_finish > size) { // в зависимости от полей которые проверяются (в нашем случае 3 поля)
             var data = form.serialize(); // подготавливаем данные
             $.ajax({ // инициализируем ajax запрос
@@ -651,30 +648,30 @@ $(document).ready(function() {
                     if (data['error']) { // если обработчик вернул ошибку
                         alert(data['error']); // покажем её текст
                     } else { // если все прошло ок
-                        $('.dm-modal form').hide(); // пишем что все ок                
-                        $('.dm-modal .sucess_mail').show('fade', 500);
-                        $('.popup .close').hide();
-                        $('.popup').delay(2000).fadeOut(
-                            function() {
-                                $('.popup').hide('fade');
-                                form.trigger('reset');
-                                $('.dm-modal .sucess_mail').removeClass('active');
-                                $("#win .close").trigger('click');
-                                $('.popup .close').show();
-                            }
-                        );
-                        if (data['form'] == "form_2") { //Проверяем какая форма, если в форме есть <input type="hidden" name="id_form" value="form_2"> то выполняем код что ниже
-                            $('.dm-modal .sucess_mail').addClass('active');
-                            $('.popup2 .close').hide();
-                            $('.popup2').show().delay(2000).fadeOut(
-                                function() {
-                                    $('.popup2').removeClass('active');
-                                    form.trigger('reset');
-                                    $('.dm-modal .sucess_mail').addClass('active');
-                                    $("#win2 .close").trigger('click');
-                                    $('.popup2 .close').show();
-                                }
-                            );
+
+                        if (data['form_type'] == 'modal') {
+                            $('.dm-modal form').hide();
+                            $('.dm-modal h2').css('display','none');
+                            $('.dm-modal .modal-photo').css('display','none');
+                            $('.dm-modal .close').css('display','none');
+                            form.trigger('reset');
+                            $('.dm-modal .success_mail').addClass('active'); //пишем что всё ок
+                            setTimeout(function() {
+                                form.parents('.popup').hide("fade", 500);
+                                $('.dm-modal .success_mail').removeClass('active');
+                                $("body").css({ "overflow": "inherit", "padding-right": "0" });
+                            }, 3000);
+                        }
+                        if (data['form_type'] == 'normal') { //надо писать в обычных формах <input type="hidden" name="form_type" value="normal"> 
+                            form.trigger('reset');
+                            $('.dm-modal .success_mail').addClass('active');
+                            $('.popup[data-modal="modal-res"]').toggle("fade", 500);
+                            //$("body").css({ "overflow": "hidden", "padding-right": "17px" });
+                            setTimeout(function() {
+                                $('.popup[data-modal="modal-res"]').hide("fade", 500);
+                                $('.dm-modal .success_mail').removeClass('active', 500);
+                                //$("body").css({ "overflow": "inherit", "padding-right": "0" });
+                            }, 3000);
                         }
                     }
                 },
@@ -685,7 +682,6 @@ $(document).ready(function() {
                 complete: function(data) { // событие после любого исхода
                     form.find('input[type="submit"]').prop('disabled', false); // в любом случае включим кнопку обратно
                 }
-
             });
         }
         return false; // вырубаем стандартную отправку формы
@@ -728,7 +724,9 @@ $(document).ready(function() {
         $('.tabs-wrap').removeClass("active"); //убираем активные состояния у табов
         $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
         //атрибут в ссылке то делаем его активным
-        TweenMax.staggerFrom($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 30, autoAlpha: 0 }, 0.1);
+        tabsAnim = new TimelineMax();
+         tabsAnim.set($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'),{ y: 30, autoAlpha: 0 })
+                .staggerTo($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 0, autoAlpha: 1 }, 0.1);
     });
 
 
