@@ -716,7 +716,7 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .about-contextual-advertising-wrap-1{margin-bottom:20px}
 .about-contextual-advertising-wrap-1 img{float:left;margin-right:25px}
 .about-contextual-advertising-wrap-2 img{float:right;margin-left:25px}
-.about-contextual-advertising-position{top:-webkit-calc(50% - 450px);top:calc(50% - 450px)}
+.about-contextual-advertising-position{top:-webkit-calc(50% - 456px);top:calc(50% - 456px)}
 .main-result-container{left:0;right:0;bottom:60px}
 .main-result{margin:auto;background:rgba(255,255,255,.2);padding:33px 0 41px;float:none;color:#fff;-webkit-border-radius:5px;border-radius:5px}
 .main-result h2{font-size:3.6rem;margin-bottom:23px}
