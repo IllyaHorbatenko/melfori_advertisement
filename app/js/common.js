@@ -109,16 +109,30 @@ $(document).ready(function() {
 
     var md = new MobileDetect(window.navigator.userAgent);
 
-    var mdSafari = new MobileDetect(
-    'Mozilla/5.0 (Linux; U; Android 4.0.3; en-in; SonyEricssonMT11i' +
-    ' Build/4.1.A.0.562) AppleWebKit/534.30 (KHTML, like Gecko)' +
-    ' Version/4.0 Mobile Safari/534.30');
+    function get_name_browser(){
+    // получаем данные userAgent
+    var ua = navigator.userAgent;    
+    // с помощью регулярок проверяем наличие текста,
+    // соответствующие тому или иному браузеру
+    if (ua.search(/Chrome/) > 0) return 'Google Chrome';
+    if (ua.search(/Firefox/) > 0) return 'Firefox';
+    if (ua.search(/Opera/) > 0) return 'Opera';
+    if (ua.search(/Safari/) > 0) return 'Safari';
+    if (ua.search(/MSIE/) > 0) return 'Internet Explorer';
+    // условий может быть и больше.
+    // сейчас сделаны проверки только 
+    // для популярных браузеров
+    return 'Не определен';
+}
+ 
+// пример использования
+var browser = get_name_browser();
 
-    console.log(md.userAgent());
-    if (md.userAgent() == "Safari") {
-        $("#tel").css("font-size", "19px");  
+
+    if (get_name_browser() == "Safari") {
+        $("#tel").css("font-size", "19px");
     }
-    
+
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
 
@@ -135,14 +149,14 @@ $(document).ready(function() {
         //     updateURL: false, // обновлять URL или нет
         //     // для инициализации tooltips
         // });
-            $('#fullpage').fullpage({
-                anchors: ['1','2','3','4', '5', '6', '7', '8', '9', '10'],
-                menu: '#desktop-menu',
-                css3: true,
-                navigation:true
-            });
-    
-       // activeDesctopMenu();
+        $('#fullpage').fullpage({
+            anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            menu: '#desktop-menu',
+            css3: true,
+            navigation: true
+        });
+
+        // activeDesctopMenu();
         setInterval(function() {
             setAnimation(td, tu);
         }, 100);
@@ -159,8 +173,8 @@ $(document).ready(function() {
 
     }
 
-    if(md.mobile() == "iPad"){
-        $('body, html').css('overflow','auto')
+    if (md.mobile() == "iPad") {
+        $('body, html').css('overflow', 'auto')
     }
 
     if (document.documentElement.clientWidth > 1200 && md.mobile() != "iPad") {
@@ -530,10 +544,10 @@ $(document).ready(function() {
         $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
         $(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
         $(".popup[data-modal=" + id + "] h2").css('display', 'block'); // прописать в ссылку data-title="нужный title"
-        if(document.documentElement.clientWidth > 768){
-            $(".popup[data-modal=" + id + "] .modal-photo").css('display', 'block'); 
+        if (document.documentElement.clientWidth > 768) {
+            $(".popup[data-modal=" + id + "] .modal-photo").css('display', 'block');
         }
-        $(".popup[data-modal=" + id + "] .close").css('display', 'block'); 
+        $(".popup[data-modal=" + id + "] .close").css('display', 'block');
 
         $(".popup5[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
 
@@ -651,9 +665,9 @@ $(document).ready(function() {
 
                         if (data['form_type'] == 'modal') {
                             $('.dm-modal form').hide();
-                            $('.dm-modal h2').css('display','none');
-                            $('.dm-modal .modal-photo').css('display','none');
-                            $('.dm-modal .close').css('display','none');
+                            $('.dm-modal h2').css('display', 'none');
+                            $('.dm-modal .modal-photo').css('display', 'none');
+                            $('.dm-modal .close').css('display', 'none');
                             form.trigger('reset');
                             $('.dm-modal .success_mail').addClass('active'); //пишем что всё ок
                             setTimeout(function() {
@@ -725,8 +739,8 @@ $(document).ready(function() {
         $('.tabs-wrap[data-tab=' + data + ']').addClass('active'); //если таб соответствует тому, какой data
         //атрибут в ссылке то делаем его активным
         tabsAnim = new TimelineMax();
-         tabsAnim.set($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'),{ y: 30, autoAlpha: 0 })
-                .staggerTo($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 0, autoAlpha: 1 }, 0.1);
+        tabsAnim.set($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), { y: 30, autoAlpha: 0 })
+            .staggerTo($('.tabs-wrap[data-tab=' + data + '] .starting-work-item'), 0.5, { y: 0, autoAlpha: 1 }, 0.1);
     });
 
 
