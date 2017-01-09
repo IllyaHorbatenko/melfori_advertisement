@@ -73,7 +73,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup2 .dm-table{display:table;width:100%;height:100%}
 .popup2 .overlay{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(54,64,74,.98);z-index:1001}
 .popup2 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
-.popup2 .dm-modal{display:inline-block;padding:50px 46px;width:470px;position:relative;animation:fade .8s;background-color:#fff;border-radius:10px;z-index:1002}
+.popup2 .dm-modal{display:inline-block;padding:50px 46px;width:700px;position:relative;animation:fade .8s;background-color:#fff;border-radius:10px;z-index:1002}
 .popup{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#fff}
 .popup .close{background:0 0;right:10px;top:10px}
 .popup .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
