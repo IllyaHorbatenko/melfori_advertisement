@@ -2,1734 +2,1939 @@
 <html class="no-js" lang="ru">
 
 <head>
-    <meta charset="utf-8">
-    <title>Заголовок</title>
-    <meta name="description" content="">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta property="og:image" content="path/to/image.jpg">
-    <link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
-    <link rel="stylesheet" href="css/reset .css">
-    <link rel="stylesheet" href="libs/scroll/jquery.fullPage.css">
-    <!-- <link rel="stylesheet" href="css/onepage-scroll.css"> -->
-    <!-- Bootstrap v3.3.4 Grid Styles -->
-    <style>
-    html {
-        font-family: sans-serif;
-        -ms-text-size-adjust: 100%;
-        -webkit-text-size-adjust: 100%
-    }
-    
-    body {
-        margin: 0
-    }
-    
-    article,
-    aside,
-    details,
-    figcaption,
-    figure,
-    footer,
-    header,
-    hgroup,
-    main,
-    menu,
-    nav,
-    section,
-    summary {
-        display: block
-    }
-    
-    audio,
-    canvas,
-    progress,
-    video {
-        display: inline-block;
-        vertical-align: baseline
-    }
-    
-    audio:not([controls]) {
-        display: none;
-        height: 0
-    }
-    
-    [hidden],
-    template {
-        display: none
-    }
-    
-    a {
-        background-color: transparent
-    }
-    
-    a:active,
-    a:hover {
-        outline: 0
-    }
-    
-    abbr[title] {
-        border-bottom: 1px dotted
-    }
-    
-    b,
-    strong {
-        font-weight: 700
-    }
-    
-    dfn {
-        font-style: italic
-    }
-    
-    h1 {
-        font-size: 2em;
-        margin: .67em 0
-    }
-    
-    mark {
-        background: #ff0;
-        color: #000
-    }
-    
-    small {
-        font-size: 80%
-    }
-    
-    sub,
-    sup {
-        font-size: 75%;
-        line-height: 0;
-        position: relative;
-        vertical-align: baseline
-    }
-    
-    sup {
-        top: -.5em
-    }
-    
-    sub {
-        bottom: -.25em
-    }
-    
-    img {
-        border: 0
-    }
-    
-    svg:not(:root) {
-        overflow: hidden
-    }
-    
-    figure {
-        margin: 1em 40px
-    }
-    
-    hr {
-        -moz-box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        box-sizing: content-box;
-        height: 0
-    }
-    
-    pre {
-        overflow: auto
-    }
-    
-    code,
-    kbd,
-    pre,
-    samp {
-        font-family: monospace, monospace;
-        font-size: 1em
-    }
-    
-    button,
-    input,
-    optgroup,
-    select,
-    textarea {
-        color: inherit;
-        font: inherit;
-        margin: 0
-    }
-    
-    button {
-        overflow: visible
-    }
-    
-    button,
-    select {
-        text-transform: none
-    }
-    
-    button,
-    html input[type="button"],
-    input[type="reset"],
-    input[type="submit"] {
-        -webkit-appearance: button;
-        cursor: pointer
-    }
-    
-    button[disabled],
-    html input[disabled] {
-        cursor: default
-    }
-    
-    button::-moz-focus-inner,
-    input::-moz-focus-inner {
-        border: 0;
-        padding: 0
-    }
-    
-    input {
-        line-height: normal
-    }
-    
-    input[type="checkbox"],
-    input[type="radio"] {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        padding: 0
-    }
-    
-    input[type="number"]::-webkit-inner-spin-button,
-    input[type="number"]::-webkit-outer-spin-button {
-        height: auto
-    }
-    
-    input[type="search"] {
-        -webkit-appearance: textfield;
-        -moz-box-sizing: content-box;
-        -webkit-box-sizing: content-box;
-        box-sizing: content-box
-    }
-    
-    input[type="search"]::-webkit-search-cancel-button,
-    input[type="search"]::-webkit-search-decoration {
-        -webkit-appearance: none
-    }
-    
-    fieldset {
-        border: 1px solid silver;
-        margin: 0 2px;
-        padding: .35em .625em .75em
-    }
-    
-    legend {
-        border: 0;
-        padding: 0
-    }
-    
-    textarea {
-        overflow: auto
-    }
-    
-    optgroup {
-        font-weight: 700
-    }
-    
-    table {
-        border-collapse: collapse;
-        border-spacing: 0
-    }
-    
-    td,
-    th {
-        padding: 0
-    }
-    
-    * {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box
-    }
-    
-    :before,
-    :after {
-        -webkit-box-sizing: border-box;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box
-    }
-    
-    html {
-        font-size: 10px;
-        -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
-    }
-    
-    body {
-        font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-        font-size: 14px;
-        line-height: 1.42857143;
-        color: #333;
-        background-color: #fff
-    }
-    
-    input,
-    button,
-    select,
-    textarea {
-        font-family: inherit;
-        font-size: inherit;
-        line-height: inherit
-    }
-    
-    a {
-        color: #337ab7;
-        text-decoration: none
-    }
-    
-    a:hover,
-    a:focus {
-        color: #23527c;
-        text-decoration: underline
-    }
-    
-    a:focus {
-        outline: thin dotted;
-        outline: 5px auto -webkit-focus-ring-color;
-        outline-offset: -2px
-    }
-    
-    figure {
-        margin: 0
-    }
-    
-    img {
-        vertical-align: middle
-    }
-    
-    .img-responsive {
-        display: block;
-        max-width: 100%;
-        height: auto
-    }
-    
-    .img-rounded {
-        border-radius: 6px
-    }
-    
-    .img-thumbnail {
-        padding: 4px;
-        line-height: 1.42857143;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-        -webkit-transition: all .2s ease-in-out;
-        -o-transition: all .2s ease-in-out;
-        transition: all .2s ease-in-out;
-        display: inline-block;
-        max-width: 100%;
-        height: auto
-    }
-    
-    .img-circle {
-        border-radius: 50%
-    }
-    
-    hr {
-        margin-top: 20px;
-        margin-bottom: 20px;
-        border: 0;
-        border-top: 1px solid #eee
-    }
-    
-    .sr-only {
-        position: absolute;
-        width: 1px;
-        height: 1px;
-        margin: -1px;
-        padding: 0;
-        overflow: hidden;
-        clip: rect(0, 0, 0, 0);
-        border: 0
-    }
-    
-    .sr-only-focusable:active,
-    .sr-only-focusable:focus {
-        position: static;
-        width: auto;
-        height: auto;
-        margin: 0;
-        overflow: visible;
-        clip: auto
-    }
-    
-    [role="button"] {
-        cursor: pointer
-    }
-    
-    .container {
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    @media (min-width:768px) {
-        .container {
-            width: 750px
-        }
-    }
-    
-    @media (min-width:992px) {
-        .container {
-            width: 970px
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .container {
-            width: 1170px
-        }
-    }
-    
-    .container-fluid {
-        margin-right: auto;
-        margin-left: auto;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    .row {
-        margin-left: 15px;
-        margin-right: 15px
-    }
-    
-    .col-xs-1,
-    .col-sm-1,
-    .col-md-1,
-    .col-lg-1,
-    .col-xs-2,
-    .col-sm-2,
-    .col-md-2,
-    .col-lg-2,
-    .col-xs-3,
-    .col-sm-3,
-    .col-md-3,
-    .col-lg-3,
-    .col-xs-4,
-    .col-sm-4,
-    .col-md-4,
-    .col-lg-4,
-    .col-xs-5,
-    .col-sm-5,
-    .col-md-5,
-    .col-lg-5,
-    .col-xs-6,
-    .col-sm-6,
-    .col-md-6,
-    .col-lg-6,
-    .col-xs-7,
-    .col-sm-7,
-    .col-md-7,
-    .col-lg-7,
-    .col-xs-8,
-    .col-sm-8,
-    .col-md-8,
-    .col-lg-8,
-    .col-xs-9,
-    .col-sm-9,
-    .col-md-9,
-    .col-lg-9,
-    .col-xs-10,
-    .col-sm-10,
-    .col-md-10,
-    .col-lg-10,
-    .col-xs-11,
-    .col-sm-11,
-    .col-md-11,
-    .col-lg-11,
-    .col-xs-12,
-    .col-sm-12,
-    .col-md-12,
-    .col-lg-12 {
-        position: relative;
-        min-height: 1px;
-        padding-left: 15px;
-        padding-right: 15px
-    }
-    
-    .col-xs-1,
-    .col-xs-2,
-    .col-xs-3,
-    .col-xs-4,
-    .col-xs-5,
-    .col-xs-6,
-    .col-xs-7,
-    .col-xs-8,
-    .col-xs-9,
-    .col-xs-10,
-    .col-xs-11,
-    .col-xs-12 {
-        float: left
-    }
-    
-    .col-xs-12 {
-        width: 100%
-    }
-    
-    .col-xs-11 {
-        width: 91.66666667%
-    }
-    
-    .col-xs-10 {
-        width: 83.33333333%
-    }
-    
-    .col-xs-9 {
-        width: 75%
-    }
-    
-    .col-xs-8 {
-        width: 66.66666667%
-    }
-    
-    .col-xs-7 {
-        width: 58.33333333%
-    }
-    
-    .col-xs-6 {
-        width: 50%
-    }
-    
-    .col-xs-5 {
-        width: 41.66666667%
-    }
-    
-    .col-xs-4 {
-        width: 33.33333333%
-    }
-    
-    .col-xs-3 {
-        width: 25%
-    }
-    
-    .col-xs-2 {
-        width: 16.66666667%
-    }
-    
-    .col-xs-1 {
-        width: 8.33333333%
-    }
-    
-    .col-xs-pull-12 {
-        right: 100%
-    }
-    
-    .col-xs-pull-11 {
-        right: 91.66666667%
-    }
-    
-    .col-xs-pull-10 {
-        right: 83.33333333%
-    }
-    
-    .col-xs-pull-9 {
-        right: 75%
-    }
-    
-    .col-xs-pull-8 {
-        right: 66.66666667%
-    }
-    
-    .col-xs-pull-7 {
-        right: 58.33333333%
-    }
-    
-    .col-xs-pull-6 {
-        right: 50%
-    }
-    
-    .col-xs-pull-5 {
-        right: 41.66666667%
-    }
-    
-    .col-xs-pull-4 {
-        right: 33.33333333%
-    }
-    
-    .col-xs-pull-3 {
-        right: 25%
-    }
-    
-    .col-xs-pull-2 {
-        right: 16.66666667%
-    }
-    
-    .col-xs-pull-1 {
-        right: 8.33333333%
-    }
-    
-    .col-xs-pull-0 {
-        right: auto
-    }
-    
-    .col-xs-push-12 {
-        left: 100%
-    }
-    
-    .col-xs-push-11 {
-        left: 91.66666667%
-    }
-    
-    .col-xs-push-10 {
-        left: 83.33333333%
-    }
-    
-    .col-xs-push-9 {
-        left: 75%
-    }
-    
-    .col-xs-push-8 {
-        left: 66.66666667%
-    }
-    
-    .col-xs-push-7 {
-        left: 58.33333333%
-    }
-    
-    .col-xs-push-6 {
-        left: 50%
-    }
-    
-    .col-xs-push-5 {
-        left: 41.66666667%
-    }
-    
-    .col-xs-push-4 {
-        left: 33.33333333%
-    }
-    
-    .col-xs-push-3 {
-        left: 25%
-    }
-    
-    .col-xs-push-2 {
-        left: 16.66666667%
-    }
-    
-    .col-xs-push-1 {
-        left: 8.33333333%
-    }
-    
-    .col-xs-push-0 {
-        left: auto
-    }
-    
-    .col-xs-offset-12 {
-        margin-left: 100%
-    }
-    
-    .col-xs-offset-11 {
-        margin-left: 91.66666667%
-    }
-    
-    .col-xs-offset-10 {
-        margin-left: 83.33333333%
-    }
-    
-    .col-xs-offset-9 {
-        margin-left: 75%
-    }
-    
-    .col-xs-offset-8 {
-        margin-left: 66.66666667%
-    }
-    
-    .col-xs-offset-7 {
-        margin-left: 58.33333333%
-    }
-    
-    .col-xs-offset-6 {
-        margin-left: 50%
-    }
-    
-    .col-xs-offset-5 {
-        margin-left: 41.66666667%
-    }
-    
-    .col-xs-offset-4 {
-        margin-left: 33.33333333%
-    }
-    
-    .col-xs-offset-3 {
-        margin-left: 25%
-    }
-    
-    .col-xs-offset-2 {
-        margin-left: 16.66666667%
-    }
-    
-    .col-xs-offset-1 {
-        margin-left: 8.33333333%
-    }
-    
-    .col-xs-offset-0 {
-        margin-left: 0
-    }
-    
-    @media (min-width:768px) {
-        .col-sm-1,
-        .col-sm-2,
-        .col-sm-3,
-        .col-sm-4,
-        .col-sm-5,
-        .col-sm-6,
-        .col-sm-7,
-        .col-sm-8,
-        .col-sm-9,
-        .col-sm-10,
-        .col-sm-11,
-        .col-sm-12 {
-            float: left
-        }
-        .col-sm-12 {
-            width: 100%
-        }
-        .col-sm-11 {
-            width: 91.66666667%
-        }
-        .col-sm-10 {
-            width: 83.33333333%
-        }
-        .col-sm-9 {
-            width: 75%
-        }
-        .col-sm-8 {
-            width: 66.66666667%
-        }
-        .col-sm-7 {
-            width: 58.33333333%
-        }
-        .col-sm-6 {
-            width: 50%
-        }
-        .col-sm-5 {
-            width: 41.66666667%
-        }
-        .col-sm-4 {
-            width: 33.33333333%
-        }
-        .col-sm-3 {
-            width: 25%
-        }
-        .col-sm-2 {
-            width: 16.66666667%
-        }
-        .col-sm-1 {
-            width: 8.33333333%
-        }
-        .col-sm-pull-12 {
-            right: 100%
-        }
-        .col-sm-pull-11 {
-            right: 91.66666667%
-        }
-        .col-sm-pull-10 {
-            right: 83.33333333%
-        }
-        .col-sm-pull-9 {
-            right: 75%
-        }
-        .col-sm-pull-8 {
-            right: 66.66666667%
-        }
-        .col-sm-pull-7 {
-            right: 58.33333333%
-        }
-        .col-sm-pull-6 {
-            right: 50%
-        }
-        .col-sm-pull-5 {
-            right: 41.66666667%
-        }
-        .col-sm-pull-4 {
-            right: 33.33333333%
-        }
-        .col-sm-pull-3 {
-            right: 25%
-        }
-        .col-sm-pull-2 {
-            right: 16.66666667%
-        }
-        .col-sm-pull-1 {
-            right: 8.33333333%
-        }
-        .col-sm-pull-0 {
-            right: auto
-        }
-        .col-sm-push-12 {
-            left: 100%
-        }
-        .col-sm-push-11 {
-            left: 91.66666667%
-        }
-        .col-sm-push-10 {
-            left: 83.33333333%
-        }
-        .col-sm-push-9 {
-            left: 75%
-        }
-        .col-sm-push-8 {
-            left: 66.66666667%
-        }
-        .col-sm-push-7 {
-            left: 58.33333333%
-        }
-        .col-sm-push-6 {
-            left: 50%
-        }
-        .col-sm-push-5 {
-            left: 41.66666667%
-        }
-        .col-sm-push-4 {
-            left: 33.33333333%
-        }
-        .col-sm-push-3 {
-            left: 25%
-        }
-        .col-sm-push-2 {
-            left: 16.66666667%
-        }
-        .col-sm-push-1 {
-            left: 8.33333333%
-        }
-        .col-sm-push-0 {
-            left: auto
-        }
-        .col-sm-offset-12 {
-            margin-left: 100%
-        }
-        .col-sm-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-sm-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-sm-offset-9 {
-            margin-left: 75%
-        }
-        .col-sm-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-sm-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-sm-offset-6 {
-            margin-left: 50%
-        }
-        .col-sm-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-sm-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-sm-offset-3 {
-            margin-left: 25%
-        }
-        .col-sm-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-sm-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-sm-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    @media (min-width:992px) {
-        .col-md-1,
-        .col-md-2,
-        .col-md-3,
-        .col-md-4,
-        .col-md-5,
-        .col-md-6,
-        .col-md-7,
-        .col-md-8,
-        .col-md-9,
-        .col-md-10,
-        .col-md-11,
-        .col-md-12 {
-            float: left
-        }
-        .col-md-12 {
-            width: 100%
-        }
-        .col-md-11 {
-            width: 91.66666667%
-        }
-        .col-md-10 {
-            width: 83.33333333%
-        }
-        .col-md-9 {
-            width: 75%
-        }
-        .col-md-8 {
-            width: 66.66666667%
-        }
-        .col-md-7 {
-            width: 58.33333333%
-        }
-        .col-md-6 {
-            width: 50%
-        }
-        .col-md-5 {
-            width: 41.66666667%
-        }
-        .col-md-4 {
-            width: 33.33333333%
-        }
-        .col-md-3 {
-            width: 25%
-        }
-        .col-md-2 {
-            width: 16.66666667%
-        }
-        .col-md-1 {
-            width: 8.33333333%
-        }
-        .col-md-pull-12 {
-            right: 100%
-        }
-        .col-md-pull-11 {
-            right: 91.66666667%
-        }
-        .col-md-pull-10 {
-            right: 83.33333333%
-        }
-        .col-md-pull-9 {
-            right: 75%
-        }
-        .col-md-pull-8 {
-            right: 66.66666667%
-        }
-        .col-md-pull-7 {
-            right: 58.33333333%
-        }
-        .col-md-pull-6 {
-            right: 50%
-        }
-        .col-md-pull-5 {
-            right: 41.66666667%
-        }
-        .col-md-pull-4 {
-            right: 33.33333333%
-        }
-        .col-md-pull-3 {
-            right: 25%
-        }
-        .col-md-pull-2 {
-            right: 16.66666667%
-        }
-        .col-md-pull-1 {
-            right: 8.33333333%
-        }
-        .col-md-pull-0 {
-            right: auto
-        }
-        .col-md-push-12 {
-            left: 100%
-        }
-        .col-md-push-11 {
-            left: 91.66666667%
-        }
-        .col-md-push-10 {
-            left: 83.33333333%
-        }
-        .col-md-push-9 {
-            left: 75%
-        }
-        .col-md-push-8 {
-            left: 66.66666667%
-        }
-        .col-md-push-7 {
-            left: 58.33333333%
-        }
-        .col-md-push-6 {
-            left: 50%
-        }
-        .col-md-push-5 {
-            left: 41.66666667%
-        }
-        .col-md-push-4 {
-            left: 33.33333333%
-        }
-        .col-md-push-3 {
-            left: 25%
-        }
-        .col-md-push-2 {
-            left: 16.66666667%
-        }
-        .col-md-push-1 {
-            left: 8.33333333%
-        }
-        .col-md-push-0 {
-            left: auto
-        }
-        .col-md-offset-12 {
-            margin-left: 100%
-        }
-        .col-md-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-md-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-md-offset-9 {
-            margin-left: 75%
-        }
-        .col-md-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-md-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-md-offset-6 {
-            margin-left: 50%
-        }
-        .col-md-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-md-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-md-offset-3 {
-            margin-left: 25%
-        }
-        .col-md-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-md-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-md-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .col-lg-1,
-        .col-lg-2,
-        .col-lg-3,
-        .col-lg-4,
-        .col-lg-5,
-        .col-lg-6,
-        .col-lg-7,
-        .col-lg-8,
-        .col-lg-9,
-        .col-lg-10,
-        .col-lg-11,
-        .col-lg-12 {
-            float: left
-        }
-        .col-lg-12 {
-            width: 100%
-        }
-        .col-lg-11 {
-            width: 91.66666667%
-        }
-        .col-lg-10 {
-            width: 83.33333333%
-        }
-        .col-lg-9 {
-            width: 75%
-        }
-        .col-lg-8 {
-            width: 66.66666667%
-        }
-        .col-lg-7 {
-            width: 58.33333333%
-        }
-        .col-lg-6 {
-            width: 50%
-        }
-        .col-lg-5 {
-            width: 41.66666667%
-        }
-        .col-lg-4 {
-            width: 33.33333333%
-        }
-        .col-lg-3 {
-            width: 25%
-        }
-        .col-lg-2 {
-            width: 16.66666667%
-        }
-        .col-lg-1 {
-            width: 8.33333333%
-        }
-        .col-lg-pull-12 {
-            right: 100%
-        }
-        .col-lg-pull-11 {
-            right: 91.66666667%
-        }
-        .col-lg-pull-10 {
-            right: 83.33333333%
-        }
-        .col-lg-pull-9 {
-            right: 75%
-        }
-        .col-lg-pull-8 {
-            right: 66.66666667%
-        }
-        .col-lg-pull-7 {
-            right: 58.33333333%
-        }
-        .col-lg-pull-6 {
-            right: 50%
-        }
-        .col-lg-pull-5 {
-            right: 41.66666667%
-        }
-        .col-lg-pull-4 {
-            right: 33.33333333%
-        }
-        .col-lg-pull-3 {
-            right: 25%
-        }
-        .col-lg-pull-2 {
-            right: 16.66666667%
-        }
-        .col-lg-pull-1 {
-            right: 8.33333333%
-        }
-        .col-lg-pull-0 {
-            right: auto
-        }
-        .col-lg-push-12 {
-            left: 100%
-        }
-        .col-lg-push-11 {
-            left: 91.66666667%
-        }
-        .col-lg-push-10 {
-            left: 83.33333333%
-        }
-        .col-lg-push-9 {
-            left: 75%
-        }
-        .col-lg-push-8 {
-            left: 66.66666667%
-        }
-        .col-lg-push-7 {
-            left: 58.33333333%
-        }
-        .col-lg-push-6 {
-            left: 50%
-        }
-        .col-lg-push-5 {
-            left: 41.66666667%
-        }
-        .col-lg-push-4 {
-            left: 33.33333333%
-        }
-        .col-lg-push-3 {
-            left: 25%
-        }
-        .col-lg-push-2 {
-            left: 16.66666667%
-        }
-        .col-lg-push-1 {
-            left: 8.33333333%
-        }
-        .col-lg-push-0 {
-            left: auto
-        }
-        .col-lg-offset-12 {
-            margin-left: 100%
-        }
-        .col-lg-offset-11 {
-            margin-left: 91.66666667%
-        }
-        .col-lg-offset-10 {
-            margin-left: 83.33333333%
-        }
-        .col-lg-offset-9 {
-            margin-left: 75%
-        }
-        .col-lg-offset-8 {
-            margin-left: 66.66666667%
-        }
-        .col-lg-offset-7 {
-            margin-left: 58.33333333%
-        }
-        .col-lg-offset-6 {
-            margin-left: 50%
-        }
-        .col-lg-offset-5 {
-            margin-left: 41.66666667%
-        }
-        .col-lg-offset-4 {
-            margin-left: 33.33333333%
-        }
-        .col-lg-offset-3 {
-            margin-left: 25%
-        }
-        .col-lg-offset-2 {
-            margin-left: 16.66666667%
-        }
-        .col-lg-offset-1 {
-            margin-left: 8.33333333%
-        }
-        .col-lg-offset-0 {
-            margin-left: 0
-        }
-    }
-    
-    .clearfix:before,
-    .clearfix:after,
-    .container:before,
-    .container:after,
-    .container-fluid:before,
-    .container-fluid:after,
-    .row:before,
-    .row:after {
-        content: " ";
-        display: table
-    }
-    
-    .clearfix:after,
-    .container:after,
-    .container-fluid:after,
-    .row:after {
-        clear: both
-    }
-    
-    .center-block {
-        display: block;
-        margin-left: auto;
-        margin-right: auto
-    }
-    
-    .pull-right {
-        float: right!important
-    }
-    
-    .pull-left {
-        float: left!important
-    }
-    
-    .hide {
-        display: none!important
-    }
-    
-    .show {
-        display: block!important
-    }
-    
-    .invisible {
-        visibility: hidden
-    }
-    
-    .text-hide {
-        font: 0/0 a;
-        color: transparent;
-        text-shadow: none;
-        background-color: transparent;
-        border: 0
-    }
-    
-    .hidden {
-        display: none!important
-    }
-    
-    .affix {
-        position: fixed
-    }
-    
-    .visible-xs,
-    .visible-sm,
-    .visible-md,
-    .visible-lg {
-        display: none!important
-    }
-    
-    .visible-xs-block,
-    .visible-xs-inline,
-    .visible-xs-inline-block,
-    .visible-sm-block,
-    .visible-sm-inline,
-    .visible-sm-inline-block,
-    .visible-md-block,
-    .visible-md-inline,
-    .visible-md-inline-block,
-    .visible-lg-block,
-    .visible-lg-inline,
-    .visible-lg-inline-block {
-        display: none!important
-    }
-    
-    @media (max-width:767px) {
-        .visible-xs {
-            display: block!important
-        }
-        table.visible-xs {
-            display: table
-        }
-        tr.visible-xs {
-            display: table-row!important
-        }
-        th.visible-xs,
-        td.visible-xs {
-            display: table-cell!important
-        }
-        .visible-xs-block {
-            display: block!important
-        }
-        .visible-xs-inline {
-            display: inline!important
-        }
-        .visible-xs-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:768px) and (max-width:991px) {
-        .visible-sm {
-            display: block!important
-        }
-        table.visible-sm {
-            display: table
-        }
-        tr.visible-sm {
-            display: table-row!important
-        }
-        th.visible-sm,
-        td.visible-sm {
-            display: table-cell!important
-        }
-        .visible-sm-block {
-            display: block!important
-        }
-        .visible-sm-inline {
-            display: inline!important
-        }
-        .visible-sm-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:992px) and (max-width:1199px) {
-        .visible-md {
-            display: block!important
-        }
-        table.visible-md {
-            display: table
-        }
-        tr.visible-md {
-            display: table-row!important
-        }
-        th.visible-md,
-        td.visible-md {
-            display: table-cell!important
-        }
-        .visible-md-block {
-            display: block!important
-        }
-        .visible-md-inline {
-            display: inline!important
-        }
-        .visible-md-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg {
-            display: block!important
-        }
-        table.visible-lg {
-            display: table
-        }
-        tr.visible-lg {
-            display: table-row!important
-        }
-        th.visible-lg,
-        td.visible-lg {
-            display: table-cell!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-block {
-            display: block!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-inline {
-            display: inline!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .visible-lg-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media (max-width:767px) {
-        .hidden-xs {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:768px) and (max-width:991px) {
-        .hidden-sm {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:992px) and (max-width:1199px) {
-        .hidden-md {
-            display: none!important
-        }
-    }
-    
-    @media (min-width:1200px) {
-        .hidden-lg {
-            display: none!important
-        }
-    }
-    
-    .visible-print {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print {
-            display: block!important
-        }
-        table.visible-print {
-            display: table
-        }
-        tr.visible-print {
-            display: table-row!important
-        }
-        th.visible-print,
-        td.visible-print {
-            display: table-cell!important
-        }
-    }
-    
-    .visible-print-block {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-block {
-            display: block!important
-        }
-    }
-    
-    .visible-print-inline {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-inline {
-            display: inline!important
-        }
-    }
-    
-    .visible-print-inline-block {
-        display: none!important
-    }
-    
-    @media print {
-        .visible-print-inline-block {
-            display: inline-block!important
-        }
-    }
-    
-    @media print {
-        .hidden-print {
-            display: none!important
-        }
-    }
-    </style>
-    <!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
-    <style>
-    html .loader {
-        background: #fff;
-        bottom: 0;
-        height: 100%;
-        left: 0;
-        position: fixed;
-        right: 0;
-        top: 0;
-        width: 100%;
-        z-index: 9999
-    }
-    
-    html .loader .loader_inner {
-        background-image: url(img/preloader.gif);
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-color: #fff;
-        height: 60px;
-        width: 60px;
-        margin-top: -30px;
-        margin-left: -30px;
-        left: 50%;
-        top: 50%;
-        position: absolute
-    }
-    </style>
-    <!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
-    <script>
-    ! function(e) {
-        "use strict";
+	<meta charset="utf-8">
+	<title>Заголовок</title>
+	<meta name="description" content="">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta property="og:image" content="path/to/image.jpg">
+	<link rel="shortcut icon" href="img/favicon.png" type="image/x-icon">
+	<link rel="stylesheet" href="css/reset .css">
+	<link rel="stylesheet" href="libs/scroll/jquery.fullPage.css">
+	<!-- <link rel="stylesheet" href="css/onepage-scroll.css"> -->
+	<!-- Bootstrap v3.3.4 Grid Styles -->
+	<style>
+		html {
+			font-family: sans-serif;
+			-ms-text-size-adjust: 100%;
+			-webkit-text-size-adjust: 100%
+		}
 
-        function t(e, t, n) {
-            e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
-        }
+		body {
+			margin: 0
+		}
 
-        function n(t, n) {
-            return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
-        }
+		article,
+		aside,
+		details,
+		figcaption,
+		figure,
+		footer,
+		header,
+		hgroup,
+		main,
+		menu,
+		nav,
+		section,
+		summary {
+			display: block
+		}
 
-        function a(t, a) {
-            if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
-            else {
-                var s = r.createElement("link");
-                s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
-            }
-        }
+		audio,
+		canvas,
+		progress,
+		video {
+			display: inline-block;
+			vertical-align: baseline
+		}
 
-        function l(e, t) {
-            var n = new XMLHttpRequest;
-            n.open("GET", t, !0), n.onreadystatechange = function() {
-                4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
-            }, n.send()
-        }
+		audio:not([controls]) {
+			display: none;
+			height: 0
+		}
 
-        function o(e) {
-            var t = r.createElement("style");
-            t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
-        }
-        var r = e.document;
-        e.loadCSS = function(e, t, n) {
-            var a, l = r.createElement("link");
-            if (t) a = t;
-            else {
-                var o;
-                o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
-            }
-            var s = r.styleSheets;
-            l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
-            var c = function(e) {
-                for (var t = l.href, n = s.length; n--;)
-                    if (s[n].href === t) return e();
-                setTimeout(function() {
-                    c(e)
-                })
-            };
-            return l.onloadcssdefined = c, c(function() {
-                l.media = n || "all"
-            }), l
-        }, e.loadLocalStorageCSS = function(l, o) {
-            n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function() {
-                a(l, o)
-            })
-        }
-    }(this);
-    </script>
-    <!-- Load CSS Start -->
-    <script>
-    loadLocalStorageCSS("webfonts", "css/fonts.min.css?ver=1.0.0");
-    </script>
-    <script>
-    loadCSS("css/header.min.css?ver=1.0.0", false, "all");
-    </script>
-    <script>
-    loadCSS("css/main.min.css?ver=1.0.0", false, "all");
-    </script>
-    <!-- Load CSS End -->
-    <!-- Load CSS Compiled without JS -->
-    <noscript>
-        <link rel="stylesheet" href="css/fonts.min.css">
-        <link rel="stylesheet" href="css/main.min.css">
-    </noscript>
+		[hidden],
+		template {
+			display: none
+		}
+
+		a {
+			background-color: transparent
+		}
+
+		a:active,
+		a:hover {
+			outline: 0
+		}
+
+		abbr[title] {
+			border-bottom: 1px dotted
+		}
+
+		b,
+		strong {
+			font-weight: 700
+		}
+
+		dfn {
+			font-style: italic
+		}
+
+		h1 {
+			font-size: 2em;
+			margin: .67em 0
+		}
+
+		mark {
+			background: #ff0;
+			color: #000
+		}
+
+		small {
+			font-size: 80%
+		}
+
+		sub,
+		sup {
+			font-size: 75%;
+			line-height: 0;
+			position: relative;
+			vertical-align: baseline
+		}
+
+		sup {
+			top: -.5em
+		}
+
+		sub {
+			bottom: -.25em
+		}
+
+		img {
+			border: 0
+		}
+
+		svg:not(:root) {
+			overflow: hidden
+		}
+
+		figure {
+			margin: 1em 40px
+		}
+
+		hr {
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box;
+			height: 0
+		}
+
+		pre {
+			overflow: auto
+		}
+
+		code,
+		kbd,
+		pre,
+		samp {
+			font-family: monospace, monospace;
+			font-size: 1em
+		}
+
+		button,
+		input,
+		optgroup,
+		select,
+		textarea {
+			color: inherit;
+			font: inherit;
+			margin: 0
+		}
+
+		button {
+			overflow: visible
+		}
+
+		button,
+		select {
+			text-transform: none
+		}
+
+		button,
+		html input[type="button"],
+		input[type="reset"],
+		input[type="submit"] {
+			-webkit-appearance: button;
+			cursor: pointer
+		}
+
+		button[disabled],
+		html input[disabled] {
+			cursor: default
+		}
+
+		button::-moz-focus-inner,
+		input::-moz-focus-inner {
+			border: 0;
+			padding: 0
+		}
+
+		input {
+			line-height: normal
+		}
+
+		input[type="checkbox"],
+		input[type="radio"] {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box;
+			padding: 0
+		}
+
+		input[type="number"]::-webkit-inner-spin-button,
+		input[type="number"]::-webkit-outer-spin-button {
+			height: auto
+		}
+
+		input[type="search"] {
+			-webkit-appearance: textfield;
+			-moz-box-sizing: content-box;
+			-webkit-box-sizing: content-box;
+			box-sizing: content-box
+		}
+
+		input[type="search"]::-webkit-search-cancel-button,
+		input[type="search"]::-webkit-search-decoration {
+			-webkit-appearance: none
+		}
+
+		fieldset {
+			border: 1px solid silver;
+			margin: 0 2px;
+			padding: .35em .625em .75em
+		}
+
+		legend {
+			border: 0;
+			padding: 0
+		}
+
+		textarea {
+			overflow: auto
+		}
+
+		optgroup {
+			font-weight: 700
+		}
+
+		table {
+			border-collapse: collapse;
+			border-spacing: 0
+		}
+
+		td,
+		th {
+			padding: 0
+		}
+
+		* {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		:before,
+		:after {
+			-webkit-box-sizing: border-box;
+			-moz-box-sizing: border-box;
+			box-sizing: border-box
+		}
+
+		html {
+			font-size: 10px;
+			-webkit-tap-highlight-color: rgba(0, 0, 0, 0)
+		}
+
+		body {
+			font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+			font-size: 14px;
+			line-height: 1.42857143;
+			color: #333;
+			background-color: #fff
+		}
+
+		input,
+		button,
+		select,
+		textarea {
+			font-family: inherit;
+			font-size: inherit;
+			line-height: inherit
+		}
+
+		a {
+			color: #337ab7;
+			text-decoration: none
+		}
+
+		a:hover,
+		a:focus {
+			color: #23527c;
+			text-decoration: underline
+		}
+
+		a:focus {
+			outline: thin dotted;
+			outline: 5px auto -webkit-focus-ring-color;
+			outline-offset: -2px
+		}
+
+		figure {
+			margin: 0
+		}
+
+		img {
+			vertical-align: middle
+		}
+
+		.img-responsive {
+			display: block;
+			max-width: 100%;
+			height: auto
+		}
+
+		.img-rounded {
+			border-radius: 6px
+		}
+
+		.img-thumbnail {
+			padding: 4px;
+			line-height: 1.42857143;
+			background-color: #fff;
+			border: 1px solid #ddd;
+			border-radius: 4px;
+			-webkit-transition: all .2s ease-in-out;
+			-o-transition: all .2s ease-in-out;
+			transition: all .2s ease-in-out;
+			display: inline-block;
+			max-width: 100%;
+			height: auto
+		}
+
+		.img-circle {
+			border-radius: 50%
+		}
+
+		hr {
+			margin-top: 20px;
+			margin-bottom: 20px;
+			border: 0;
+			border-top: 1px solid #eee
+		}
+
+		.sr-only {
+			position: absolute;
+			width: 1px;
+			height: 1px;
+			margin: -1px;
+			padding: 0;
+			overflow: hidden;
+			clip: rect(0, 0, 0, 0);
+			border: 0
+		}
+
+		.sr-only-focusable:active,
+		.sr-only-focusable:focus {
+			position: static;
+			width: auto;
+			height: auto;
+			margin: 0;
+			overflow: visible;
+			clip: auto
+		}
+
+		[role="button"] {
+			cursor: pointer
+		}
+
+		.container {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		@media (min-width: 768px) {
+			.container {
+				width: 750px
+			}
+		}
+
+		@media (min-width: 992px) {
+			.container {
+				width: 970px
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.container {
+				width: 1170px
+			}
+		}
+
+		.container-fluid {
+			margin-right: auto;
+			margin-left: auto;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		.row {
+			margin-left: 15px;
+			margin-right: 15px
+		}
+
+		.col-xs-1,
+		.col-sm-1,
+		.col-md-1,
+		.col-lg-1,
+		.col-xs-2,
+		.col-sm-2,
+		.col-md-2,
+		.col-lg-2,
+		.col-xs-3,
+		.col-sm-3,
+		.col-md-3,
+		.col-lg-3,
+		.col-xs-4,
+		.col-sm-4,
+		.col-md-4,
+		.col-lg-4,
+		.col-xs-5,
+		.col-sm-5,
+		.col-md-5,
+		.col-lg-5,
+		.col-xs-6,
+		.col-sm-6,
+		.col-md-6,
+		.col-lg-6,
+		.col-xs-7,
+		.col-sm-7,
+		.col-md-7,
+		.col-lg-7,
+		.col-xs-8,
+		.col-sm-8,
+		.col-md-8,
+		.col-lg-8,
+		.col-xs-9,
+		.col-sm-9,
+		.col-md-9,
+		.col-lg-9,
+		.col-xs-10,
+		.col-sm-10,
+		.col-md-10,
+		.col-lg-10,
+		.col-xs-11,
+		.col-sm-11,
+		.col-md-11,
+		.col-lg-11,
+		.col-xs-12,
+		.col-sm-12,
+		.col-md-12,
+		.col-lg-12 {
+			position: relative;
+			min-height: 1px;
+			padding-left: 15px;
+			padding-right: 15px
+		}
+
+		.col-xs-1,
+		.col-xs-2,
+		.col-xs-3,
+		.col-xs-4,
+		.col-xs-5,
+		.col-xs-6,
+		.col-xs-7,
+		.col-xs-8,
+		.col-xs-9,
+		.col-xs-10,
+		.col-xs-11,
+		.col-xs-12 {
+			float: left
+		}
+
+		.col-xs-12 {
+			width: 100%
+		}
+
+		.col-xs-11 {
+			width: 91.66666667%
+		}
+
+		.col-xs-10 {
+			width: 83.33333333%
+		}
+
+		.col-xs-9 {
+			width: 75%
+		}
+
+		.col-xs-8 {
+			width: 66.66666667%
+		}
+
+		.col-xs-7 {
+			width: 58.33333333%
+		}
+
+		.col-xs-6 {
+			width: 50%
+		}
+
+		.col-xs-5 {
+			width: 41.66666667%
+		}
+
+		.col-xs-4 {
+			width: 33.33333333%
+		}
+
+		.col-xs-3 {
+			width: 25%
+		}
+
+		.col-xs-2 {
+			width: 16.66666667%
+		}
+
+		.col-xs-1 {
+			width: 8.33333333%
+		}
+
+		.col-xs-pull-12 {
+			right: 100%
+		}
+
+		.col-xs-pull-11 {
+			right: 91.66666667%
+		}
+
+		.col-xs-pull-10 {
+			right: 83.33333333%
+		}
+
+		.col-xs-pull-9 {
+			right: 75%
+		}
+
+		.col-xs-pull-8 {
+			right: 66.66666667%
+		}
+
+		.col-xs-pull-7 {
+			right: 58.33333333%
+		}
+
+		.col-xs-pull-6 {
+			right: 50%
+		}
+
+		.col-xs-pull-5 {
+			right: 41.66666667%
+		}
+
+		.col-xs-pull-4 {
+			right: 33.33333333%
+		}
+
+		.col-xs-pull-3 {
+			right: 25%
+		}
+
+		.col-xs-pull-2 {
+			right: 16.66666667%
+		}
+
+		.col-xs-pull-1 {
+			right: 8.33333333%
+		}
+
+		.col-xs-pull-0 {
+			right: auto
+		}
+
+		.col-xs-push-12 {
+			left: 100%
+		}
+
+		.col-xs-push-11 {
+			left: 91.66666667%
+		}
+
+		.col-xs-push-10 {
+			left: 83.33333333%
+		}
+
+		.col-xs-push-9 {
+			left: 75%
+		}
+
+		.col-xs-push-8 {
+			left: 66.66666667%
+		}
+
+		.col-xs-push-7 {
+			left: 58.33333333%
+		}
+
+		.col-xs-push-6 {
+			left: 50%
+		}
+
+		.col-xs-push-5 {
+			left: 41.66666667%
+		}
+
+		.col-xs-push-4 {
+			left: 33.33333333%
+		}
+
+		.col-xs-push-3 {
+			left: 25%
+		}
+
+		.col-xs-push-2 {
+			left: 16.66666667%
+		}
+
+		.col-xs-push-1 {
+			left: 8.33333333%
+		}
+
+		.col-xs-push-0 {
+			left: auto
+		}
+
+		.col-xs-offset-12 {
+			margin-left: 100%
+		}
+
+		.col-xs-offset-11 {
+			margin-left: 91.66666667%
+		}
+
+		.col-xs-offset-10 {
+			margin-left: 83.33333333%
+		}
+
+		.col-xs-offset-9 {
+			margin-left: 75%
+		}
+
+		.col-xs-offset-8 {
+			margin-left: 66.66666667%
+		}
+
+		.col-xs-offset-7 {
+			margin-left: 58.33333333%
+		}
+
+		.col-xs-offset-6 {
+			margin-left: 50%
+		}
+
+		.col-xs-offset-5 {
+			margin-left: 41.66666667%
+		}
+
+		.col-xs-offset-4 {
+			margin-left: 33.33333333%
+		}
+
+		.col-xs-offset-3 {
+			margin-left: 25%
+		}
+
+		.col-xs-offset-2 {
+			margin-left: 16.66666667%
+		}
+
+		.col-xs-offset-1 {
+			margin-left: 8.33333333%
+		}
+
+		.col-xs-offset-0 {
+			margin-left: 0
+		}
+
+		@media (min-width: 768px) {
+			.col-sm-1,
+			.col-sm-2,
+			.col-sm-3,
+			.col-sm-4,
+			.col-sm-5,
+			.col-sm-6,
+			.col-sm-7,
+			.col-sm-8,
+			.col-sm-9,
+			.col-sm-10,
+			.col-sm-11,
+			.col-sm-12 {
+				float: left
+			}
+
+			.col-sm-12 {
+				width: 100%
+			}
+
+			.col-sm-11 {
+				width: 91.66666667%
+			}
+
+			.col-sm-10 {
+				width: 83.33333333%
+			}
+
+			.col-sm-9 {
+				width: 75%
+			}
+
+			.col-sm-8 {
+				width: 66.66666667%
+			}
+
+			.col-sm-7 {
+				width: 58.33333333%
+			}
+
+			.col-sm-6 {
+				width: 50%
+			}
+
+			.col-sm-5 {
+				width: 41.66666667%
+			}
+
+			.col-sm-4 {
+				width: 33.33333333%
+			}
+
+			.col-sm-3 {
+				width: 25%
+			}
+
+			.col-sm-2 {
+				width: 16.66666667%
+			}
+
+			.col-sm-1 {
+				width: 8.33333333%
+			}
+
+			.col-sm-pull-12 {
+				right: 100%
+			}
+
+			.col-sm-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-sm-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-sm-pull-9 {
+				right: 75%
+			}
+
+			.col-sm-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-sm-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-sm-pull-6 {
+				right: 50%
+			}
+
+			.col-sm-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-sm-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-sm-pull-3 {
+				right: 25%
+			}
+
+			.col-sm-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-sm-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-sm-pull-0 {
+				right: auto
+			}
+
+			.col-sm-push-12 {
+				left: 100%
+			}
+
+			.col-sm-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-sm-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-sm-push-9 {
+				left: 75%
+			}
+
+			.col-sm-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-sm-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-sm-push-6 {
+				left: 50%
+			}
+
+			.col-sm-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-sm-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-sm-push-3 {
+				left: 25%
+			}
+
+			.col-sm-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-sm-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-sm-push-0 {
+				left: auto
+			}
+
+			.col-sm-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-sm-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-sm-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-sm-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-sm-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-sm-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-sm-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-sm-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-sm-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-sm-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-sm-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-sm-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-sm-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		@media (min-width: 992px) {
+			.col-md-1,
+			.col-md-2,
+			.col-md-3,
+			.col-md-4,
+			.col-md-5,
+			.col-md-6,
+			.col-md-7,
+			.col-md-8,
+			.col-md-9,
+			.col-md-10,
+			.col-md-11,
+			.col-md-12 {
+				float: left
+			}
+
+			.col-md-12 {
+				width: 100%
+			}
+
+			.col-md-11 {
+				width: 91.66666667%
+			}
+
+			.col-md-10 {
+				width: 83.33333333%
+			}
+
+			.col-md-9 {
+				width: 75%
+			}
+
+			.col-md-8 {
+				width: 66.66666667%
+			}
+
+			.col-md-7 {
+				width: 58.33333333%
+			}
+
+			.col-md-6 {
+				width: 50%
+			}
+
+			.col-md-5 {
+				width: 41.66666667%
+			}
+
+			.col-md-4 {
+				width: 33.33333333%
+			}
+
+			.col-md-3 {
+				width: 25%
+			}
+
+			.col-md-2 {
+				width: 16.66666667%
+			}
+
+			.col-md-1 {
+				width: 8.33333333%
+			}
+
+			.col-md-pull-12 {
+				right: 100%
+			}
+
+			.col-md-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-md-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-md-pull-9 {
+				right: 75%
+			}
+
+			.col-md-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-md-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-md-pull-6 {
+				right: 50%
+			}
+
+			.col-md-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-md-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-md-pull-3 {
+				right: 25%
+			}
+
+			.col-md-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-md-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-md-pull-0 {
+				right: auto
+			}
+
+			.col-md-push-12 {
+				left: 100%
+			}
+
+			.col-md-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-md-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-md-push-9 {
+				left: 75%
+			}
+
+			.col-md-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-md-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-md-push-6 {
+				left: 50%
+			}
+
+			.col-md-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-md-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-md-push-3 {
+				left: 25%
+			}
+
+			.col-md-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-md-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-md-push-0 {
+				left: auto
+			}
+
+			.col-md-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-md-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-md-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-md-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-md-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-md-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-md-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-md-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-md-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-md-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-md-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-md-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-md-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.col-lg-1,
+			.col-lg-2,
+			.col-lg-3,
+			.col-lg-4,
+			.col-lg-5,
+			.col-lg-6,
+			.col-lg-7,
+			.col-lg-8,
+			.col-lg-9,
+			.col-lg-10,
+			.col-lg-11,
+			.col-lg-12 {
+				float: left
+			}
+
+			.col-lg-12 {
+				width: 100%
+			}
+
+			.col-lg-11 {
+				width: 91.66666667%
+			}
+
+			.col-lg-10 {
+				width: 83.33333333%
+			}
+
+			.col-lg-9 {
+				width: 75%
+			}
+
+			.col-lg-8 {
+				width: 66.66666667%
+			}
+
+			.col-lg-7 {
+				width: 58.33333333%
+			}
+
+			.col-lg-6 {
+				width: 50%
+			}
+
+			.col-lg-5 {
+				width: 41.66666667%
+			}
+
+			.col-lg-4 {
+				width: 33.33333333%
+			}
+
+			.col-lg-3 {
+				width: 25%
+			}
+
+			.col-lg-2 {
+				width: 16.66666667%
+			}
+
+			.col-lg-1 {
+				width: 8.33333333%
+			}
+
+			.col-lg-pull-12 {
+				right: 100%
+			}
+
+			.col-lg-pull-11 {
+				right: 91.66666667%
+			}
+
+			.col-lg-pull-10 {
+				right: 83.33333333%
+			}
+
+			.col-lg-pull-9 {
+				right: 75%
+			}
+
+			.col-lg-pull-8 {
+				right: 66.66666667%
+			}
+
+			.col-lg-pull-7 {
+				right: 58.33333333%
+			}
+
+			.col-lg-pull-6 {
+				right: 50%
+			}
+
+			.col-lg-pull-5 {
+				right: 41.66666667%
+			}
+
+			.col-lg-pull-4 {
+				right: 33.33333333%
+			}
+
+			.col-lg-pull-3 {
+				right: 25%
+			}
+
+			.col-lg-pull-2 {
+				right: 16.66666667%
+			}
+
+			.col-lg-pull-1 {
+				right: 8.33333333%
+			}
+
+			.col-lg-pull-0 {
+				right: auto
+			}
+
+			.col-lg-push-12 {
+				left: 100%
+			}
+
+			.col-lg-push-11 {
+				left: 91.66666667%
+			}
+
+			.col-lg-push-10 {
+				left: 83.33333333%
+			}
+
+			.col-lg-push-9 {
+				left: 75%
+			}
+
+			.col-lg-push-8 {
+				left: 66.66666667%
+			}
+
+			.col-lg-push-7 {
+				left: 58.33333333%
+			}
+
+			.col-lg-push-6 {
+				left: 50%
+			}
+
+			.col-lg-push-5 {
+				left: 41.66666667%
+			}
+
+			.col-lg-push-4 {
+				left: 33.33333333%
+			}
+
+			.col-lg-push-3 {
+				left: 25%
+			}
+
+			.col-lg-push-2 {
+				left: 16.66666667%
+			}
+
+			.col-lg-push-1 {
+				left: 8.33333333%
+			}
+
+			.col-lg-push-0 {
+				left: auto
+			}
+
+			.col-lg-offset-12 {
+				margin-left: 100%
+			}
+
+			.col-lg-offset-11 {
+				margin-left: 91.66666667%
+			}
+
+			.col-lg-offset-10 {
+				margin-left: 83.33333333%
+			}
+
+			.col-lg-offset-9 {
+				margin-left: 75%
+			}
+
+			.col-lg-offset-8 {
+				margin-left: 66.66666667%
+			}
+
+			.col-lg-offset-7 {
+				margin-left: 58.33333333%
+			}
+
+			.col-lg-offset-6 {
+				margin-left: 50%
+			}
+
+			.col-lg-offset-5 {
+				margin-left: 41.66666667%
+			}
+
+			.col-lg-offset-4 {
+				margin-left: 33.33333333%
+			}
+
+			.col-lg-offset-3 {
+				margin-left: 25%
+			}
+
+			.col-lg-offset-2 {
+				margin-left: 16.66666667%
+			}
+
+			.col-lg-offset-1 {
+				margin-left: 8.33333333%
+			}
+
+			.col-lg-offset-0 {
+				margin-left: 0
+			}
+		}
+
+		.clearfix:before,
+		.clearfix:after,
+		.container:before,
+		.container:after,
+		.container-fluid:before,
+		.container-fluid:after,
+		.row:before,
+		.row:after {
+			content: " ";
+			display: table
+		}
+
+		.clearfix:after,
+		.container:after,
+		.container-fluid:after,
+		.row:after {
+			clear: both
+		}
+
+		.center-block {
+			display: block;
+			margin-left: auto;
+			margin-right: auto
+		}
+
+		.pull-right {
+			float: right !important
+		}
+
+		.pull-left {
+			float: left !important
+		}
+
+		.hide {
+			display: none !important
+		}
+
+		.show {
+			display: block !important
+		}
+
+		.invisible {
+			visibility: hidden
+		}
+
+		.text-hide {
+			font: 0/0 a;
+			color: transparent;
+			text-shadow: none;
+			background-color: transparent;
+			border: 0
+		}
+
+		.hidden {
+			display: none !important
+		}
+
+		.affix {
+			position: fixed
+		}
+
+		.visible-xs,
+		.visible-sm,
+		.visible-md,
+		.visible-lg {
+			display: none !important
+		}
+
+		.visible-xs-block,
+		.visible-xs-inline,
+		.visible-xs-inline-block,
+		.visible-sm-block,
+		.visible-sm-inline,
+		.visible-sm-inline-block,
+		.visible-md-block,
+		.visible-md-inline,
+		.visible-md-inline-block,
+		.visible-lg-block,
+		.visible-lg-inline,
+		.visible-lg-inline-block {
+			display: none !important
+		}
+
+		@media (max-width: 767px) {
+			.visible-xs {
+				display: block !important
+			}
+
+			table.visible-xs {
+				display: table
+			}
+
+			tr.visible-xs {
+				display: table-row !important
+			}
+
+			th.visible-xs,
+			td.visible-xs {
+				display: table-cell !important
+			}
+
+			.visible-xs-block {
+				display: block !important
+			}
+
+			.visible-xs-inline {
+				display: inline !important
+			}
+
+			.visible-xs-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px) {
+			.visible-sm {
+				display: block !important
+			}
+
+			table.visible-sm {
+				display: table
+			}
+
+			tr.visible-sm {
+				display: table-row !important
+			}
+
+			th.visible-sm,
+			td.visible-sm {
+				display: table-cell !important
+			}
+
+			.visible-sm-block {
+				display: block !important
+			}
+
+			.visible-sm-inline {
+				display: inline !important
+			}
+
+			.visible-sm-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.visible-md {
+				display: block !important
+			}
+
+			table.visible-md {
+				display: table
+			}
+
+			tr.visible-md {
+				display: table-row !important
+			}
+
+			th.visible-md,
+			td.visible-md {
+				display: table-cell !important
+			}
+
+			.visible-md-block {
+				display: block !important
+			}
+
+			.visible-md-inline {
+				display: inline !important
+			}
+
+			.visible-md-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg {
+				display: block !important
+			}
+
+			table.visible-lg {
+				display: table
+			}
+
+			tr.visible-lg {
+				display: table-row !important
+			}
+
+			th.visible-lg,
+			td.visible-lg {
+				display: table-cell !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-block {
+				display: block !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-inline {
+				display: inline !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.visible-lg-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media (max-width: 767px) {
+			.hidden-xs {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 768px) and (max-width: 991px) {
+			.hidden-sm {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 992px) and (max-width: 1199px) {
+			.hidden-md {
+				display: none !important
+			}
+		}
+
+		@media (min-width: 1200px) {
+			.hidden-lg {
+				display: none !important
+			}
+		}
+
+		.visible-print {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print {
+				display: block !important
+			}
+
+			table.visible-print {
+				display: table
+			}
+
+			tr.visible-print {
+				display: table-row !important
+			}
+
+			th.visible-print,
+			td.visible-print {
+				display: table-cell !important
+			}
+		}
+
+		.visible-print-block {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-block {
+				display: block !important
+			}
+		}
+
+		.visible-print-inline {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-inline {
+				display: inline !important
+			}
+		}
+
+		.visible-print-inline-block {
+			display: none !important
+		}
+
+		@media print {
+			.visible-print-inline-block {
+				display: inline-block !important
+			}
+		}
+
+		@media print {
+			.hidden-print {
+				display: none !important
+			}
+		}
+	</style>
+	<!-- Header CSS (First Sections of Website: paste after release from header.min.css here) -->
+	<style>
+		html .loader {
+			background: #fff;
+			bottom: 0;
+			height: 100%;
+			left: 0;
+			position: fixed;
+			right: 0;
+			top: 0;
+			width: 100%;
+			z-index: 9999
+		}
+
+		html .loader .loader_inner {
+			background-image: url(img/preloader.gif);
+			background-size: cover;
+			background-repeat: no-repeat;
+			background-position: center center;
+			background-color: #fff;
+			height: 60px;
+			width: 60px;
+			margin-top: -30px;
+			margin-left: -30px;
+			left: 50%;
+			top: 50%;
+			position: absolute
+		}
+	</style>
+	<!-- Load CSS, CSS Localstorage & WebFonts Main Function -->
+	<script>
+		!function (e) {
+			"use strict";
+
+			function t(e, t, n) {
+				e.addEventListener ? e.addEventListener(t, n, !1) : e.attachEvent && e.attachEvent("on" + t, n)
+			}
+
+			function n(t, n) {
+				return e.localStorage && localStorage[t + "_content"] && localStorage[t + "_file"] === n
+			}
+
+			function a(t, a) {
+				if (e.localStorage && e.XMLHttpRequest) n(t, a) ? o(localStorage[t + "_content"]) : l(t, a);
+				else {
+					var s = r.createElement("link");
+					s.href = a, s.id = t, s.rel = "stylesheet", s.type = "text/css", r.getElementsByTagName("head")[0].appendChild(s), r.cookie = t
+				}
+			}
+
+			function l(e, t) {
+				var n = new XMLHttpRequest;
+				n.open("GET", t, !0), n.onreadystatechange = function () {
+					4 === n.readyState && 200 === n.status && (o(n.responseText), localStorage[e + "_content"] = n.responseText, localStorage[e + "_file"] = t)
+				}, n.send()
+			}
+
+			function o(e) {
+				var t = r.createElement("style");
+				t.setAttribute("type", "text/css"), r.getElementsByTagName("head")[0].appendChild(t), t.styleSheet ? t.styleSheet.cssText = e : t.innerHTML = e
+			}
+
+			var r = e.document;
+			e.loadCSS = function (e, t, n) {
+				var a, l = r.createElement("link");
+				if (t) a = t;
+				else {
+					var o;
+					o = r.querySelectorAll ? r.querySelectorAll("style,link[rel=stylesheet],script") : (r.body || r.getElementsByTagName("head")[0]).childNodes, a = o[o.length - 1]
+				}
+				var s = r.styleSheets;
+				l.rel = "stylesheet", l.href = e, l.media = "only x", a.parentNode.insertBefore(l, t ? a : a.nextSibling);
+				var c = function (e) {
+					for (var t = l.href, n = s.length; n--;)
+						if (s[n].href === t) return e();
+					setTimeout(function () {
+						c(e)
+					})
+				};
+				return l.onloadcssdefined = c, c(function () {
+					l.media = n || "all"
+				}), l
+			}, e.loadLocalStorageCSS = function (l, o) {
+				n(l, o) || r.cookie.indexOf(l) > -1 ? a(l, o) : t(e, "load", function () {
+					a(l, o)
+				})
+			}
+		}(this);
+	</script>
+	<!-- Load CSS Start -->
+	<script>
+		loadLocalStorageCSS("webfonts", "css/fonts.min.css?ver=1.0.0");
+	</script>
+	<script>
+		loadCSS("css/header.min.css?ver=1.0.0", false, "all");
+	</script>
+	<script>
+		loadCSS("css/main.min.css?ver=1.0.0", false, "all");
+	</script>
+	<!-- Load CSS End -->
+	<!-- Load CSS Compiled without JS -->
+	<noscript>
+		<link rel="stylesheet" href="css/fonts.min.css">
+		<link rel="stylesheet" href="css/main.min.css">
+	</noscript>
 </head>
 
 <body>
-    <div class="loader">
-        <div class="loader_inner"></div>
-    </div>
-    <!-- Модальное окно 2-->
-    <div class="popup" data-modal="modal-res">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <p class='success_mail'>Заявка отправлена</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- Модальное окно 3 -->
-    <div class="popup" data-modal="modal-3">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <h2 class="dm-modal_inner_h1"></h2>
-                    <p class='success_mail'>Заявка отправлена</p>
-                    <form id="form">
-                        <div>
-                            <label>Введите своё имя</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="name" class="modal_form_input" type="text">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Введите свой телефон</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="phone" class="modal_form_phone" type="text">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Введите свой e-mail</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text">
-                            </div>
-                        </div>
-                        <input type="hidden" name="form_name" value="Заказ veloVdelo">
-                        <input type="hidden" name="form_type" value="modal">
-                        <input type="submit" value="Отправить">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- модальное окно 4 -->
-    <div class="popup4 popup" data-modal="modal-4">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <div class="dm-modal_inner">
-                        <p class="dm-modal_inner_h1">Содержание аудита</p>
-                        <p class="dm-modal_inner_h2">заголовок</p>
-                        <p>текст</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- Модальное окно 5 -->
-    <div class="popup5" data-modal="modal-5">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <div class="dm-modal_inner">
-                        <p class="dm-modal_inner_h1">Политика конфиденциальности</p>
-                        <p class="dm-modal_inner_h2">Защита личных данных</p>
-                        <p>Для защиты ваших личных данных у нас внедрен ряд средств защиты, которые действуют при введении, передаче или работе с вашими личными данными.</p>
-                        <p class="dm-modal_inner_h2">Разглашение личных сведений и передача этих сведений третьим лицам</p>
-                        <p>Ваши личные сведения могут быть разглашены нами только в том случае это необходимо для: (а) обеспечения соответствия предписаниям закона или требованиям судебного процесса в нашем отношении ; (б) защиты наших прав или собственности (в) принятия срочных мер по обеспечению личной безопасности наших сотрудников или потребителей предоставляемых им услуг, а также обеспечению общественной безопасности. Личные сведения, полученные в наше распоряжение при регистрации, могут передаваться третьим организациям и лицам, состоящим с нами в партнерских отношениях для улучшения качества оказываемых услуг. Эти сведения не будут использоваться в каких-либо иных целях, кроме перечисленных выше. Адрес электронной почты, предоставленный вами при заказе товара, может использоваться для отправки вам сообщений или уведомлений об изменениях, связанных с вашей заявкой, а также рассылки сообщений о происходящих в компании событиях и изменениях, важной информации о новых товарах и услугах и т.д. Предусмотрена возможность отказа от подписки на эти почтовые сообщения.</p>
-                        <p class="dm-modal_inner_h2">Использование файлов «cookie»</p>
-                        <p>Когда пользователь посещает веб-узел, на его компьютер записывается файл «cookie» (если пользователь разрешает прием таких файлов). Если же пользователь уже посещал данный веб-узел, файл «cookie» считывается с компьютера. Одно из направлений использования файлов «cookie» связано с тем, что с их помощью облегчается сбор статистики посещения. Эти сведения помогают определять, какая информация, отправляемая заказчикам, может представлять для них наибольший интерес. Сбор этих данных осуществляется в обобщенном виде и никогда не соотносится с личными сведениями пользователей. Третьи стороны, включая компании Google, показывают объявления нашей компании на страницах сайтов в Интернете. Третьи стороны, включая компанию Google, используют cookie, чтобы показывать объявления, основанные на предыдущих посещениях пользователем наших веб-сайтов и интересах в веб-браузерах. Пользователи могут запретить компаниям Google использовать cookie. Для этого необходимо посетить специальную страницу компании Google по этому адресу: http://www.google.com/privacy/ads/</p>
-                        <p class="dm-modal_inner_h2">Изменения в заявлении о соблюдении конфиденциальности</p>
-                        <p>Заявление о соблюдении конфиденциальности предполагается периодически обновлять. При этом будет изменяться дата предыдущего обновления, указанная в начале документа. Сообщения об изменениях в данном заявлении будут размещаться на видном месте наших веб-узлов Осуществив заказ на нашем сайте какого-либо товара, Вы соглашаетесь получить смс-уведомление о доставке купленного Вами товара в соответствующее почтовое отделение, согласно указанному вами индексу.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- модальное окно 6 -->
-    <div class="popup6 popup" data-modal="modal-6">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <h2 class="dm-modal_inner_h1"></h2>
-                    <p class='success_mail'>Заявка отправлена</p>
-                    <form id="form">
-                        <div>
-                            <label>Введите своё имя:</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="name" class="modal_form_input" type="text">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Введите свой телефон:</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="phone" class="modal_form_phone" type="text">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Введите свой e-mail:</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text">
-                            </div>
-                        </div>
-                        <div>
-                            <label>Вопрос:</label>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <textarea name="textarea" class="modal_form_input"></textarea>
-                            </div>
-                        </div>
-                        <input type="hidden" name="form_name" value="Заказ veloVdelo">
-                        <input type="hidden" name="form_type" value="modal">
-                        <input type="submit" value="Отправить">
-                    </form>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- модалдьное окно 7 -->
+<div class="loader">
+	<div class="loader_inner"></div>
+</div>
+<!-- Модальное окно 2-->
+<div class="popup" data-modal="modal-res">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<p class='success_mail'>Заявка отправлена</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Модальное окно 3 -->
+<div class="popup" data-modal="modal-3">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2 class="dm-modal_inner_h1"></h2>
+				<p class='success_mail'>Заявка отправлена</p>
+				<form id="form">
+					<div>
+						<label>Введите своё имя</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой телефон</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой e-mail</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text">
+						</div>
+					</div>
+					<input type="hidden" name="form_name" value="Заказ veloVdelo">
+					<input type="hidden" name="form_type" value="modal">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- модальное окно 4 -->
+<div class="popup4 popup" data-modal="modal-4">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<div class="dm-modal_inner">
+					<p class="dm-modal_inner_h1">Содержание аудита</p>
+					<p class="dm-modal_inner_h2">заголовок</p>
+					<p>текст</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- Модальное окно 5 -->
+<div class="popup5" data-modal="modal-5">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<div class="dm-modal_inner">
+					<p class="dm-modal_inner_h1">Политика конфиденциальности</p>
+					<p class="dm-modal_inner_h2">Защита личных данных</p>
+					<p>Для защиты ваших личных данных у нас внедрен ряд средств защиты, которые действуют при введении,
+						передаче или работе с вашими личными данными.</p>
+					<p class="dm-modal_inner_h2">Разглашение личных сведений и передача этих сведений третьим лицам</p>
+					<p>Ваши личные сведения могут быть разглашены нами только в том случае это необходимо для: (а)
+						обеспечения соответствия предписаниям закона или требованиям судебного процесса в нашем
+						отношении ; (б) защиты наших прав или собственности (в) принятия срочных мер по обеспечению
+						личной безопасности наших сотрудников или потребителей предоставляемых им услуг, а также
+						обеспечению общественной безопасности. Личные сведения, полученные в наше распоряжение при
+						регистрации, могут передаваться третьим организациям и лицам, состоящим с нами в партнерских
+						отношениях для улучшения качества оказываемых услуг. Эти сведения не будут использоваться в
+						каких-либо иных целях, кроме перечисленных выше. Адрес электронной почты, предоставленный вами
+						при заказе товара, может использоваться для отправки вам сообщений или уведомлений об
+						изменениях, связанных с вашей заявкой, а также рассылки сообщений о происходящих в компании
+						событиях и изменениях, важной информации о новых товарах и услугах и т.д. Предусмотрена
+						возможность отказа от подписки на эти почтовые сообщения.</p>
+					<p class="dm-modal_inner_h2">Использование файлов «cookie»</p>
+					<p>Когда пользователь посещает веб-узел, на его компьютер записывается файл «cookie» (если
+						пользователь разрешает прием таких файлов). Если же пользователь уже посещал данный веб-узел,
+						файл «cookie» считывается с компьютера. Одно из направлений использования файлов «cookie»
+						связано с тем, что с их помощью облегчается сбор статистики посещения. Эти сведения помогают
+						определять, какая информация, отправляемая заказчикам, может представлять для них наибольший
+						интерес. Сбор этих данных осуществляется в обобщенном виде и никогда не соотносится с личными
+						сведениями пользователей. Третьи стороны, включая компании Google, показывают объявления нашей
+						компании на страницах сайтов в Интернете. Третьи стороны, включая компанию Google, используют
+						cookie, чтобы показывать объявления, основанные на предыдущих посещениях пользователем наших
+						веб-сайтов и интересах в веб-браузерах. Пользователи могут запретить компаниям Google
+						использовать cookie. Для этого необходимо посетить специальную страницу компании Google по этому
+						адресу: http://www.google.com/privacy/ads/</p>
+					<p class="dm-modal_inner_h2">Изменения в заявлении о соблюдении конфиденциальности</p>
+					<p>Заявление о соблюдении конфиденциальности предполагается периодически обновлять. При этом будет
+						изменяться дата предыдущего обновления, указанная в начале документа. Сообщения об изменениях в
+						данном заявлении будут размещаться на видном месте наших веб-узлов Осуществив заказ на нашем
+						сайте какого-либо товара, Вы соглашаетесь получить смс-уведомление о доставке купленного Вами
+						товара в соответствующее почтовое отделение, согласно указанному вами индексу.</p>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- модальное окно 6 -->
+<div class="popup6 popup" data-modal="modal-6">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<h2 class="dm-modal_inner_h1"></h2>
+				<p class='success_mail'>Заявка отправлена</p>
+				<form id="form">
+					<div>
+						<label>Введите своё имя:</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="name" class="modal_form_input" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой телефон:</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Введите свой e-mail:</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text">
+						</div>
+					</div>
+					<div>
+						<label>Вопрос:</label>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<textarea name="textarea" class="modal_form_input"></textarea>
+						</div>
+					</div>
+					<input type="hidden" name="form_name" value="Заказ veloVdelo">
+					<input type="hidden" name="form_type" value="modal">
+					<input type="submit" value="Отправить">
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- модалдьное окно 7 -->
 <!--     <div class="popup7 popup" data-modal="modal-7">
         <div class="dm-table">
             <div class="dm-cell">
@@ -1791,821 +1996,1004 @@
         <div class="overlay">
         </div>
     </div> -->
-    <!-- модальное окно -8 -->
-    <div class="popup-8 popup" data-modal="modal-8">
-        <div class="dm-table">
-            <div class="dm-cell">
-                <div class="dm-modal">
-                    <a href="#" class="close">
-                        <span class="left"></span>
-                        <span class="right"></span>
-                    </a>
-                    <p class='success_mail'>Заявка отправлена</p>
-                    <h2 class="dm-modal_inner_h1"></h2>
-                    <form id="form">
-                        <aside class="form-aside">
-                            <h4>Оставьте заявку</h4>
-                            <p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
-                        </aside>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
-                            </div>
-                        </div>
-                        <div>
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="phone" class="modal_form_phone" type="text" placeholder="Введите номер телефона">
-                            </div>
-                        </div>
-                        <input type="hidden" name="form_name" value="Сообщение из форма 'Получить предложение'">
-                        <input type="hidden" name="form_type" value="modal">
-                        <input type="submit" value="Заказать">
-                    </form>
-                    <div class="modal-photo">
-                        <img src="img/developer-foto8.jpg" alt="">
-                        <aside>
-                            <h4>Юлия и Андрей</h4>
-                            <p>Менеджеры</p>
-                        </aside>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="overlay">
-        </div>
-    </div>
-    <!-- окно меню для мобильного -->
-    <nav class="mobile-menu">
-        <ul class="mobile_navigation">
-            <li><a href="#about-us-section">Что делаем</a></li>
-            <li><a href="#finished-result-section">Кейсы</a></li>
-            <li><a href="#starting-work-section">Стоимость</a></li>
-            <li><a href="#main-quetions-section">FAQ</a></li>
-            <li><a href="#developed-command-section">Команда</a></li>
-            <li><a href="#footer">Контакты</a></li>
-        </ul>
-        <div class="overlay"></div>
-    </nav>
-    <!-- Здесь пишем код -->
-    <header class="top-menu-container onepage-pagination-container top-menu-container-active">
-        <div class="container">
-            <div class="col-lg-1">
-                <a href="#" class="header_logo"><img src="img/mel-logo.png" alt=""></a>
-            </div>
-            <nav class="header_nav col-lg-9">
-                <ul class="onepage-pagination" id="desktop-menu">
-                    <li data-menuanchor="2"><a href="#2">Что делаем</a></li>
-                    <li data-menuanchor="5"><a href="#5">Кейсы</a</li>
-                    <li data-menuanchor="6"><a href="#6">Стоимость</a></li>
-                    <li data-menuanchor="7"><a href="#7">Решение проблемы</a></li>
-                    <li data-menuanchor="9"><a href="#9">FAQ</a></li>
-                    <li data-menuanchor="8"><a href="#8">Команда</a></li>
-                    <li data-menuanchor="10"><a href="#10">Контакты</a></li>
-                </ul>
-            </nav>
-            <div class="button-mobile-menu">
-                <span class="left"></span>
-                <span class="center"></span>
-                <span class="right"></span>
-            </div>
-            <div class="col-lg-2 call_information_container">
-                <div class="call_information">
-                    <span>Бесплатная консультация:</span>
-                    <a href="tel:+380667077777"><b id="tel">+38 066 707 77 77</b></a>
-                </div>
-            </div>
-        </div>
-    </header>
-    <!-- jfndjivn -->
-    <div class="main" id="fullpage">
-        <section class="header section"  id="clever-context">
-            <div class="container header-container">
-                <div class="advertising-container">
-                    <div class="col-lg-8">
-                        <div class="advertising-title">
-                            <aside class="advertising-title-aside-main">
-                                Обеспечим заявками от клиентов
-                                <p>по минимальной стоимости путём умной</p>
-                                настройки <span>Яндекс. Директ и Google Adwords</span>
-                            </aside>
-                            <aside class="advertising-title-aside">Без раздутого рекламного бюджета | <b>Уже через 2-4 дня</b></aside>
-                        </div>
-                    </div>
-                    <div class="col-lg-4 header-add-project-container">
-                        <div class="header-add-project-title">
-                            <h2>Уже пользуетесь контекстом?</h2>
-                            <p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
-                        </div>
-                        <form id="form" class="add-massage-form header-form">
-                            <div>
-                                <div class="modal_form_input_wrap">
-                                    <div class="modal_input_error">Заполните поле
-                                        <div class="modal_error_triangle"></div>
-                                        <div class="modal_error_chest_img"></div>
-                                    </div>
-                                    <input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
-                                </div>
-                            </div>
-                            <div>
-                                <div class="modal_form_input_wrap">
-                                    <div class="modal_input_error">Заполните поле
-                                        <div class="modal_error_triangle"></div>
-                                        <div class="modal_error_chest_img"></div>
-                                    </div>
-                                    <input name="phone" class="modal_form_phone" type="text" placeholder="Введите номер телефона">
-                                </div>
-                            </div>
-                            <input type="hidden" name="form_type" value="normal">
-                            <input type="hidden" name="form_name" value="форма из 1го экрана">
-                            <input type="submit" class="submit" value="Заказать">
-                        </form>
-                    </div>
-                </div>
-                <div class="scroll-mouse-container">
-                    <h2>Что такое «умный» контекст?</h2>
-                    <div class="scroll-mouse">
-                        <span></span>
-                        <ul>
-                            <li></li>
-                            <li></li>
-                            <li></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-     <!--    <section class="about-contextual-advertising-section section">
-            <div class="container">
-                <div class="row">
-                    <div class="about-contextual-advertising-container">
-                        <div class="about-contextual-advertising-position">
-                            <h1 class="about-contextual-advertising-title">Как работает контекстная реклама</h1>
-                            <div class="about-contextual-advertising-wrap-1 clearfix">
-                                <img src="img/image-advertising-2.png">
-                                <article>
-                                    <h2>Поисковая строка</h2>
-                                    <p>
-                                         Первое чем Вы можете привлечь клиента на сайт - это своим объявлением. Оно должно обращать на себя внимание и выделяться среди конкурентов. После того как человек кликнул на него, дело остается за сайтом. 70% людей оценивают сайт по первому экрану, если он им понравиться, только тогда приступят читать текст и если их все устроит, оставят заявку.
-                                    </p>
-                                </article>
-                            </div>
-                            <div class="about-contextual-advertising-wrap-2 clearfix">
-                                <img src="img/image-advertising-1.png">
-                                <article>
-                                    <h2>Как выглядят объявления</h2>
-                                    <p>
-                                        Контекстная реклама – это метод привести новых клиентов на сайт. Ее запуск устроен таким образом, что показы идут только целевым людям, которые написали в Google или Yandex ключевое слово связанной с вашей тематикой или нишей. Оплата производиться только за клики по вашему объявлению.
-                                    </p>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section class="clever-context-container section" id="clever-context">
-            <div class="container main-container main-container-clever-context">
-                <div class="about-lever-context-container">
-                    <h3 class="about-lever-context-container-title">«Умный» контекст — это когда</h3>
-                    <div class="col-lg-4 col-md-4 about-lever-context-col">
-                        <div class="clever-context-image-money"></div>
-                        <aside class="aside-about-context">
-                            <h4>Вы не тратите рекламный бюджет</h4>
-                            <p>за несколько дней, получив 2-3 заявки от «залётных» посетителей</p>
-                        </aside>
-                    </div>
-                    <div class="col-lg-4 col-md-4 about-lever-context-col">
-                        <div class="clever-context-image-coffee"></div>
-                        <aside class="aside-about-context">
-                            <h4>Вы получаете горячих клиентов</h4>
-                            <p>по нужным поисковым запросам, не переплачивая за стоимость клиента</p>
-                        </aside class="aside-about-context">
-                    </div>
-                    <div class="col-lg-4 col-md-4 about-lever-context-col">
-                        <div class="clever-context-image-blackboard"></div>
-                        <aside class="aside-about-context">
-                            <h4>Вы увидете результат работы</h4>
-                            <p>уже через несколько дней после начала сотрудничества с нами</p>
-                        </aside>
-                    </div>
-                    <div class="audit-information-container">
-                        <h4 class="audit-information-title">
-                    Уже привлекаете клиентов через поисковики,
-                    но знаете, что можно и лучшее?
-                    <p>Мы расскажем, как. Бесплатно!</p>
-                </h4>
-                        <h4 class="audit-form-title">Оставьте заявку на подробный аудит вашей рекламной кампании</h4>
-                        <form id="form" class="add-massage-form audit-form">
-                            <div class="audit-form-input-container">
-                                <div class="modal_form_input_wrap">
-                                    <div class="modal_input_error">Заполните поле
-                                        <div class="modal_error_triangle"></div>
-                                        <div class="modal_error_chest_img"></div>
-                                    </div>
-                                    <input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
-                                </div>
-                            </div>
-                            <div class="audit-form-input-container">
-                                <div class="modal_form_input_wrap">
-                                    <div class="modal_input_error">Заполните поле
-                                        <div class="modal_error_triangle"></div>
-                                        <div class="modal_error_chest_img"></div>
-                                    </div>
-                                    <input name="phone" class="modal_form_phone" type="text" placeholder="Введите номер телефона">
-                                </div>
-                            </div>
-                            <input type="submit" value="Хочу аудит">
-                            <input type="hidden" name="form_type" value="normal">
-                            <input type="hidden" name="form_name" value="Форма из 'Умный контекст' - заявка на аудит">
-                            <div class="submit-lable-audit">
-                                <a href="#" class="modal" data-modal="modal-4">Посмотреть, что включено в аудит</a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="about-us-section section" id="about-us-section">
-            <div class="container">
-                <div class="row">
-                    <div class="main-about-us-container">
-                        <h2 class="about-us-container-title">
-                            Почему доверить эту задачу нам – удобно и надёжно
-                            <p>
-                                Мы занимаемся тем, что настраиваем и ведём рекламные кампании в ЯД и GA– обеспечивая 
-                                вас качественными заявками по лучшей цене
-                            </p>
-                        </h2>
-                        <div class="about-us-container">
-                            <div class="row">
-                                <div class="about-us-container-item">
-                                    <div class="col-lg-3 col-md-6 about-us-icon-container">
-                                        <img src="img/Diamond.png" class="about-us-icon-diamond">
-                                        <aside class="about-us-aside">
-                                            <h3>
-                                                    Экономим ваш 
-                                                    бюджет
-                                                </h3>
-                                            <p>Оптимизируем РК, и снижаем стоимость перехода до эффективного минимума</p>
-                                        </aside>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
-                                        <img src="img/Credit-Card.png" class="about-us-icon-credit">
-                                        <aside class="about-us-aside">
-                                            <h3>
-                                                    Наша помощь 
-                                                    по карману каждому
-                                                </h3>
-                                            <p>Стоимость услуг начинается от $50 – это даже меньше, чем напечатать и раздать </p>
-                                        </aside>
-                                    </div>
-                                </div>
-                                <div class="about-us-container-item">
-                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
-                                        <img src="img/Pencil-And-Ruler.png" class="about-us-icon-pencil">
-                                        <aside class="about-us-aside">
-                                            <h3>
-                                                                        Прорабатываем текст
-                                                                        каждого объявления
-                                                                    </h3>
-                                            <p>Никакой автоматической генерации нечитабельных объявлений – всё вручную</p>
-                                        </aside>
-                                    </div>
-                                    <div class="col-lg-3 col-md-6 about-us-icon-container ">
-                                        <img src="img/Banner.png" class="about-us-icon-banner">
-                                        <aside class="about-us-aside">
-                                            <h3>
-                                                                        Даём гарантию результата
-                                                                    </h3>
-                                            <p>Если не добиваемся обещаных показателей – возвращаем стоимость услуг</p>
-                                        </aside>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="main-result-container ">
-                            <div class="main-result">
-                                <h2>В результате вы:</h2>
-                                <ul class="main-result-list">
-                                    <li>Снижаете стоимость клиента</li>
-                                    <li>Получаете более качественный трафик</li>
-                                    <li>Повышаете показатели бизнеса минимума</li>
-                                </ul>
-                                <input class="modal" type="submit" value="Готов попробовать" data-title="Готов Попробовать" data-info="Сообщение из формы 'Готов Попробовать'" data-modal="modal-3">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="finished-result-section section" id="finished-result-section">
-            <div class="container finished-result-container main-container">
-                <h2 class="finished-result-container-title">Посмотрите, каких результатов мы уже добились <p>для наших клиентов</p></h2>
-                <div class="owl-carousel-container">
-                    <div class="owl-carousel">
-                        <div class="owl-carousel-list">
-                            <div class="owl-carousel-list-img-container">
-                                <img src="img/example-work.png">
-                            </div>
-                            <div>
-                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на сайт</a></h3>
-                                <article class="owl-carousel-list-article">
-                                    <h4>Что сделали:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                                <article class="owl-carousel-list-article">
-                                    <h4>В результате:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-list">
-                            <div class="owl-carousel-list-img-container">
-                                <img src="img/example-work.png">
-                            </div>
-                            <div>
-                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p> <a href="#">Ссылка на сайт</a></h3>
-                                <article class="owl-carousel-list-article">
-                                    <h4>Что сделали:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaeczat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                                <article class="owl-carousel-list-article">
-                                    <h4>В результате:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                            </div>
-                        </div>
-                        <div class="owl-carousel-list">
-                            <div class="owl-carousel-list-img-container">
-                                <img src="img/example-work.png">
-                            </div>
-                            <div>
-                                <h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на сайт</a></h3>
-                                <article class="owl-carousel-list-article">
-                                    <h4>Что сделали:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                                <article class="owl-carousel-list-article">
-                                    <h4>В результате:</h4>
-                                    <aside>
-                                        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
-                                    </aside>
-                                </article>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="starting-work-section section" id="starting-work-section">
-            <div class="container">
-                <div class="row">
-                    <div class="starting-work-container clearfix">
-                        <div class="starting-work-container-position">
-                            <h2 class="starting-work-container-title">
-                                <p>С чего хотели бы начать?</p>
-                                <b>Получайте от 10 до 100 заявок в день</b>
-                            </h2>
-                            <div class="tabs-container clearfix">
-                                <div class="clearfix tabs-item-conatiner">
-                                    <a href="/" data-tab="1" class="col-lg-4 col-md-4 col-sm-4  tabs-item active">
-                                        <h3 class="starting-work-item-title">
-                                                <img src="img/yandex-icon.png" class="icon-container">
-                                                <p>Настройка</p> 
-                                                <p>Яндекс. Директ</p>
-                                            </h3>
-                                    </a>
-                                    <a href="/" data-tab="2" class="col-lg-4 col-md-4 col-sm-4  tabs-item">
-                                        <h3 class="starting-work-item-title">
-                                                <img src="img/google-icon.png" class="icon-container">
-                                                <p>Настройка</p> 
-                                                <p>Google. Adwords</p>
-                                            </h3>
-                                    </a>
-                                    <a href="/" data-tab="3" class="col-lg-4 col-md-4 col-sm-4  tabs-item">
-                                        <h3 class="starting-work-item-title">
-                                                <img src="img/yandex-google-icon.png" class="icon-container">
-                                                <p>Комплексный</p> 
-                                                <p>Пакет ЯД + GA</p>
-                                            </h3></a>
-                                </div>
-                                <div class="tabs-wrap-container">
-                                    <div class="tabs-wrap active" data-tab="1">
-                                        <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Яндекс. Директ (Стандарт)" data-modal="modal-8" data-info="Настройка Яндекс. Директ (Стандарт)">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-2">
-                                            <span class="starting-work-item-span-2">Премиум</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Яндекс. Директ (Премиум)" data-info="Настройка Яндекс. Директ (Премиум)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Gold</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Яндекс. Директ (Gold)" data-info="Настройка Яндекс. Директ (Gold)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                    </div>
-                                    <div class="tabs-wrap" data-tab="2">
-                                        <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Google. Adwords (Стандарт)" data-info="Настройка Google. Adwords (Стандарт)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-2">
-                                            <span class="starting-work-item-span-2">Премиум</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Google. Adwords (Премиум)" data-info="Настройка Google. Adwords (Премиум)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Gold</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Настройка Google. Adwords (Gold)" data-info="Настройка Google. Adwords (Gold)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                    </div>
-                                    <div class="tabs-wrap" data-tab="3">
-                                        <div class="starting-work-item starting-work-item-1">
-                                            <span class="starting-work-item-span-1">Стандарт</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Комплексный Пакет ЯД + GA (Стандарт)" data-info="Комплексный Пакет ЯД + GA (Стандарт)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-2">
-                                            <span class="starting-work-item-span-2">Премиум</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Комплексный Пакет ЯД + GA (Премиум)" data-info="Комплексный Пакет ЯД + GA (Премиум)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                        <div class="starting-work-item starting-work-item-3">
-                                            <span class="starting-work-item-span-3">Gold</span>
-                                            <aside>
-                                                <p>Анализ вашего бизнеса</p>
-                                                <p>Разработка стратегии продвижения</p>
-                                                <p>Создание и настройка Яндекс.Директ</p>
-                                                <p>Первичное ведение 1 месяц</p>
-                                                <b>От 59$</b></aside>
-                                            <a href="#"  class="modal" data-title="Комплексный Пакет ЯД + GA (Gold)" data-info="Комплексный Пакет ЯД + GA (Gold)" data-modal="modal-8">Выбрать</a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="another-promotion">
-                                <h3 class="another-promotion-title"><p>Как ещё можно увеличить 
-                                                ваши продажи?</p></h3>
-                                <div class="another-promotion-item">
-                                    <h4>Melfori – веб-студия полного цикла</h4>
-                                    <p>По вашему желанию мы можем полностью проработать весь ваш маркетинг:</p>
-                                    <ul>
-                                        <li>– от создания лендинга:<a href="http://landing.melfori.com/" target="_blank" class="link"> landing.melfori.com</a></li>
-                                        <li>– до продвижения в инстаграме:<a href="http://instagram.melfori.com/" target="_blank" class="link"> instagram.melfori.com</a></li>
-                                    </ul>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-<!--         <section class="solution-section section">
-            <div class="container">
-                <div class="row">
-                    <div class="solution-container">
-                        <div class="solution-position">
-                            <h3 class="title">Решение проблем</h3>
-                            <div class="clearfix">
-                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
-                                    <span class="number">1</span>
-                                    <aside class="about-problems">
-                                        <b>Есть сайт, а реклама не настроена?</b>
-                                    </aside>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
-                                    <span class="number">2</span>
-                                    <aside class="about-problems">
-                                        <b>Настроили рекламу, но клиентов нет и деньги уходят впустую?</b>
-                                    </aside>
-                                </div>
-                                <div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
-                                    <div>
-                                        <span class="number">3</span>
-                                        <aside class="about-problems">
-                                            <b>Нет времени, чтобы полностью погрузится в рекламную компанию?</b>
-                                        </aside>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="text-container">
-                                <aside>
-                                    <p>Мы для вас подготовили индивидуальное предложение, которое включает не только</p>
-                                    <p>усовершенствование и ведение рекламы, а так же повышение конверсии за счет</p>
-                                    <p>а/б тестирования и улучшения сайта нашими специалистами.</p>
-                                </aside>
-                            </div>
-                            <div class="developers">
-                                <h3 class="title"><p>Наши спецалисты</p></h3>
-                                <div class="clearfix">
-                                    <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
-                                        <img src="img/developer-foto4.jpg" alt="">
-                                        <h4 class="name">Спичак Дмитрий</h4>
-                                        <aside>
-                                            <p class="skills">Веб-дизайнер</p>
-                                        </aside>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
-                                        <img src="img/developer-foto5.jpg" alt="">
-                                        <h4 class="name">Елена Калиниченко</h4>
-                                        <aside>
-                                            <p class="skills">Веб-дизайнер</p>
-                                        </aside>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
-                                        <img src="img/developer-foto6.jpg" alt="">
-                                        <h4 class="name">Александр Стадник</h4>
-                                        <aside>
-                                            <p class="skills">Front-End Developer</p>
-                                        </aside>
-                                    </div>
-                                    <div class="col-lg-3 col-md-3 col-sm-6 developers-item">
-                                        <img src="img/developer-foto7.jpg" alt="">
-                                        <h4 class="name">Алексей Третьяков</h4>
-                                        <aside>
-                                            <p class="skills">Back-End Developer</p>
-                                        </aside>
-                                    </div>
-                                </div>
-                                <div class="add-prop modal" data-info="Получить предложение" data-modal="modal-8" data-title="Получить предложение">Получить предложение</div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> -->
-        <section class="developed-command-section section" id="developed-command-section">
-            <div class="container">
-                <div class="row">
-                    <div class="developed-sociality-container clearfix">
-                        <div class="developed-sociality-foto-position">
-                            <h2 class="developed-sociality-container-title">
-                                <b>Созданием и ведением</b>
-                                <p>вашей рекламной кампании займётся сплочённая команда</p>
-                            </h2>
-                            <div class="col-lg-6 col-md-6">
-                                <ul class="developed-sociality-wrap">
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto1.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto2.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                    <li class="clearfix">
-                                        <img src="img/developer-foto3.jpg">
-                                        <h3>Иван Иванов</h3>
-                                        <aside>
-                                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in</p>
-                                        </aside>
-                                        <a href="#">vk.com/1231343434</a>
-                                    </li>
-                                </ul>
-                            </div>
-                            <div class="col-lg-6 col-md-6">
-                                <div class="developed-sociality-foto-container">
-                                    <aside class="developed-sociality-foto-aside">
-                                        <p><span>Вся команда Melfori </span> (25 специалистов и каждый профессионал в своем деле)</p>
-                                    </aside>
-                                    <div class="developed-sociality-foto-wrap">
-                                        <img src="img/company-photo.jpg" alt="">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="main-quetions-section section" id="main-quetions-section">
-            <div class="container main-quetions-container">
-                <div class="main-quetions" id="main-quetions-id">
-                    <h2 class="main-quetions-container-title">Есть вопросы или сомнения?<p>Отвечаем честно</p></h2>
-                    <div class="accordion">
-                        <div class="accordion_title">
-                            <p>Потребуется ли моё активное участие, или всё сделаете сами?</p>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="accordion_content">
-                            <p>От вас потребуется участие на этапе сбора семантического ядра. Так как некоторые нюансы, словоформы по вашей нише можем не знать. Далее все сделаем самостоятельно. Вам останется только пополнить рекламную компанию.</p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion_title">
-                            <p>Смогу ли я сам вести рекламную кампанию в дальнейшем?</p>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="accordion_content">
-                            <p>Да, Вы сможете вести самостоятельно компанию, если у вас присутствуют базовые знание о Яндекс Директе или Google AdWords. Иначе вы сможете спустить свой бюджет в пустую.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion_title">
-                            <p>Будет ли скидка, если у меня несколько направлений бизнеса?</p>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="accordion_content">
-                            <p>Да, Вам будет предоставлена скидка 30% на последующее направления бизнеса.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion_title">
-                            <p>Какой рекламный бюджет у меня будет? От чего он зависит?</p>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="accordion_content">
-                            <p>LРекламный бюджет зависит от того, сколько денег Вы готовы выделить на рекламную компанию и какая конкуренция в вашем бизнесе. Также от позиций, где Вы хотите размещаться. По просьбе можем сделать приблизительный прогноз бюджета.
-                            </p>
-                        </div>
-                    </div>
-                    <div class="accordion">
-                        <div class="accordion_title">
-                            <p>Если я не получу обещанный результат, вы вернёте деньги? Какие гарантии?</p>
-                            <span class="arrow"></span>
-                        </div>
-                        <div class="accordion_content">
-                            <p>Да, мы вернем деньги если оговоренного результата не будет. У нас открыт ООО “Мелфори” ЕГРПОУ 40761564, есть возможность работы по договору. 
-                            </p>
-                        </div>
-                    </div>
-                    <input class="ask-quetion-submit modal" data-modal="modal-6" data-title="Задайте вопрос" type="submit" name="ask-quetion" data-info="Сообщение из формы 'Задайте вопрос'" value="Задать вопрос">
-                </div>
-        </section>
-        <section class="footer section" id="footer">
-            <div class="container footer-position-contaiener">
-                <div class="footer-container">
-                    <h2 class="footer-title">Начать просто. Не нужно ничего платить!
-                        <p>Оставьте заявку – мы перезвоним, проведём анализвашей ниши, озвучим выгодный тариф и примерную стоимость будущего клиента
-                    </p>
-                    </h2>
-                    <form id="form" class="add-massage-form footer-form">
-                        <div class="input-container">
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес">
-                            </div>
-                        </div>
-                        <div class="input-container">
-                            <div class="modal_form_input_wrap">
-                                <div class="modal_input_error">Заполните поле
-                                    <div class="modal_error_triangle"></div>
-                                    <div class="modal_error_chest_img"></div>
-                                </div>
-                                <input name="phone" class="modal_form_phone" type="text" placeholder="Введите номер телефона">
-                            </div>
-                        </div>
-                        <input type="hidden" name="form_type" value="normal">
-                        <input type="hidden" name="form_name" value="Сообщение из формы 'Получить консультацию'">
-                        <input type="submit"  value="Получить консультацию">
-                    </form>
-                    <aside class="footer-aside">
-                        Мы не навязываем свои услуги, но предлагаем наиболее выгодные условия на рынке. Решение о сотрудничестве всегда остаётся за вами. Попробуйте!
-                    </aside>
-                </div>
-                <div class="footer-row container">
-                    <div class="footer-row-bottom clearfix">
-                        <div class="melfori-footer col-lg-3 col-md-4 col-sm-4 col-xs-12">©2016 Melfori</div>
-                        <div class="privaci-politic modal col-lg-6 col-md-4 col-sm-4 col-xs-12" data-modal="modal-5">Политика конфиденциальности</div>
-                        <ul class="footer-link-icon col-lg-3 col-md-4 col-sm-4 col-xs-12">
-                            <li>
-                                <a href="#" class="instagramm-icon"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="vk-icon"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="facebook-icon"></a>
-                            </li>
-                            <li>
-                                <a href="#" class="twitter-icon"></a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="copirate">
-                        <a href="http://landing.melfori.com/" target="_blank">
-                            <p>Создание сайта:</p>
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </section>
-        </div>
-        <div class="hidden"></div>
-        <!--[if lt IE 9]>
-    <script src="libs/html5shiv/es5-shim.min.js"></script>
-    <script src="libs/html5shiv/html5shiv.min.js"></script>
-    <script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
-    <script src="libs/respond/respond.min.js"></script>
-    <![endif]-->
-        <!-- Load Scripts Start -->
-        <script>
-        var scr = {
-            "scripts": [{
-                "src": "js/libs.js",
-                "async": false
-            }, {
-                "src": "js/common.js",
-                "async": false
-            }]
-        };
-        ! function(t, n, r) {
-            "use strict";
-            var c = function(t) {
-                if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
-                for (var r = 0; r < t.length; r++) {
-                    var c = n.createElement("script"),
-                        e = t[r];
-                    c.src = e.src, c.async = e.async, n.body.appendChild(c)
-                }
-                return !0
-            };
-            t.addEventListener ? t.addEventListener("load", function() {
-                c(r.scripts);
-            }, !1) : t.attachEvent ? t.attachEvent("onload", function() {
-                c(r.scripts)
-            }) : t.onload = function() {
-                c(r.scripts)
-            }
-        }(window, document, scr);
-        </script>
-        <!-- Load Scripts End -->
+<!-- модальное окно -8 -->
+<div class="popup-8 popup" data-modal="modal-8">
+	<div class="dm-table">
+		<div class="dm-cell">
+			<div class="dm-modal">
+				<a href="#" class="close">
+					<span class="left"></span>
+					<span class="right"></span>
+				</a>
+				<p class='success_mail'>Заявка отправлена</p>
+				<h2 class="dm-modal_inner_h1"></h2>
+				<form id="form">
+					<aside class="form-aside">
+						<h4>Оставьте заявку</h4>
+						<p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
+					</aside>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
+						</div>
+					</div>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text"
+								   placeholder="Введите номер телефона">
+						</div>
+					</div>
+					<input type="hidden" name="form_name" value="Сообщение из форма 'Получить предложение'">
+					<input type="hidden" name="form_type" value="modal">
+					<input type="submit" value="Заказать">
+				</form>
+				<div class="modal-photo">
+					<img src="img/developer-foto8.jpg" alt="">
+					<aside>
+						<h4>Юлия и Андрей</h4>
+						<p>Менеджеры</p>
+					</aside>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="overlay">
+	</div>
+</div>
+<!-- окно меню для мобильного -->
+<nav class="mobile-menu">
+	<ul class="mobile_navigation">
+		<li><a href="#about-us-section">Что делаем</a></li>
+		<li><a href="#finished-result-section">Кейсы</a></li>
+		<li><a href="#starting-work-section">Стоимость</a></li>
+		<li><a href="#main-quetions-section">FAQ</a></li>
+		<li><a href="#developed-command-section">Команда</a></li>
+		<li><a href="#footer">Контакты</a></li>
+	</ul>
+	<div class="overlay"></div>
+</nav>
+<!-- Здесь пишем код -->
+<header class="top-menu-container onepage-pagination-container top-menu-container-active">
+	<div class="container">
+		<div class="col-lg-1">
+			<a href="#" class="header_logo"><img src="img/mel-logo.png" alt=""></a>
+		</div>
+		<nav class="header_nav col-lg-9">
+			<ul class="onepage-pagination" id="desktop-menu">
+				<li data-menuanchor="2"><a href="#2">Что делаем</a></li>
+				<li data-menuanchor="5"><a href="#5">Кейсы</a</li>
+				<li data-menuanchor="6"><a href="#6">Стоимость</a></li>
+				<li data-menuanchor="7"><a href="#7">Решение проблемы</a></li>
+				<li data-menuanchor="9"><a href="#9">FAQ</a></li>
+				<li data-menuanchor="8"><a href="#8">Команда</a></li>
+				<li data-menuanchor="10"><a href="#10">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class="button-mobile-menu">
+			<span class="left"></span>
+			<span class="center"></span>
+			<span class="right"></span>
+		</div>
+		<div class="col-lg-2 call_information_container">
+			<div class="call_information">
+				<span>Бесплатная консультация:</span>
+				<a href="tel:+380667077777"><b id="tel">+38 066 707 77 77</b></a>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- jfndjivn -->
+<div class="main" id="fullpage">
+	<section class="header section" id="clever-context">
+		<div class="container header-container">
+			<div class="advertising-container">
+				<div class="col-lg-8">
+					<div class="advertising-title">
+						<aside class="advertising-title-aside-main">
+							Обеспечим заявками от клиентов
+							<p>по минимальной стоимости путём умной</p>
+							настройки <span>Яндекс. Директ и Google Adwords</span>
+						</aside>
+						<aside class="advertising-title-aside">Без раздутого рекламного бюджета | <b>Уже через 2-4
+							дня</b></aside>
+					</div>
+				</div>
+				<div class="col-lg-4 header-add-project-container">
+					<div class="header-add-project-title">
+						<h2>Уже пользуетесь контекстом?</h2>
+						<p>Проведём аудит и отправим чеклист с рекомендациями по доработке <b>бесплатно</b></p>
+					</div>
+					<form id="form" class="add-massage-form header-form">
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" type="text"
+									   placeholder="Введите email адрес*">
+							</div>
+						</div>
+						<div>
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone" type="text"
+									   placeholder="Введите номер телефона">
+							</div>
+						</div>
+						<input type="hidden" name="form_type" value="normal">
+						<input type="hidden" name="form_name" value="форма из 1го экрана">
+						<input type="submit" class="submit" value="Заказать">
+					</form>
+				</div>
+			</div>
+			<div class="scroll-mouse-container">
+				<h2>Что такое «умный» контекст?</h2>
+				<div class="scroll-mouse">
+					<span></span>
+					<ul>
+						<li></li>
+						<li></li>
+						<li></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--    <section class="about-contextual-advertising-section section">
+		   <div class="container">
+			   <div class="row">
+				   <div class="about-contextual-advertising-container">
+					   <div class="about-contextual-advertising-position">
+						   <h1 class="about-contextual-advertising-title">Как работает контекстная реклама</h1>
+						   <div class="about-contextual-advertising-wrap-1 clearfix">
+							   <img src="img/image-advertising-2.png">
+							   <article>
+								   <h2>Поисковая строка</h2>
+								   <p>
+										Первое чем Вы можете привлечь клиента на сайт - это своим объявлением. Оно должно обращать на себя внимание и выделяться среди конкурентов. После того как человек кликнул на него, дело остается за сайтом. 70% людей оценивают сайт по первому экрану, если он им понравиться, только тогда приступят читать текст и если их все устроит, оставят заявку.
+								   </p>
+							   </article>
+						   </div>
+						   <div class="about-contextual-advertising-wrap-2 clearfix">
+							   <img src="img/image-advertising-1.png">
+							   <article>
+								   <h2>Как выглядят объявления</h2>
+								   <p>
+									   Контекстная реклама – это метод привести новых клиентов на сайт. Ее запуск устроен таким образом, что показы идут только целевым людям, которые написали в Google или Yandex ключевое слово связанной с вашей тематикой или нишей. Оплата производиться только за клики по вашему объявлению.
+								   </p>
+							   </article>
+						   </div>
+					   </div>
+				   </div>
+			   </div>
+		   </div>
+	   </section> -->
+	<section class="section about-contextual-advertising-section">
+		<div class="container">
+			<div class="row">
+				<div class="wrapper">
+					<div class="position">
+						<div class="item-1 col-lg-8">
+							<h3 class="item-title">
+								Это когда вы не тратите рекламный бюджет
+							</h3>
+							<p class="text">за несколько дней, получив 2-3 заявки от «залётных» посетителей</p>
+							<div class="arrow-wrap">
+								<span class="arrow"></span>
+								<span class="arrow"></span>
+								<span class="arrow"></span>
+							</div>
+						</div>
+						<div class="item-2 col-lg-8">
+							<h3 class="item-title">
+								Контекстная реклама <b class="bold">– это, прежде всего, выгодная реклама.</b>
+							</h3>
+							<p class="text">С её помощью вы получаете горячих клиентов по нужным поисковым запросам,
+								не переплачивая за стоимость клиента.</p>
+							<div class="arrow-wrap">
+								<span class="arrow"></span>
+								<span class="arrow"></span>
+								<span class="arrow"></span>
+							</div>
+						</div>
+						<div class="item-3 clearfix">
+							<h3 class="item-title">
+								Чтобы получить наибольшее число заявок,</b>
+							</h3>
+							<p class="text">большинство компаний использует сразу две службы контекстной рекламы</p>
+							<div class="item-content col-lg-6">
+								<img src="img/yandex.jpg" alt="">
+								<h4 class="sec-title">Яндекс.Директ (ЯД)</h4>
+								<p class="text">На него приходится примерно 70% от всех заявок</p>
+							</div>
+							<div class="item-content col-lg-6">
+								<img src="img/google.jpg" alt="">
+								<h4 class="sec-title">Google.Awdords (GA)</h4>
+								<p class="text">Больше популярен за рубежом, но весомую часть клиентов
+									можно получить и оттуда</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="clever-context-container section" id="clever-context">
+		<div class="container main-container main-container-clever-context">
+			<div class="about-lever-context-container">
+				<h3 class="about-lever-context-container-title">«Умный» контекст — это когда</h3>
+				<div class="col-lg-4 col-md-4 about-lever-context-col">
+					<div class="clever-context-image-money"></div>
+					<aside class="aside-about-context">
+						<h4>Вы не тратите рекламный бюджет</h4>
+						<p>за несколько дней, получив 2-3 заявки от «залётных» посетителей</p>
+					</aside>
+				</div>
+				<div class="col-lg-4 col-md-4 about-lever-context-col">
+					<div class="clever-context-image-coffee"></div>
+					<aside class="aside-about-context">
+						<h4>Вы получаете горячих клиентов</h4>
+						<p>по нужным поисковым запросам, не переплачивая за стоимость клиента</p>
+					</aside class="aside-about-context">
+				</div>
+				<div class="col-lg-4 col-md-4 about-lever-context-col">
+					<div class="clever-context-image-blackboard"></div>
+					<aside class="aside-about-context">
+						<h4>Вы увидете результат работы</h4>
+						<p>уже через несколько дней после начала сотрудничества с нами</p>
+					</aside>
+				</div>
+				<div class="audit-information-container">
+					<h4 class="audit-information-title">
+						Уже привлекаете клиентов через поисковики,
+						но знаете, что можно и лучшее?
+						<p>Мы расскажем, как. Бесплатно!</p>
+					</h4>
+					<h4 class="audit-form-title">Оставьте заявку на подробный аудит вашей рекламной кампании</h4>
+					<form id="form" class="add-massage-form audit-form">
+						<div class="audit-form-input-container">
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="email" class="modal_form_email" type="text"
+									   placeholder="Введите email адрес*">
+							</div>
+						</div>
+						<div class="audit-form-input-container">
+							<div class="modal_form_input_wrap">
+								<div class="modal_input_error">Заполните поле
+									<div class="modal_error_triangle"></div>
+									<div class="modal_error_chest_img"></div>
+								</div>
+								<input name="phone" class="modal_form_phone" type="text"
+									   placeholder="Введите номер телефона">
+							</div>
+						</div>
+						<input type="submit" value="Хочу аудит">
+						<input type="hidden" name="form_type" value="normal">
+						<input type="hidden" name="form_name" value="Форма из 'Умный контекст' - заявка на аудит">
+						<div class="submit-lable-audit">
+							<a href="#" class="modal" data-modal="modal-4">Посмотреть, что включено в аудит</a>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="about-us-section section" id="about-us-section">
+		<div class="container">
+			<div class="row">
+				<div class="main-about-us-container">
+					<h2 class="about-us-container-title">
+						Почему доверить эту задачу нам – удобно и надёжно
+						<p>
+							Мы занимаемся тем, что настраиваем и ведём рекламные кампании в ЯД и GA– обеспечивая
+							вас качественными заявками по лучшей цене
+						</p>
+					</h2>
+					<div class="about-us-container">
+						<div class="row">
+							<div class="about-us-container-item">
+								<div class="col-lg-3 col-md-6 about-us-icon-container">
+									<img src="img/Diamond.png" class="about-us-icon-diamond">
+									<aside class="about-us-aside">
+										<h3>
+											Экономим ваш
+											бюджет
+										</h3>
+										<p>Оптимизируем РК, и снижаем стоимость перехода до эффективного минимума</p>
+									</aside>
+								</div>
+								<div class="col-lg-3 col-md-6 about-us-icon-container ">
+									<img src="img/Credit-Card.png" class="about-us-icon-credit">
+									<aside class="about-us-aside">
+										<h3>
+											Наша помощь
+											по карману каждому
+										</h3>
+										<p>Стоимость услуг начинается от $50 – это даже меньше, чем напечатать и
+											раздать </p>
+									</aside>
+								</div>
+							</div>
+							<div class="about-us-container-item">
+								<div class="col-lg-3 col-md-6 about-us-icon-container ">
+									<img src="img/Pencil-And-Ruler.png" class="about-us-icon-pencil">
+									<aside class="about-us-aside">
+										<h3>
+											Прорабатываем текст
+											каждого объявления
+										</h3>
+										<p>Никакой автоматической генерации нечитабельных объявлений – всё вручную</p>
+									</aside>
+								</div>
+								<div class="col-lg-3 col-md-6 about-us-icon-container ">
+									<img src="img/Banner.png" class="about-us-icon-banner">
+									<aside class="about-us-aside">
+										<h3>
+											Даём гарантию результата
+										</h3>
+										<p>Если не добиваемся обещаных показателей – возвращаем стоимость услуг</p>
+									</aside>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="main-result-container ">
+						<div class="main-result">
+							<h2>В результате вы:</h2>
+							<ul class="main-result-list">
+								<li>Снижаете стоимость клиента</li>
+								<li>Получаете более качественный трафик</li>
+								<li>Повышаете показатели бизнеса минимума</li>
+							</ul>
+							<input class="modal" type="submit" value="Готов попробовать" data-title="Готов Попробовать"
+								   data-info="Сообщение из формы 'Готов Попробовать'" data-modal="modal-3">
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="finished-result-section section" id="finished-result-section">
+		<div class="container finished-result-container main-container">
+			<h2 class="finished-result-container-title">Посмотрите, каких результатов мы уже добились <p>для наших
+				клиентов</p></h2>
+			<div class="owl-carousel-container">
+				<div class="owl-carousel">
+					<div class="owl-carousel-list">
+						<div class="owl-carousel-list-img-container">
+							<img src="img/example-work.png">
+						</div>
+						<div>
+							<h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на
+								сайт</a></h3>
+							<article class="owl-carousel-list-article">
+								<h4>Что сделали:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+							<article class="owl-carousel-list-article">
+								<h4>В результате:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+						</div>
+					</div>
+					<div class="owl-carousel-list">
+						<div class="owl-carousel-list-img-container">
+							<img src="img/example-work.png">
+						</div>
+						<div>
+							<h3 class="owl-carousel-list-title"><p>Название Компании №1 </p> <a href="#">Ссылка на
+								сайт</a></h3>
+							<article class="owl-carousel-list-article">
+								<h4>Что сделали:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaeczat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+							<article class="owl-carousel-list-article">
+								<h4>В результате:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+						</div>
+					</div>
+					<div class="owl-carousel-list">
+						<div class="owl-carousel-list-img-container">
+							<img src="img/example-work.png">
+						</div>
+						<div>
+							<h3 class="owl-carousel-list-title"><p>Название Компании №1 </p><a href="#">Ссылка на
+								сайт</a></h3>
+							<article class="owl-carousel-list-article">
+								<h4>Что сделали:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+							<article class="owl-carousel-list-article">
+								<h4>В результате:</h4>
+								<aside>
+									Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
+									incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+									exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
+									irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+									pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia
+									deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error
+									sit voluptatem accusantium
+								</aside>
+							</article>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="section intermediate-section">
+		<div class="container">
+			<div class="row">
+				<div class="wrapper">
+					<div class="position">
+						<img src="img/elephans.png" alt="">
+						<h3 class="title">Уже привлекаете клиентов через поисковики,
+							но знаете, что можно и лучшее?</h3>
+						<p class="text">Мы расскажем, как. Бесплатно!</p>
+						<div class="intermediate col-lg-10">
+							<aside class="aside">
+								<b>Оставьте заявку на подробный аудит вашей рекламной кампании</b>
+							</aside>
+							<form id="form" class="add-massage-form header-form">
+								<div class="input-wrap">
+									<div class="modal_form_input_wrap">
+										<div class="modal_input_error">Заполните поле
+											<div class="modal_error_triangle"></div>
+											<div class="modal_error_chest_img"></div>
+										</div>
+										<input name="email" class="modal_form_email" type="text"
+											   placeholder="Введите email адрес*">
+									</div>
+								</div>
+								<div class="input-wrap">
+									<div class="modal_form_input_wrap">
+										<div class="modal_input_error">Заполните поле
+											<div class="modal_error_triangle"></div>
+											<div class="modal_error_chest_img"></div>
+										</div>
+										<input name="phone" class="modal_form_phone" type="text"
+											   placeholder="Введите номер телефона">
+									</div>
+								</div>
+								<input type="hidden" name="form_type" value="normal">
+								<input type="hidden" name="form_name" value="Иполучение информации на аудит">
+								<input type="submit" class="submit" value="Заказать">
+								<p class="modal col-popup" data-modal="modal-4">Посмотреть, что включено в аудит</p>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="starting-work-section section" id="starting-work-section">
+		<div class="container">
+			<div class="row">
+				<div class="starting-work-container clearfix">
+					<div class="starting-work-container-position">
+						<h2 class="starting-work-container-title">
+							<p>С чего хотели бы начать?</p>
+							<b>Получайте от 10 до 100 заявок в день</b>
+						</h2>
+						<div class="tabs-container clearfix">
+							<div class="clearfix tabs-item-conatiner">
+								<a href="/" data-tab="1" class="col-lg-4 col-md-4 col-sm-4  tabs-item active">
+									<h3 class="starting-work-item-title">
+										<img src="img/yandex-icon.png" class="icon-container">
+										<p>Настройка</p>
+										<p>Яндекс. Директ</p>
+									</h3>
+								</a>
+								<a href="/" data-tab="2" class="col-lg-4 col-md-4 col-sm-4  tabs-item">
+									<h3 class="starting-work-item-title">
+										<img src="img/google-icon.png" class="icon-container">
+										<p>Настройка</p>
+										<p>Google. Adwords</p>
+									</h3>
+								</a>
+								<a href="/" data-tab="3" class="col-lg-4 col-md-4 col-sm-4  tabs-item">
+									<h3 class="starting-work-item-title">
+										<img src="img/yandex-google-icon.png" class="icon-container">
+										<p>Комплексный</p>
+										<p>Пакет ЯД + GA</p>
+									</h3>
+								</a>
+							</div>
+							<div class="tabs-wrap-container">
+								<div class="tabs-wrap active" data-tab="1">
+									<div class="starting-work-item starting-work-item-1">
+										<span class="starting-work-item-span-1">Стандарт</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Яндекс. Директ (Стандарт)"
+										   data-modal="modal-8"
+										   data-info="Настройка Яндекс. Директ (Стандарт)">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-2">
+										<span class="starting-work-item-span-2">Премиум</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Яндекс. Директ (Премиум)"
+										   data-info="Настройка Яндекс. Директ (Премиум)"
+										   data-modal="modal-8">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-3">
+										<span class="starting-work-item-span-3">Gold</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Яндекс. Директ (Gold)"
+										   data-info="Настройка Яндекс. Директ (Gold)" data-modal="modal-8">Выбрать</a>
+									</div>
+								</div>
+								<div class="tabs-wrap" data-tab="2">
+									<div class="starting-work-item starting-work-item-1">
+										<span class="starting-work-item-span-1">Стандарт</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Google. Adwords (Стандарт)"
+										   data-info="Настройка Google. Adwords (Стандарт)"
+										   data-modal="modal-8">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-2">
+										<span class="starting-work-item-span-2">Премиум</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Google. Adwords (Премиум)"
+										   data-info="Настройка Google. Adwords (Премиум)"
+										   data-modal="modal-8">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-3">
+										<span class="starting-work-item-span-3">Gold</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Настройка Google. Adwords (Gold)"
+										   data-info="Настройка Google. Adwords (Gold)" data-modal="modal-8">Выбрать</a>
+									</div>
+								</div>
+								<div class="tabs-wrap" data-tab="3">
+									<div class="starting-work-item starting-work-item-1">
+										<span class="starting-work-item-span-1">Стандарт</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Комплексный Пакет ЯД + GA (Стандарт)"
+										   data-info="Комплексный Пакет ЯД + GA (Стандарт)"
+										   data-modal="modal-8">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-2">
+										<span class="starting-work-item-span-2">Премиум</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Комплексный Пакет ЯД + GA (Премиум)"
+										   data-info="Комплексный Пакет ЯД + GA (Премиум)"
+										   data-modal="modal-8">Выбрать</a>
+									</div>
+									<div class="starting-work-item starting-work-item-3">
+										<span class="starting-work-item-span-3">Gold</span>
+										<aside>
+											<p>Анализ вашего бизнеса</p>
+											<p>Разработка стратегии продвижения</p>
+											<p>Создание и настройка Яндекс.Директ</p>
+											<p>Первичное ведение 1 месяц</p>
+											<b>От 59$</b></aside>
+										<a href="#" class="modal" data-title="Комплексный Пакет ЯД + GA (Gold)"
+										   data-info="Комплексный Пакет ЯД + GA (Gold)" data-modal="modal-8">Выбрать</a>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="another-promotion">
+							<h3 class="another-promotion-title"><p>Как ещё можно увеличить
+								ваши продажи?</p></h3>
+							<div class="another-promotion-item">
+								<h4>Melfori – веб-студия полного цикла</h4>
+								<p>По вашему желанию мы можем полностью проработать весь ваш маркетинг:</p>
+								<ul>
+									<li>– от создания лендинга:<a href="http://landing.melfori.com/" target="_blank"
+																  class="link"> landing.melfori.com</a></li>
+									<li>– до продвижения в инстаграме:<a href="http://instagram.melfori.com/"
+																		 target="_blank" class="link">
+										instagram.melfori.com</a></li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!--         <section class="solution-section section">
+				<div class="container">
+					<div class="row">
+						<div class="solution-container">
+							<div class="solution-position">
+								<h3 class="title">Решение проблем</h3>
+								<div class="clearfix">
+									<div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
+										<span class="number">1</span>
+										<aside class="about-problems">
+											<b>Есть сайт, а реклама не настроена?</b>
+										</aside>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
+										<span class="number">2</span>
+										<aside class="about-problems">
+											<b>Настроили рекламу, но клиентов нет и деньги уходят впустую?</b>
+										</aside>
+									</div>
+									<div class="col-lg-4 col-md-4 col-sm-4 nomber-container">
+										<div>
+											<span class="number">3</span>
+											<aside class="about-problems">
+												<b>Нет времени, чтобы полностью погрузится в рекламную компанию?</b>
+											</aside>
+										</div>
+									</div>
+								</div>
+								<div class="text-container">
+									<aside>
+										<p>Мы для вас подготовили индивидуальное предложение, которое включает не только</p>
+										<p>усовершенствование и ведение рекламы, а так же повышение конверсии за счет</p>
+										<p>а/б тестирования и улучшения сайта нашими специалистами.</p>
+									</aside>
+								</div>
+								<div class="developers">
+									<h3 class="title"><p>Наши спецалисты</p></h3>
+									<div class="clearfix">
+										<div class="col-lg-3 col-md-3 col-sm-6 developers-item">
+											<img src="img/developer-foto4.jpg" alt="">
+											<h4 class="name">Спичак Дмитрий</h4>
+											<aside>
+												<p class="skills">Веб-дизайнер</p>
+											</aside>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-6 developers-item">
+											<img src="img/developer-foto5.jpg" alt="">
+											<h4 class="name">Елена Калиниченко</h4>
+											<aside>
+												<p class="skills">Веб-дизайнер</p>
+											</aside>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-6 developers-item">
+											<img src="img/developer-foto6.jpg" alt="">
+											<h4 class="name">Александр Стадник</h4>
+											<aside>
+												<p class="skills">Front-End Developer</p>
+											</aside>
+										</div>
+										<div class="col-lg-3 col-md-3 col-sm-6 developers-item">
+											<img src="img/developer-foto7.jpg" alt="">
+											<h4 class="name">Алексей Третьяков</h4>
+											<aside>
+												<p class="skills">Back-End Developer</p>
+											</aside>
+										</div>
+									</div>
+									<div class="add-prop modal" data-info="Получить предложение" data-modal="modal-8" data-title="Получить предложение">Получить предложение</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section> -->
+	<section class="developed-command-section section" id="developed-command-section">
+		<div class="container">
+			<div class="row">
+				<div class="developed-sociality-container clearfix">
+					<div class="developed-sociality-foto-position">
+						<h2 class="developed-sociality-container-title">
+							<b>Созданием и ведением</b>
+							<p>вашей рекламной кампании займётся сплочённая команда</p>
+						</h2>
+						<div class="col-lg-6 col-md-6">
+							<ul class="developed-sociality-wrap">
+								<li class="clearfix">
+									<img src="img/developer-foto1.jpg">
+									<h3>Иван Иванов</h3>
+									<aside>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in</p>
+									</aside>
+									<a href="#">vk.com/1231343434</a>
+								</li>
+								<li class="clearfix">
+									<img src="img/developer-foto2.jpg">
+									<h3>Иван Иванов</h3>
+									<aside>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in</p>
+									</aside>
+									<a href="#">vk.com/1231343434</a>
+								</li>
+								<li class="clearfix">
+									<img src="img/developer-foto3.jpg">
+									<h3>Иван Иванов</h3>
+									<aside>
+										<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+											tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+											quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+											consequat. Duis aute irure dolor in reprehenderit in</p>
+									</aside>
+									<a href="#">vk.com/1231343434</a>
+								</li>
+							</ul>
+						</div>
+						<div class="col-lg-6 col-md-6">
+							<div class="developed-sociality-foto-container">
+								<aside class="developed-sociality-foto-aside">
+									<p><span>Вся команда Melfori </span> (25 специалистов и каждый профессионал в своем
+										деле)</p>
+								</aside>
+								<div class="developed-sociality-foto-wrap">
+									<img src="img/company-photo.jpg" alt="">
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="main-quetions-section section" id="main-quetions-section">
+		<div class="container main-quetions-container">
+			<div class="main-quetions" id="main-quetions-id">
+				<h2 class="main-quetions-container-title">Есть вопросы или сомнения?<p>Отвечаем честно</p></h2>
+				<div class="accordion">
+					<div class="accordion_title">
+						<p>Потребуется ли моё активное участие, или всё сделаете сами?</p>
+						<span class="arrow"></span>
+					</div>
+					<div class="accordion_content">
+						<p>От вас потребуется участие на этапе сбора семантического ядра. Так как некоторые нюансы,
+							словоформы по вашей нише можем не знать. Далее все сделаем самостоятельно. Вам останется
+							только пополнить рекламную компанию.</p>
+					</div>
+				</div>
+				<div class="accordion">
+					<div class="accordion_title">
+						<p>Смогу ли я сам вести рекламную кампанию в дальнейшем?</p>
+						<span class="arrow"></span>
+					</div>
+					<div class="accordion_content">
+						<p>Да, Вы сможете вести самостоятельно компанию, если у вас присутствуют базовые знание о Яндекс
+							Директе или Google AdWords. Иначе вы сможете спустить свой бюджет в пустую.
+						</p>
+					</div>
+				</div>
+				<div class="accordion">
+					<div class="accordion_title">
+						<p>Будет ли скидка, если у меня несколько направлений бизнеса?</p>
+						<span class="arrow"></span>
+					</div>
+					<div class="accordion_content">
+						<p>Да, Вам будет предоставлена скидка 30% на последующее направления бизнеса.
+						</p>
+					</div>
+				</div>
+				<div class="accordion">
+					<div class="accordion_title">
+						<p>Какой рекламный бюджет у меня будет? От чего он зависит?</p>
+						<span class="arrow"></span>
+					</div>
+					<div class="accordion_content">
+						<p>LРекламный бюджет зависит от того, сколько денег Вы готовы выделить на рекламную компанию и
+							какая конкуренция в вашем бизнесе. Также от позиций, где Вы хотите размещаться. По просьбе
+							можем сделать приблизительный прогноз бюджета.
+						</p>
+					</div>
+				</div>
+				<div class="accordion">
+					<div class="accordion_title">
+						<p>Если я не получу обещанный результат, вы вернёте деньги? Какие гарантии?</p>
+						<span class="arrow"></span>
+					</div>
+					<div class="accordion_content">
+						<p>Да, мы вернем деньги если оговоренного результата не будет. У нас открыт ООО “Мелфори” ЕГРПОУ
+							40761564, есть возможность работы по договору.
+						</p>
+					</div>
+				</div>
+				<input class="ask-quetion-submit modal" data-modal="modal-6" data-title="Задайте вопрос" type="submit"
+					   name="ask-quetion" data-info="Сообщение из формы 'Задайте вопрос'" value="Задать вопрос">
+			</div>
+	</section>
+	<section class="footer section" id="footer">
+		<div class="container footer-position-contaiener">
+			<div class="footer-container">
+				<h2 class="footer-title">Начать просто. Не нужно ничего платить!
+					<p>Оставьте заявку – мы перезвоним, проведём анализвашей ниши, озвучим выгодный тариф и примерную
+						стоимость будущего клиента
+					</p>
+				</h2>
+				<form id="form" class="add-massage-form footer-form">
+					<div class="input-container">
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес">
+						</div>
+					</div>
+					<div class="input-container">
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="phone" class="modal_form_phone" type="text"
+								   placeholder="Введите номер телефона">
+						</div>
+					</div>
+					<input type="hidden" name="form_type" value="normal">
+					<input type="hidden" name="form_name" value="Сообщение из формы 'Получить консультацию'">
+					<input type="submit" value="Получить консультацию">
+				</form>
+				<aside class="footer-aside">
+					Мы не навязываем свои услуги, но предлагаем наиболее выгодные условия на рынке. Решение о
+					сотрудничестве всегда остаётся за вами. Попробуйте!
+				</aside>
+			</div>
+			<div class="footer-row container">
+				<div class="footer-row-bottom clearfix">
+					<div class="melfori-footer col-lg-3 col-md-4 col-sm-4 col-xs-12">©2016 Melfori</div>
+					<div class="privaci-politic modal col-lg-6 col-md-4 col-sm-4 col-xs-12"
+						 data-modal="modal-5">Политика конфиденциальности</div>
+					<ul class="footer-link-icon col-lg-3 col-md-4 col-sm-4 col-xs-12">
+						<li>
+							<a href="#" class="instagramm-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="vk-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="facebook-icon"></a>
+						</li>
+						<li>
+							<a href="#" class="twitter-icon"></a>
+						</li>
+					</ul>
+				</div>
+				<div class="copirate">
+					<a href="http://landing.melfori.com/" target="_blank">
+						<p>Создание сайта:</p>
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+<div class="hidden"></div>
+<!--[if lt IE 9]>
+<script src="libs/html5shiv/es5-shim.min.js"></script>
+<script src="libs/html5shiv/html5shiv.min.js"></script>
+<script src="libs/html5shiv/html5shiv-printshiv.min.js"></script>`
+<script src="libs/respond/respond.min.js"></script>
+<![endif]-->
+<!-- Load Scripts Start -->
+<script>
+	var scr = {
+		"scripts": [{
+			"src": "js/libs.js",
+			"async": false
+		}, {
+			"src": "js/common.js",
+			"async": false
+		}]
+	};
+	!function (t, n, r) {
+		"use strict";
+		var c = function (t) {
+			if ("[object Array]" !== Object.prototype.toString.call(t)) return !1;
+			for (var r = 0; r < t.length; r++) {
+				var c = n.createElement("script"),
+						e = t[r];
+				c.src = e.src, c.async = e.async, n.body.appendChild(c)
+			}
+			return !0
+		};
+		t.addEventListener ? t.addEventListener("load", function () {
+			c(r.scripts);
+		}, !1) : t.attachEvent ? t.attachEvent("onload", function () {
+			c(r.scripts)
+		}) : t.onload = function () {
+			c(r.scripts)
+		}
+	}(window, document, scr);
+</script>
+<!-- Load Scripts End -->
 </body>
 
 </html>
