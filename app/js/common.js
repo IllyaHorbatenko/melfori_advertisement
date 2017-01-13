@@ -87,8 +87,8 @@ function setAnimation(down, up) {
                     }
                     if (thisSection > nextSection) {
                         // вызов анимации по скроллу вверх
+                        console.log()
                         up[i].play(0);
-                        console.log('sdvsdv')
                         for (var k = 0; k < section.length; k++) {
                             if (k != i) {
                                 section[k].classList.remove('animation');
@@ -149,7 +149,7 @@ $(document).ready(function () {
         //     // для инициализации tooltips
         // });
         $('#fullpage').fullpage({
-            anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'],
+            anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
             menu: '#desktop-menu',
             css3: true,
             navigation: true,
@@ -197,6 +197,7 @@ $(document).ready(function () {
             td8 = new TimelineMax(),
             td9 = new TimelineMax(),
             td10 = new TimelineMax(),
+            td11 = new TimelineMax(),
 
             tu1 = new TimelineMax(),
             tu2 = new TimelineMax(),
@@ -208,9 +209,10 @@ $(document).ready(function () {
             tu8 = new TimelineMax(),
             tu9 = new TimelineMax(),
             tu10 = new TimelineMax(),
+            tu11 = new TimelineMax(),
 
-            td = [td1, td2, td3, td4, td5, td6, td7, td8, td9, td10];
-        tu = [tu1, tu2, tu3, tu4, tu5, tu6, td7, tu8, tu8, tu9, tu10];
+            td = [td1, td2, td3, td4, td5, td6, td7, td8, td9, td10, td11],
+            tu = [tu1, tu2, tu3, tu4, tu5, tu6, td7, tu8, tu9, tu10, tu11];
 
         td1.pause();
         td2.pause();
@@ -222,6 +224,7 @@ $(document).ready(function () {
         td8.pause();
         td9.pause();
         td10.pause();
+        td11.pause();
 
         tu1.pause();
         tu2.pause();
@@ -233,6 +236,7 @@ $(document).ready(function () {
         tu8.pause();
         tu9.pause();
         tu10.pause();
+        tu11.pause();
         // GREEN SOCKS FOR DOWN
 
 
@@ -242,20 +246,46 @@ $(document).ready(function () {
         td1.from('.header-add-project-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 'header-1');
         td1.from('.scroll-mouse-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6', 'header-3');
 
-        // секция 2
 
-        // td2.from('.about-contextual-advertising-title', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5', 'advertising-1');
-        // td2.from('.about-contextual-advertising-wrap-1 article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.3', 'advertising-2');
-        // td2.from('.about-contextual-advertising-wrap-2 article', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5', 'advertising-3');
-        // td2.from('.about-contextual-advertising-wrap-1 img', 0.7, { opacity: 0, scale: 0.5, ease: Power4.easeOut }, '-=0.6', 'advertising-img');
-        // td2.from('.about-contextual-advertising-wrap-2 img', 0.7, { opacity: 0, scale: 0.5, ease: Power4.easeOut }, '-=0.6', 'advertising-img');
+        //section 2
+
+        td2.from('.about-contextual-advertising-section .wrapper .position .item-1', 0.7, {
+            y: -100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.5', 0.3, 'lable-dn-2')
+            .from('.about-contextual-advertising-section .wrapper .position .item-2', 0.7, {
+                y: -100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, 'lable-dn-2')
+            .staggerFrom('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', 0.7, {
+                y: -10,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, 0.2, 'lable-dn-2')
+            .from('.about-contextual-advertising-section .wrapper .position .item-3 .item-title', 1, {
+                y: -100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, 'lable-dn-2')
+            .from('.about-contextual-advertising-section .wrapper .position .item-3', 1, {
+                y: 100,
+                opacity: 0,
+                scale: 0.9,
+                ease: Power4.easeOut
+            }, 'lable-dn-2')
+            .staggerFrom('.about-contextual-advertising-section .wrapper .position .item-3 .item-content img', 0.7, {
+                y: -10,
+                opacity: 0,
+                scale:0.7,
+                ease: Power4.easeOut
+            }, 0, 'lable-dn-2');
         // секция 3
 
         td3.from('.about-lever-context-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td3.staggerFrom('.about-lever-context-col', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 0.2, '-=0.5');
-        td3.from('.audit-information-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
-        td3.from('.audit-form-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.8');
-        td3.from('.audit-form', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7');
+
 
         // секция 4
 
@@ -270,8 +300,29 @@ $(document).ready(function () {
         td5.from('.owl-carousel-list-img-container', 0.7, {y: 200, opacity: 0, ease: Power4.easeOut}, '-=0.6');
         td5.from('.owl-carousel-list-title', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
         td5.from('.owl-carousel-list-article', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
+        // sectino 6
 
-        // секция 6
+        td6.from('.intermediate-section .wrapper .position .image', 0.7, {
+            y: 100,
+            x: -150,
+            scale: 0.5,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.6')
+            .from('.audit-information-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
+            .from('.intermediate-section .wrapper .position .title', 0.7, {
+                y: 100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, '-=0.6')
+            .from('.intermediate-section .wrapper .position .text', 0.7, {
+                y: 100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, '-=0.8')
+            .from('.audit-information-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7');
+
+        // секция 7
 
         td7.from('.starting-work-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td7.from('.tabs-wrap-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
@@ -283,29 +334,46 @@ $(document).ready(function () {
         }, 0.1, '-=0.8', 'tabs-item');
         td7.from('.another-promotion', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=1.4');
 
-        //секция 7
+        //секция 8
+        td8.from('.advertising-section .wrapper .position .title', 0.7, {
+            y: 100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.4')
+            .from('.advertising-section .wrapper .position .aside', 0.7, {
+                y: 100,
+                opacity: 0,
+                ease: Power4.easeOut
+            }, '-=0.4')
+            .staggerFrom('.advertising-section .wrapper .position .item', 0.7, {
+                scale: 0.3,
+                y: -400,
+                autoAlpha: 0,
+                ease: Power4.easeOut
+            }, 0.1, '-=0.8', 'tabs-item')
+            .staggerFrom('.advertising-section .wrapper .position .item img', 0.7, {
+                scale: 0.3,
+                autoAlpha: 0,
+                ease: Bounce.easeOut
+            }, -0.3, '-=0.6', 'tabs-item');
 
-        // td6.from('.solution-section .title ', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '+=0.5');
-        // td6.staggerFrom('.solution-section .nomber-container', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8');
-        // td6.from('.solution-section .text-container', 0.7, { y: 100, opacity: 0, ease: Power4.easeOut }, '-=0.5');
-        // td6.staggerFrom('.solution-section .developers-item', 0.7, { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8');
-        // td6.from('.solution-section .add-prop', 0.5, { y: 10, opacity: 0, ease: Power4.easeOut }, '-=1');
-        // секция 8
-
-        td8.from('.developed-sociality-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
-        td8.staggerFrom('.developed-sociality-wrap li', 0.7, {x: -100, autoAlpha: 0, ease: Power4.easeOut}, 0.2);
-        td8.from('.developed-sociality-foto-aside', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7');
-        td8.from('.developed-sociality-foto-wrap', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.5');
 
         // секция 9
-        td9.from('.main-quetions-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
-        td9.staggerFrom('.accordion', 0.7, {y: 100, autoAlpha: 0, ease: Power4.easeOut}, 0.1, '-=0.6');
-        td9.from('.ask-quetion-submit', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
+        td9.from('.developed-sociality-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5')
+            .staggerFrom('.developed-sociality-wrap li', 0.7, {x: -100, autoAlpha: 0, ease: Power4.easeOut}, 0.2)
+            .from('.developed-sociality-foto-aside', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7')
+            .from('.developed-sociality-foto-wrap', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.5');
+
 
         // секция 10
+        td10.from('.main-quetions-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
+        td10.staggerFrom('.accordion', 0.7, {y: 100, autoAlpha: 0, ease: Power4.easeOut}, 0.1, '-=0.6');
+        td10.from('.ask-quetion-submit', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
 
-        td10.from('.footer-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.2');
-        td10.from('.footer-row', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
+        //section 11
+
+        td11.from('.footer-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.2');
+        td11.from('.footer-row', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
 
 
         //  GREEN SOCKS FOR UP
@@ -347,12 +415,6 @@ $(document).ready(function () {
                 opacity: 1,
                 ease: Power4.easeOut
             }, 0.2, '-=0.8', 'lable-3');
-        tu3.set('.audit-information-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-information-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
-        tu3.set('.audit-form-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-form-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
-        tu3.set('.audit-form', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-form', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
 
 
         // секция 4
@@ -379,6 +441,15 @@ $(document).ready(function () {
             .to('.owl-carousel-list-article', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
 
         // секция 6
+        tu6.set('.audit-information-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
+            .to('.audit-information-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
+        tu6.set('.audit-form-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
+            .to('.audit-form-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
+        tu6.set('.audit-form', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
+            .to('.audit-form', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
+
+
+        // секция 7
 
         tu7.set('.another-promotion', {y: -100, opacity: 0}, '-=0.2')
             .to('.another-promotion', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.2');
@@ -390,48 +461,35 @@ $(document).ready(function () {
             .staggerTo('.tabs-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.2, '-=0.8', 'lable-6');
         tu7.staggerTo('.starting-work-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=1.3', 'lable-6');
 
-        // секция 7
-
-        // tu6.set('.solution-section .title ', { y: -100, opacity: 0, ease: Power4.easeOut }, '+=0.5')
-        //     .to('.solution-section .title ', 0.7, { y: 0, opacity: 1, ease: Power4.easeOut }, '+=0.5');
-        // tu6.set('.solution-section .nomber-container', { y: -100, autoAlpha: 0, ease: Power4.easeOut }, '-=0.8')
-        //     .staggerTo('.solution-section .nomber-container', 0.7, { y: 0, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8');
-        // tu6.set('.solution-section .text-container', { y: -100, opacity: 0, ease: Power4.easeOut }, '-=0.5')
-        //     .to('.solution-section .text-container', 0.7, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.5');
-        // tu6.set('.solution-section .developers-item', { y: 100, autoAlpha: 0, ease: Power4.easeOut }, 0.1, '-=0.8')
-        //     .staggerTo('.solution-section .developers-item', 0.7, { y: 100, autoAlpha: 1, ease: Power4.easeOut }, 0.1, '-=0.8');
-        // tu6.set('.solution-section .add-prop', { y: -10, opacity: 0, ease: Power4.easeOut }, '-=1')
-        //     .to('.solution-section .add-prop', 0.5, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=1');
-
         // секция 8
-        tu8.set('.developed-sociality-container-title', {y: -100, opacity: 0}, '+=0.3')
+        tu9.set('.developed-sociality-container-title', {y: -100, opacity: 0}, '+=0.3')
             .to('.developed-sociality-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3');
-        tu8.set('.developed-sociality-wrap li', {x: -100, autoAlpha: 0}, '-=0.3', 'lable-8')
+        tu9.set('.developed-sociality-wrap li', {x: -100, autoAlpha: 0}, '-=0.3', 'lable-8')
             .staggerTo('.developed-sociality-wrap li', 1, {
                 x: 0,
                 autoAlpha: 1,
                 ease: Power4.easeOut
             }, 0.3, '-=0.3', 'lable-8');
-        tu8.set('.developed-sociality-foto-aside', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
+        tu9.set('.developed-sociality-foto-aside', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
             .to('.developed-sociality-foto-aside', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
-        tu8.set('.developed-sociality-foto-wrap', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
+        tu9.set('.developed-sociality-foto-wrap', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
             .to('.developed-sociality-foto-wrap', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
 
 
         // секция 9
-        tu9.set('.main-quetions-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-7')
+        tu10.set('.main-quetions-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-7')
             .to('.main-quetions-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-7');
-        tu9.set('.accordion', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-7')
+        tu10.set('.accordion', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-7')
             .staggerTo('.accordion', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=0.8', 'lable-7');
-        tu9.set('.ask-quetion-submit', {y: -100, opacity: 0}, '-=0.9', 'lable-7')
+        tu10.set('.ask-quetion-submit', {y: -100, opacity: 0}, '-=0.9', 'lable-7')
             .to('.ask-quetion-submit', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-7');
     }
 
 
     // $( document ).tooltip({
     //   track: true
-    // });  
-    //скролл по ссылке с атрибутом href 
+    // });
+    //скролл по ссылке с атрибутом href
     $(".mobile_navigation a[href*='#']").on("click", function (e) {
         e.preventDefault();
         var anchor = $(this);
@@ -523,15 +581,15 @@ $(document).ready(function () {
             /* Работаем с событием клика по элементам выпадающего списка */
             $('.drop').find('li').click(function () {
 
-                /* Заносим в переменную HTML код элемента 
+                /* Заносим в переменную HTML код элемента
                  списка по которому кликнули */
                 var selectResult = $(this).html();
 
-                /* Находим наш скрытый инпут и передаем в него 
+                /* Находим наш скрытый инпут и передаем в него
                  значение из переменной selectResult */
                 $(this).parent().parent().find('input').val(selectResult);
 
-                /* Передаем значение переменной selectResult в ссылку которая 
+                /* Передаем значение переменной selectResult в ссылку которая
                  открывает наш выпадающий список и удаляем активность */
                 $(this).parent().parent().find(".slct").removeClass('active').html(selectResult);
                 $(".slct_arrow").removeClass('active');
@@ -550,7 +608,7 @@ $(document).ready(function () {
         /* Предотвращаем обычное поведение ссылки при клике */
         return false;
     });
-    // Открываем модальное окно  
+    // Открываем модальное окно
     $(".modal").click(function (e) {
         e.preventDefault();
         var id = $(this).data('modal');
@@ -613,7 +671,7 @@ $(document).ready(function () {
             var pattern = /^(\+|d+)*\d[\d\(\)\-]{4,14}\d$/;
             if ($(this).val() == '') { // если пустое
                 $(this).siblings().show("fade", 500);
-                error.push(true); // ошибка 
+                error.push(true); // ошибка
                 if ($(this).siblings().hasClass('input_error_phone')) {
                     $(this).siblings().removeClass('input_error_phone').text("").prepend("Заполните поле<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
                 }
@@ -623,7 +681,7 @@ $(document).ready(function () {
                     error.push(false); // нет ошибок
                 } else {
                     $(this).siblings().show("fade", 500).addClass('input_error_phone').text("").prepend("Введите правильный телефон<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                    error.push(true); // ошибка  
+                    error.push(true); // ошибка
                 }
             }
             $(this).focus(function () {
@@ -646,7 +704,7 @@ $(document).ready(function () {
                     error.push(false); // нет ошибок
                 } else {
                     $(this).siblings().show("fade", 500).addClass('input_error_email').text("").prepend("Введите правильный Email<div class='modal_error_triangle'></div><div class='modal_error_chest_img'></div>");
-                    error.push(true); // ошибка  
+                    error.push(true); // ошибка
                 }
             }
             $(this).focus(function () {
@@ -693,7 +751,7 @@ $(document).ready(function () {
                                 $("body").css({"overflow": "inherit", "padding-right": "0"});
                             }, 3000);
                         }
-                        if (data['form_type'] == 'normal') { //надо писать в обычных формах <input type="hidden" name="form_type" value="normal"> 
+                        if (data['form_type'] == 'normal') { //надо писать в обычных формах <input type="hidden" name="form_type" value="normal">
                             form.trigger('reset');
                             $('.dm-modal .success_mail').addClass('active');
                             $('.popup[data-modal="modal-res"]').toggle("fade", 500);
@@ -728,7 +786,7 @@ $(document).ready(function () {
                 $(this).removeClass("active");
 
             } else {
-                $(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые 
+                $(".accordion .accordion_content").slideUp("slow"); //если невидимый, прячем все скрытые
                 $(".accordion .accordion_title").children() //убираем активный класс у стрелки к примеру
                     .removeClass("active");
                 $(".accordion_title").removeClass("active"); //убираем активный класс у стрелки к примеру
