@@ -63,7 +63,7 @@ gulp.task('scripts', function() {
 		'app/libs/owl.carousel/owl.carousel.min.js',
 		'app/libs/matchMedia/matchMedia.js',
 		'app/libs/matchMedia/matchMedia.addListener.js',
-		'app/libs/scroll/jquery.fullPage.min.js',
+		'app/libs/scroll/*.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
 		'app/libs/greensocks/*.js'
 		])

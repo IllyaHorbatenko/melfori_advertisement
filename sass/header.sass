@@ -2,8 +2,9 @@
 @import "vars.sass"
 @import "fonts.sass"
 @import "sprite/sprite.sass"
-// @import "app/libs/jquery/jquery-ui.min"  //Если мы хотим подключить стили для  jquery-ui (например для рабочих tooltips)
-
+@import "app/libs/scroll/jquery.fullPage"  //Если мы хотим подключить стили для  jquery-ui (например для рабочих tooltips)
+.row
+	margin: 0
 section
 	text-align: center
 body
@@ -818,7 +819,7 @@ html .loader
 	display: inline-block
 	left: 0
 	right: 0
-	top: calc(50% - 300px)
+	top: calc(50% - 240px)
 .advertising-title-aside-main
 	font-size: 37px
 	line-height: 1.3
@@ -878,7 +879,7 @@ html .loader
 .scroll-mouse-container
 	left: 0
 	right: 0
-	bottom: 150px
+	bottom: 50px
 	h2
 		font-size: 24px
 		color: #fff

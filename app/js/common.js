@@ -135,7 +135,7 @@ $(document).ready(function () {
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth > 1200 && md.mobile() != "iPad") {
+    if (document.documentElement.clientWidth > 1366 && document.documentElement.clientHeight >= 650 && md.mobile() != "iPad") {
         // $(".main").onepage_scroll({
         //     sectionContainer: "section", // контейнер, к которому будет применяться скролл
         //     easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -179,13 +179,7 @@ $(document).ready(function () {
         scrollMouseArrow.repeat(Infinity);
         scrollMouse.repeat(Infinity);
 
-    }
 
-    if (md.mobile() == "iPad") {
-        $('body, html').css('overflow', 'auto')
-    }
-
-    if (document.documentElement.clientWidth > 1200 && md.mobile() != "iPad") {
 
         var td1 = new TimelineMax(),
             td2 = new TimelineMax(),
@@ -253,32 +247,32 @@ $(document).ready(function () {
             y: -100,
             opacity: 0,
             ease: Power4.easeOut
-        }, '+=0.5', 0.3, 'lable-dn-2')
+        }, '+=0.2', 0.3, 'lable-dn-2')
             .from('.about-contextual-advertising-section .wrapper .position .item-2', 0.7, {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 'lable-dn-2')
+            }, '-=0.2','lable-dn-2')
             .staggerFrom('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', 0.7, {
                 y: -10,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 0.2, 'lable-dn-2')
+            }, 0.2, 'lable-dn-2','+=0.2')
             .from('.about-contextual-advertising-section .wrapper .position .item-3 .item-title', 1, {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 'lable-dn-2')
+            }, 'lable-dn-2','+=0.2')
             .from('.about-contextual-advertising-section .wrapper .position .item-3', 1, {
                 y: 100,
                 opacity: 0,
                 scale: 0.9,
                 ease: Power4.easeOut
-            }, 'lable-dn-2')
+            }, 'lable-dn-2','+=0.2' )
             .staggerFrom('.about-contextual-advertising-section .wrapper .position .item-3 .item-content img', 0.7, {
                 y: -10,
                 opacity: 0,
-                scale:0.7,
+                scale: 0.7,
                 ease: Power4.easeOut
             }, 0, 'lable-dn-2');
         // секция 3
@@ -290,16 +284,17 @@ $(document).ready(function () {
         // секция 4
 
         td4.from('.about-us-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
-        td4.staggerFrom('.about-us-icon-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 0.2, '-=0.6');
+        td4.staggerFrom('.about-us-icon-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, -0.2, '-=0.6');
         td4.from('.main-result', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.9');
 
 
         // секция 5
 
-        td5.from('.finished-result-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
-        td5.from('.owl-carousel-list-img-container', 0.7, {y: 200, opacity: 0, ease: Power4.easeOut}, '-=0.6');
-        td5.from('.owl-carousel-list-title', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
-        td5.from('.owl-carousel-list-article', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
+        td5.from('.finished-result-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5')
+            .from('.owl-carousel-list-img-container', 0.7, {y: 200, opacity: 0, ease: Power4.easeOut}, '-=0.6')
+            .from('.owl-carousel-list-title', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
+            .from('.finished-result-section .diogramm', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
+            .from('.owl-carousel-list-article', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
         // sectino 6
 
         td6.from('.intermediate-section .wrapper .position .image', 0.7, {
@@ -389,16 +384,70 @@ $(document).ready(function () {
 
         // секция 2
 
-        // tu2.set('.about-contextual-advertising-title', { y: -100, opacity: 0 }, '+=0.3', 'lable-2')
-        //     .to('.about-contextual-advertising-title', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '+=0.3', 'lable-2');
-        // tu2.set('.about-contextual-advertising-wrap-1 article', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
-        //     .to('.about-contextual-advertising-wrap-1 article', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
-        // tu2.set('.about-contextual-advertising-wrap-2 article', { y: -100, opacity: 0 }, '-=0.7', 'lable-2')
-        //     .to('.about-contextual-advertising-wrap-2 article', 1, { y: 0, opacity: 1, ease: Power4.easeOut }, '-=0.7', 'lable-2');
-        // tu2.set('.about-contextual-advertising-wrap-1 img', { opacity: 0, scale: 0.5 }, '-=0.9', 'lable-2-img')
-        //     .to('.about-contextual-advertising-wrap-1 img', 1, { opacity: 1, scale: 1, ease: Power4.easeOut }, '-=0.9', 'lable-2-img');
-        // tu2.set('.about-contextual-advertising-wrap-2 img', { opacity: 0, scale: 0.5 }, '-=0.9', 'lable-2-img')
-        //     .to('.about-contextual-advertising-wrap-2 img', 1, { opacity: 1, scale: 1, ease: Power4.easeOut }, '-=0.9', 'lable-2-img');
+        tu2.set('.about-contextual-advertising-section .wrapper .position .item-1', {
+            y: -100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.5', 0.3, 'lable-dn-2')
+            .to('.about-contextual-advertising-section .wrapper .position .item-1', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '+=0.5', 0.3, 'lable-dn-2');
+        tu2.set('.about-contextual-advertising-section .wrapper .position .item-2', {
+            y: -100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, 'lable-dn-2')
+            .to('.about-contextual-advertising-section .wrapper .position .item-2', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, 'lable-dn-2');
+        tu2.set('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', {
+            y: -10,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, 0.2, 'lable-dn-2')
+            .staggerTo('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, 0.2, 'lable-dn-2');
+        tu2.set('.about-contextual-advertising-section .wrapper .position .item-3 .item-title', {
+            y: -100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, 'lable-dn-2')
+            .to('.about-contextual-advertising-section .wrapper .position .item-3 .item-title', 1, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, 'lable-dn-2');
+        tu2.set('.about-contextual-advertising-section .wrapper .position .item-3', {
+            y: 100,
+            opacity: 0,
+            scale: 0.9,
+            ease: Power4.easeOut
+        }, 'lable-dn-2')
+            .to('.about-contextual-advertising-section .wrapper .position .item-3', 1, {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                ease: Power4.easeOut
+            }, 'lable-dn-2');
+        tu2.set('.about-contextual-advertising-section .wrapper .position .item-3 .item-content img', {
+            y: -10,
+            opacity: 0,
+            scale: 0.7,
+            ease: Power4.easeOut
+        }, 0.1, 'lable-dn-2')
+            .staggerTo('.about-contextual-advertising-section .wrapper .position .item-3 .item-content img', 0.7, {
+                y: 0,
+                opacity: 1,
+                scale: 1,
+                ease: Power4.easeOut
+            }, 0.1, 'lable-dn-2');
 
 
         // секция 3
@@ -437,16 +486,50 @@ $(document).ready(function () {
             .to('.owl-carousel-list-img-container', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
         tu5.set('.owl-carousel-list-title', {x: 100, opacity: 0}, '-=0.8', 'lable-5')
             .to('.owl-carousel-list-title', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
+        tu5.set('.finished-result-section .diogramm', {x: 100, opacity: 0}, '-=0.8', 'lable-5')
+            .to('.finished-result-section .diogramm', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
         tu5.set('.owl-carousel-list-article', {x: 100, opacity: 0}, '-=0.8', 'lable-5')
             .to('.owl-carousel-list-article', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
 
         // секция 6
-        tu6.set('.audit-information-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-information-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
-        tu6.set('.audit-form-title', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-form-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
-        tu6.set('.audit-form', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
-            .to('.audit-form', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-3');
+        tu6.set('.intermediate-section .wrapper .position .image', {
+            y: 100,
+            x: -150,
+            scale: 0.5,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.3')
+            .to('.intermediate-section .wrapper .position .image', 0.7, {
+                y: 0,
+                x: 0,
+                scale: 1,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '+=0.3');
+        tu6.set('.audit-information-title', {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
+            .to('.audit-information-title', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.6');
+        tu6.set('.intermediate-section .wrapper .position .title', {
+            y: 100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '-=0.6')
+            .to('.intermediate-section .wrapper .position .title', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '-=0.6');
+        tu6.set('.intermediate-section .wrapper .position .text', {
+            y: 100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '-=0.8')
+            .to('.intermediate-section .wrapper .position .text', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '-=0.8');
+        tu6.set('.audit-information-container', {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7')
+            .to('.audit-information-container', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.7');
 
 
         // секция 7
@@ -462,6 +545,52 @@ $(document).ready(function () {
         tu7.staggerTo('.starting-work-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=1.3', 'lable-6');
 
         // секция 8
+        tu8.set('.advertising-section .wrapper .position .title', {
+            y: 100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '+=0.1')
+            .to('.advertising-section .wrapper .position .title', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '+=0.1');
+        tu8.set('.advertising-section .wrapper .position .aside', {
+            y: 100,
+            opacity: 0,
+            ease: Power4.easeOut
+        }, '-=0.4')
+            .to('.advertising-section .wrapper .position .aside', 0.7, {
+                y: 0,
+                opacity: 1,
+                ease: Power4.easeOut
+            }, '-=0.4');
+        tu8.set('.advertising-section .wrapper .position .item', {
+            scale: 0.3,
+            y: -400,
+            autoAlpha: 0,
+            ease: Power4.easeOut
+        }, 0.1, '-=0.8', 'tabs-item')
+            .staggerTo('.advertising-section .wrapper .position .item', 0.7, {
+                scale: 1,
+                y: 0,
+                autoAlpha: 1,
+                ease: Power4.easeOut
+            }, 0.1, '-=0.8', 'tabs-item');
+        tu8.set('.advertising-section .wrapper .position .item img', {
+            scale: 0.3,
+            autoAlpha: 0,
+            ease: Bounce.easeOut
+        }, -0.3, '-=0.6', 'tabs-item')
+            .staggerTo('.advertising-section .wrapper .position .item img', 0.7, {
+                scale: 1,
+                autoAlpha: 1,
+                ease: Bounce.easeOut
+            }, -0.3, '-=0.6', 'tabs-item');
+
+
+        // секция 9
+
         tu9.set('.developed-sociality-container-title', {y: -100, opacity: 0}, '+=0.3')
             .to('.developed-sociality-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3');
         tu9.set('.developed-sociality-wrap li', {x: -100, autoAlpha: 0}, '-=0.3', 'lable-8')
@@ -476,14 +605,21 @@ $(document).ready(function () {
             .to('.developed-sociality-foto-wrap', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
 
 
-        // секция 9
+        // секция 10
         tu10.set('.main-quetions-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-7')
             .to('.main-quetions-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-7');
         tu10.set('.accordion', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-7')
             .staggerTo('.accordion', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=0.8', 'lable-7');
         tu10.set('.ask-quetion-submit', {y: -100, opacity: 0}, '-=0.9', 'lable-7')
             .to('.ask-quetion-submit', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-7');
+
+
     }
+
+    if (md.mobile() == "iPad") {
+        $('body, html').css('overflow', 'auto')
+    }
+
 
 
     // $( document ).tooltip({
