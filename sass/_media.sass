@@ -537,10 +537,6 @@
 				width: calc(50% - 30px)
 		.developers
 			padding-bottom: 50px
-
-@media only screen and (max-height: 950px)
-	.top-menu-container
-		width: 100%
 	.main-quetions-container,
 	.starting-work-container,
 	.header-container,
@@ -551,15 +547,20 @@
 	.footer-position-contaiener,
 	.solution-container
 		min-height: 0
+@media only screen and (max-height: 950px)
+	.top-menu-container
+		width: 100%
+
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 999px)
 	.audit-form,
 	.add-massage-form
 		width: auto
+		input
+			width: 100%
 		input[type=submit]
-			display: block
 			margin-top: 8px
-			margin: auto
+			width: 100%
 	.audit-form-input-container,
 	.input-container
 		display: block
@@ -659,6 +660,10 @@
 					font-size: 1.8rem
 					p
 						display: inline
+	.popup5
+		.dm-modal
+			width: 100%
+			padding: 50px 20px 10px
 
 /* Small Devices, Tablets */
 		
@@ -805,6 +810,7 @@
 			.position
 				.item
 					width: 320px
+
 	/*Disable Animation on Mobile Devices*/
 	.animated
 		/*CSS transitions*/
@@ -854,7 +860,6 @@
 			margin: auto
 	.popup,
 	.popup6,
-	.popup5,
 	.popup4,
 	.popup7
 		.dm-modal

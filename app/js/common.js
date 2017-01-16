@@ -135,7 +135,7 @@ $(document).ready(function () {
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth > 1366 && document.documentElement.clientHeight >= 650 && md.mobile() != "iPad") {
+    if (document.documentElement.clientWidth >= 1366 && document.documentElement.clientHeight >= 650 && md.mobile() != "iPad") {
         // $(".main").onepage_scroll({
         //     sectionContainer: "section", // контейнер, к которому будет применяться скролл
         //     easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"

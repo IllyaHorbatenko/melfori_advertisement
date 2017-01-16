@@ -82,7 +82,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup5 .dm-table{display:table;width:100%;height:100%}
 .popup5 .overlay{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(54,64,74,.98);z-index:1001}
 .popup5 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
-.popup5 .dm-modal{display:inline-block;padding:50px 46px;width:579px;height:100vh;position:relative;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002;text-align:left}
+.popup5 .dm-modal{display:inline-block;padding:50px 46px;width:779px;height:100vh;position:relative;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002;text-align:left}
 .popup3 .dm-modal,.popup6 .dm-modal{max-width:100%;-webkit-animation:fade .8s}
 .popup6{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#343434}
 .popup6 .close{background:0 0;right:10px;top:10px}

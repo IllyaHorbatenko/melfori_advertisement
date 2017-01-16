@@ -773,7 +773,7 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .finished-result-section .diogramm .first,.finished-result-section .diogramm .second,.finished-result-section .diogramm .third{border-left:13px solid transparent;border-right:13px solid transparent;margin:auto;height:0}
 .finished-result-section .diogramm .first{width:204px;border-bottom:53px solid #04be5b;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);position:relative}
 .finished-result-section .diogramm .first p{color:#fff;font-size:2.4rem;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);position:absolute;left:0;right:0;text-align:center;top:7px}
-.finished-result-section .diogramm .second{width:180px;border-bottom:45px solid #04be5b;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
+.finished-result-section .diogramm .second{width:144px;border-bottom:45px solid #04be5b;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 .finished-result-section .diogramm .second p{color:#fff;font-size:2.4rem;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);position:absolute;left:0;right:0;text-align:center;top:4px}
 .finished-result-section .diogramm .third{width:154px;border-bottom:41px solid #04be5b;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg)}
 .finished-result-section .diogramm .third p{color:#fff;font-size:2.4rem;-webkit-transform:rotate(180deg);-ms-transform:rotate(180deg);transform:rotate(180deg);position:absolute;left:0;right:0;text-align:center;top:1px}
@@ -867,7 +867,7 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .starting-work-item-span-1{background:#2e92cc}
 .starting-work-item-span-2{background:#cc662e}
 .starting-work-item-span-3{background:#ccbf2e}
-.developed-sociality-container{position:relative;min-height:950px}
+.developed-sociality-container{position:relative;min-height:650px}
 .developed-sociality-container-title{margin-bottom:49px;color:#343434}
 .developed-sociality-container-title b{font-size:3.8rem;font-weight:400}
 .developed-sociality-container-title p{font-size:1.8rem}
@@ -1043,6 +1043,7 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .about-contextual-advertising-section .wrapper .position .item-1,.about-contextual-advertising-section .wrapper .position .item-2{float:none;width:inherit;margin:0 auto 20px}
 .intermediate-section .wrapper .item input[type=submit]{width:100%}
 .advertising-section .wrapper .position .item{min-height:570px;position:relative}
+.developed-sociality-container,.finished-result-container,.footer-position-contaiener,.header-container,.main-about-us-container,.main-container-clever-context,.main-quetions-container,.solution-container,.starting-work-container{min-height:0}
 .advertising-section .wrapper .position .item input[type=submit]{position:absolute;left:0;right:0;margin:auto;bottom:34px;width:90%}
 .about-contextual-advertising-wrap-2,.advertising-section .wrapper .position .aside{margin-bottom:30px}
 .another-promotion .another-promotion-title{text-align:center;width:100%;margin:0 0 25px}
@@ -1081,7 +1082,6 @@ body,html{overflow:visible}
 .call_information_container{width:240px}
 .owl-carousel-list-title p{display:block}
 .owl-carousel-list-title a{margin:0}
-.footer-position-contaiener{min-height:0}
 .footer-row{margin-bottom:10px}
 .another-promotion{margin-bottom:35px}
 .another-promotion .another-promotion-title{font-size:2.5rem}
@@ -1093,10 +1093,10 @@ body,html{overflow:visible}
 .solution-section .developers{padding-bottom:50px}
 }
 @media only screen and (max-height:950px){.top-menu-container{width:100%}
-.developed-sociality-container,.finished-result-container,.footer-position-contaiener,.header-container,.main-about-us-container,.main-container-clever-context,.main-quetions-container,.solution-container,.starting-work-container{min-height:0}
 }
 @media only screen and (max-width:999px){.add-massage-form,.audit-form{width:auto}
-.add-massage-form input[type=submit],.audit-form input[type=submit]{display:block;margin:auto}
+.add-massage-form input,.audit-form input{width:100%}
+.add-massage-form input[type=submit],.audit-form input[type=submit]{margin-top:8px;width:100%}
 .audit-form-input-container,.input-container{display:block;margin:auto auto 9px}
 .submit-lable-audit{text-align:right;padding-left:12px}
 .footer-form input{margin:0}
@@ -1128,6 +1128,7 @@ body,html{overflow:visible}
 .advertising-section .wrapper .position .item input[type=submit]{position:static}
 .advertising-section .wrapper .position .title{font-size:2.4rem}
 .advertising-section .wrapper .position .aside{font-size:1.8rem}
+.popup5 .dm-modal{width:100%;padding:50px 20px 10px}
 }
 @media only screen and (max-width:768px){#form ::-webkit-input-placeholder{font-size:16px}
 #form :-moz-placeholder{font-size:16px}
@@ -1178,7 +1179,7 @@ body,html{overflow:visible}
 }
 @media only screen and (max-width:573px){.popup .success_mail{padding-bottom:40px}
 .about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{float:none;width:100%;margin:auto}
-.popup .dm-modal,.popup4 .dm-modal,.popup5 .dm-modal,.popup6 .dm-modal,.popup7 .dm-modal{width:100%;padding:50px 20px 10px}
+.popup .dm-modal,.popup4 .dm-modal,.popup6 .dm-modal,.popup7 .dm-modal{width:100%;padding:50px 20px 10px}
 }
 @media only screen and (max-width:480px){.about-contextual-advertising-section .wrapper .position .item-3 .item-content{padding:0}
 .finished-result-section .diogramm .first{width:140px}
