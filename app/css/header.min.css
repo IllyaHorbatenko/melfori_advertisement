@@ -218,7 +218,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .header-add-project-title h2{font-size:30px;color:#fff;margin-right:15px;margin-bottom:19px}
 .header-add-project-title p{font-size:14px;margin-right:6px;margin-bottom:36px;margin-left:-4px}
 .header-add-project-title p b{color:#04be5b}
-.add-massage-form input{-webkit-border-radius:5px;border-radius:5px;width:263px;height:40px;padding-left:15px;border:1px solid rgba(0,0,0,.2);color:#000}
+.add-massage-form input{-webkit-border-radius:5px;border-radius:5px;width:245px;height:40px;padding-left:15px;border:1px solid rgba(0,0,0,.2);color:#000}
 .add-massage-form input[type=submit]{border:none;background:#04be5b;color:#fff;padding:0}
 .add-massage-form .submit,.add-massage-form .submit:hover{-webkit-box-shadow:0 2px 5px 1px #374547;box-shadow:0 2px 5px 1px #374547}
 .header-form input{margin-bottom:10px;color:#000}

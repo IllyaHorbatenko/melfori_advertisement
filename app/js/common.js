@@ -102,7 +102,6 @@ function setAnimation(down, up) {
     }
 }
 
-
 $(document).ready(function () {
     buttonMobileMenu();
 
@@ -156,15 +155,18 @@ $(document).ready(function () {
             responsiveSlides: true,
             responsiveWidth: 1366,
             responsiveHeight: 650,
+            slidesNavigation: true,
+
             afterResponsive: function (isResponsive) {
                 if (isResponsive == true) {
                     $.fn.fullpage.setResponsive(true);
                 } else $.fn.fullpage.setResponsive(false);
 
             }
-        });
+        })
+        ;
 
-        // activeDesctopMenu();
+// activeDesctopMenu();
         setInterval(function () {
             setAnimation(td, tu);
         }, 100);
@@ -178,7 +180,6 @@ $(document).ready(function () {
 
         scrollMouseArrow.repeat(Infinity);
         scrollMouse.repeat(Infinity);
-
 
 
         var td1 = new TimelineMax(),
@@ -231,17 +232,17 @@ $(document).ready(function () {
         tu9.pause();
         tu10.pause();
         tu11.pause();
-        // GREEN SOCKS FOR DOWN
+// GREEN SOCKS FOR DOWN
 
 
-        // секция 1
+// секция 1
 
         td1.from('.advertising-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 'header-1');
         td1.from('.header-add-project-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 'header-1');
         td1.from('.scroll-mouse-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6', 'header-3');
 
 
-        //section 2
+//section 2
 
         td2.from('.about-contextual-advertising-section .wrapper .position .item-1', 0.7, {
             y: -100,
@@ -252,50 +253,50 @@ $(document).ready(function () {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, '-=0.2','lable-dn-2')
+            }, '-=0.2', 'lable-dn-2')
             .staggerFrom('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', 0.7, {
                 y: -10,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 0.2, 'lable-dn-2','+=0.2')
+            }, 0.2, 'lable-dn-2', '+=0.2')
             .from('.about-contextual-advertising-section .wrapper .position .item-3 .item-title', 1, {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, 'lable-dn-2','+=0.2')
+            }, 'lable-dn-2', '+=0.2')
             .from('.about-contextual-advertising-section .wrapper .position .item-3', 1, {
                 y: 100,
                 opacity: 0,
                 scale: 0.9,
                 ease: Power4.easeOut
-            }, 'lable-dn-2','+=0.2' )
+            }, 'lable-dn-2', '+=0.2')
             .staggerFrom('.about-contextual-advertising-section .wrapper .position .item-3 .item-content img', 0.7, {
                 y: -10,
                 opacity: 0,
                 scale: 0.7,
                 ease: Power4.easeOut
             }, 0, 'lable-dn-2');
-        // секция 3
+// секция 3
 
         td3.from('.about-lever-context-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td3.staggerFrom('.about-lever-context-col', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, 0.2, '-=0.5');
 
 
-        // секция 4
+// секция 4
 
         td4.from('.about-us-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td4.staggerFrom('.about-us-icon-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, -0.2, '-=0.6');
         td4.from('.main-result', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.9');
 
 
-        // секция 5
+// секция 5
 
         td5.from('.finished-result-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5')
             .from('.owl-carousel-list-img-container', 0.7, {y: 200, opacity: 0, ease: Power4.easeOut}, '-=0.6')
             .from('.owl-carousel-list-title', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
             .from('.finished-result-section .diogramm', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6')
             .from('.owl-carousel-list-article', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
-        // sectino 6
+// sectino 6
 
         td6.from('.intermediate-section .wrapper .position .image', 0.7, {
             y: 100,
@@ -317,7 +318,7 @@ $(document).ready(function () {
             }, '-=0.8')
             .from('.audit-information-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7');
 
-        // секция 7
+// секция 7
 
         td7.from('.starting-work-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td7.from('.tabs-wrap-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
@@ -329,7 +330,7 @@ $(document).ready(function () {
         }, 0.1, '-=0.8', 'tabs-item');
         td7.from('.another-promotion', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=1.4');
 
-        //секция 8
+//секция 8
         td8.from('.advertising-section .wrapper .position .title', 0.7, {
             y: 100,
             opacity: 0,
@@ -353,27 +354,27 @@ $(document).ready(function () {
             }, -0.3, '-=0.6', 'tabs-item');
 
 
-        // секция 9
+// секция 9
         td9.from('.developed-sociality-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5')
             .staggerFrom('.developed-sociality-wrap li', 0.7, {x: -100, autoAlpha: 0, ease: Power4.easeOut}, 0.2)
             .from('.developed-sociality-foto-aside', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.7')
             .from('.developed-sociality-foto-wrap', 0.7, {x: 100, opacity: 0, ease: Power4.easeOut}, '-=0.5');
 
 
-        // секция 10
+// секция 10
         td10.from('.main-quetions-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td10.staggerFrom('.accordion', 0.7, {y: 100, autoAlpha: 0, ease: Power4.easeOut}, 0.1, '-=0.6');
         td10.from('.ask-quetion-submit', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.6');
 
-        //section 11
+//section 11
 
         td11.from('.footer-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.2');
         td11.from('.footer-row', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
 
 
-        //  GREEN SOCKS FOR UP
+//  GREEN SOCKS FOR UP
 
-        // секция 1
+// секция 1
 
         tu1.set('.advertising-title', {y: -100, opacity: 0}, '+=0.3', 'lable-1')
             .to('.advertising-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-1');
@@ -382,7 +383,7 @@ $(document).ready(function () {
         tu1.set('.scroll-mouse-container', {y: -100, opacity: 0}, '-=0.7', 'lable-1')
             .to('.scroll-mouse-container', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.7', 'lable-1');
 
-        // секция 2
+// секция 2
 
         tu2.set('.about-contextual-advertising-section .wrapper .position .item-1', {
             y: -100,
@@ -450,7 +451,7 @@ $(document).ready(function () {
             }, 0.1, 'lable-dn-2');
 
 
-        // секция 3
+// секция 3
 
         tu3.set('.about-lever-context-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-3')
             .to('.about-lever-context-container-title', 1, {
@@ -466,7 +467,7 @@ $(document).ready(function () {
             }, 0.2, '-=0.8', 'lable-3');
 
 
-        // секция 4
+// секция 4
         tu4.set('.about-us-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-4')
             .to('.about-us-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-4');
         tu4.set('.about-us-icon-container', {y: -100, opacity: 0}, '-=0.8', 'lable-4')
@@ -478,7 +479,7 @@ $(document).ready(function () {
         tu4.set('.main-result', {y: -100, opacity: 0}, '-=0.8', 'lable-4')
             .to('.main-result', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-4');
 
-        // секция 5
+// секция 5
 
         tu5.set('.finished-result-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-5')
             .to('.finished-result-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-5');
@@ -491,7 +492,7 @@ $(document).ready(function () {
         tu5.set('.owl-carousel-list-article', {x: 100, opacity: 0}, '-=0.8', 'lable-5')
             .to('.owl-carousel-list-article', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-5');
 
-        // секция 6
+// секция 6
         tu6.set('.intermediate-section .wrapper .position .image', {
             y: 100,
             x: -150,
@@ -532,7 +533,7 @@ $(document).ready(function () {
             .to('.audit-information-container', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.7');
 
 
-        // секция 7
+// секция 7
 
         tu7.set('.another-promotion', {y: -100, opacity: 0}, '-=0.2')
             .to('.another-promotion', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.2');
@@ -544,7 +545,7 @@ $(document).ready(function () {
             .staggerTo('.tabs-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.2, '-=0.8', 'lable-6');
         tu7.staggerTo('.starting-work-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=1.3', 'lable-6');
 
-        // секция 8
+// секция 8
         tu8.set('.advertising-section .wrapper .position .title', {
             y: 100,
             opacity: 0,
@@ -589,7 +590,7 @@ $(document).ready(function () {
             }, -0.3, '-=0.6', 'tabs-item');
 
 
-        // секция 9
+// секция 9
 
         tu9.set('.developed-sociality-container-title', {y: -100, opacity: 0}, '+=0.3')
             .to('.developed-sociality-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3');
@@ -605,7 +606,7 @@ $(document).ready(function () {
             .to('.developed-sociality-foto-wrap', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
 
 
-        // секция 10
+// секция 10
         tu10.set('.main-quetions-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-7')
             .to('.main-quetions-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-7');
         tu10.set('.accordion', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-7')
@@ -621,11 +622,10 @@ $(document).ready(function () {
     }
 
 
-
-    // $( document ).tooltip({
-    //   track: true
-    // });
-    //скролл по ссылке с атрибутом href
+// $( document ).tooltip({
+//   track: true
+// });
+//скролл по ссылке с атрибутом href
     $(".mobile_navigation a[href*='#']").on("click", function (e) {
         e.preventDefault();
         var anchor = $(this);
@@ -634,25 +634,25 @@ $(document).ready(function () {
         }, 500);
         return false;
     });
-    // Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
-    // $(".scroll_to").on("click", function(e) {
-    //     e.preventDefault();
-    //     var anchor = $(this);
-    //     $('html, body').stop().animate({
-    //         scrollTop: $("#" + anchor.data('scroll')).offset().top
-    //     }, 500);
-    //     return false;
-    // });
-    //  Активация слайдера
+// Скролл по классу .scroll_to и атрибуту data-scroll у кнопки к примеру (data-scroll="куда скроллим" в элементе куда скроллим ставим id потом впишем в куда скроллим)
+// $(".scroll_to").on("click", function(e) {
+//     e.preventDefault();
+//     var anchor = $(this);
+//     $('html, body').stop().animate({
+//         scrollTop: $("#" + anchor.data('scroll')).offset().top
+//     }, 500);
+//     return false;
+// });
+//  Активация слайдера
     $(".owl-carousel").owlCarousel({
         loop: true,
         items: 1,
         dots: true,
         autoPlay: true
     });
-    // td5.staggerFrom('.owl-dot', 0.7, { scale: 1, ease: Power4.easeOut }, '-=0.6');
-    // tu5.set('.owl-dot', { scale: 0 }, '-=0.8', 'lable-5')
-    //     .staggerTo('.owl-dot', 1, { scale: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
+// td5.staggerFrom('.owl-dot', 0.7, { scale: 1, ease: Power4.easeOut }, '-=0.6');
+// tu5.set('.owl-dot', { scale: 0 }, '-=0.8', 'lable-5')
+//     .staggerTo('.owl-dot', 1, { scale: 1, ease: Power4.easeOut }, '-=0.8', 'lable-5');
     var counter = function ($this) {
         var maxNum = Math.abs(parseInt($this.text()));
         var i = 0;
@@ -694,7 +694,7 @@ $(document).ready(function () {
     $("#count .num").each(function (index, element) {
         counter($(element));
     });
-    // Select в модальном окне
+// Select в модальном окне
     $(document).click(function () {
         $('.slct').removeClass('active');
         $('.slct').parent().find('.drop').slideUp("fast");
@@ -744,7 +744,7 @@ $(document).ready(function () {
         /* Предотвращаем обычное поведение ссылки при клике */
         return false;
     });
-    // Открываем модальное окно
+// Открываем модальное окно
     $(".modal").click(function (e) {
         e.preventDefault();
         var id = $(this).data('modal');
@@ -769,12 +769,12 @@ $(document).ready(function () {
             $("body").css({"overflow": "hidden", "padding-right": "0px"});
         }
     });
-    // overlay для закрытия
+// overlay для закрытия
     $(".overlay").click(function () {
         $(this).parent().toggle("drop", {direction: "up"}, 200);
         $("body").css({"overflow": "inherit", "padding-right": "0"});
     });
-    // закрываем модальное окно на крестик
+// закрываем модальное окно на крестик
     $(".popup .close").click(function (e) {
         e.preventDefault();
         $(this).parents(".popup").hide("drop", {direction: "up"}, 200);
@@ -785,7 +785,7 @@ $(document).ready(function () {
         $(this).parents(".popup5").hide("drop", {direction: "up"}, 200);
         $("body").css({"overflow": "inherit", "padding-right": "0"});
     });
-    //  Отправка форм
+//  Отправка форм
     $("form").submit(function () { // перехватываем все при событии отправки
         var form = $(this); // запишем форму, чтобы потом не было проблем с this
         var error = [];
@@ -936,7 +936,7 @@ $(document).ready(function () {
     accordion();
 
 
-    // табы
+// табы
     $(".tabs-container .tabs-item").on('click', function (event) { //ссылки которые будут переключать табы
         event.preventDefault();
 
@@ -954,7 +954,8 @@ $(document).ready(function () {
     });
 
 
-});
+})
+;
 $(".loader_inner").fadeOut();
 $(".loader").delay(100).fadeOut("slow");
 
