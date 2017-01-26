@@ -6,6 +6,8 @@
 @media only screen and (max-height: 920px)
 	//asc
 @media only screen and (max-width: 1700px), (max-height: 920px)
+	.questions-wrap
+		padding-top: 30px
 	.submit-lable-audit
 		padding-right: 37px
 	.intermediate-section
@@ -350,6 +352,13 @@
 				margin-top: 10px
 
 @media only screen and (max-width: 1200px)
+	.starting-work-item
+		width: 289px
+	.owl-carousel-list-img-container
+		width: 100%
+		height: auto
+		margin: 0
+		margin-bottom: 25px
 	.section
 		overflow: auto
 	.about-contextual-advertising-section
@@ -433,8 +442,6 @@
 		padding: 100px 0
 	.main-result-container
 		margin-top: 65px
-	.owl-carousel-list-img-container
-		width: 100%
 	.scroll-mouse-container
 		display: none
 	.header-form
@@ -504,6 +511,8 @@
 	.about-lever-context-container-title,
 	.finished-result-container-title
 		margin-top: 50px
+		margin-bottom: 45px
+
 	.call_information_container
 		width: 240px
 	.owl-carousel-list-title
@@ -577,6 +586,15 @@
 
 @media only screen and (max-width: 992px)
 	/**/
+	.questions-wrap
+		h3
+			font-size: 2.6rem
+			margin-right: 20px
+			vertical-align: top
+			padding-bottom: 20px
+		.contacts
+			font-size: 1.6rem
+
 	.solution-section
 		.title
 			margin-top: 50px
@@ -628,7 +646,6 @@
 			padding-top: 10px
 		a
 			padding: 7px 58px
-
 	.audit-form
 		input
 			margin-right: 0
@@ -664,9 +681,62 @@
 		.dm-modal
 			width: 100%
 			padding: 50px 20px 10px
+	.starting-work-item-title
+		padding: 17px 22px 26px 14px
+		font-size: 1.5rem
+	.starting-work-item-title
+		text-align: center
+		.icon-container
+			float: none
+			margin: 0
+			margin-bottom: 10px
+	.starting-work-item
+		span
+			font-size: 2.6rem
+			padding: 5px 0
+		aside
+			b
+				font-size: 2.3rem
+		a
+			padding: 7px 38px
+	.starting-work-item-title
+		padding: 17px 0 26px 0
+		border-radius: 8px
+		margin-bottom: 10px
+		width: 150px
+	.tabs-item
+		padding: 0
+		float: none
+	.tabs-wrap-container
+		float: right
+		width: calc(100% - 180px)
+		padding: 0
+		background: transparent
+	.tabs-wrap
+		&.active
+			display: block
+	.starting-work-item
+		display: block
+	.tabs-item-conatiner
+		float: left
+	.starting-work-item
+		border-radius: 7px
+		margin: 0
+		margin-bottom: 15px
+	.starting-work-container
+		margin-bottom: 30px
+@media only screen and (max-width: 992px)
+	.aside
+					font-size: 1.8rem
+					p
+						display: inline
+	.popup5
+		.dm-modal
+			width: 100%
+			padding: 50px 20px 10px
 
 /* Small Devices, Tablets */
-		
+
 
 @media only screen and (max-width: 768px)
 	#form
@@ -721,50 +791,50 @@
 	.about-us-icon-container
 		margin-bottom: 50px
 		width: 400px
-	.starting-work-item-title
-		padding: 17px 22px 26px 14px
-		font-size: 1.5rem
-	.starting-work-item-title
-		text-align: center
-		.icon-container
-			float: none
-			margin: 0
-			margin-bottom: 10px
-	.starting-work-item
-		span
-			font-size: 2.6rem
-			padding: 5px 0
-		aside
-			b
-				font-size: 2.3rem
-		a
-			padding: 7px 38px
-	.starting-work-item-title
-		padding: 17px 0 26px 0
-		border-radius: 8px
-		margin-bottom: 10px
-		width: 150px
-	.tabs-item
-		padding: 0
-		float: none
-	.tabs-wrap-container
-		float: right
-		width: calc(100% - 180px)
-		padding: 0
-		background: transparent
-	.tabs-wrap
-		&.active
-			display: block
-	.starting-work-item
-		display: block
-	.tabs-item-conatiner
-		float: left
-	.starting-work-item
-		border-radius: 7px
-		margin: 0
-		margin-bottom: 15px
-	.starting-work-container
-		margin-bottom: 30px
+	//.starting-work-item-title
+	//	padding: 17px 22px 26px 14px
+	//	font-size: 1.5rem
+	//.starting-work-item-title
+	//	text-align: center
+	//	.icon-container
+	//		float: none
+	//		margin: 0
+	//		margin-bottom: 10px
+	//.starting-work-item
+	//	span
+	//		font-size: 2.6rem
+	//		padding: 5px 0
+	//	aside
+	//		b
+	//			font-size: 2.3rem
+	//	a
+	//		padding: 7px 38px
+	//.starting-work-item-title
+	//	padding: 17px 0 26px 0
+	//	border-radius: 8px
+	//	margin-bottom: 10px
+	//	width: 150px
+	//.tabs-item
+	//	padding: 0
+	//	float: none
+	//.tabs-wrap-container
+	//	float: right
+	//	width: calc(100% - 180px)
+	//	padding: 0
+	//	background: transparent
+	//.tabs-wrap
+	//	&.active
+	//		display: block
+	//.starting-work-item
+	//	display: block
+	//.tabs-item-conatiner
+	//	float: left
+	//.starting-work-item
+	//	border-radius: 7px
+	//	margin: 0
+	//	margin-bottom: 15px
+	//.starting-work-container
+	//	margin-bottom: 30px
 	.owl-carousel-list
 		padding: 0
 	.finished-result-container-title
@@ -970,6 +1040,13 @@
 		margin-top: 0
 /* Custom, iPhone Retina */
 @media only screen and (max-width: 380px)
+	.questions-wrap
+		text-align: left
+		h3
+			font-size: 2rem
+		.contacts
+			a
+				font-size: 1.4rem
 	.about-contextual-advertising-wrap-1,
 	.about-contextual-advertising-wrap-2
 		img

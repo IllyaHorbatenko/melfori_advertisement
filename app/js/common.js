@@ -750,10 +750,15 @@ $(document).ready(function () {
         var id = $(this).data('modal');
         var txt = $(this).data('info');
         var title = $(this).data('title'); // для изменения title в модалке
+        var iamgeSrc = $(this).data('modal-src'); // для изменения title в модалке
         $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
         $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
+        console.log(title);
+        if(title == 'none'){
+            $(".popup[data-modal=" + id + "] h2").css('display', 'none'); // прописать в ссылку data-title="нужный title"
+        }
         $(".popup[data-modal=" + id + "] h2").html(title); // прописать в ссылку data-title="нужный title"
-        $(".popup[data-modal=" + id + "] h2").css('display', 'block'); // прописать в ссылку data-title="нужный title"
+
         if (document.documentElement.clientWidth > 768) {
             $(".popup[data-modal=" + id + "] .modal-photo").css('display', 'block');
         }
@@ -767,6 +772,9 @@ $(document).ready(function () {
         if (window.matchMedia("(max-width: 992px)").matches) {
 
             $("body").css({"overflow": "hidden", "padding-right": "0px"});
+        }
+        if(iamgeSrc != undefined){
+            $(".popup[data-modal=" + id + "] #modal-img").attr('src', iamgeSrc); // прописать в ссылку data-title="нужный title"
         }
     });
 // overlay для закрытия

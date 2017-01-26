@@ -540,6 +540,11 @@ body textarea:required:valid
 		float: left
 		margin-top: 16px
 		margin-right: 37px
+		position: relative
+		cursor: pointer
+		z-index: 1
+		img
+			height: 100%
 		&.slider1
 			background: url(../img/slider.jpg) no-repeat
 			background-size: contain
@@ -549,8 +554,37 @@ body textarea:required:valid
 		&.slider3
 			background: url(../img/slider2.jpg) no-repeat
 			background-size: contain
+		&:hover
+			.hover-eff
+				opacity: 1
+				.icon
+					top: calc(50% - 35px)
+		.hover-eff
+			position: absolute
+			width: 100%
+			height: 100%
+			background: rgba(52, 52, 52, 0.6)
+			z-index: 1
+			opacity: 0
+			transition: 0.4s
+			.icon
+				display: inline-block
+				width: 50px
+				height: 50px
+				position: absolute
+				transition: 0.3s
+				top: calc(50% - 90px)
+				left: 0
+				right: 0
+				margin: auto
+				background: url(../img/lupa.png) no-repeat
+				background-size: contain
+				background-position: center
+				&:hover
+					transform: scale(1.2)
 .owl-carousel-list
 	padding-left: 21px
+	min-height: 410px
 .owl-carousel-list-title
 	font-size: 2.8rem
 	padding-bottom: 45px
@@ -694,7 +728,7 @@ body textarea:required:valid
 .footer-container
 	left: 0
 	right: 0
-	top: calc(50% - 235px)
+	top: calc(50% - 270px)
 .footer-title
 	font-size: 3.6rem
 	color: #fff
@@ -929,6 +963,7 @@ body textarea:required:valid
 			font-size: 1.8rem
 			display: block
 			margin-bottom: 5px
+			font-weight: 500
 	img
 		float: left
 		margin-top: 8px
@@ -1108,6 +1143,45 @@ body textarea:required:valid
 			transition: .3s
 			&:hover
 				box-shadow: 0 2px 5px 1px #9a9a9a
+.questions-wrap
+	padding-top: 100px
+	h3
+		font-size: 3.6rem
+		text-align: left
+		display: inline-block
+		margin-right: 100px
+		color: #fff
+	.color
+		color: #2ecc71
+	.contacts
+		display: inline-block
+		font-size: 1.8rem
+		text-align: left
+		color: #fff
+		p
+			display: inline-block
+			padding-left: 10px
+		a
+			color: #fff
+			padding-left: 10px
+			transition: .2s
+			&:hover
+				text-decoration: none
+				color: #2ecc71
+			&:active
+				text-decoration: none
+			&:focus
+				text-decoration: none
+		.phone
+			&:before
+				content: ''
+				display: inline-block
+				@include sprite($icon-phone1)
+		.mail
+			&:before
+				content: ''
+				display: inline-block
+				@include sprite($icon-mail)
 
 //	Секция
 //	Секция

@@ -73,7 +73,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup4 .dm-table{display:table;width:100%;height:100%}
 .popup4 .overlay{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(54,64,74,.98);z-index:1001}
 .popup4 .dm-cell{display:table-cell;padding:0 1em;text-align:center}
-.popup4 .dm-modal{display:inline-block;padding:50px 46px;position:relative;overflow:auto;width:579px;height:100vh;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left}
+.popup4 .dm-modal{display:inline-block;padding:50px 46px;position:relative;overflow:auto;width:579px;animation:fade .8s;background-color:#fff;-webkit-border-radius:20px;border-radius:20px;z-index:1002;text-align:left}
 .popup5{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000}
 .popup5 .close{background:0 0;right:10px;top:10px}
 .popup5 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
@@ -96,7 +96,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .dm-modal_inner,.popup6 form{text-align:left}
 .popup6 input,.popup6 textarea{width:100%;height:40px;margin-bottom:20px;color:#000}
 .popup6 input[type=submit]{background:#04be5b;color:#fff;border:none;-webkit-border-radius:5px;border-radius:5px}
-.dm-modal_inner_h1{font-size:24px;padding:23px 0;text-align:center;text-transform:uppercase;color:#fff}
+.dm-modal_inner_h1{font-size:24px;padding:23px 0;display:block;text-align:center;text-transform:uppercase;color:#fff}
 .dm-modal_inner_h2{font-size:18px;padding:20px 0;color:#fff}
 .popup3{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000}
 .popup3 .close{background:0 0;right:10px;top:10px}
@@ -144,6 +144,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup7 form input,.popup7 form textarea{width:100%;height:40px;margin-bottom:20px;color:#000}
 .popup7 form input[type=submit]{background:#04be5b;color:#fff;border:none;-webkit-border-radius:5px;border-radius:5px}
 .popup7 h2{font-size:2.5rem;margin:15px 0;text-transform:uppercase}
+.popup-9 .dm-modal{width:100%}
 .popup-8 .dm-modal{background:rgba(81,95,101,.99);width:700px;border:0;-webkit-border-radius:10px;border-radius:10px}
 .popup-8 .close{background:0 0;right:10px;top:10px}
 .popup-8 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
