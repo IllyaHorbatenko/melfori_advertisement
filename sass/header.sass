@@ -3,6 +3,11 @@
 @import "fonts.sass"
 @import "sprite/sprite.sass"
 @import "app/libs/scroll/jquery.fullPage"  //Если мы хотим подключить стили для  jquery-ui (например для рабочих tooltips)
+@import "app/libs/lightGallery/lg-transitions"
+@import "app/libs/lightGallery/lightgallery"
+@import "app/libs/lightGallery/lg-fb-comment-box"
+
+
 .row
 	margin: 0
 section
@@ -58,60 +63,7 @@ html .loader
 .hidden
 	display: none
 // Модальное окно
-.popup4
-	position: fixed
-	top: 0
-	left: 0
-	display: none
-	overflow: auto
-	width: 100%
-	height: 100%	
-	z-index: 1000
-	.close
-		background: none
-		right: 10px
-		top: 10px
-		span
-			width: 100%
-			background: #fff
-			height: 2px
-			display: block
-			position: absolute
-			bottom: 16px
-		.left
-			transform: rotate(45deg)
-		.right
-			transform: rotate(-45deg)
-	.dm-table
-		display: table
-		width: 100%
-		height: 100%
-	.overlay
-		width: 100%
-		height: 100%
-		position: fixed
-		top: 0
-		left: 0
-		background: rgba(54,64,74,0.98)
-		z-index: 1001
-	.dm-cell
-		display: table-cell
-		padding: 0 1em
-		vertical-align: middle
-		text-align: center
-	.dm-modal
-		display: inline-block
-		padding: 50px 46px 50px 46px
-		max-width: 100%	
-		text-align: center
-		position: relative	
-		overflow: auto
-		width: 579px
-		animation: fade .8s
-		background-color: #fff
-		border-radius: 20px
-		z-index: 1002
-		text-align: left
+
 .popup5
 	position: fixed
 	top: 0
@@ -511,6 +463,7 @@ html .loader
 .popup-9
 	.dm-modal
 		width: 100%
+.popup4,
 .popup-8
 	.dm-modal
 		background: rgba(81,95,101,0.99)
@@ -568,7 +521,14 @@ html .loader
 		h4
 			font-size: 2.8rem
 		
-
+.popup4
+	.modal-text
+		float: left
+		margin-top: 16px
+		color: #fff
+		text-align: center
+		h4
+			font-size: 2.8rem
 
 .modal_form_input_wrap
 	position: relative

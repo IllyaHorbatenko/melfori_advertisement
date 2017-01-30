@@ -104,7 +104,9 @@ function setAnimation(down, up) {
 
 $(document).ready(function () {
     buttonMobileMenu();
-
+    $('.owl-carousel').lightGallery({
+        selector: '.owl-carousel-list'
+    });
     var md = new MobileDetect(window.navigator.userAgent);
 
     function get_name_browser() {
@@ -128,13 +130,16 @@ $(document).ready(function () {
 
 
     if (get_name_browser() == "Safari") {
-        $("#tel").css("font-size", "19px");
+        if (document.documentElement.clientWidth >= 1340 && document.documentElement.clientHeight >= 635){
+
+            $("#tel").css("font-size", "19px");
+        }
     }
 
     console.log(document.documentElement.clientWidth);
     console.log(document.documentElement.clientHeight);
 
-    if (document.documentElement.clientWidth >= 1366 && document.documentElement.clientHeight >= 650 && md.mobile() != "iPad") {
+    if (document.documentElement.clientWidth >= 1340 && document.documentElement.clientHeight >= 635 && md.mobile() != "iPad") {
         // $(".main").onepage_scroll({
         //     sectionContainer: "section", // контейнер, к которому будет применяться скролл
         //     easing: "ease", // Тип анимации "ease", "linear", "ease-in", "ease-out", "ease-in-out"
@@ -147,24 +152,29 @@ $(document).ready(function () {
         //     updateURL: false, // обновлять URL или нет
         //     // для инициализации tooltips
         // });
+        //sdc
         $('#fullpage').fullpage({
             anchors: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11'],
             menu: '#desktop-menu',
             css3: true,
             navigation: true,
             responsiveSlides: true,
-            responsiveWidth: 1366,
-            responsiveHeight: 650,
+            responsiveWidth: 1340,
+            responsiveHeight: 635,
             slidesNavigation: true,
-
+            // scrollOverflow: true,
+            // scrollOverflowReset: true,
+            // scrollOverflowResetKey: 'Y29udGV4dC5tZWxmb3JpLmNvbV9qQ25jMk55YjJ4c1QzWmxjbVpzYjNkU1pYTmxkQT09WTd2',
+            loopTop: true,
+            loopBottom: true,
             afterResponsive: function (isResponsive) {
                 if (isResponsive == true) {
                     $.fn.fullpage.setResponsive(true);
+
                 } else $.fn.fullpage.setResponsive(false);
 
             }
-        })
-        ;
+        });
 
 // activeDesctopMenu();
         setInterval(function () {
@@ -753,7 +763,6 @@ $(document).ready(function () {
         var iamgeSrc = $(this).data('modal-src'); // для изменения title в модалке
         $(".popup[data-modal=" + id + "]").toggle("fade", 200).find("form").css('display', 'block');
         $(".popup[data-modal=" + id + "] input[name=form_name]").val(txt);
-        console.log(title);
         if(title == 'none'){
             $(".popup[data-modal=" + id + "] h2").css('display', 'none'); // прописать в ссылку data-title="нужный title"
         }

@@ -1809,16 +1809,30 @@
 					<span class="left"></span>
 					<span class="right"></span>
 				</a>
-				<div class="dm-modal_inner">
-					<p class="dm-modal_inner_h1">В услугу входит:</p>
-					<p >- Проверка ключевых слов (их качества и количества).</p>
-					<p >- Проверка списка минус-слов (их качества и количества).</p>
-					<p >- Анализ заголовков и текстов объявлений (на релевантность и
-						качество).</p>
-					<p >- Проверка дополнений объявлений (все ли используются и их качество).</p>
-					<p >- Анализ настроек рекламной кампании.</p>
-					<p >- Другие рекомендации по вашей рекламной кампании.</p>
-					<p >- Ответим на любые интересующие вопросы</p>
+				<p class='success_mail'>Спасибо! Ваша заявка уже обрабатывается менеджером и в ближайшее время он с вами
+					свяжется.</p>
+				<form id="form">
+					<aside class="form-aside">
+						<h4>Оставьте заявку</h4>
+						<p>Наши менеджеры обязательно свяжутся с вами <b>в ближайшее время</b></p>
+					</aside>
+					<div>
+						<div class="modal_form_input_wrap">
+							<div class="modal_input_error">Заполните поле
+								<div class="modal_error_triangle"></div>
+								<div class="modal_error_chest_img"></div>
+							</div>
+							<input name="email" class="modal_form_email" type="text" placeholder="Введите email адрес*">
+						</div>
+					</div>
+					<input type="hidden" name="form_name" value="Сообщение из форма 'Получить предложение'">
+					<input type="hidden" name="form_type" value="modal">
+					<input type="submit" value="Заказать">
+				</form>
+				<div class="modal-text">
+					<aside class="text">
+						text
+					</aside>
 				</div>
 			</div>
 		</div>
@@ -2005,7 +2019,14 @@
 					<span class="left"></span>
 					<span class="right"></span>
 				</a>
-				<img id="modal-img" src="" alt="">
+				<div class="lightgallery">
+					<a href="img/image-advertising-1.png">
+						<img src="img/image-advertising-1.png"/>
+					</a>
+					<a href="img/img2.jpg">
+						<img src="img/image-advertising-1.png"/>
+					</a>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -2276,8 +2297,8 @@
 				клиентов</p></h2>
 			<div class="owl-carousel-container">
 				<div class="owl-carousel">
-					<div class="owl-carousel-list">
-						<div class="owl-carousel-list-img-container modal" data-modal="modal-9"
+					<div class="owl-carousel-list" data-src="img/slider.jpg">
+						<div class="owl-carousel-list-img-container " data-modal="modal-9"
 							 data-modal-src="img/slider.jpg">
 							<div class="hover-eff"><span class="icon"></span></div>
 							<img src="img/slider-sm2.png">
@@ -2317,8 +2338,8 @@
 							</article>
 						</div>
 					</div>
-					<div class="owl-carousel-list">
-						<div class="owl-carousel-list-img-container modal" data-modal="modal-9"
+					<div class="owl-carousel-list" data-src="img/slider1.jpg">
+						<div class="owl-carousel-list-img-container " data-modal="modal-9"
 							 data-modal-src="img/slider1.jpg">
 							<div class="hover-eff"><span class="icon"></span></div>
 							<img src="img/slider-sm3.png">
@@ -2358,8 +2379,8 @@
 							</article>
 						</div>
 					</div>
-					<div class="owl-carousel-list">
-						<div class="owl-carousel-list-img-container modal" data-modal="modal-9"
+					<div class="owl-carousel-list" data-src="img/slider2.jpg">
+						<div class="owl-carousel-list-img-container " data-modal="modal-9"
 							 data-modal-src="img/slider2.jpg">
 							<div class="hover-eff"><span class="icon"></span></div>
 							<img src="img/slider-sm1.jpg">
@@ -2717,14 +2738,16 @@
 										<li>– Разработка корпоративного сайта</li>
 									</ul>
 									<input type="submit" value="Заказать создание сайта" class="modal"
-										   form_type="normal" data-info="Создание сайта" data-title="none" data-modal="modal-8">
+										   form_type="normal" data-info="Создание сайта" data-title="none"
+										   data-modal="modal-8">
 								</div>
 							</div>
 							<div class="col-lg-4 col-md-4">
 								<div class="item item-2">
 									<img class="plain" src="img/Aeroplane.png" alt="">
 									<h3 class="title-item">Продвижение в инстаграм</h3>
-									<a href="http://instagram.melfori.com/" target="_blank" data-title="" class="main-link">instagram.melfori.com</a>
+									<a href="http://instagram.melfori.com/" target="_blank" data-title=""
+									   class="main-link">instagram.melfori.com</a>
 									<ul class="text">
 										<li><p>– Увеличение подписной базы аккаунта
 											до 3000 человек в месяц</p></li>
@@ -2750,7 +2773,8 @@
 											<p>– Первичное ведение 1 месяц </p>
 										</li>
 									</ul>
-									<input type="submit" value="Заказать таргет" data-title="none" class="modal" form_type="normal"
+									<input type="submit" value="Заказать таргет" data-title="none" class="modal"
+										   form_type="normal"
 										   data-info="Таргетированная реклама в соц. сетях" data-modal="modal-8">
 								</div>
 							</div>
@@ -2772,32 +2796,34 @@
 						<div class="col-lg-6 col-md-6">
 							<ul class="developed-sociality-wrap">
 								<li class="clearfix">
-									<img src="img/developer-foto1.jpg">
-									<h3>Ляпун Виталий</h3>
-									<aside>
-										<p><b>Директолог</b></p>
-										<p>Будет заниматься, созданием, ведением рекламы и все что с ней связано.</p>
-									</aside>
-									<a href="https://vk.com/jimmyrose" target="_blank">vk.com</a>
+									<div class="developed-img-wrap"><img src="img/developer-foto1.jpg"></div>
+									<div class="developed-about-wrap"><h3>Ляпун Виталий</h3>
+										<aside>
+											<p><b>Директолог</b></p>
+											<p>Будет заниматься, созданием, ведением рекламы и все что с ней
+												связано.</p>
+										</aside>
+										<a href="https://vk.com/jimmyrose" target="_blank">vk.com</a></div>
 								</li>
 								<li class="clearfix">
-									<img src="img/developer-foto2.jpg">
-									<h3>Боженко Андрей</h3>
-									<aside>
-										<p><b>Проект менеджер</b></p>
-										<p>Ведет ваш проект и держит связь с клиентами. Любые вопросы, которые
-											возникают, спрашивайте у Андрея. </p>
-									</aside>
-									<a href="https://vk.com/a.bogenko" target="_blank">vk.com</a>
+									<div class="developed-img-wrap"><img src="img/developer-foto2.jpg"></div>
+									<div class="developed-about-wrap"><h3>Боженко Андрей</h3>
+										<aside>
+											<p><b>Проект менеджер</b></p>
+											<p>Ведет ваш проект и держит связь с клиентами. Любые вопросы, которые
+												возникают, спрашивайте у Андрея. </p>
+										</aside>
+										<a href="https://vk.com/a.bogenko" target="_blank">vk.com</a></div>
 								</li>
 								<li class="clearfix">
-									<img src="img/developer-foto3.jpg">
-									<h3>Джамаспишвили Ярослав</h3>
-									<aside>
-										<p><b>Генеральный директор веб-студии</b></p>
-										<p>Контролирует все процессы. Занимается расширением и развитием компании.</p>
-									</aside>
-									<a href="https://vk.com/djam777" target="_blank">vk.com</a>
+									<div class="developed-img-wrap"><img src="img/developer-foto3.jpg"></div>
+									<div class="developed-about-wrap"><h3>Джамаспишвили Ярослав</h3>
+										<aside>
+											<p><b>Генеральный директор веб-студии</b></p>
+											<p>Контролирует все процессы. Занимается расширением и развитием
+												компании.</p>
+										</aside>
+										<a href="https://vk.com/djam777" target="_blank">vk.com</a></div>
 								</li>
 							</ul>
 						</div>

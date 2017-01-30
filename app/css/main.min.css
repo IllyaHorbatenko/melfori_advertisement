@@ -795,6 +795,7 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .owl-carousel-list-img-container .hover-eff .icon{display:inline-block;width:50px;height:50px;position:absolute;-webkit-transition:.3s;transition:.3s;top:-webkit-calc(50% - 90px);top:calc(50% - 90px);left:0;right:0;margin:auto;background:url(../img/lupa.png) center no-repeat;background-size:contain}
 .owl-carousel-list-img-container .hover-eff .icon:hover{-webkit-transform:scale(1.2);-ms-transform:scale(1.2);transform:scale(1.2)}
 .owl-carousel-list{padding-left:21px;min-height:410px}
+.link-wrap{display:block;font-size:3rem}
 .owl-carousel-list-title{font-size:2.8rem;padding-bottom:45px}
 .owl-carousel-list-title p{display:inline-block}
 .owl-dots,.tabs-wrap.active{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox}
@@ -885,11 +886,13 @@ body input:required:valid,body textarea:focus:required:invalid,body textarea:req
 .developed-sociality-container-title b{font-size:3.8rem;font-weight:400}
 .developed-sociality-container-title p{font-size:1.8rem}
 .developed-sociality-wrap{text-align:left;font-size:1.6rem}
+.developed-sociality-wrap .developed-img-wrap{height:100%;width:auto;display:inline-block;float:left;margin-top:8px;margin-right:19px}
+.developed-sociality-wrap .developed-about-wrap{float:left;max-width:370px}
 .developed-sociality-wrap li{padding:0 7px;display:block;margin-bottom:25px}
 .developed-sociality-wrap h3{font-size:2.4rem;color:#343434;margin-bottom:7px}
 .developed-sociality-wrap aside{font-size:1.4rem;line-height:1.3;color:#6d6d6d;text-align:justify;word-spacing:-1px;margin-bottom:16px}
 .developed-sociality-wrap aside b{font-size:1.8rem;display:block;margin-bottom:5px;font-weight:500}
-.developed-sociality-wrap img{float:left;margin-top:8px;margin-right:31px;-webkit-box-shadow:2px 2px 4px 0 #a4a5a8;box-shadow:2px 2px 4px 0 #a4a5a8}
+.developed-sociality-wrap img{-webkit-box-shadow:2px 2px 4px 0 #a4a5a8;box-shadow:2px 2px 4px 0 #a4a5a8}
 .developed-sociality-wrap a{color:#04be5b;font-size:1.8rem;display:inline-block;position:relative;margin-left:27px;border-bottom:1px solid}
 .developed-sociality-wrap a:hover,.mobile-menu a{border-bottom:1px solid transparent}
 .developed-sociality-wrap a:before{content:'';display:inline-block;background-image:url(../img/sprite.png);background-position:0 -102px;width:21px;height:11px;position:absolute;left:-28px;top:8px}
@@ -1103,6 +1106,7 @@ body,html{overflow:visible}
 .ask-quetion-submit,.tabs-container{margin-bottom:50px}
 .developed-sociality-container-title{margin-top:26px}
 .developed-sociality-wrap img{width:100px}
+.developed-sociality-wrap .developed-about-wrap{max-width:302px}
 .developed-sociality-container{margin:50px 0}
 .about-lever-context-container{margin-bottom:50px}
 .about-lever-context-container-title,.finished-result-container-title{margin-top:50px;margin-bottom:45px}
@@ -1208,6 +1212,9 @@ body,html{overflow:visible}
 @media only screen and (max-width:573px){.popup .success_mail{padding-bottom:40px}
 .about-contextual-advertising-wrap-1 img,.about-contextual-advertising-wrap-2 img{float:none;width:100%;margin:auto}
 .popup .dm-modal,.popup4 .dm-modal,.popup6 .dm-modal,.popup7 .dm-modal{width:100%;padding:50px 20px 10px}
+}
+@media only screen and (max-width:500px){.developed-sociality-wrap .developed-about-wrap{max-width:201px}
+.developed-sociality-wrap .developed-img-wrap{margin-bottom:15px}
 }
 @media only screen and (max-width:480px){.about-contextual-advertising-section .wrapper .position .item-3 .item-content{padding:0}
 .finished-result-section .diogramm .first{width:140px;border-bottom:41px solid #04be5b}

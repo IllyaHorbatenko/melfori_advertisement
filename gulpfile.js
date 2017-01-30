@@ -65,7 +65,8 @@ gulp.task('scripts', function() {
 		'app/libs/matchMedia/matchMedia.addListener.js',
 		'app/libs/scroll/*.js',
 		'app/libs/mobile-detect/mobile-detect.min.js',
-		'app/libs/greensocks/*.js'
+		'app/libs/greensocks/*.js',
+		'app/libs/lightGallery/*.js'
 		])
 		.pipe(concat('libs.js'))
 		// .pipe(uglify()) //Minify libs.js

@@ -504,6 +504,8 @@
 	.developed-sociality-wrap
 		img
 			width: 100px
+		.developed-about-wrap
+			max-width: 302px
 	.developed-sociality-container
 		margin: 50px 0
 	.about-lever-context-container
@@ -935,7 +937,12 @@
 		.dm-modal
 			width: 100%
 			padding: 50px 20px 10px
-
+@media only screen and (max-width: 500px)
+	.developed-sociality-wrap
+		.developed-about-wrap
+			max-width: 201px
+		.developed-img-wrap
+			margin-bottom: 15px
 @media only screen and (max-width: 480px)
 	/**/
 	.about-contextual-advertising-section
@@ -948,7 +955,7 @@
 		.diogramm
 			.first
 				width: 140px
-				border-bottom: 41px solid #04be5b;
+				border-bottom: 41px solid #04be5b
 				p
 					font-size: 1.6rem
 					top: 8px

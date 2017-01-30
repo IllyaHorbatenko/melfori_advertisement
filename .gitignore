@@ -48,3 +48,4 @@ fabric.properties
 .gitignore
 .idea/
 .idea/modules.xml
+.idea
