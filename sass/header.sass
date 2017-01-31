@@ -386,6 +386,23 @@ html .loader
 			border: none
 		textarea
 			min-height: 100px
+.popup5
+	.dm-modal
+		-webkit-tap-highlight-color: transparent
+		//внешний вид скроллбара
+		scrollbar-base-color: #2a3139  //для IE
+		scrollbar-arrow-color: #2a3139	//для IE
+		//внешний вид скроллбара для -webkit- остальное тут https://poselab.com/en/blog/custom-scrollbars-in-webkit/
+		&::-webkit-scrollbar
+			width: 6px
+		&::-webkit-scrollbar-thumb
+			background-color: #2a3139
+			&:hover
+				background-color: darken(#2a3139, 10%)
+		&::-webkit-scrollbar-track-piece
+			background-color: transparent
+//-webkit-font-smoothing: antialiased
+//-moz-osx-font-smoothing: grayscale
 .popup7
 	position: fixed
 	top: 0
@@ -512,6 +529,7 @@ html .loader
 				margin-bottom: 25px
 				b
 					color: #04be5b
+					display: block
 	.modal-photo
 		float: right
 		margin-top: 16px
@@ -522,13 +540,12 @@ html .loader
 			font-size: 2.8rem
 		
 .popup4
-	.modal-text
-		float: left
-		margin-top: 16px
-		color: #fff
-		text-align: center
+	.dm-modal
+		width: 470px
 		h4
 			font-size: 2.8rem
+		#form
+			width: 100%
 
 .modal_form_input_wrap
 	position: relative
@@ -772,7 +789,7 @@ html .loader
 		margin-bottom: 2px
 	b
 		color: #fff
-		font-size: 21px	
+		font-size: 19px
 .advertising-title
 	text-align: left
 	margin-left: 13px

@@ -393,7 +393,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup5 .dm-table{display:table;width:100%;height:100%}
 .popup5 .overlay{width:100%;height:100%;position:fixed;top:0;left:0;background:rgba(54,64,74,.98);z-index:1001}
 .popup5 .dm-cell{display:table-cell;padding:0 1em;vertical-align:middle}
-.popup5 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;overflow:auto;width:779px;height:100vh;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002;text-align:left}
+.popup5 .dm-modal{display:inline-block;padding:50px 46px;max-width:100%;overflow:auto;width:779px;height:100vh;position:relative;-webkit-animation:fade .8s;animation:fade .8s;background-color:rgba(81,95,101,.99);-webkit-border-radius:10px;border-radius:10px;z-index:1002;text-align:left;-webkit-tap-highlight-color:transparent;scrollbar-base-color:#2a3139;scrollbar-arrow-color:#2a3139}
 .popup3 .dm-modal,.popup6 .dm-modal{max-width:100%;-webkit-animation:fade .8s}
 .popup6{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#343434}
 .popup6 .close{background:0 0;right:10px;top:10px}
@@ -442,6 +442,10 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup form{text-align:left}
 .popup form input,.popup form textarea{width:100%;height:40px;margin-bottom:20px;-webkit-border-radius:5px;border-radius:5px;color:#000}
 .popup form input[type=submit]{background:#04be5b;color:#fff;border:none}
+.popup5 .dm-modal::-webkit-scrollbar{width:6px}
+.popup5 .dm-modal::-webkit-scrollbar-thumb{background-color:#2a3139}
+.popup5 .dm-modal::-webkit-scrollbar-thumb:hover{background-color:#14181c}
+.popup5 .dm-modal::-webkit-scrollbar-track-piece{background-color:transparent}
 .popup7{position:fixed;top:0;left:0;display:none;width:100%;height:100%;z-index:1000;font-size:2rem;color:#fff}
 .popup7 .close{background:0 0;right:10px;top:10px}
 .popup7 .close span{width:100%;background:#fff;height:2px;display:block;position:absolute;bottom:16px}
@@ -469,11 +473,12 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .popup-8 #form .form-aside,.popup4 #form .form-aside{color:#fff;text-align:center;margin-bottom:20px}
 .popup-8 #form .form-aside h4,.popup4 #form .form-aside h4{font-size:3rem;margin-bottom:15px}
 .popup-8 #form .form-aside p,.popup4 #form .form-aside p{font-size:1.4rem;margin-bottom:25px}
-.popup-8 .modal-photo h4,.popup4 .modal-photo h4,.popup4 .modal-text h4{font-size:2.8rem}
-.popup-8 #form .form-aside p b,.popup4 #form .form-aside p b{color:#04be5b}
+.popup-8 .modal-photo h4,.popup4 .dm-modal h4,.popup4 .modal-photo h4{font-size:2.8rem}
+.popup-8 #form .form-aside p b,.popup4 #form .form-aside p b{color:#04be5b;display:block}
 .popup-8 .modal-photo,.popup4 .modal-photo{float:right;margin-top:16px;color:#fff}
 .popup-8 .modal-photo img,.popup4 .modal-photo img{margin-bottom:10px}
-.popup4 .modal-text{float:left;margin-top:16px;color:#fff;text-align:center}
+.popup4 .dm-modal{width:470px}
+.popup4 .dm-modal #form{width:100%}
 .modal_form_input_wrap{position:relative;display:block}
 .modal_input_error{width:141px;height:35px;text-align:center;display:none;position:absolute;right:-25px;top:-20px;padding-left:10px;font:15px/35px MyriadPro-Regular,Arial,sans-serif;background-color:#F4F4F4;border:1px solid #C8C8C8;-webkit-border-radius:5px;border-radius:5px;-webkit-box-shadow:0 0 10px rgba(0,0,0,.3);box-shadow:0 0 10px rgba(0,0,0,.3);z-index:1;color:#000}
 .modal_input_error.input_error_email{width:215px}
@@ -521,7 +526,7 @@ html .loader .loader_inner{background-image:url(../img/preloader.gif);background
 .advertising-title-aside,.header-add-project-title,.header-form,.scroll-mouse{position:relative}
 .call_information_container{padding-right:0;text-align:right}
 .call_information span{color:#bcbdbe;display:inline-block;width:100%;font-size:14px;margin-bottom:2px}
-.call_information b{color:#fff;font-size:21px}
+.call_information b{color:#fff;font-size:19px}
 .advertising-title{text-align:left;margin-left:13px;color:#fff}
 .advertising-title-aside b,.advertising-title-aside-main span{color:#04be5b}
 .advertising-container{display:inline-block;left:0;right:0;top:-webkit-calc(50% - 240px);top:calc(50% - 240px)}

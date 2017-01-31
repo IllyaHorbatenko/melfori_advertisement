@@ -102,10 +102,52 @@ function setAnimation(down, up) {
     }
 }
 
+function country() {
+    $.getJSON("http://ip-api.com/json/?callback=?", function(data_country){
+        var country = data_country.country;
+        if(country == "Ukraine"){
+            $('.call_information b').text('+38 (067) 571 78 38');
+            $('.call_information a').attr('href',"tel:+380675717838")
+            $.getJSON('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11', function(data) {
+                data.map(function (e) {
+                    if(e.ccy == "RUR"){
+                        RUB = e.sale;
+                        $('.starting-work-item aside b').each(function () {
+                            var RUBprice = parseInt($(this).text().split(' ').splice(0, 2).join('')),
+                                UAN = RUBprice / RUB,
+                                UANprice = (UAN/100).toFixed() + '00';
+
+                            if((UAN / 10000) > 10){
+                            var UANpriceF = UANprice.substr(0,3),
+                                UANpriceS = UANprice.substr(3);
+
+                            }else{
+                                var UANpriceF = UANprice.substr(0,2),
+                                    UANpriceS = UANprice.substr(2);
+                            }
+
+                            $(this).text(UANpriceF + " "+ UANpriceS + " грн")
+                        })
+                    }
+                });
+            });
+        } else if(country == "Russian"){
+            $('.call_information b').text('+7 (499) 322-84-70');
+            $('.call_information a').attr('href',"tel:+74993228470")
+        }
+    })
+
+}
+
+
+
+
 $(document).ready(function () {
+    country();
+
     buttonMobileMenu();
     $('.owl-carousel').lightGallery({
-        selector: '.owl-carousel-list'
+        selector: '.owl-carousel-list-img-container'
     });
     var md = new MobileDetect(window.navigator.userAgent);
 
@@ -135,9 +177,6 @@ $(document).ready(function () {
             $("#tel").css("font-size", "19px");
         }
     }
-
-    console.log(document.documentElement.clientWidth);
-    console.log(document.documentElement.clientHeight);
 
     if (document.documentElement.clientWidth >= 1340 && document.documentElement.clientHeight >= 635 && md.mobile() != "iPad") {
         // $(".main").onepage_scroll({
@@ -258,12 +297,12 @@ $(document).ready(function () {
             y: -100,
             opacity: 0,
             ease: Power4.easeOut
-        }, '+=0.2', 0.3, 'lable-dn-2')
+        }, 0.3, 'lable-dn-2', '+=0.2')
             .from('.about-contextual-advertising-section .wrapper .position .item-2', 0.7, {
                 y: -100,
                 opacity: 0,
                 ease: Power4.easeOut
-            }, '-=0.2', 'lable-dn-2')
+            }, 'lable-dn-2', '-=0.2')
             .staggerFrom('.about-contextual-advertising-section .wrapper .arrow-wrap .arrow', 0.7, {
                 y: -10,
                 opacity: 0,
@@ -332,13 +371,15 @@ $(document).ready(function () {
 
         td7.from('.starting-work-container-title', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '+=0.5');
         td7.from('.tabs-wrap-container', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=0.4');
-        td7.staggerFrom('.tabs-item', 0.7, {y: 100, autoAlpha: 0, ease: Power4.easeOut}, 0.1, '-=0.4', 'tabs-item');
-        td7.staggerFrom('.starting-work-item', 0.7, {
+        td7.add('tabs-item', '-=0.4')
+            .staggerFrom('.tabs-item', 0.7, {y: 100, autoAlpha: 0, ease: Power4.easeOut}, 0.1,'tabs-item')
+            .add('tabs-item', '-=0.8')
+            .staggerFrom('.starting-work-item', 0.7, {
             y: 100,
             autoAlpha: 0,
             ease: Power4.easeOut
-        }, 0.1, '-=0.8', 'tabs-item');
-        td7.from('.another-promotion', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=1.4');
+        }, 0.1,'tabs-item')
+        .from('.another-promotion', 0.7, {y: 100, opacity: 0, ease: Power4.easeOut}, '-=1.4');
 
 //секция 8
         td8.from('.advertising-section .wrapper .position .title', 0.7, {
@@ -351,17 +392,19 @@ $(document).ready(function () {
                 opacity: 0,
                 ease: Power4.easeOut
             }, '-=0.4')
+            .add('tabs-item', '-=0.8')
             .staggerFrom('.advertising-section .wrapper .position .item', 0.7, {
                 scale: 0.3,
                 y: -400,
                 autoAlpha: 0,
                 ease: Power4.easeOut
-            }, 0.1, '-=0.8', 'tabs-item')
+            }, 0.1,'tabs-item')
+            .add( 'tabs-item', '-=0.6')
             .staggerFrom('.advertising-section .wrapper .position .item img', 0.7, {
                 scale: 0.3,
                 autoAlpha: 0,
                 ease: Bounce.easeOut
-            }, -0.3, '-=0.6', 'tabs-item');
+            }, -0.3, 'tabs-item');
 
 
 // секция 9
@@ -463,31 +506,31 @@ $(document).ready(function () {
 
 // секция 3
 
-        tu3.set('.about-lever-context-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-3')
+        tu3.set('.about-lever-context-container-title', {y: -100, opacity: 0}, 'lable-3', '+=0.3')
             .to('.about-lever-context-container-title', 1, {
                 y: 0,
                 opacity: 1,
                 ease: Power4.easeOut
             }, '+=0.3', 'lable-3');
-        tu3.set('.about-lever-context-col', {y: -100, opacity: 0}, '-=0.8', 'lable-3')
+        tu3.add('lable-3', '-=0.8').set('.about-lever-context-col', {y: -100, opacity: 0}, 'lable-3')
             .staggerTo('.about-lever-context-col', 1, {
                 y: 0,
                 opacity: 1,
                 ease: Power4.easeOut
-            }, 0.2, '-=0.8', 'lable-3');
+            }, 0.2, 'lable-3');
 
 
 // секция 4
-        tu4.set('.about-us-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-4')
-            .to('.about-us-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-4');
-        tu4.set('.about-us-icon-container', {y: -100, opacity: 0}, '-=0.8', 'lable-4')
+        tu4.set('.about-us-container-title', {y: -100, opacity: 0}, 'lable-4', '+=0.3')
+            .to('.about-us-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-4', '+=0.3');
+        tu4.add('lable-4','-=0.5').set('.about-us-icon-container', {y: -100, opacity: 0}, 'lable-4')
             .staggerTo('.about-us-icon-container', 1, {
                 y: 0,
                 opacity: 1,
                 ease: Power4.easeOut
-            }, 0.2, '-=0.8', 'lable-4');
-        tu4.set('.main-result', {y: -100, opacity: 0}, '-=0.8', 'lable-4')
-            .to('.main-result', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-4');
+            }, 0.2,'lable-4');
+        tu4.set('.main-result', {y: -100, opacity: 0}, 'lable-4', '-=0.8')
+            .to('.main-result', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-4', '-=0.8');
 
 // секция 5
 
@@ -547,13 +590,15 @@ $(document).ready(function () {
 
         tu7.set('.another-promotion', {y: -100, opacity: 0}, '-=0.2')
             .to('.another-promotion', 0.7, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.2');
-        tu7.set('.starting-work-container-title', {y: -100, opacity: 0}, '-=0.2', 'lable-6')
-            .to('.starting-work-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.2', 'lable-6');
-        tu7.set('.tabs-wrap-container', {y: -100, opacity: 0}, '-=0.8', 'lable-6')
-            .to('.tabs-wrap-container', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.8', 'lable-6');
-        tu7.set('.tabs-item', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-6')
-            .staggerTo('.tabs-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.2, '-=0.8', 'lable-6');
-        tu7.staggerTo('.starting-work-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=1.3', 'lable-6');
+        tu7.set('.starting-work-container-title', {y: -100, opacity: 0},'-=0.2')
+            .to('.starting-work-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-6', '-=0.2');
+        tu7.set('.tabs-wrap-container', {y: -100, opacity: 0}, 'lable-6', '-=0.8')
+            .to('.tabs-wrap-container', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-6', '-=0.8');
+        tu7.set('.tabs-item', {y: -100, autoAlpha: 0}, 'lable-6')
+            .add('lable-6','-=0.8')
+            .staggerTo('.tabs-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.2,'lable-6');
+        tu7.add('lable-6', '-=1.3')
+            .staggerTo('.starting-work-item', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1,'lable-6');
 
 // секция 8
         tu8.set('.advertising-section .wrapper .position .title', {
@@ -581,48 +626,51 @@ $(document).ready(function () {
             y: -400,
             autoAlpha: 0,
             ease: Power4.easeOut
-        }, 0.1, '-=0.8', 'tabs-item')
+        }, 0.1, 'tabs-item', '-=0.8')
+            .add('tabs-item', '-=0.8')
             .staggerTo('.advertising-section .wrapper .position .item', 0.7, {
                 scale: 1,
                 y: 0,
                 autoAlpha: 1,
                 ease: Power4.easeOut
-            }, 0.1, '-=0.8', 'tabs-item');
+            }, 0.1, 'tabs-item');
         tu8.set('.advertising-section .wrapper .position .item img', {
             scale: 0.3,
             autoAlpha: 0,
             ease: Bounce.easeOut
         }, -0.3, '-=0.6', 'tabs-item')
+            .add('tabs-item', '-=0.6')
             .staggerTo('.advertising-section .wrapper .position .item img', 0.7, {
                 scale: 1,
                 autoAlpha: 1,
                 ease: Bounce.easeOut
-            }, -0.3, '-=0.6', 'tabs-item');
+            }, -0.3, 'tabs-item');
 
 
 // секция 9
 
         tu9.set('.developed-sociality-container-title', {y: -100, opacity: 0}, '+=0.3')
             .to('.developed-sociality-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3');
-        tu9.set('.developed-sociality-wrap li', {x: -100, autoAlpha: 0}, '-=0.3', 'lable-8')
+        tu9.add( 'lable-8', '-=0.3').set('.developed-sociality-wrap li', {x: -100, autoAlpha: 0}, 'lable-8')
+
             .staggerTo('.developed-sociality-wrap li', 1, {
                 x: 0,
                 autoAlpha: 1,
                 ease: Power4.easeOut
-            }, 0.3, '-=0.3', 'lable-8');
-        tu9.set('.developed-sociality-foto-aside', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
-            .to('.developed-sociality-foto-aside', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
-        tu9.set('.developed-sociality-foto-wrap', {x: -100, opacity: 0}, '-=0.9', 'lable-8')
-            .to('.developed-sociality-foto-wrap', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-8');
+            }, 0.3, 'lable-8');
+        tu9.set('.developed-sociality-foto-aside', {x: -100, opacity: 0}, 'lable-8', '-=0.9')
+            .to('.developed-sociality-foto-aside', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, 'lable-8', '-=0.9');
+        tu9.set('.developed-sociality-foto-wrap', {x: -100, opacity: 0}, 'lable-8', '-=0.9')
+            .to('.developed-sociality-foto-wrap', 1, {x: 0, opacity: 1, ease: Power4.easeOut}, 'lable-8', '-=0.9');
 
 
 // секция 10
         tu10.set('.main-quetions-container-title', {y: -100, opacity: 0}, '+=0.3', 'lable-7')
-            .to('.main-quetions-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '+=0.3', 'lable-7');
-        tu10.set('.accordion', {y: -100, autoAlpha: 0}, '-=0.8', 'lable-7')
-            .staggerTo('.accordion', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, '-=0.8', 'lable-7');
-        tu10.set('.ask-quetion-submit', {y: -100, opacity: 0}, '-=0.9', 'lable-7')
-            .to('.ask-quetion-submit', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, '-=0.9', 'lable-7');
+            .to('.main-quetions-container-title', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-7', '+=0.3');
+        tu10.add('lable-7', '-=0.9').set('.accordion', {y: -100, autoAlpha: 0}, 'lable-7')
+            .staggerTo('.accordion', 1, {y: 0, autoAlpha: 1, ease: Power4.easeOut}, 0.1, 'lable-7');
+        tu10.add('lable-7', '-=0.9').set('.ask-quetion-submit', {y: -100, opacity: 0}, 'lable-7')
+            .to('.ask-quetion-submit', 1, {y: 0, opacity: 1, ease: Power4.easeOut}, 'lable-7');
 
 
     }
